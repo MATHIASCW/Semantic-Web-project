@@ -1,0 +1,17 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?s ?p ?o
+WHERE {
+  {
+    ?s (owl:sameAs|^owl:sameAs)? <https://yourkg.org/resource/Elrond> .
+    ?s ?p ?o .
+  }
+  UNION
+  {
+    ?s (owl:sameAs|^owl:sameAs)? <https://yourkg.org/resource/Elrond> .
+    ?x ?p ?s .
+    BIND(?x AS ?s)
+    BIND(?p AS ?p)
+    BIND(?s AS ?o)
+  }
+}

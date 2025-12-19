@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tolkien KG</title>
+    <style>
+      :root {
+        --ink: #1a1b1e;
+        --accent: #b13f24;
+        --muted: #6b6b6b;
+        --panel: #ffffff;
+        --line: #e7dcc9;
+        --shadow: rgba(0,0,0,0.08);
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 600px at 10% -10%, #fff4db 0%, transparent 60%),
+          radial-gradient(900px 600px at 110% 10%, #f2e3c7 0%, transparent 55%),
+          linear-gradient(140deg, #f8f3ea 0%, #efe3cf 100%);
+        font-family: "Georgia", "Times New Roman", serif;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 30px 20px 50px;
+      }
+      .hero {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 10px 24px var(--shadow);
+        padding: 22px 24px;
+      }
+      .title {
+        margin: 0 0 8px;
+        font-size: 34px;
+      }
+      .sub {
+        color: var(--muted);
+        margin: 0 0 18px;
+      }
+      .badge {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        text-transform: uppercase;
+      }
+      .grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px 14px;
+        box-shadow: 0 6px 18px var(--shadow);
+        text-decoration: none;
+        color: var(--ink);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px var(--shadow);
+      }
+      .card small {
+        color: var(--muted);
+      }
+      .form {
+        margin-top: 14px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      input[type="text"] {
+        flex: 1;
+        min-width: 220px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        font-size: 14px;
+      }
+      button {
+        padding: 10px 14px;
+        border: none;
+        border-radius: 10px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      @media (min-width: 768px) {
+        .grid { grid-template-columns: repeat(3, 1fr); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="hero">
+        <span class="badge">Linked Data</span>
+        <h1 class="title">Tolkien Knowledge Graph</h1>
+        <p class="sub">Explore entities from Tolkien Gateway. Type a label or pick a sample.</p>
+        <form class="form" action="/resource" method="get">
+          <input type="text" name="label" placeholder="Elrond, Mordor, The Shire..." />
+          <button type="submit">Open entity</button>
+        </form>
+      </div>
+
+      <div class="grid">
+        {% for label in sample_labels %}
+        <a class="card" href="/resource/{{ label }}">
+          <strong>{{ label }}</strong><br />
+          <small>Open entity</small>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

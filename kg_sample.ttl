@@ -1,0 +1,1547 @@
+@prefix ns1: <https://yourkg.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+<https://yourkg.org/resource/Adanel> a schema:Thing ;
+    rdfs:label "Adanel" ;
+    schema:birthPlace <https://yourkg.org/resource/Presumably_Estolad> ;
+    schema:children <https://yourkg.org/resource/Beren> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/Dorthonion>,
+        <https://yourkg.org/resource/Estolad>,
+        <https://yourkg.org/resource/Hithlum> ;
+    schema:memberOf <https://yourkg.org/resource/Adan>,
+        <https://yourkg.org/resource/House_of_Marach> ;
+    schema:spouse <https://yourkg.org/resource/Belemir_of_the_House_of_B%C3%ABor> ;
+    ns1:caption "Adanel (right) in 'Adanel the Wise' by Juliana Pinho" ;
+    ns1:death "unknown (aged 35+)" ;
+    ns1:image "Juliana Pinho - Adanel the Wise.png" ;
+    ns1:name "Adanel" ;
+    ns1:parentage "Malach Aradan & Zimrahin Meldis" ;
+    ns1:position "'Wise-woman'" ;
+    ns1:siblings "Magor" .
+
+<https://yourkg.org/resource/Adelard_Took> a schema:Thing ;
+    rdfs:label "Adelard Took" ;
+    schema:children <https://yourkg.org/resource/Everard_Took>,
+        <https://yourkg.org/resource/Reginard_Took>,
+        "2 daughters" ;
+    schema:gender "Male" ;
+    schema:memberOf <https://yourkg.org/resource/Hobbit>,
+        <https://yourkg.org/resource/Took> ;
+    ns1:age "95" ;
+    ns1:caption "Adelard Took from The Lord of the Rings Online" ;
+    ns1:image "The Lord of the Rings Online - Adelard Took.jpg" ;
+    ns1:name "Adelard Took" ;
+    ns1:parentage "Flambard Took" .
+
+<https://yourkg.org/resource/Aegnor> a schema:Thing ;
+    rdfs:label "Aegnor" ;
+    schema:birthPlace <https://yourkg.org/resource/Eldamar> ;
+    schema:deathPlace <https://yourkg.org/resource/In_the_Dagor_Bragollach> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/EldamarDorthonion> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Finarfin>,
+        <https://yourkg.org/resource/Noldo> ;
+    schema:spouse <https://yourkg.org/resource/Never_married_(loved_Andreth)> ;
+    ns1:age "between c. 1,726 & c. 2,297" ;
+    ns1:birth "Between &" ;
+    ns1:caption "'Aegnor' by Elena Kukanova" ;
+    ns1:hair "Golden" ;
+    ns1:height "Tall" ;
+    ns1:image "Elena Kukanova - Aegnor 2.jpg" ;
+    ns1:language "QuenyaSindarin" ;
+    ns1:name "Aegnor" ;
+    ns1:othernames "Ambaráto (Q, fn)Aikanáro (Q, mn)" ;
+    ns1:parentage "Finarfin & Eärwen" ;
+    ns1:position "Lord of Dorthonion" ;
+    ns1:pronun "S," ;
+    ns1:siblings "FinrodAngrodGaladriel" .
+
+<https://yourkg.org/resource/Aerin> a schema:Thing ;
+    rdfs:label "Aerin" ;
+    schema:deathPlace <https://yourkg.org/resource/Dor-l%C3%B3min> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/Dor-l%C3%B3min> ;
+    schema:memberOf <https://yourkg.org/resource/Adan>,
+        <https://yourkg.org/resource/House_of_Hador> ;
+    schema:spouse <https://yourkg.org/resource/Brodda> ;
+    ns1:caption "'Aerin' by Turner Mohan" ;
+    ns1:death "(suicide)" ;
+    ns1:image "Turner Mohan - Aerin.jpg" ;
+    ns1:name "Aerin" ;
+    ns1:othernames "Lady Aerin, Indor’s daughter" ;
+    ns1:parentage "Indor" .
+
+<https://yourkg.org/resource/Aghan> a schema:Thing ;
+    rdfs:label "Aghan" ;
+    schema:affiliation <https://yourkg.org/resource/Dr%C3%BAedain>,
+        <https://yourkg.org/resource/Haladin> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Brethil> ;
+    schema:memberOf <https://yourkg.org/resource/Dr%C3%BAadan> ;
+    ns1:height "Short" ;
+    ns1:language "Drúadan language" ;
+    ns1:name "Aghan" ;
+    ns1:siblings "Unnamed brother" .
+
+<https://yourkg.org/resource/Ailinel> a schema:Thing ;
+    rdfs:label "Ailinel" ;
+    schema:children <https://yourkg.org/resource/Soronto> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    schema:spouse <https://yourkg.org/resource/Orchaldor> ;
+    ns1:death "unknown (aged 87+)" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Ailinel" ;
+    ns1:parentage "Tar-Meneldur and Almarian" ;
+    ns1:pronun "Q," ;
+    ns1:siblings "Tar-Aldarion and Almiel" .
+
+<https://yourkg.org/resource/Aldamir> a schema:Thing ;
+    rdfs:label "Aldamir" ;
+    schema:children <https://yourkg.org/resource/Hyarmendacil_II> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Gondor> ;
+    schema:memberOf <https://yourkg.org/resource/Gondorian> ;
+    ns1:age "210" ;
+    ns1:caption "'Aldamir of Gondor' by Matěj Čadil" ;
+    ns1:image "Matěj_Čadil_-_Aldamir_of_Gondor.jpg" ;
+    ns1:name "Aldamir" ;
+    ns1:parentage "Eldacar" ;
+    ns1:rule "- (50 years)" ;
+    ns1:siblings "Ornendil" ;
+    ns1:titles "King of Gondor" .
+
+<https://yourkg.org/resource/Aldor> a schema:Thing ;
+    rdfs:label "Aldor" ;
+    schema:children <https://yourkg.org/resource/Fr%C3%A9a>,
+        <https://yourkg.org/resource/Three_unnamed_daughters> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rohan> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Eorl>,
+        <https://yourkg.org/resource/Rohir> ;
+    ns1:caption "'The House of Eorl - Aldor the Old' by Lída Holubová" ;
+    ns1:death "(aged 101)" ;
+    ns1:image "Lída Holubová - The House of Eorl - Aldor the Old.jpg" ;
+    ns1:language "Rohanese and Westron" ;
+    ns1:name "Aldor" ;
+    ns1:othernames "'the Old'" ;
+    ns1:parentage "Brego" ;
+    ns1:rule "– (75 years)" ;
+    ns1:siblings "Baldor and Eofor" ;
+    ns1:titles "King of Rohan" .
+
+<https://yourkg.org/resource/Algund> a schema:Thing ;
+    rdfs:label "Algund" ;
+    schema:affiliation <https://yourkg.org/resource/Gaurwaith> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Dor-C%C3%BAarthol>,
+        <https://yourkg.org/resource/Dor-l%C3%B3min> ;
+    schema:memberOf <https://yourkg.org/resource/Adan> ;
+    ns1:language "Mannish dialect" ;
+    ns1:name "Algund" .
+
+<https://yourkg.org/resource/Almarian> a schema:Thing ;
+    rdfs:label "Almarian" ;
+    schema:children <https://yourkg.org/resource/Ailinel_and_Almiel>,
+        <https://yourkg.org/resource/Anardil> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    schema:spouse <https://yourkg.org/resource/Tar-Meneldur> ;
+    ns1:birth "Before" ;
+    ns1:caption "'A Royal Wedding in Númenor' by Matěj Čadil" ;
+    ns1:death "After" ;
+    ns1:hair "Golden" ;
+    ns1:image "Matěj Čadil - A Royal Wedding in Numenor.jpg" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Almarian" ;
+    ns1:parentage "Vëantur" ;
+    ns1:rule "- (143 years)" ;
+    ns1:titles "Queen of Númenor" .
+
+<https://yourkg.org/resource/Almiel> a schema:Thing ;
+    rdfs:label "Almiel" ;
+    schema:birthPlace <https://yourkg.org/resource/Forostar> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Almiel" ;
+    ns1:parentage "Tar-Meneldur and Almarian" ;
+    ns1:siblings "Anardil and Ailinel" .
+
+<https://yourkg.org/resource/Amari%C3%AB> a schema:Thing ;
+    rdfs:label "Amarië" ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/Valinor> ;
+    schema:memberOf <https://yourkg.org/resource/Vanya> ;
+    schema:spouse <https://yourkg.org/resource/Finrod_(lover)> ;
+    ns1:birth "During" ;
+    ns1:caption "'Amarie of the Vanyar' by Marya Filatova" ;
+    ns1:image "Marya Filatova - Amarie of the Vanyar.jpg" ;
+    ns1:language "Vanyarin" ;
+    ns1:name "Amárië" .
+
+<https://yourkg.org/resource/Amlach> a schema:Thing ;
+    rdfs:label "Amlach" ;
+    schema:gender "Male" ;
+    schema:memberOf <https://yourkg.org/resource/Adan>,
+        <https://yourkg.org/resource/House_of_Marach> ;
+    ns1:caption "Amlach (right) in 'Adanel and Amlach' by Juliana Pinho" ;
+    ns1:image "Juliana Pinho - Adanel and Amlach.png" ;
+    ns1:language "Mannish dialect" ;
+    ns1:name "Amlach" ;
+    ns1:parentage "Imlach" .
+
+<https://yourkg.org/resource/Amlaith> a schema:Thing ;
+    rdfs:label "Amlaith" ;
+    schema:children <https://yourkg.org/resource/Beleg> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "220" ;
+    ns1:caption "'Amlaith, king of Arthedain' by ElfinFen" ;
+    ns1:image "ElfinFen - Amlaith, king of Arthedain.jpg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Amlaith" ;
+    ns1:parentage "Eärendur" ;
+    ns1:siblings "two unnamed brothers" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Amroth> a schema:Thing ;
+    rdfs:label "Amroth" ;
+    schema:deathPlace <https://yourkg.org/resource/Bay_of_Belfalas> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Edhellond>,
+        <https://yourkg.org/resource/Lothl%C3%B3rien> ;
+    schema:memberOf <https://yourkg.org/resource/Sinda> ;
+    schema:spouse <https://yourkg.org/resource/Nimrodel_(betrothed)> ;
+    ns1:age "4,685+" ;
+    ns1:birth "Before c." ;
+    ns1:caption "'Amroth' by Olga Kukhtenkova" ;
+    ns1:hair "Bright" ;
+    ns1:image "Olga Kukhtenkova - Amroth.jpg" ;
+    ns1:language "Sindarin, Silvan Elvish" ;
+    ns1:name "Amroth" ;
+    ns1:parentage "Amdír" ;
+    ns1:titles "King of Lórien" .
+
+<https://yourkg.org/resource/Anair%C3%AB> a schema:Thing ;
+    rdfs:label "Anairë" ;
+    schema:children <https://yourkg.org/resource/Aredhel_and_Argon>,
+        <https://yourkg.org/resource/Fingon>,
+        <https://yourkg.org/resource/Turgon> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/Valinor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Fingolfin_(by_marriage)>,
+        <https://yourkg.org/resource/Noldo> ;
+    schema:spouse <https://yourkg.org/resource/Fingolfin> ;
+    ns1:birth "during the Years of the Trees" ;
+    ns1:caption "'Anaire' by Marya Filatova" ;
+    ns1:image "Marya Filatova - Anaire.jpg" ;
+    ns1:language "Quenya" ;
+    ns1:name "Anairë" ;
+    ns1:pronun "Q," .
+
+<https://yourkg.org/resource/Anardil_(King_of_Gondor)> a schema:Thing ;
+    rdfs:label "Anardil (King of Gondor)" ;
+    schema:children <https://yourkg.org/resource/Ostoher> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Gondor> ;
+    schema:memberOf <https://yourkg.org/resource/Gondorian>,
+        <https://yourkg.org/resource/House_of_An%C3%A1rion> ;
+    ns1:age "275" ;
+    ns1:caption "'Anardil of Gondor' by Matěj Čadil" ;
+    ns1:image "Matěj Čadil - Anardil of Gondor.jpg" ;
+    ns1:language "Westron and Sindarin" ;
+    ns1:name "Anardil" ;
+    ns1:parentage "Eärendil" ;
+    ns1:rule "- (87 years)" ;
+    ns1:titles "King of Gondor" .
+
+<https://yourkg.org/resource/Anborn> a schema:Thing ;
+    rdfs:label "Anborn" ;
+    schema:affiliation <https://yourkg.org/resource/Rangers_of_Ithilien> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Forbidden_Pool>,
+        <https://yourkg.org/resource/Henneth_Ann%C3%BBn>,
+        <https://yourkg.org/resource/Near_the_Harad_Road> ;
+    schema:memberOf <https://yourkg.org/resource/Gondorian> ;
+    ns1:birth "Late Third Age" ;
+    ns1:caption "Anborn from The Lord of the Rings Trading Card Game" ;
+    ns1:image "Decipher - Anborn.jpg" ;
+    ns1:language "Westron, Sindarin" ;
+    ns1:name "Anborn" ;
+    ns1:position "ScoutArcher" ;
+    ns1:weapons "Bow" .
+
+<https://yourkg.org/resource/Andr%C3%B3g> a schema:Thing ;
+    rdfs:label "Andróg" ;
+    schema:affiliation <https://yourkg.org/resource/Gaurwaith> ;
+    schema:birthPlace <https://yourkg.org/resource/Dor-l%C3%B3min> ;
+    schema:children <https://yourkg.org/resource/Andv%C3%ADr> ;
+    schema:deathPlace <https://yourkg.org/resource/Amon_R%C3%BBdh> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Dor-C%C3%BAarthol> ;
+    schema:memberOf <https://yourkg.org/resource/Adan> ;
+    ns1:caption "Andróg (standing, right) in 'Forweg's end' by Anke Eißmann" ;
+    ns1:image "Anke Eißmann - Forweg's end.jpg" ;
+    ns1:name "Andróg" ;
+    ns1:position "Outlaw" ;
+    ns1:weapons "Bow and knife" .
+
+<https://yourkg.org/resource/Andreth> a schema:Thing ;
+    rdfs:label "Andreth" ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/Ladros> ;
+    schema:memberOf <https://yourkg.org/resource/Adan>,
+        <https://yourkg.org/resource/House_of_B%C3%ABor> ;
+    schema:spouse <https://yourkg.org/resource/In_love_with_Aegnor_(never_married)> ;
+    ns1:age "c. 94" ;
+    ns1:caption "'Andreth' by Elena Kukanova" ;
+    ns1:death "c." ;
+    ns1:hair "Dark" ;
+    ns1:image "Elena Kukanova - Andreth.jpg" ;
+    ns1:name "Andreth" ;
+    ns1:othernames "Saelind" ;
+    ns1:parentage "Boromir" ;
+    ns1:siblings "Bregor & Beril" ;
+    ns1:titles "Wise-woman of the Bëorians" .
+
+<https://yourkg.org/resource/Andwise_Roper> a schema:Thing ;
+    rdfs:label "Andwise Roper" ;
+    schema:children <https://yourkg.org/resource/Anson_Roper> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Tighfield> ;
+    schema:memberOf <https://yourkg.org/resource/Gamgee>,
+        <https://yourkg.org/resource/Hobbit> ;
+    ns1:name "Andwise Roper" ;
+    ns1:othernames "Andy" ;
+    ns1:parentage "Hobson 'Roper' Gamgee" ;
+    ns1:siblings "Hamfast, May and Halfred" .
+
+<https://yourkg.org/resource/Angamait%C3%AB> a schema:Thing ;
+    rdfs:label "Angamaitë" ;
+    schema:affiliation <https://yourkg.org/resource/Corsairs_of_Umbar> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Umbar> ;
+    schema:memberOf <https://yourkg.org/resource/Gondorian>,
+        <https://yourkg.org/resource/House_of_An%C3%A1rion> ;
+    ns1:caption "'Angamaitë' by Liz Danforth" ;
+    ns1:image "Liz Danforth - Angamaitë.jpg" ;
+    ns1:name "Angamaitë" ;
+    ns1:parentage "unknown; great-grandson of Castamir" ;
+    ns1:pronun "Q," .
+
+<https://yourkg.org/resource/Angrod> a schema:Thing ;
+    rdfs:label "Angrod" ;
+    schema:birthPlace <https://yourkg.org/resource/Eldamar> ;
+    schema:children <https://yourkg.org/resource/Orodreth> ;
+    schema:deathPlace <https://yourkg.org/resource/In_the_Dagor_Bragollach> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/EldamarDorthonion> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Finarfin>,
+        <https://yourkg.org/resource/Noldo> ;
+    schema:spouse <https://yourkg.org/resource/Eldal%C3%B3t%C3%AB> ;
+    ns1:age "between c. 1,726 & c. 2,297" ;
+    ns1:birth "Between &" ;
+    ns1:caption "'Angrod' by Elena Kukanova" ;
+    ns1:hair "Golden" ;
+    ns1:height "Tall" ;
+    ns1:image "Elena_Kukanova_-_Angrod.jpg" ;
+    ns1:language "QuenyaSindarin" ;
+    ns1:name "Angrod" ;
+    ns1:othernames "Angaráto (Q, fn)Angamaitë (Q, an)" ;
+    ns1:parentage "Finarfin & Eärwen" ;
+    ns1:position "Lord of Dorthonion" ;
+    ns1:pronun "S," ;
+    ns1:siblings "FinrodAegnorGaladriel" .
+
+<https://yourkg.org/resource/Annael> a schema:Thing ;
+    rdfs:label "Annael" ;
+    schema:children <https://yourkg.org/resource/fostered_Tuor> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Androth>,
+        <https://yourkg.org/resource/Mithrim>,
+        <https://yourkg.org/resource/Mouths_of_Sirion> ;
+    schema:memberOf <https://yourkg.org/resource/Sinda> ;
+    ns1:caption "'Rían gives Tuor to Annael' by Svirina Vera" ;
+    ns1:image "Svirina Vera - Rian gives Tuor to Annael.jpg" ;
+    ns1:language "Sindarin" ;
+    ns1:name "Annael" .
+
+<https://yourkg.org/resource/Ar-Pharaz%C3%B4n> a schema:Thing ;
+    rdfs:label "Ar-Pharazôn" ;
+    schema:affiliation <https://yourkg.org/resource/King's_MenSauron> ;
+    schema:deathPlace <https://yourkg.org/resource/On_the_shores_of_Aman> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    schema:spouse <https://yourkg.org/resource/Tar-M%C3%ADriel> ;
+    ns1:age "201" ;
+    ns1:caption "'Ar-Pharazon' by Turner Mohan" ;
+    ns1:image "Turner Mohan - Ar-Pharazon.jpg" ;
+    ns1:language "Adûnaic" ;
+    ns1:name "Ar-Pharazôn" ;
+    ns1:othernames "Tar-Calion (Q), 'The Golden'" ;
+    ns1:parentage "Gimilkhâd" ;
+    ns1:rule "- (64 years)" ;
+    ns1:steed "Alcarondas (ship)" ;
+    ns1:titles "King of NúmenorKing of Men'King of the Sea'" .
+
+<https://yourkg.org/resource/Arantar> a schema:Thing ;
+    rdfs:label "Arantar" ;
+    schema:children <https://yourkg.org/resource/Tarcil> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Ann%C3%BAminas> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "250" ;
+    ns1:language "Sindarin" ;
+    ns1:name "Arantar" ;
+    ns1:parentage "Eldacar" ;
+    ns1:titles "King of Arnor" .
+
+<https://yourkg.org/resource/Aranw%C3%AB> a schema:Thing ;
+    rdfs:label "Aranwë" ;
+    schema:children <https://yourkg.org/resource/Voronw%C3%AB> ;
+    schema:gender "Male" ;
+    schema:memberOf <https://yourkg.org/resource/Fingolfin>,
+        <https://yourkg.org/resource/Noldo> ;
+    schema:spouse <https://yourkg.org/resource/Falathrim_lady_related_to_C%C3%ADrdan> ;
+    ns1:name "Aranwë" .
+
+<https://yourkg.org/resource/Aratan> a schema:Thing ;
+    rdfs:label "Aratan" ;
+    schema:birthPlace <https://yourkg.org/resource/Gondor> ;
+    schema:deathPlace <https://yourkg.org/resource/Disaster_of_the_Gladden_Fields> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Gondor> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "104" ;
+    ns1:caption "Aratan in The Lord of the Rings Online" ;
+    ns1:image "The Lord of the Rings Online - Aratan.jpg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Aratan" ;
+    ns1:parentage "Isildur" ;
+    ns1:pronun "Q," ;
+    ns1:siblings "Elendur, Ciryon and Valandil" .
+
+<https://yourkg.org/resource/Argeleb_I> a schema:Thing ;
+    rdfs:label "Argeleb I" ;
+    schema:children <https://yourkg.org/resource/Arveleg_I> ;
+    schema:deathPlace <https://yourkg.org/resource/Rhudaur> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "130" ;
+    ns1:caption "Argeleb I from The Rise of the Witch-king" ;
+    ns1:image "Argeleb I.jpg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Argeleb I" ;
+    ns1:parentage "Malvegil" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Argon> a schema:Thing ;
+    rdfs:label "Argon" ;
+    schema:birthPlace <https://yourkg.org/resource/Eldamar> ;
+    schema:deathPlace <https://yourkg.org/resource/Battle_of_the_Lammoth> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Eldamar> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Fingolfin>,
+        <https://yourkg.org/resource/Noldo> ;
+    schema:spouse <https://yourkg.org/resource/Never_married> ;
+    ns1:age "c. 685" ;
+    ns1:birth "Between and" ;
+    ns1:caption "'Arakáno' by Marya Filatova" ;
+    ns1:height "Tallest of the brothersCf. with the later Tale of Tuor, where Turgon is said to be the 'tallest of all the Children of the World, save Thingol'." ;
+    ns1:image "Marya Filatova - Arakano.jpeg" ;
+    ns1:language "Quenya" ;
+    ns1:name "Argon" ;
+    ns1:othernames "Arakáno (Q)" ;
+    ns1:parentage "Fingolfin and Anairë" ;
+    ns1:siblings "FingonTurgonAredhel" .
+
+<https://yourkg.org/resource/Argonui> a schema:Thing ;
+    rdfs:label "Argonui" ;
+    schema:children <https://yourkg.org/resource/Arador> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Eriador_(incl._Rivendell)> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "155" ;
+    ns1:birth "NB" ;
+    ns1:language "Presumably Sindarin and Westron" ;
+    ns1:name "Argonui" ;
+    ns1:parentage "Arathorn I" ;
+    ns1:siblings "Probably at least one other siblingNB" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Arien> a schema:Thing ;
+    rdfs:label "Arien" ;
+    schema:affiliation <https://yourkg.org/resource/Varda>,
+        <https://yourkg.org/resource/formally_Est%C3%AB_and_V%C3%A1na> ;
+    schema:birthPlace <https://yourkg.org/resource/Timeless_Halls> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/The_Sun> ;
+    schema:memberOf <https://yourkg.org/resource/Maia> ;
+    ns1:birth "Creation of the Ainur" ;
+    ns1:caption "'Arien' by Lady Elleth" ;
+    ns1:image "Lady Elleth - Arien.jpg" ;
+    ns1:name "Arien" ;
+    ns1:position "Guiding the Sun" ;
+    ns1:pronun "Q," .
+
+<https://yourkg.org/resource/Arminas> a schema:Thing ;
+    rdfs:label "Arminas" ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Dorthonion>,
+        <https://yourkg.org/resource/Mouths_of_Sirion> ;
+    schema:memberOf <https://yourkg.org/resource/Noldo> ;
+    ns1:caption "'The Gate of the Noldor' by Peter Xavier Price" ;
+    ns1:image "Peter Xavier Price - The Gate of the Noldor.jpg" ;
+    ns1:name "Arminas" .
+
+<https://yourkg.org/resource/Arod> a schema:Thing ;
+    rdfs:label "Arod" ;
+    schema:affiliation <https://yourkg.org/resource/Gimli>,
+        <https://yourkg.org/resource/Legolas> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rohan> ;
+    schema:memberOf <https://yourkg.org/resource/Horse> ;
+    schema:species <https://yourkg.org/resource/Horse> ;
+    ns1:caption "'Friendship between peoples' by Marya Filatova" ;
+    ns1:image "Marya Filatova - Friendship between peoples.jpg" ;
+    ns1:name "Arod" .
+
+<https://yourkg.org/resource/Artamir> a schema:Thing ;
+    rdfs:label "Artamir" ;
+    schema:deathPlace <https://yourkg.org/resource/Disaster_of_the_Morannon> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Gondor> ;
+    schema:memberOf <https://yourkg.org/resource/Gondorian>,
+        <https://yourkg.org/resource/House_of_An%C3%A1rion> ;
+    ns1:birth "Before" ;
+    ns1:death "12 July" ;
+    ns1:language "Westron" ;
+    ns1:name "Artamir" ;
+    ns1:parentage "Ondoher" ;
+    ns1:siblings "Fíriel and Faramir" .
+
+<https://yourkg.org/resource/Arwen> a schema:Thing ;
+    rdfs:label "Arwen" ;
+    schema:children <https://yourkg.org/resource/Eldarion_and_several_daughters> ;
+    schema:deathPlace <https://yourkg.org/resource/Cerin_Amroth>,
+        <https://yourkg.org/resource/Lothl%C3%B3rien> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/Lothl%C3%B3rien>,
+        <https://yourkg.org/resource/Reunited_Kingdom>,
+        <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Half-elf> ;
+    schema:spouse <https://yourkg.org/resource/Aragorn> ;
+    ns1:age "2,901" ;
+    ns1:caption "'Arwen' by John Howe" ;
+    ns1:clothing "Grey raiment with girdle of silver leaves;" ;
+    ns1:death "1 March" ;
+    ns1:eyes "Grey" ;
+    ns1:hair "Dark" ;
+    ns1:heritage "Half-elven father, Elf mother" ;
+    ns1:image "John Howe - Arwen.jpg" ;
+    ns1:language "Primarily Sindarin" ;
+    ns1:name "Arwen" ;
+    ns1:notablefor "Being granted the Gift of Ilúvatar" ;
+    ns1:othernames "Undómiel (Q: 'Evenstar')Elerondiel (Q)Elrenniel (S)" ;
+    ns1:parentage "Elrond and Celebrían" ;
+    ns1:pronun "S," ;
+    ns1:siblings "Elladan and Elrohir (twins)" ;
+    ns1:titles "Lady of RivendellQueen of Elves and MenQueen of Gondor" .
+
+<https://yourkg.org/resource/Asfaloth> a schema:Thing ;
+    rdfs:label "Asfaloth" ;
+    schema:affiliation <https://yourkg.org/resource/Glorfindel> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Horse> ;
+    schema:species <https://yourkg.org/resource/Horse> ;
+    ns1:caption "'Glorfindel' by Elena Kukanova" ;
+    ns1:image "Elena Kukanova - Glorfindel.jpg" ;
+    ns1:name "Asfaloth" .
+
+<https://yourkg.org/resource/Atanalcar> a schema:Thing ;
+    rdfs:label "Atanalcar" ;
+    schema:children <https://yourkg.org/resource/Unnamed_male_descendants> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:birth "After" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Atanalcar" ;
+    ns1:parentage "Elros" ;
+    ns1:siblings "Vardamir, Tindómiel and Manwendil" .
+
+<https://yourkg.org/resource/Atanatar_I> a schema:Thing ;
+    rdfs:label "Atanatar I" ;
+    schema:children <https://yourkg.org/resource/Siriondil> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Gondor> ;
+    schema:memberOf <https://yourkg.org/resource/Gondorian>,
+        <https://yourkg.org/resource/House_of_An%C3%A1rion> ;
+    ns1:age "268" ;
+    ns1:caption "'Atanatar I of Gondor' by Matěj Čadil" ;
+    ns1:image "Matěj Čadil - Atanatar I of Gondor.jpg" ;
+    ns1:language "Westron and Sindarin" ;
+    ns1:name "Atanatar I" ;
+    ns1:parentage "Turambar" ;
+    ns1:rule "- (81 years)" ;
+    ns1:titles "King of Gondor" .
+
+<https://yourkg.org/resource/Atanatar_II> a schema:Thing ;
+    rdfs:label "Atanatar II" ;
+    schema:children <https://yourkg.org/resource/Narmacil_I_and_Calmacil> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Gondor> ;
+    schema:memberOf <https://yourkg.org/resource/Gondorian>,
+        <https://yourkg.org/resource/House_of_An%C3%A1rion> ;
+    ns1:age "249" ;
+    ns1:caption "'Atanatar II Alcarin' by Matěj Čadil" ;
+    ns1:image "Matěj Čadil - Atanatar II Alcarin.jpg" ;
+    ns1:language "Westron and Sindarin" ;
+    ns1:name "Atanatar II" ;
+    ns1:othernames "Alcarin (Q, 'Glorious')" ;
+    ns1:parentage "Hyarmendacil I" ;
+    ns1:rule "- (77 years)" ;
+    ns1:titles "King of Gondor" .
+
+<https://yourkg.org/resource/Aul%C3%AB> a schema:Thing ;
+    rdfs:label "Aulë" ;
+    schema:affiliation <https://yourkg.org/resource/Mairon_and_Curumo> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Mansions_of_Aul%C3%AB> ;
+    schema:memberOf <https://yourkg.org/resource/Vala> ;
+    schema:spouse <https://yourkg.org/resource/Yavanna> ;
+    ns1:birth "Creation of the Ainur" ;
+    ns1:caption "'Aulë the Destroyer' by Ted Nasmith" ;
+    ns1:image "Ted_Nasmith_-_Aulë_the_Destroyer.jpg" ;
+    ns1:language "Valarin; also devised Khuzdul for the Dwarves" ;
+    ns1:name "Aulë" ;
+    ns1:notablefor "creating the Dwarves" ;
+    ns1:othernames "Aȝūlēz (V)Mahal (K)" ;
+    ns1:position "Rocks and metals" ;
+    ns1:pronun "(Q, )" ;
+    ns1:titles "The Great Smith, Smith, Maker, Friend of the Noldor" .
+
+<https://yourkg.org/resource/Ausir_(boy)> a schema:Thing ;
+    rdfs:label "Ausir (boy)" ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Tol_Eress%C3%ABa> ;
+    schema:memberOf <https://yourkg.org/resource/Elf> ;
+    ns1:name "Ausir" .
+
+<https://yourkg.org/resource/Azagh%C3%A2l> a schema:Thing ;
+    rdfs:label "Azaghâl" ;
+    schema:affiliation <https://yourkg.org/resource/Union_of_Maedhros> ;
+    schema:deathPlace <https://yourkg.org/resource/Nirnaeth_Arnoediad> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Belegost> ;
+    schema:memberOf <https://yourkg.org/resource/Broadbeams_or_Firebeards>,
+        <https://yourkg.org/resource/Dwarf> ;
+    ns1:birth "Before" ;
+    ns1:caption "'Azaghâl' by Jenny Dolfen" ;
+    ns1:death "(aged 212+)" ;
+    ns1:image "Jenny Dolfen - Azaghal.jpg" ;
+    ns1:language "Sindarin, Khuzdul" ;
+    ns1:name "Azaghâl" ;
+    ns1:notablefor "Injuring Glaurung" ;
+    ns1:titles "Lord of Belegost" ;
+    ns1:weapons "Axe and knife" .
+
+<https://yourkg.org/resource/Azog> a schema:Thing ;
+    rdfs:label "Azog" ;
+    schema:affiliation <https://yourkg.org/resource/Orcs_of_the_Misty_Mountains> ;
+    schema:children <https://yourkg.org/resource/Bolg> ;
+    schema:deathPlace <https://yourkg.org/resource/Azanulbizar> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/MoriaAzanulbizar> ;
+    schema:memberOf <https://yourkg.org/resource/Orc> ;
+    ns1:birth "Before" ;
+    ns1:caption "'Azog' by Pascal Yung" ;
+    ns1:height "Tall" ;
+    ns1:image "Pascal Yung - Azog.jpg" ;
+    ns1:language "Presumably Orkish and Westron" ;
+    ns1:name "Azog" ;
+    ns1:notablefor "Killing Thrór;igniting the War of the Dwarves and Orcs" ;
+    ns1:position "Orc-chieftain" ;
+    ns1:titles "the Goblin" .
+
+<https://yourkg.org/resource/Balbo_Baggins> a schema:Thing ;
+    rdfs:label "Balbo Baggins" ;
+    schema:children <https://yourkg.org/resource/Largo>,
+        <https://yourkg.org/resource/Lily>,
+        <https://yourkg.org/resource/Mungo>,
+        <https://yourkg.org/resource/Pansy>,
+        <https://yourkg.org/resource/Ponto> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Hobbiton> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Berylla_Boffin> ;
+    ns1:age "91" ;
+    ns1:name "Balbo Baggins" .
+
+<https://yourkg.org/resource/Belba_Baggins> a schema:Thing ;
+    rdfs:label "Belba Baggins" ;
+    schema:children <https://yourkg.org/resource/Herugar> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/Budgeford> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Rudigar_Bolger> ;
+    ns1:age "100" ;
+    ns1:caption "Belba Baggins from The Hobbit (2003 video game)" ;
+    ns1:image "Belba Baggins.png" ;
+    ns1:name "Belba Baggins" ;
+    ns1:parentage "Mungo Baggins and Laura Grubb" ;
+    ns1:siblings "Bungo, Longo, Linda and Bingo" .
+
+<https://yourkg.org/resource/Bingo_Baggins> a schema:Thing ;
+    rdfs:label "Bingo Baggins" ;
+    schema:children <https://yourkg.org/resource/Falco_Chubb-Baggins> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Chica_Chubb> ;
+    ns1:age "96" ;
+    ns1:caption "Bingo Baggins from The Hobbit (2003 video game)" ;
+    ns1:image "Bingo Baggins.png" ;
+    ns1:name "Bingo Baggins" ;
+    ns1:parentage "Mungo Baggins and Laura Grubb" ;
+    ns1:siblings "Bungo, Belba, Longo and Linda" .
+
+<https://yourkg.org/resource/Bungo_Baggins> a schema:Thing ;
+    rdfs:label "Bungo Baggins" ;
+    schema:children <https://yourkg.org/resource/Bilbo> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Bag_End>,
+        <https://yourkg.org/resource/Hobbiton> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Belladonna_Took> ;
+    ns1:age "80" ;
+    ns1:caption "'The Lovers' by Peter Pracownik" ;
+    ns1:image "Peter Pracownik - The Lovers.jpg" ;
+    ns1:name "Bungo Baggins" ;
+    ns1:parentage "Mungo Baggins and Laura Grubb" ;
+    ns1:siblings "Belba, Longo, Linda and Bingo" .
+
+<https://yourkg.org/resource/Dora_Baggins> a schema:Thing ;
+    rdfs:label "Dora Baggins" ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    ns1:age "104" ;
+    ns1:caption "'Dora Baggins' by Liz Danforth" ;
+    ns1:image "Liz Danforth - Dora Baggins.jpg" ;
+    ns1:name "Dora Baggins" ;
+    ns1:parentage "Fosco Baggins and Ruby Bolger" ;
+    ns1:siblings "Dudo and Drogo" .
+
+<https://yourkg.org/resource/Drogo_Baggins> a schema:Thing ;
+    rdfs:label "Drogo Baggins" ;
+    schema:children <https://yourkg.org/resource/Frodo_Baggins> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Primula_Brandybuck> ;
+    ns1:age "72" ;
+    ns1:caption "Drogo Baggins as a child - Detail by Miriam Ellis" ;
+    ns1:image "Miriam Ellis - Drogo Baggins.jpg" ;
+    ns1:name "Drogo Baggins" ;
+    ns1:parentage "Fosco Baggins and Ruby Bolger" ;
+    ns1:siblings "Dora and Dudo" .
+
+<https://yourkg.org/resource/Dudo_Baggins> a schema:Thing ;
+    rdfs:label "Dudo Baggins" ;
+    schema:children <https://yourkg.org/resource/Daisy> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    ns1:age "98" ;
+    ns1:name "Dudo Baggins" ;
+    ns1:parentage "Fosco Baggins and Ruby Bolger" ;
+    ns1:siblings "Drogo and Dora" .
+
+<https://yourkg.org/resource/Fosco_Baggins> a schema:Thing ;
+    rdfs:label "Fosco Baggins" ;
+    schema:children <https://yourkg.org/resource/Dora>,
+        <https://yourkg.org/resource/Drogo_and_Dudo> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Ruby_Bolger> ;
+    ns1:age "96" ;
+    ns1:name "Fosco Baggins" ;
+    ns1:parentage "Largo Baggins and Tanta Hornblower" .
+
+<https://yourkg.org/resource/Largo_Baggins> a schema:Thing ;
+    rdfs:label "Largo Baggins" ;
+    schema:children <https://yourkg.org/resource/Fosco> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Tanta_Hornblower> ;
+    ns1:age "92" ;
+    ns1:name "Largo Baggins" ;
+    ns1:parentage "Balbo Baggins and Berylla Boffin" ;
+    ns1:siblings "Mungo, Pansy, Ponto and Lily" .
+
+<https://yourkg.org/resource/Lily_Baggins> a schema:Thing ;
+    rdfs:label "Lily Baggins" ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Togo_Goodbody> ;
+    ns1:age "90" ;
+    ns1:name "Lily Baggins" ;
+    ns1:parentage "Balbo Baggins and Berylla Boffin" ;
+    ns1:siblings "Mungo, Pansy, Ponto and Largo" .
+
+<https://yourkg.org/resource/Linda_Baggins> a schema:Thing ;
+    rdfs:label "Linda Baggins" ;
+    schema:children <https://yourkg.org/resource/Odo> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Bodo_Proudfoot> ;
+    ns1:age "101" ;
+    ns1:caption "Linda Proudfoot from The Hobbit (2003 video game)" ;
+    ns1:image "Linda Proudfoot.png" ;
+    ns1:name "Linda Baggins" ;
+    ns1:parentage "Mungo Baggins and Laura Grubb" ;
+    ns1:siblings "Bungo, Belba, Longo and Bingo" .
+
+<https://yourkg.org/resource/Longo_Baggins> a schema:Thing ;
+    rdfs:label "Longo Baggins" ;
+    schema:children <https://yourkg.org/resource/Otho_Sackville-Baggins> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Camellia_Sackville> ;
+    ns1:age "90" ;
+    ns1:name "Longo Baggins" ;
+    ns1:parentage "Mungo Baggins and Laura Grubb" ;
+    ns1:siblings "Bungo, Belba, Linda and Bingo" .
+
+<https://yourkg.org/resource/Mungo_Baggins> a schema:Thing ;
+    rdfs:label "Mungo Baggins" ;
+    schema:children <https://yourkg.org/resource/Belba>,
+        <https://yourkg.org/resource/Bungo>,
+        <https://yourkg.org/resource/Linda_and_Bingo>,
+        <https://yourkg.org/resource/Longo> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Hobbiton> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Laura_Grubb> ;
+    ns1:age "93" ;
+    ns1:caption "'Mungo Baggins' by Peter Xavier Price" ;
+    ns1:image "Peter Xavier Price - Mungo Baggins.jpg" ;
+    ns1:name "Mungo Baggins" ;
+    ns1:parentage "Balbo Baggins and Berylla Boffin" ;
+    ns1:siblings "Pansy, Ponto, Largo, Lily" .
+
+<https://yourkg.org/resource/Peony_Baggins> a schema:Thing ;
+    rdfs:label "Peony Baggins" ;
+    schema:children <https://yourkg.org/resource/Moro>,
+        <https://yourkg.org/resource/Mosco>,
+        <https://yourkg.org/resource/Myrtle_and_Minto> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Milo_Burrows> ;
+    ns1:death "After" ;
+    ns1:name "Peony Baggins" ;
+    ns1:parentage "Posco Baggins and Gilly Brownlock" ;
+    ns1:siblings "Ponto and Porto" .
+
+<https://yourkg.org/resource/Polo_Baggins> a schema:Thing ;
+    rdfs:label "Polo Baggins" ;
+    schema:children <https://yourkg.org/resource/Posco_and_Prisca> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    ns1:name "Polo Baggins" ;
+    ns1:othernames "Pola Labingi (H)" ;
+    ns1:parentage "Ponto Baggins and Mimosa Bunce" ;
+    ns1:siblings "Rosa" .
+
+<https://yourkg.org/resource/Ponto_Baggins_I> a schema:Thing ;
+    rdfs:label "Ponto Baggins I" ;
+    schema:children <https://yourkg.org/resource/Rosa_and_Polo> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Mimosa_Bunce> ;
+    ns1:age "95" ;
+    ns1:name "Ponto Baggins" ;
+    ns1:parentage "Balbo Baggins and Berylla Boffin" ;
+    ns1:siblings "Mungo, Pansy, Largo and Lily" .
+
+<https://yourkg.org/resource/Porto_Baggins> a schema:Thing ;
+    rdfs:label "Porto Baggins" ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/The_Shire> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    ns1:name "Porto Baggins" ;
+    ns1:parentage "Posco Baggins and Gilly Brownlock" ;
+    ns1:siblings "Ponto and Peony" .
+
+<https://yourkg.org/resource/Tar-Alcarin> a schema:Thing ;
+    rdfs:label "Tar-Alcarin" ;
+    schema:affiliation <https://yourkg.org/resource/King's_Men> ;
+    schema:children <https://yourkg.org/resource/Tar-Calmacil> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "331" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Tar-Alcarin" ;
+    ns1:parentage "Tar-Vanimeldë and Herucalmo" ;
+    ns1:rule "- (de jure) - (de facto)" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Tar-Aldarion> a schema:Thing ;
+    rdfs:label "Tar-Aldarion" ;
+    schema:affiliation <https://yourkg.org/resource/Guild_of_Venturers> ;
+    schema:birthPlace <https://yourkg.org/resource/Forostar> ;
+    schema:children <https://yourkg.org/resource/Ancalim%C3%AB> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    schema:spouse <https://yourkg.org/resource/Erendis> ;
+    ns1:age "398" ;
+    ns1:birth "April," ;
+    ns1:caption "'He Knew Her For Erendis' by Peter Xavier Price" ;
+    ns1:eyes "Blue" ;
+    ns1:hair "Golden" ;
+    ns1:image "Peter Xavier Price - He Knew Her For Erendis.jpg" ;
+    ns1:language "Adûnaic, Quenya and Sindarin" ;
+    ns1:name "Tar-Aldarion" ;
+    ns1:othernames "Anardil (Q), Anardilya" ;
+    ns1:parentage "Tar-Meneldur and Almarian" ;
+    ns1:position "Mariner" ;
+    ns1:pronun "Q," ;
+    ns1:rule "- (192 years)" ;
+    ns1:siblings "Ailinel and Almiel" ;
+    ns1:steed "Eämbar (ship)Palarran (ship)Hirilondë (ship)" ;
+    ns1:titles "King of Númenor'Great Captain'Lord of the Ships and Havens of NúmenorMaster of the Forests" .
+
+<https://yourkg.org/resource/Tar-Amandil> a schema:Thing ;
+    rdfs:label "Tar-Amandil" ;
+    schema:children <https://yourkg.org/resource/E%C3%A4rendur>,
+        <https://yourkg.org/resource/Elendil_and_Mairen> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "411" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Tar-Amandil" ;
+    ns1:othernames "Ar-Aphanuzîr (A)" ;
+    ns1:parentage "Vardamir" ;
+    ns1:rule "- (de facto) - (de jure)" ;
+    ns1:siblings "Aulendil, Nolondil and Vardilmë" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Tar-An%C3%A1rion> a schema:Thing ;
+    rdfs:label "Tar-Anárion" ;
+    schema:birthPlace <https://yourkg.org/resource/Emeri%C3%AB> ;
+    schema:children <https://yourkg.org/resource/Tar-S%C3%BArion>,
+        <https://yourkg.org/resource/Two_daughters> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "401 years" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Tar-Anárion" ;
+    ns1:parentage "Tar-Ancalimë and Hallacar" ;
+    ns1:rule "- (114 years)" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Tar-Ancalim%C3%AB> a schema:Thing ;
+    rdfs:label "Tar-Ancalimë" ;
+    schema:birthPlace <https://yourkg.org/resource/Armenelos> ;
+    schema:children <https://yourkg.org/resource/An%C3%A1rion> ;
+    schema:gender "Female" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    schema:spouse <https://yourkg.org/resource/Hallacar> ;
+    ns1:age "412" ;
+    ns1:caption "'Queen Ancalime the Princess Shepherdess' by Sara M. Morello" ;
+    ns1:image "Sara M. Morello - Queen Ancalime the Princess Shepherdess.jpg" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Tar-Ancalimë" ;
+    ns1:othernames "Emerwen Aranel (Q, 'Princess Shepherdess')" ;
+    ns1:parentage "Aldarion and Erendis" ;
+    ns1:rule "- (205 years)" ;
+    ns1:titles "Ruling Queen of Númenor" .
+
+<https://yourkg.org/resource/Tar-Ardamin> a schema:Thing ;
+    rdfs:label "Tar-Ardamin" ;
+    schema:affiliation <https://yourkg.org/resource/King's_Men> ;
+    schema:children <https://yourkg.org/resource/Ar-Ad%C3%BBnakh%C3%B4r> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "281" ;
+    ns1:language "Adûnaic; used Quenya out of custom" ;
+    ns1:name "Tar-Ardamin" ;
+    ns1:othernames "Ar-Abattârik (A)" ;
+    ns1:parentage "Tar-Calmacil" ;
+    ns1:rule "- (74 years)" ;
+    ns1:siblings "Gimilzagar" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Tar-Atanamir> a schema:Thing ;
+    rdfs:label "Tar-Atanamir" ;
+    schema:children <https://yourkg.org/resource/Tar-Ancalimon>,
+        <https://yourkg.org/resource/unnamed_child_-_ancestor_of_Herucalmo> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "421" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Tar-Atanamir" ;
+    ns1:othernames "'The Great', 'The Unwilling'" ;
+    ns1:parentage "Tar-Ciryatan" ;
+    ns1:rule "- (192 years)" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Tar-Elendil> a schema:Thing ;
+    rdfs:label "Tar-Elendil" ;
+    schema:birthPlace <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:children <https://yourkg.org/resource/Isilm%C3%AB_and_%C3%8Drimon>,
+        <https://yourkg.org/resource/Silmari%C3%ABn> ;
+    schema:deathPlace <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "401" ;
+    ns1:caption "'Tar-Elendil' by Liz Danforth" ;
+    ns1:image "Liz Danforth - Tar-Elendil.jpg" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Tar-Elendil" ;
+    ns1:othernames "Parmaitë (Q, 'book-handed')" ;
+    ns1:parentage "Tar-Amandil" ;
+    ns1:rule "- (150 years)" ;
+    ns1:siblings "Eärendur and Mairen" ;
+    ns1:titles "King of Númenor" ;
+    ns1:weapons "Aranrúth" .
+
+<https://yourkg.org/resource/Telimektar> a schema:Thing ;
+    rdfs:label "Telimektar" ;
+    schema:children <https://yourkg.org/resource/L%C3%BAthienNB> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/ValinorTol_Eress%C3%ABaIlw%C3%AB> ;
+    schema:memberOf <https://yourkg.org/resource/Vala> ;
+    ns1:name "Telimektar" ;
+    ns1:notablefor "Guarding the world from Melko's return" ;
+    ns1:othernames "Telumaithor/Telumaithar, Daimort/Daimord (G)Mordo/Taimordo/Taimondo, Telmaithron, Taimavar (Q)" ;
+    ns1:parentage "Tulkas & Nessa" ;
+    ns1:weapons "Silver sword" .
+
+<https://yourkg.org/resource/An%C3%A1rion> a schema:Thing ;
+    rdfs:label "Anárion" ;
+    schema:affiliation <https://yourkg.org/resource/Faithful>,
+        <https://yourkg.org/resource/Last_Alliance_of_Elves_and_Men> ;
+    schema:birthPlace <https://yourkg.org/resource/And%C3%BAni%C3%AB>,
+        <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:children <https://yourkg.org/resource/Meneldil>,
+        <https://yourkg.org/resource/Three_unnamed_children> ;
+    schema:deathPlace <https://yourkg.org/resource/During_Siege_of_Barad-d%C3%BBr> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Gondor>,
+        <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elendil>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean>,
+        <https://yourkg.org/resource/founded_the_House_of_An%C3%A1rion> ;
+    ns1:age "221" ;
+    ns1:caption "'Anárion' by Liz Danforth" ;
+    ns1:image "Liz Danforth - Anárion.jpg" ;
+    ns1:language "Quenya, Sindarin, and Adûnaic" ;
+    ns1:name "Anárion" ;
+    ns1:notablefor "Founded Gondor with Isildur" ;
+    ns1:parentage "Elendil" ;
+    ns1:pronun "Q," ;
+    ns1:rule "- (joint reign)" ;
+    ns1:siblings "Isildur" ;
+    ns1:titles "King of Gondor" .
+
+<https://yourkg.org/resource/Ar-Ad%C3%BBnakh%C3%B4r> a schema:Thing ;
+    rdfs:label "Ar-Adûnakhôr" ;
+    schema:affiliation <https://yourkg.org/resource/King's_Men> ;
+    schema:children <https://yourkg.org/resource/Ar-Zimrath%C3%B4n> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "253" ;
+    ns1:language "Adûnaic" ;
+    ns1:name "Ar-Adûnakhôr" ;
+    ns1:othernames "Tar-Herunúmen (Q)" ;
+    ns1:parentage "Tar-Ardamin" ;
+    ns1:rule "- (63 years)" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Ar-Gimilz%C3%B4r> a schema:Thing ;
+    rdfs:label "Ar-Gimilzôr" ;
+    schema:affiliation <https://yourkg.org/resource/King's_Men> ;
+    schema:children <https://yourkg.org/resource/Inzilad%C3%BBn_and_Gimilkh%C3%A2d> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    schema:spouse <https://yourkg.org/resource/Inzilb%C3%AAth> ;
+    ns1:age "217" ;
+    ns1:caption "'Ar-Gimilzor' by Peter Xavier Price" ;
+    ns1:image "Peter Xavier Price - Ar-Gimilzor.jpg" ;
+    ns1:language "Adûnaic" ;
+    ns1:name "Ar-Gimilzôr" ;
+    ns1:othernames "Tar-Telemnar (Q)" ;
+    ns1:parentage "Ar-Sakalthôr" ;
+    ns1:rule "- (75 years)" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Ar-Sakalth%C3%B4r> a schema:Thing ;
+    rdfs:label "Ar-Sakalthôr" ;
+    schema:affiliation <https://yourkg.org/resource/King's_Men> ;
+    schema:children <https://yourkg.org/resource/Ar-Gimilz%C3%B4r> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "226" ;
+    ns1:language "Adûnaic" ;
+    ns1:name "Ar-Sakalthôr" ;
+    ns1:othernames "Tar-Falassion (Q)" ;
+    ns1:parentage "Ar-Zimrathôn" ;
+    ns1:rule "- (69 years)" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Ar-Zimrath%C3%B4n> a schema:Thing ;
+    rdfs:label "Ar-Zimrathôn" ;
+    schema:affiliation <https://yourkg.org/resource/King's_Men> ;
+    schema:children <https://yourkg.org/resource/Ar-Sakalth%C3%B4r> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "235" ;
+    ns1:language "Adûnaic" ;
+    ns1:name "Ar-Zimrathôn" ;
+    ns1:othernames "Tar-Hostamir (Q)" ;
+    ns1:parentage "Ar-Adûnakhôr" ;
+    ns1:rule "- (71 years)" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Arador> a schema:Thing ;
+    rdfs:label "Arador" ;
+    schema:children <https://yourkg.org/resource/Arathorn_II> ;
+    schema:deathPlace <https://yourkg.org/resource/Coldfells> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "110" ;
+    ns1:caption "Arador from Born of Hope" ;
+    ns1:image "Born of Hope - Arador.jpg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arador" ;
+    ns1:parentage "Argonui" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Araglas> a schema:Thing ;
+    rdfs:label "Araglas" ;
+    schema:children <https://yourkg.org/resource/Arahad_I> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "159" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Araglas" ;
+    ns1:parentage "Aragorn I" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Aragorn_I> a schema:Thing ;
+    rdfs:label "Aragorn I" ;
+    schema:children <https://yourkg.org/resource/Araglas> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "100" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Aragorn I" ;
+    ns1:parentage "Aravir" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Aragost> a schema:Thing ;
+    rdfs:label "Aragost" ;
+    schema:children <https://yourkg.org/resource/Aravorn> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "157" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Aragost" ;
+    ns1:parentage "Arahad I" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Arahad_I> a schema:Thing ;
+    rdfs:label "Arahad I" ;
+    schema:children <https://yourkg.org/resource/Aragost> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "158" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arahad I" ;
+    ns1:parentage "Araglas" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Arahad_II> a schema:Thing ;
+    rdfs:label "Arahad II" ;
+    schema:children <https://yourkg.org/resource/Arassuil> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "156" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arahad II" ;
+    ns1:parentage "Aravorn" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Arahael> a schema:Thing ;
+    rdfs:label "Arahael" ;
+    schema:children <https://yourkg.org/resource/Aranuir> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "165" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arahael" ;
+    ns1:parentage "Aranarth" ;
+    ns1:siblings "At least one sibling" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Aranarth> a schema:Thing ;
+    rdfs:label "Aranarth" ;
+    schema:children <https://yourkg.org/resource/Arahael>,
+        "at least one other" ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "168" ;
+    ns1:caption "'Aranarth' by Elena Kukanova" ;
+    ns1:image "Elena Kukanova - Aranarth.jpeg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Aranarth" ;
+    ns1:parentage "Arvedui and Fíriel" ;
+    ns1:siblings "At least one younger brother" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Aranuir> a schema:Thing ;
+    rdfs:label "Aranuir" ;
+    schema:children <https://yourkg.org/resource/Aravir> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "163" ;
+    ns1:language "Sindarin and Westron" ;
+    ns1:name "Aranuir" ;
+    ns1:parentage "Arahael" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Araphant> a schema:Thing ;
+    rdfs:label "Araphant" ;
+    schema:children <https://yourkg.org/resource/Arvedui> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "175" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Araphant" ;
+    ns1:parentage "Araval" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Araphor> a schema:Thing ;
+    rdfs:label "Araphor" ;
+    schema:children <https://yourkg.org/resource/Argeleb_II> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "198" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Araphor" ;
+    ns1:parentage "Arveleg I" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Arassuil> a schema:Thing ;
+    rdfs:label "Arassuil" ;
+    schema:children <https://yourkg.org/resource/Arathorn_I> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "156" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arassuil" ;
+    ns1:parentage "Arahad II" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Arathorn_I> a schema:Thing ;
+    rdfs:label "Arathorn I" ;
+    schema:children <https://yourkg.org/resource/ArgonuiProbably_at_least_one_other_childNB> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Eriador_(incl._Rivendell))> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "155" ;
+    ns1:birth "NB" ;
+    ns1:language "Presumably Sindarin & Westron" ;
+    ns1:name "Arathorn I" ;
+    ns1:parentage "Arassuil" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Arathorn_II> a schema:Thing ;
+    rdfs:label "Arathorn II" ;
+    schema:children <https://yourkg.org/resource/Aragorn> ;
+    schema:gender "Male" ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    schema:spouse <https://yourkg.org/resource/Gilraen> ;
+    ns1:age "60" ;
+    ns1:caption "Arathorn from Guardians of Middle-earth" ;
+    ns1:image "Guardians of Middle-earth - Arathorn Icon.jpg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arathorn II" ;
+    ns1:parentage "Arador" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Araval> a schema:Thing ;
+    rdfs:label "Araval" ;
+    schema:children <https://yourkg.org/resource/Araphant> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "180" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Araval" ;
+    ns1:parentage "Arveleg II" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Aravir> a schema:Thing ;
+    rdfs:label "Aravir" ;
+    schema:children <https://yourkg.org/resource/Aragorn_I> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "163" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Aravir" ;
+    ns1:parentage "Aranuir" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Aravorn> a schema:Thing ;
+    rdfs:label "Aravorn" ;
+    schema:children <https://yourkg.org/resource/Arahad_II> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Rivendell> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "157" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Aravorn" ;
+    ns1:parentage "Aragost" ;
+    ns1:titles "Chieftain of the Dúnedain" .
+
+<https://yourkg.org/resource/Argeleb_II> a schema:Thing ;
+    rdfs:label "Argeleb II" ;
+    schema:children <https://yourkg.org/resource/Arvegil> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "197" ;
+    ns1:caption "Argeleb from Middle-earth Role Playing" ;
+    ns1:image "Argeleb II.jpg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Argeleb" ;
+    ns1:parentage "Araphor" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Arvedui> a schema:Thing ;
+    rdfs:label "Arvedui" ;
+    schema:children <https://yourkg.org/resource/Aranarth>,
+        "at least one other son" ;
+    schema:deathPlace <https://yourkg.org/resource/Icebay_of_Forochel> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    schema:spouse <https://yourkg.org/resource/F%C3%ADriel> ;
+    ns1:age "110" ;
+    ns1:caption "'Arvedui and Firiel' by Elena Kukanova" ;
+    ns1:death "March" ;
+    ns1:image "Elena Kukanova - Arvedui and Firiel.jpeg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arvedui" ;
+    ns1:othernames "Last King" ;
+    ns1:parentage "Araphant" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Arvegil> a schema:Thing ;
+    rdfs:label "Arvegil" ;
+    schema:children <https://yourkg.org/resource/Arveleg_II> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "190" ;
+    ns1:caption "Arvegil from Middle-earth Role Playing" ;
+    ns1:image "Arvegil.jpg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arvegil" ;
+    ns1:parentage "Argeleb II" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Arveleg_I> a schema:Thing ;
+    rdfs:label "Arveleg I" ;
+    schema:children <https://yourkg.org/resource/Araphor> ;
+    schema:deathPlace <https://yourkg.org/resource/Fall_of_Amon_S%C3%BBl> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "100" ;
+    ns1:caption "Arveleg from The Rise of the Witch-king" ;
+    ns1:image "Arveleg rotwk.jpg" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arveleg I" ;
+    ns1:parentage "Argeleb I" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Arveleg_II> a schema:Thing ;
+    rdfs:label "Arveleg II" ;
+    schema:children <https://yourkg.org/resource/Araval> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Arthedain> ;
+    schema:memberOf <https://yourkg.org/resource/Arnorian>,
+        <https://yourkg.org/resource/House_of_Isildur> ;
+    ns1:age "180" ;
+    ns1:language "Sindarin, Westron" ;
+    ns1:name "Arveleg II" ;
+    ns1:parentage "Arvegil" ;
+    ns1:titles "King of Arthedain" .
+
+<https://yourkg.org/resource/Frodo_Baggins> a schema:Thing ;
+    rdfs:label "Frodo Baggins" ;
+    schema:affiliation <https://yourkg.org/resource/Fellowship_of_the_Ring> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/Brandy_Hall>,
+        <https://yourkg.org/resource/BucklandBag_End>,
+        <https://yourkg.org/resource/HobbitonCrickhollowTol_Eress%C3%ABa> ;
+    schema:memberOf <https://yourkg.org/resource/Baggins>,
+        <https://yourkg.org/resource/Hobbit> ;
+    schema:spouse <https://yourkg.org/resource/Never_married> ;
+    ns1:age "53" ;
+    ns1:birth "22 September," ;
+    ns1:caption "'Frodo Baggins' by Matt Stewart" ;
+    ns1:clothing "Mithril coat, Elven cloak" ;
+    ns1:hair "Brown" ;
+    ns1:height "Taller than some Hobbits" ;
+    ns1:image "Matt Stewart - Frodo Baggins.webp" ;
+    ns1:language "Westron and Sindarin" ;
+    ns1:name "Frodo Baggins" ;
+    ns1:notablefor "Bearing the One Ring to the land of Mordor, and bringing it to the Cracks of Doom" ;
+    ns1:othernames "See below" ;
+    ns1:parentage "Drogo Baggins and Primula Brandybuck" ;
+    ns1:position "Ring-bearer" ;
+    ns1:ribboncolor "#90a26f" ;
+    ns1:ribbonid "test" ;
+    ns1:sailedfrom "Grey Havens" ;
+    ns1:sailedwest "29 September," ;
+    ns1:skin "Fairer than most Hobbits" ;
+    ns1:steed "Strider" ;
+    ns1:weapons "Sting" .
+
+<https://yourkg.org/resource/Tar-Ancalimon> a schema:Thing ;
+    rdfs:label "Tar-Ancalimon" ;
+    schema:affiliation <https://yourkg.org/resource/King's_Men> ;
+    schema:children <https://yourkg.org/resource/Tar-Telemmait%C3%AB> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "400" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Tar-Ancalimon" ;
+    ns1:parentage "Tar-Atanamir" ;
+    ns1:rule "- (165 years)" ;
+    ns1:titles "King of Númenor" .
+
+<https://yourkg.org/resource/Tar-S%C3%BArion> a schema:Thing ;
+    rdfs:label "Tar-Súrion" ;
+    schema:children <https://yourkg.org/resource/Tar-Telperi%C3%ABn_and_Isilmo> ;
+    schema:gender "Male" ;
+    schema:location <https://yourkg.org/resource/N%C3%BAmenor> ;
+    schema:memberOf <https://yourkg.org/resource/House_of_Elros>,
+        <https://yourkg.org/resource/N%C3%BAmen%C3%B3rean> ;
+    ns1:age "400" ;
+    ns1:language "Adûnaic, Sindarin and Quenya" ;
+    ns1:name "Tar-Súrion" ;
+    ns1:parentage "Tar-Anárion" ;
+    ns1:rule "- (162 years)" ;
+    ns1:siblings "Two older sisters" ;
+    ns1:titles "King of Númenor" .
+

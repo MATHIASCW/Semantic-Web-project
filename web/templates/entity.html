@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <style>
+      :root {
+        --ink: #1a1b1e;
+        --paper: #f7f0e3;
+        --accent: #b13f24;
+        --muted: #6b6b6b;
+        --panel: #ffffff;
+        --line: #e7dcc9;
+        --shadow: rgba(0,0,0,0.08);
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 600px at 10% -10%, #fff4db 0%, transparent 60%),
+          radial-gradient(900px 600px at 110% 10%, #f2e3c7 0%, transparent 55%),
+          linear-gradient(140deg, #f8f3ea 0%, #efe3cf 100%);
+        font-family: "Georgia", "Times New Roman", serif;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 28px 20px 40px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 18px 20px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 10px 24px var(--shadow);
+        position: relative;
+        overflow: hidden;
+        animation: fadeUp 0.5s ease-out;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -120px;
+        top: -80px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(177,63,36,0.12), transparent 65%);
+      }
+      .title {
+        font-size: 30px;
+        letter-spacing: 0.3px;
+        margin: 0;
+      }
+      .uri {
+        color: var(--muted);
+        font-family: "Courier New", monospace;
+        font-size: 13px;
+        word-break: break-all;
+      }
+      .image {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .image img {
+        max-width: 100%;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        box-shadow: 0 6px 16px var(--shadow);
+      }
+      .badge {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        text-transform: uppercase;
+      }
+      .back {
+        display: inline-block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: bold;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 18px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 24px var(--shadow);
+      }
+      th, td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        font-size: 14px;
+      }
+      th {
+        background: #f8f5ef;
+        text-align: left;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      code {
+        background: #f7f1e7;
+        padding: 2px 6px;
+        border-radius: 6px;
+        border: 1px solid var(--line);
+      }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(6px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @media (min-width: 768px) {
+        .hero { grid-template-columns: 2fr 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="/">← Back</a>
+      <div class="hero">
+        <div>
+          <span class="badge">Entity</span>
+          <h1 class="title">{{ title }}</h1>
+          <div class="uri">{{ uri }}</div>
+        </div>
+        <div class="image">
+          {% if image %}
+          <img src="{{ image }}" alt="{{ title }}" />
+          {% endif %}
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>Predicate</th><th>Object</th></tr></thead>
+        <tbody>
+          {% if rows|length == 0 %}
+          <tr>
+            <td colspan="2">No triples found for this entity.</td>
+          </tr>
+          {% else %}
+          {% for p, o in rows %}
+          <tr>
+            <td><code>{{ p.rsplit('/', 1)[-1] }}</code></td>
+            <td>
+              {% if o.startswith("https://yourkg.org/resource/") %}
+              <a href="/resource/{{ o.rsplit('/', 1)[-1].replace('_', ' ') }}">{{ o }}</a>
+              {% else %}
+              {{ o }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
