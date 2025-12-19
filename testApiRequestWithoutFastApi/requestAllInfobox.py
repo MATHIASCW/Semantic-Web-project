@@ -43,7 +43,6 @@ def extract_infobox(wikitext):
     return None
 
 
-# Get all page titles from the wiki
 def get_all_page_titles(limit=500):
     API = "https://tolkiengateway.net/w/api.php"
     params = {
@@ -75,14 +74,11 @@ def get_all_page_titles(limit=500):
             break
     return titles
 
-# Fetch and print infobox for each page
-
-# Create output directory
 output_dir = "infoboxes"
 os.makedirs(output_dir, exist_ok=True)
 
 start_time = time.time()
-all_titles = get_all_page_titles(limit=50)  # You can increase the limit
+all_titles = get_all_page_titles(limit=50)
 log_file = os.path.join(output_dir, "infobox_log.txt")
 with open(log_file, "w", encoding="utf-8") as log:
     for idx, title in enumerate(all_titles, 1):

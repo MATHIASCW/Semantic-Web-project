@@ -1,2 +1,4 @@
 infoboxes
+*.zip
 .venv
+.gitignore
