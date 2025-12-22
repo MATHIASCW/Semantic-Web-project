@@ -1,0 +1,164 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kg-ont: <http://tolkien-kg.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+
+############################
+# Classes
+############################
+
+kg-ont:Character a owl:Class ;
+    rdfs:label "Character" ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:comment "Personnage de l'univers de Tolkien (personnage fictif tel que défini sur Tolkien Gateway)." .
+
+kg-ont:House a owl:Class ;
+    rdfs:label "House" ;
+    rdfs:comment "Maison, lignée ou famille noble." .
+
+kg-ont:Race a owl:Class ;
+    rdfs:label "Race" ;
+    rdfs:comment "Race (Elfe, Homme, Nain, Hobbit, Maia, etc.)." .
+
+kg-ont:Location a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "Lieu géographique (village, ville, région, royaume, etc.)." .
+
+############################
+# Object Properties
+############################
+
+kg-ont:affiliation a owl:ObjectProperty ;
+    rdfs:label "affiliation" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range schema:Organization ;
+    rdfs:comment "Organisation, maison ou groupe affilié." .
+
+kg-ont:deathLocation a owl:ObjectProperty ;
+    rdfs:label "death location" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range kg-ont:Location ;
+    rdfs:comment "Lieu de décès." .
+
+kg-ont:birthLocation a owl:ObjectProperty ;
+    rdfs:label "birth location" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range kg-ont:Location ;
+    rdfs:comment "Lieu de naissance." .
+
+kg-ont:family a owl:ObjectProperty ;
+    rdfs:label "family" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range kg-ont:House ;
+    rdfs:comment "Famille ou maison à laquelle le personnage appartient." .
+
+kg-ont:parentage a owl:ObjectProperty ;
+    rdfs:label "parentage" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range kg-ont:Character ;
+    rdfs:comment "Relation parentale (parent d’un personnage)." .
+
+kg-ont:siblings a owl:ObjectProperty ;
+    rdfs:label "siblings" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range kg-ont:Character ;
+    rdfs:comment "Frères et sœurs." .
+
+kg-ont:spouse a owl:ObjectProperty ;
+    rdfs:label "spouse" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range kg-ont:Character ;
+    rdfs:comment "Conjoint(e)." .
+
+kg-ont:children a owl:ObjectProperty ;
+    rdfs:label "children" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range kg-ont:Character ;
+    rdfs:comment "Enfants." .
+
+kg-ont:steed a owl:ObjectProperty ;
+    rdfs:label "steed" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:comment "Monture ou destrier." .
+
+kg-ont:weapons a owl:ObjectProperty ;
+    rdfs:label "weapons" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:comment "Armes utilisées." .
+
+############################
+# Datatype Properties
+############################
+
+kg-ont:birthDate a owl:DatatypeProperty ;
+    rdfs:label "birth date" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Date de naissance." .
+
+kg-ont:deathDate a owl:DatatypeProperty ;
+    rdfs:label "death date" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Date de décès." .
+
+kg-ont:rulePeriod a owl:DatatypeProperty ;
+    rdfs:label "rule period" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Période de règne (si applicable)." .
+
+kg-ont:otherNames a owl:DatatypeProperty ;
+    rdfs:label "other names" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Autres noms ou surnoms." .
+
+kg-ont:position a owl:DatatypeProperty ;
+    rdfs:label "position or title" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Position, titre ou fonction." .
+
+kg-ont:gender a owl:DatatypeProperty ;
+    rdfs:label "gender" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Genre (ex: Male, Female, etc.)." .
+
+kg-ont:age a owl:DatatypeProperty ;
+    rdfs:label "age" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Âge." .
+
+kg-ont:height a owl:DatatypeProperty ;
+    rdfs:label "height" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Taille." .
+
+kg-ont:hairColor a owl:DatatypeProperty ;
+    rdfs:label "hair color" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Couleur des cheveux." .
+
+kg-ont:eyeColor a owl:DatatypeProperty ;
+    rdfs:label "eye color" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Couleur des yeux." .
+
+kg-ont:clothing a owl:DatatypeProperty ;
+    rdfs:label "clothing" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Description des vêtements." .
+
+kg-ont:notableFor a owl:DatatypeProperty ;
+    rdfs:label "notable for" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Ce pour quoi le personnage est notable (champ notablefor dans l’infobox)." .

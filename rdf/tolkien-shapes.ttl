@@ -1,0 +1,24 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix kg-ont: <http://tolkien-kg.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+
+kg-ont:PersonShape a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Chaque personne doit avoir exactement un nom" ;
+    ] ;
+    sh:property [
+        sh:path schema:gender ;
+        sh:maxCount 1 ;
+        sh:in ( "Male" "Female" "Unknown" ) ;
+        sh:message "Le genre doit être Male, Female ou Unknown" ;
+    ] ;
+    sh:property [
+        sh:path dbp:birthDate ;
+        sh:maxCount 1 ;
+        sh:message "Une seule date de naissance" ;
+    ] .
