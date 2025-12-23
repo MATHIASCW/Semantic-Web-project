@@ -162,3 +162,228 @@ kg-ont:notableFor a owl:DatatypeProperty ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string ;
     rdfs:comment "Ce pour quoi le personnage est notable (champ notablefor dans l’infobox)." .
+
+kg-ont:album a owl:DatatypeProperty ;
+    rdfs:label "album" ;
+    rdfs:domain schema:MusicRecording ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Nom de l'album musical." .
+
+kg-ont:composer a owl:DatatypeProperty ;
+    rdfs:label "composer" ;
+    rdfs:domain schema:MusicRecording ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Compositeur de l'œuvre." .
+
+kg-ont:track a owl:DatatypeProperty ;
+    rdfs:label "track" ;
+    rdfs:domain schema:MusicRecording ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Numéro ou nom de la piste." .
+
+kg-ont:audio a owl:DatatypeProperty ;
+    rdfs:label "audio" ;
+    rdfs:domain schema:MusicRecording ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Fichier ou lien audio." .
+
+kg-ont:lyricist a owl:DatatypeProperty ;
+    rdfs:label "lyricist" ;
+    rdfs:domain schema:MusicRecording ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Auteur des paroles." .
+
+kg-ont:performer a owl:DatatypeProperty ;
+    rdfs:label "performer" ;
+    rdfs:domain schema:MusicRecording ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Interprète." .
+
+kg-ont:duration a owl:DatatypeProperty ;
+    rdfs:label "duration" ;
+    rdfs:domain schema:MusicRecording ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Durée de l'œuvre." .
+
+kg-ont:gallery a owl:DatatypeProperty ;
+    rdfs:label "gallery" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Galerie d'images ou de médias." .
+
+kg-ont:caption a owl:DatatypeProperty ;
+    rdfs:label "caption" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Légende ou description." .
+
+kg-ont:subtitle a owl:DatatypeProperty ;
+    rdfs:label "subtitle" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Sous-titre." .
+
+kg-ont:timeline a owl:DatatypeProperty ;
+    rdfs:label "timeline" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Chronologie ou période." .
+
+kg-ont:additionalcredits a owl:DatatypeProperty ;
+    rdfs:label "additional credits" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Crédits additionnels." .
+
+kg-ont:writer a owl:DatatypeProperty ;
+    rdfs:label "writer" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Auteur ou scénariste." .
+
+kg-ont:next a owl:ObjectProperty ;
+    rdfs:label "next" ;
+    rdfs:comment "Ressource suivante dans une séquence." .
+
+kg-ont:previous a owl:ObjectProperty ;
+    rdfs:label "previous" ;
+    rdfs:comment "Ressource précédente dans une séquence." .
+
+kg-ont:people a owl:DatatypeProperty ;
+    rdfs:label "people" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Personnes associées." .
+
+kg-ont:people-duplicated a owl:DatatypeProperty ;
+    rdfs:label "people duplicated" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Personnes dupliquées (données redondantes)." .
+
+kg-ont:members a owl:DatatypeProperty ;
+    rdfs:label "members" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Membres d'un groupe ou d'une organisation." .
+
+kg-ont:heritage a owl:DatatypeProperty ;
+    rdfs:label "heritage" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Héritage ou ascendance." .
+
+kg-ont:language a owl:DatatypeProperty ;
+    rdfs:label "language" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Langue." .
+
+kg-ont:pronun a owl:DatatypeProperty ;
+    rdfs:label "pronunciation" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Prononciation." .
+
+kg-ont:skin a owl:DatatypeProperty ;
+    rdfs:label "skin" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Peau." .
+
+kg-ont:skin_colour a owl:DatatypeProperty ;
+    rdfs:label "skin colour" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Couleur de peau." .
+
+kg-ont:eyes a owl:DatatypeProperty ;
+    rdfs:label "eyes" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Description des yeux." .
+
+kg-ont:hair a owl:DatatypeProperty ;
+    rdfs:label "hair" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Description des cheveux." .
+
+kg-ont:distinctions a owl:DatatypeProperty ;
+    rdfs:label "distinctions" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Distinctions ou titres honorifiques." .
+
+kg-ont:realm a owl:DatatypeProperty ;
+    rdfs:label "realm" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Royaume ou territoire." .
+
+kg-ont:species a owl:DatatypeProperty ;
+    rdfs:label "species" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Espèce." .
+
+kg-ont:slayer a owl:DatatypeProperty ;
+    rdfs:label "slayer" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Tueur ou destructeur." .
+
+kg-ont:spotify a owl:DatatypeProperty ;
+    rdfs:label "spotify" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lien Spotify." .
+
+kg-ont:ribboncolor a owl:DatatypeProperty ;
+    rdfs:label "ribbon color" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Couleur du ruban (pour les distinctions visuelles)." .
+
+kg-ont:ribbonid a owl:DatatypeProperty ;
+    rdfs:label "ribbon id" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identifiant du ruban." .
+
+kg-ont:rule a owl:DatatypeProperty ;
+    rdfs:label "rule" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Règne ou période de règne." .
+
+kg-ont:sailedfrom a owl:DatatypeProperty ;
+    rdfs:label "sailed from" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lieu de départ (navigation)." .
+
+kg-ont:sailedto a owl:DatatypeProperty ;
+    rdfs:label "sailed to" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Lieu d'arrivée (navigation)." .
+
+kg-ont:sailedwest a owl:DatatypeProperty ;
+    rdfs:label "sailed west" ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A navigué vers l'ouest." .
+
+# Corrections de fautes de frappe et doublons
+kg-ont:birthlocation a owl:ObjectProperty ;
+    rdfs:label "birth location" ;
+    rdfs:comment "Alias pour birthLocation (corriger dans les données)." .
+
+kg-ont:deathlocation a owl:ObjectProperty ;
+    rdfs:label "death location" ;
+    rdfs:comment "Alias pour deathLocation (corriger dans les données)." .
+
+kg-ont:notable_for a owl:DatatypeProperty ;
+    rdfs:label "notable for" ;
+    rdfs:comment "Alias pour notableFor (corriger dans les données)." .
+
+kg-ont:othernames a owl:DatatypeProperty ;
+    rdfs:label "other names" ;
+    rdfs:comment "Alias pour otherNames (corriger dans les données)." .
+
+kg-ont:1 a owl:DatatypeProperty ;
+    rdfs:label "1" ;
+    rdfs:comment "Clé numérique issue d'une erreur d'extraction." .
+
+kg-ont:2 a owl:DatatypeProperty ;
+    rdfs:label "2" ;
+    rdfs:comment "Clé numérique issue d'une erreur d'extraction." .
+
+
+kg-ont:death a owl:DatatypeProperty ;
+    rdfs:label "death" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Date ou circonstances de la mort." .
+
+kg-ont:race a owl:ObjectProperty ;
+    rdfs:label "race" ;
+    rdfs:domain kg-ont:Character ;
+    rdfs:range kg-ont:Race ;
+    rdfs:comment "Race du personnage (Elfe, Homme, etc.)." .
+
+

@@ -13,7 +13,7 @@ Fonctions clés
 - `clean_value(v)`: nettoie HTML simple, références <ref>, entités; convertit templates de dates en texte.
 - `ttl_escape(s)`: échappe correctement les caractères problématiques pour Turtle (quotes, backslashes, newlines).
 - `only_markup_and_links(s)`: détecte si la valeur ne contient que du markup/liens sans texte résiduel.
-- `sanitize_title_to_iri_local(title)`: convertit un titre wiki en CURIE local `ex:...` sûr pour Turtle.
+- `sanitize_title_to_iri_local(title)`: convertit un titre wiki en CURIE local `kg-res:...` sûr pour Turtle.
 - `wiki_value_to_rdf_normalized(value, pred, out)`: écrit des IRIs si uniquement des liens; sinon un littéral propre.
 - `extract_infobox_block(wikitext)`: extrait le bloc {{Infobox ...}} en comptant les paires d’accolades.
 - `parse_infobox(text)`: parse les arguments de l’infobox et retourne un dict clé → valeur.
@@ -35,7 +35,7 @@ Utilisation
 Notes
 - Le sujet est typé `schema:Person` par défaut.
 - Fallback: si aucune écriture n’a eu lieu pour une valeur, un littéral échappé via `ttl_escape` est produit.
-- Les IRIs locaux pour valeurs utilisent `ex:`; les sujets utilisent `kg-res:`.
+- Les IRIs locaux pour valeurs utilisent `kg-res:`.
 """
 
 def clean_value(v):
@@ -72,7 +72,7 @@ def only_markup_and_links(s: str) -> bool:
     return tmp == ''
 
 def sanitize_title_to_iri_local(title: str) -> str:
-    """Vers un CURIE local 'ex:Title_With_Underscores' sûr pour Turtle."""
+    """Vers un CURIE local 'kg-res:Title_With_Underscores' sûr pour Turtle."""
     t = title.strip()
     t = t.replace(' ', '_')
     t = ''.join(c if c.isalnum() or c in ('_', '-', '.') else '_' for c in t)
@@ -80,7 +80,7 @@ def sanitize_title_to_iri_local(title: str) -> str:
     t = t.strip('_')
     if not t:
         t = 'unknown'
-    return f"ex:{t}"
+    return f"kg-res:{t}"
 
 def wiki_value_to_rdf_normalized(value: str, pred: str, out) -> bool:
     """
@@ -148,6 +148,9 @@ property_map = {
     'name': 'schema:name',
     'birth': 'dbp:birthDate',
     'birthlocation': 'schema:birthPlace',
+    'birthLocation': 'schema:birthPlace',
+    'deathlocation': 'schema:deathPlace',
+    'deathLocation': 'schema:deathPlace',
     'gender': 'schema:gender',
     'image': 'schema:image',
     'parentage': 'schema:parent',
@@ -158,20 +161,56 @@ property_map = {
     'house': 'dbp:house',
     'age': 'schema:age',
     'notablefor': 'schema:description',
+    'notableFor': 'schema:description',
+    'race': 'kg-ont:race',
+    'death': 'schema:deathDate',
 }
 
+def parse_embedded_infoboxes(data):
+    """Récupère tous les contentN et labelN, retourne une liste de (label, infobox_dict)"""
+    embedded = []
+    for k, v in data.items():
+        if k.startswith("content") and v.startswith("{{"):
+            idx = k[len("content"):]
+            label = data.get(f"label{idx}", "")
+            parsed = wtp.parse(v)
+            for t in parsed.templates:
+                if t.name.strip().lower().startswith("song") or t.name.strip().lower().startswith("infobox"):
+                    subdata = {}
+                    for arg in t.arguments:
+                        subdata[arg.name.strip()] = clean_value(arg.value.strip())
+                    embedded.append((label, t.name.strip().lower(), subdata))
+    return embedded
+
+def get_type_from_template(template_name):
+    if "song" in template_name:
+        return "schema:MusicRecording"
+    if "album" in template_name:
+        return "schema:MusicAlbum"
+    if "movie" in template_name:
+        return "schema:Movie"
+    if "game" in template_name:
+        return "schema:VideoGame"
+    if "book" in template_name:
+        return "schema:Book"
+    if "character" in template_name or "person" in template_name:
+        return "kg-ont:Character"
+    return "schema:CreativeWork"
+
 def sanitize_subject_iri(entity: str) -> str:
-    """Nettoie le nom d'entité pour en faire un IRI valide."""
     t = entity.strip()
     t = t.replace(' ', '_')
-    t = ''.join(c if c.isalnum() or c in ('_', '-', '.') else f'%{ord(c):02X}' for c in t)
+    t = ''.join(c if c.isalnum() or c in ('_', '-', '.') else '_' for c in t)
+    t = re.sub(r'_{2,}', '_', t)
+    t = t.strip('_')
+    if not t:
+        t = 'unknown'
     return f"kg-res:{t}"
 
 output_file = os.path.join(output_dir, "all_infoboxes.ttl")
 with open(output_file, "w", encoding="utf-8") as out:
     out.write("""@prefix kg-ont: <http://tolkien-kg.org/ontology/> .
 @prefix kg-res: <http://tolkien-kg.org/resource/> .
-@prefix ex: <http://example.org/> .
 @prefix schema: <http://schema.org/> .
 @prefix dbp: <http://dbpedia.org/property/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
@@ -186,15 +225,48 @@ with open(output_file, "w", encoding="utf-8") as out:
             infobox_text = "".join(lines[1:])
             data = parse_infobox(infobox_text)
             subj = sanitize_subject_iri(entity)
-            out.write(f"{subj} a schema:Person")
-            wrote_any = False
-            for k, v in data.items():
-                if not v:
-                    continue
-                pred = property_map.get(k.lower(), f"kg-ont:{k.replace(' ', '_')}")
-                if not wiki_value_to_rdf_normalized(v, pred, out):
-                    out.write(f'  ;\n  {pred} "{ttl_escape(v)}"')
-                wrote_any = True
+
+            embedded = parse_embedded_infoboxes(data)
+            sub_iris = []
+
+            for k in list(data.keys()):
+                if k.startswith("content") or k.startswith("label"):
+                    del data[k]
+
+            out.write(f"{subj} a schema:CreativeWork")
+            if "name" in data and data["name"]:
+                out.write(f' ;\n  schema:name "{ttl_escape(data["name"])}"')
+            else:
+                out.write(f' ;\n  schema:name "{ttl_escape(entity)}"')
+            for idx, (label, template, subdata) in enumerate(embedded):
+                sub_iri = f"{subj}_{label.replace(' ', '_') or 'part'}"
+                sub_iris.append(sub_iri)
+                out.write(f" ;\n  schema:hasPart {sub_iri}")
             out.write(" .\n\n")
-            print(f"RDF triples added for {entity}")
+
+            for idx, (label, template, subdata) in enumerate(embedded):
+                sub_iri = f"{subj}_{label.replace(' ', '_') or 'part'}"
+                sub_type = get_type_from_template(template)
+                out.write(f"{sub_iri} a {sub_type}")
+                if "title" in subdata and subdata["title"]:
+                    out.write(f' ;\n  schema:name "{ttl_escape(subdata["title"])}"')
+                for k, v in subdata.items():
+                    if not v or k == "title":
+                        continue
+                    pred = property_map.get(k, property_map.get(k.lower(), f"kg-ont:{k.replace(' ', '_')}"))
+                    if not wiki_value_to_rdf_normalized(v, pred, out):
+                        out.write(f'  ;\n  {pred} "{ttl_escape(v)}"')
+                out.write(" .\n\n")
+
+            if not embedded:
+                main_type = get_type_from_template("infobox character" if "character" in data else "infobox")
+                out.write(f"{subj} a {main_type}")
+                for k, v in data.items():
+                    if not v:
+                        continue
+                    pred = property_map.get(k, property_map.get(k.lower(), f"kg-ont:{k.replace(' ', '_')}"))
+                    if not wiki_value_to_rdf_normalized(v, pred, out):
+                        out.write(f'  ;\n  {pred} "{ttl_escape(v)}"')
+                out.write(" .\n\n")
+
     print(f"All infoboxes written to {output_file}")
