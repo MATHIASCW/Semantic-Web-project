@@ -49,19 +49,19 @@ kg-ont:CharacterShape a sh:NodeShape ;
     # Relations parentales (peuvent avoir plusieurs valeurs)
     sh:property [
         sh:path kg-ont:parentage ;
-        sh:node kg-ont:CharacterShape ;
+        sh:class kg-ont:Character ;
         sh:message "Les parents doivent être des Personnages." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:children ;
-        sh:node kg-ont:CharacterShape ;
+        sh:class kg-ont:Character ;
         sh:message "Les enfants doivent être des Personnages." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:spouse ;
-        sh:node kg-ont:CharacterShape ;
+        sh:class kg-ont:Character ;
         sh:maxCount 1 ;
         sh:message "L'époux/épouse doit être un Personnage (max 1)." ;
     ] ;

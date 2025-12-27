@@ -1,6 +1,6 @@
 import requests
 import re
-
+#Test Obsolete file to be deleted later ?
 API = "https://tolkiengateway.net/w/api.php"
 
 def get_infobox_wikitext(page_title):
