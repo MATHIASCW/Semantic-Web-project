@@ -2,6 +2,7 @@
 @prefix kg-ont: <http://tolkien-kg.org/ontology/> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 kg-ont:CharacterShape a sh:NodeShape ;
     sh:targetClass kg-ont:Character ;

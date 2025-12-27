@@ -72,10 +72,13 @@ def only_markup_and_links(s: str) -> bool:
     return tmp == ''
 
 def sanitize_title_to_iri_local(title: str) -> str:
-    """Vers un CURIE local 'kg-res:Title_With_Underscores' sûr pour Turtle."""
+    """Vers un CURIE local 'kg-res:Title_With_Underscores' sûr pour Turtle, sans ponctuation ni accents."""
+    import unicodedata
     t = title.strip()
     t = t.replace(' ', '_')
-    t = ''.join(c if c.isalnum() or c in ('_', '-', '.') else '_' for c in t)
+    t = unicodedata.normalize('NFD', t)
+    t = ''.join(c for c in t if unicodedata.category(c) != 'Mn')
+    t = ''.join(c if c.isalnum() or c in ('_', '.') else '_' for c in t)
     t = re.sub(r'_{2,}', '_', t)
     t = t.strip('_')
     if not t:
@@ -198,9 +201,12 @@ def get_type_from_template(template_name):
     return "schema:CreativeWork"
 
 def sanitize_subject_iri(entity: str) -> str:
+    import unicodedata
     t = entity.strip()
     t = t.replace(' ', '_')
-    t = ''.join(c if c.isalnum() or c in ('_', '-', '.') else '_' for c in t)
+    t = unicodedata.normalize('NFD', t)
+    t = ''.join(c for c in t if unicodedata.category(c) != 'Mn')
+    t = ''.join(c if c.isalnum() or c in ('_', '.') else '_' for c in t)
     t = re.sub(r'_{2,}', '_', t)
     t = t.strip('_')
     if not t:
