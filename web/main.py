@@ -93,6 +93,18 @@ async def get_resource(name: str, request: Request, format: str = Query(None, al
             status_code=404,
             content={"error": f"Ressource '{name}' non trouvée"}
         )
+
+    # Optional: Redirect to canonical local-name if different (helps avoid 404s from mismatched casing)
+    try:
+        canonical = resource_uri.rsplit('/', 1)[-1]
+        if canonical != name:
+            # Preserve requested format if present
+            suffix = ""
+            if format:
+                suffix = f"?format={format}"
+            return HTMLResponse(status_code=307, content="", headers={"Location": f"/resource/{canonical}{suffix}"})
+    except Exception:
+        pass
     
     properties = get_resource_properties(resource_uri)
     if not properties:

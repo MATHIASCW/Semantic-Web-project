@@ -81,7 +81,8 @@ def build_summary_table(resource: ResourceData) -> str:
     def render_val(v: str):
         if v.startswith('http://') or v.startswith('https://'):
             lbl = format_property_label(v)
-            return f'<a href="/resource/{quote(lbl)}">{escape(lbl)}</a>'
+            local = v.rsplit('/', 1)[-1]
+            return f'<a href="/resource/{quote(local)}">{escape(lbl)}</a>'
         return escape(v)
     
     summary_rows = []
@@ -133,7 +134,8 @@ def build_properties_section(resource: ResourceData) -> str:
             
             if value.startswith('http://') or value.startswith('https://'):
                 value_label = format_property_label(value)
-                html += f'<div class="value-item"><a href="/resource/{quote(value_label)}">{escape(value_label)}</a></div>'
+                local = value.rsplit('/', 1)[-1]
+                html += f'<div class="value-item"><a href="/resource/{quote(local)}">{escape(value_label)}</a></div>'
             else:
                 html += f'<div class="value-item">{escape(str(value))}</div>'
         
@@ -421,7 +423,8 @@ def generate_html_page(resource: ResourceData) -> str:
         for value in values:
             if value.startswith('http://') or value.startswith('https://'):
                 value_label = format_property_label(value)
-                value_parts.append(f'<a href="/resource/{quote(value_label)}">{escape(value_label)}</a>')
+                local = value.rsplit('/', 1)[-1]
+                value_parts.append(f'<a href="/resource/{quote(local)}">{escape(value_label)}</a>')
             else:
                 value_parts.append(f'<span>{escape(str(value))}</span>')
         
@@ -475,9 +478,9 @@ def generate_html_page(resource: ResourceData) -> str:
             <div class="linked-data">
                 <h3>Formats disponibles</h3>
                 <div class="format-links">
-                    <a href="/resource/{quote(resource.name)}?format=turtle">📄 Turtle (RDF)</a>
-                    <a href="/resource/{quote(resource.name)}?format=json">📋 JSON</a>
-                    <a href="/resource/{quote(resource.name)}">🌐 HTML</a>
+                    <a href="/resource/{quote(resource.uri.rsplit('/', 1)[-1])}?format=turtle">📄 Turtle (RDF)</a>
+                    <a href="/resource/{quote(resource.uri.rsplit('/', 1)[-1])}?format=json">📋 JSON</a>
+                    <a href="/resource/{quote(resource.uri.rsplit('/', 1)[-1])}">🌐 HTML</a>
                 </div>
             </div>
             

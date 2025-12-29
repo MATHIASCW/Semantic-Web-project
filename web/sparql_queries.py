@@ -20,24 +20,28 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
     Returns the resource URI if found, None otherwise.
     """
     sparql = SPARQLWrapper(FUSEKI_URL)
-    
-    safe_name = resource_name.replace('"', '\"')
+    # 1) Try case-insensitive match on labels (schema:name, rdfs:label, kg-ont:name)
     name_predicates = [
         "http://schema.org/name",
         "http://www.w3.org/2000/01/rdf-schema#label",
         "http://tolkien-kg.org/ontology/name",
     ]
-
     predicates_values = " ".join(f"<{p}>" for p in name_predicates)
-    query = f'''
+
+    # Replace underscores/hyphens with spaces for label matching
+    label_candidate = resource_name.replace("_", " ").replace("-", " ")
+    safe_label = label_candidate.replace('"', '\"')
+
+    query_labels = f'''
         SELECT ?s WHERE {{
             VALUES ?p {{ {predicates_values} }}
-            ?s ?p "{safe_name}" .
+            ?s ?p ?name .
+            FILTER(LCASE(STR(?name)) = LCASE("{safe_label}"))
         }} LIMIT 1
     '''
-    sparql.setQuery(query)
+    sparql.setQuery(query_labels)
     sparql.setReturnFormat(JSON)
-    
+
     try:
         results = sparql.query().convert()
         if results["results"]["bindings"]:
@@ -45,11 +49,34 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
     except Exception:
         pass
 
+    # 2) Try case-insensitive match on local name part of subject IRI
+    local_candidate = resource_name.replace(" ", "_").replace("-", "_")
+    safe_local = local_candidate.replace('"', '\"')
+
+    query_local = f'''
+        SELECT ?s WHERE {{
+            VALUES ?base {{ "http://tolkien-kg.org/resource/" "http://tolkien-kg.org/ontology/" }}
+            ?s ?p ?o .
+            FILTER(STRSTARTS(STR(?s), ?base))
+            BIND(STRAFTER(STR(?s), ?base) AS ?local)
+            FILTER(LCASE(?local) = LCASE("{safe_local}"))
+        }} LIMIT 1
+    '''
+    sparql.setQuery(query_local)
+    sparql.setReturnFormat(JSON)
+    try:
+        results = sparql.query().convert()
+        if results["results"]["bindings"]:
+            return results["results"]["bindings"][0]["s"]["value"]
+    except Exception:
+        pass
+
+    # 3) Fallback: direct IRI guesses (as-is)
     iri_guesses = [
         build_iri(resource_name, "http://tolkien-kg.org/resource/"),
         build_iri(resource_name, "http://tolkien-kg.org/ontology/"),
     ]
-    
+
     for iri in iri_guesses:
         sparql.setQuery(f'''ASK {{ <{iri}> ?p ?o }}''')
         try:

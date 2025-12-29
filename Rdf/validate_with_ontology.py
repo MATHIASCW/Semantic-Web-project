@@ -17,10 +17,10 @@ en détectant les incohérences entre l'ontologie et les données réelles.
 """
 
 ontology = Graph()
-ontology.parse("rdf/tolkien-kg-ontology.ttl", format="turtle")
+ontology.parse("RdfData/tolkien-kg-ontology.ttl", format="turtle")
 
 data = Graph()
-data.parse("rdf/all_infoboxes.ttl", format="turtle")
+data.parse("RdfData/all_infoboxes.ttl", format="turtle")
 
 print(f"✅ Ontologie: {len(ontology)} triplets")
 print(f"✅ Données: {len(data)} triplets")

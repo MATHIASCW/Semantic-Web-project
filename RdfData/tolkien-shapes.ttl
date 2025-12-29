@@ -19,51 +19,59 @@ kg-ont:CharacterShape a sh:NodeShape ;
     # Genre avec valeurs contrôlées
     sh:property [
         sh:path schema:gender ;
-        sh:maxCount 1 ;
-        sh:in ( "Male" "Female" "Stallion" "Male (presumably)" ) ;
-        sh:message "Le genre doit être Male, Female, Stallion, ou Male (presumably)." ;
+        sh:datatype xsd:string ;
+        sh:message "Le genre doit être une chaîne de caractères." ;
     ] ;
     
-    # Dates (optionnelles mais limitées)
+    # Dates (optionnelles)
     sh:property [
         sh:path kg-ont:birthDate ;
-        sh:maxCount 1 ;
         sh:datatype xsd:string ;
-        sh:message "Une seule date de naissance." ;
+        sh:message "La date de naissance doit être une chaîne." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:deathDate ;
-        sh:maxCount 1 ;
         sh:datatype xsd:string ;
-        sh:message "Une seule date de décès." ;
+        sh:message "La date de décès doit être une chaîne." ;
     ] ;
     
     # Relation avec une Maison (famille)
     sh:property [
         sh:path kg-ont:family ;
-        sh:node kg-ont:HouseShape ;
-        sh:message "La famille doit être une instance de kg-ont:House." ;
+        sh:or (
+            [ sh:node kg-ont:HouseShape ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:message "La famille doit être un IRI House ou une string." ;
     ] ;
     
     # Relations parentales (peuvent avoir plusieurs valeurs)
     sh:property [
         sh:path kg-ont:parentage ;
-        sh:class kg-ont:Character ;
-        sh:message "Les parents doivent être des Personnages." ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:message "Les parents doivent être des IRIs ou des strings." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:children ;
-        sh:class kg-ont:Character ;
-        sh:message "Les enfants doivent être des Personnages." ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:message "Les enfants doivent être des IRIs ou des strings." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:spouse ;
-        sh:class kg-ont:Character ;
-        sh:maxCount 1 ;
-        sh:message "L'époux/épouse doit être un Personnage (max 1)." ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:message "L'epoux/epouse doit être un IRI ou une string." ;
     ] ;
     
     # Affiliation (peut être multiple)
@@ -72,17 +80,23 @@ kg-ont:CharacterShape a sh:NodeShape ;
         sh:message "L'affiliation doit être vers une organisation ou un groupe." ;
     ] ;
     
-    # Lieux
+    # Lieux (peuvent être des IRIs OU des strings)
     sh:property [
         sh:path kg-ont:birthLocation ;
-        sh:node kg-ont:LocationShape ;
-        sh:message "Le lieu de naissance doit être un Lieu." ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:message "Le lieu de naissance doit être soit un IRI, soit une string." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:deathLocation ;
-        sh:node kg-ont:LocationShape ;
-        sh:message "Le lieu de décès doit être un Lieu." ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:message "Le lieu de decès doit être soit un IRI, soit une string." ;
     ] ;
     
     # Propriétés physiques
@@ -119,20 +133,8 @@ kg-ont:CharacterShape a sh:NodeShape ;
 
 # Forme pour les Maisons
 kg-ont:HouseShape a sh:NodeShape ;
-    sh:targetClass kg-ont:House ;
-    sh:property [
-        sh:path rdfs:label ;
-        sh:minCount 1 ;
-        sh:datatype xsd:string ;
-        sh:message "Une Maison doit avoir un label." ;
-    ] .
+    sh:targetClass kg-ont:House .
 
 # Forme pour les Lieux
 kg-ont:LocationShape a sh:NodeShape ;
-    sh:targetClass kg-ont:Location ;
-    sh:property [
-        sh:path rdfs:label ;
-        sh:minCount 1 ;
-        sh:datatype xsd:string ;
-        sh:message "Un Lieu doit avoir un label." ;
-    ] .
+    sh:targetClass kg-ont:Location .
