@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolkien KG - Guide de l'Interface Web</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin: 40px 0 20px;
+            font-size: 32px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin: 30px 0 15px;
+            font-size: 24px;
+        }
+        
+        h3 {
+            color: #667eea;
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+        
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .code {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            border-left: 3px solid #764ba2;
+        }
+        
+        .step {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            border-left: 4px solid #764ba2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .step strong {
+            color: #667eea;
+        }
+        
+        .url {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 10px 0;
+            color: #667eea;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f9f9f9;
+            border-left: 3px solid #667eea;
+            border-radius: 2px;
+        }
+        
+        .feature-list li:before {
+            content: "✅ ";
+            margin-right: 10px;
+            color: #667eea;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        table tr:hover {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧙 Tolkien Knowledge Graph - Guide de l'Interface Web</h1>
+        
+        <div class="success">
+            <strong>✨ Excellentes nouvelles!</strong><br>
+            Votre interface web a été créée avec succès. Ce guide vous montre comment l'utiliser.
+        </div>
+
+        <h2>📍 Démarrage Rapide</h2>
+        
+        <h3>Étape 1: Démarrer le serveur</h3>
+        <div class="box">
+            <strong>Windows (le plus simple):</strong>
+            <div class="code">start_web.bat</div>
+            
+            <strong>Linux/Mac:</strong>
+            <div class="code">./start_web.sh</div>
+            
+            <strong>Manuel:</strong>
+            <div class="code">python run_web.py</div>
+        </div>
+
+        <h3>Étape 2: Ouvrir votre navigateur</h3>
+        <div class="box">
+            <div class="url">http://localhost:8000/</div>
+        </div>
+
+        <h3>Étape 3: Explorer!</h3>
+        <div class="box">
+            Vous verrez la page d'accueil avec:
+            <ul class="feature-list" style="margin-top: 10px;">
+                <li>Statistiques globales (total d'entités)</li>
+                <li>Cartes des catégories principales</li>
+                <li>Navigation vers les sections</li>
+            </ul>
+        </div>
+
+        <h2>🌐 Pages Disponibles</h2>
+
+        <div class="section">
+            <h3>1. Accueil</h3>
+            <div class="url">http://localhost:8000/</div>
+            <p>La page d'accueil affiche:</p>
+            <ul class="feature-list">
+                <li>31,379 entités totales</li>
+                <li>2,000 personnages</li>
+                <li>4,075 lieux</li>
+                <li>Cartes cliquables pour naviguer</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>2. Navigation</h3>
+            <div class="url">http://localhost:8000/browse</div>
+            <p>Interface pour parcourir les entités:</p>
+            <ul class="feature-list">
+                <li>Grille de 20 entités par page</li>
+                <li>Boîte de recherche (case-insensitive)</li>
+                <li>Filtres par type (Personnages, Lieux, Œuvres)</li>
+                <li>Pagination numérotée</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>3. Détail d'une Entité</h3>
+            <div class="url">http://localhost:8000/resource/Gandalf</div>
+            <p>Affiche toutes les informations:</p>
+            <ul class="feature-list">
+                <li>Toutes les propriétés de l'entité</li>
+                <li>Liens vers ressources liées</li>
+                <li>Timeline si disponible</li>
+                <li>Support JSON/Turtle</li>
+            </ul>
+        </div>
+
+        <h2>🔗 Exemples d'URLs</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Accueil</td>
+                    <td class="url">http://localhost:8000/</td>
+                </tr>
+                <tr>
+                    <td>Tous les personnages</td>
+                    <td class="url">http://localhost:8000/browse?type=Character</td>
+                </tr>
+                <tr>
+                    <td>Chercher "Gandalf"</td>
+                    <td class="url">http://localhost:8000/browse?search=Gandalf</td>
+                </tr>
+                <tr>
+                    <td>Page 2 de la navigation</td>
+                    <td class="url">http://localhost:8000/browse?page=2</td>
+                </tr>
+                <tr>
+                    <td>Détail de Gandalf</td>
+                    <td class="url">http://localhost:8000/resource/Gandalf</td>
+                </tr>
+                <tr>
+                    <td>Gandalf en JSON</td>
+                    <td class="url">http://localhost:8000/resource/Gandalf?format=json</td>
+                </tr>
+                <tr>
+                    <td>API Documentation</td>
+                    <td class="url">http://localhost:8000/docs</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🎯 Fonctionnalités Principales</h2>
+
+        <div class="section">
+            <h3>🔍 Recherche</h3>
+            <p>Trouvez rapidement une entité:</p>
+            <div class="step">
+                <strong>Étapes:</strong>
+                <ol style="margin: 10px 0 10px 20px;">
+                    <li>Aller à <span class="url" style="display: inline;">http://localhost:8000/browse</span></li>
+                    <li>Taper votre recherche dans la boîte</li>
+                    <li>Cliquer "Rechercher"</li>
+                </ol>
+                <p><strong>La recherche est case-insensitive:</strong> "gandalf", "GANDALF", "Gandalf" donnent les mêmes résultats.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🏷️ Filtres</h3>
+            <p>Filtrer par type d'entité:</p>
+            <ul class="feature-list">
+                <li><strong>Tous:</strong> Affiche toutes les entités</li>
+                <li><strong>👤 Personnages:</strong> Affiche uniquement les personnages</li>
+                <li><strong>🗺️ Lieux:</strong> Affiche uniquement les lieux</li>
+                <li><strong>📖 Œuvres:</strong> Affiche uniquement les œuvres</li>
+            </ul>
+            <p><strong>Les filtres sont combinables avec la recherche:</strong></p>
+            <div class="url">http://localhost:8000/browse?type=Character&search=Gandalf</div>
+        </div>
+
+        <div class="section">
+            <h3>📄 Pagination</h3>
+            <p>Naviguer entre les pages:</p>
+            <ul class="feature-list">
+                <li>20 entités par page</li>
+                <li>Boutons "Précédent" et "Suivant"</li>
+                <li>Navigation numérotée (1, 2, 3, ...)</li>
+                <li>Saute rapide aux premières/dernières pages</li>
+            </ul>
+        </div>
+
+        <h2>📊 Statistiques</h2>
+
+        <div class="section">
+            <p>Affichées sur la page d'accueil:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Entités totales</td>
+                        <td>31,379</td>
+                    </tr>
+                    <tr>
+                        <td>Personnages</td>
+                        <td>2,000</td>
+                    </tr>
+                    <tr>
+                        <td>Lieux</td>
+                        <td>4,075</td>
+                    </tr>
+                    <tr>
+                        <td>Œuvres</td>
+                        <td>~100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>🎨 Design et Responsive</h2>
+
+        <div class="section">
+            <h3>Thème</h3>
+            <ul class="feature-list">
+                <li>Gradient violet/rose professionnel</li>
+                <li>Cartes interactives avec hover effects</li>
+                <li>Emojis pour meilleure lisibilité</li>
+                <li>Navigation fluide</li>
+            </ul>
+
+            <h3>Responsive</h3>
+            <ul class="feature-list">
+                <li>Desktop: 4 colonnes</li>
+                <li>Tablette: 2-3 colonnes</li>
+                <li>Mobile: 1 colonne</li>
+                <li>Fonts adaptées à l'écran</li>
+            </ul>
+        </div>
+
+        <h2>📚 Documentation</h2>
+
+        <div class="section">
+            <p>Pour plus d'informations, consultez:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fichier</th>
+                        <th>Contenu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>WEB_INTERFACE.md</strong></td>
+                        <td>Guide complet de l'interface (60+ lignes)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>QUICK_START.py</strong></td>
+                        <td>Guide interactif de démarrage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CHANGELOG_WEB.md</strong></td>
+                        <td>Tous les changements effectués</td>
+                    </tr>
+                    <tr>
+                        <td><strong>INTERFACE_READY.md</strong></td>
+                        <td>Résumé détaillé de la création</td>
+                    </tr>
+                    <tr>
+                        <td><strong>/docs</strong></td>
+                        <td>Documentation API interactive (Swagger)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>⚠️ Dépannage</h2>
+
+        <div class="warning">
+            <h3>Fuseki non accessible</h3>
+            <p><strong>Symptôme:</strong> Les requêtes échouent</p>
+            <p><strong>Solution:</strong></p>
+            <div class="code">
+# Vérifier que Fuseki tourne:
+curl http://localhost:3030
+
+# Démarrer Fuseki:
+fuseki-server --mem /kg-tolkiengateway
+
+# Charger les données RDF:
+curl -X POST \
+  -H "Content-Type: text/turtle" \
+  -d @RdfData/all_infoboxes.ttl \
+  http://localhost:3030/kg-tolkiengateway/data
+            </div>
+        </div>
+
+        <div class="warning">
+            <h3>Pas de résultats</h3>
+            <p><strong>Symptôme:</strong> /browse affiche "Aucune entité trouvée"</p>
+            <p><strong>Solution:</strong> Les données RDF ne sont pas chargées. Voir "Fuseki non accessible" ci-dessus.</p>
+        </div>
+
+        <h2>✨ Prochaines Étapes</h2>
+
+        <div class="section">
+            <p>Vous pouvez maintenant:</p>
+            <ol style="margin: 10px 0 10px 20px;">
+                <li>✅ Démarrer l'interface web</li>
+                <li>✅ Explorer les personnages, lieux et œuvres</li>
+                <li>✅ Rechercher des entités spécifiques</li>
+                <li>✅ Consulter les détails de chaque entité</li>
+                <li>✅ Accéder à l'API REST pour l'intégration</li>
+            </ol>
+        </div>
+
+        <div class="success">
+            <strong>🎉 Félicitations!</strong><br>
+            Votre interface web Tolkien Knowledge Graph est prête à être utilisée!
+        </div>
+
+        <hr style="margin: 40px 0; border: none; border-top: 2px solid #ddd;">
+        
+        <p style="text-align: center; color: #666; margin-top: 40px;">
+            <strong>Créé avec ❤️ - Décembre 2025</strong><br>
+            Tolkien Knowledge Graph v2.0 avec Interface Web
+        </p>
+    </div>
+</body>
+</html>

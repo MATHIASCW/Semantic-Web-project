@@ -9,8 +9,11 @@ from web.sparql_queries import (
     get_resource_properties,
     get_characters_list,
     get_character_by_name,
+    get_statistics,
+    get_entities_by_type,
 )
 from web.html_renderer import generate_html_page, generate_turtle_for_resource
+from web.home_renderer import generate_home_page, generate_browse_page
 
 """
 Tolkien Knowledge Graph API
@@ -57,14 +60,55 @@ app.add_middleware(
 
 @app.get("/", tags=["Root"])
 def root():
-    """Bienvenue sur l'API Tolkien Knowledge Graph."""
-    return {"message": "Bienvenue sur l'API Tolkien Knowledge Graph. Voir /docs pour la documentation."}
+    """Page d'accueil - Affiche les statistiques et catégories."""
+    stats = get_statistics()
+    html = generate_home_page(stats)
+    return HTMLResponse(html)
 
 @app.get("/characters", tags=["Characters"])
 def list_characters(limit: int = Query(100, ge=1, le=500)):
     """Retourne une liste de personnages (noms) du knowledge graph."""
     names = get_characters_list(limit)
     return {"count": len(names), "characters": names}
+
+
+@app.get("/browse", tags=["Browse"])
+def browse_entities(
+    type: str = Query(None, alias="type"),
+    page: int = Query(1, ge=1),
+    search: str = Query(None, alias="search")
+):
+    """
+    Page de navigation interactive pour parcourir les entités.
+    
+    Query params:
+    - type: Character, Location, Work (optionnel)
+    - page: numéro de page (défaut: 1)
+    - search: terme de recherche (optionnel)
+    """
+    ITEMS_PER_PAGE = 20
+    offset = (page - 1) * ITEMS_PER_PAGE
+    
+    entities, total_count = get_entities_by_type(
+        entity_type=type,
+        limit=ITEMS_PER_PAGE,
+        offset=offset,
+        search_query=search
+    )
+    
+    total_pages = (total_count + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE
+    if total_pages == 0:
+        total_pages = 1
+    
+    html = generate_browse_page(
+        entities=entities,
+        entity_type=type,
+        page=page,
+        total_pages=total_pages,
+        search_query=search
+    )
+    
+    return HTMLResponse(html)
 
 @app.get("/character/{name}", tags=["Characters"])
 def get_character(name: str):
@@ -94,11 +138,9 @@ async def get_resource(name: str, request: Request, format: str = Query(None, al
             content={"error": f"Ressource '{name}' non trouvée"}
         )
 
-    # Optional: Redirect to canonical local-name if different (helps avoid 404s from mismatched casing)
     try:
         canonical = resource_uri.rsplit('/', 1)[-1]
         if canonical != name:
-            # Preserve requested format if present
             suffix = ""
             if format:
                 suffix = f"?format={format}"

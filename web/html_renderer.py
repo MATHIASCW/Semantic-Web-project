@@ -7,6 +7,7 @@ import re
 from typing import List, Dict, Optional
 
 from .models import ResourceData, TimelineEvent, PageContent
+from .styles import get_resource_css
 
 
 def format_property_label(predicate_uri: str) -> str:
@@ -175,201 +176,6 @@ def build_image_section(image_url: Optional[str], resource_name: str) -> str:
         return f'<div><strong>Image:</strong> <a href="{escape(file_page)}" target="_blank">{escape(file_name)}</a></div>'
 
 
-def get_css_styles() -> str:
-    """Return CSS styles for HTML pages (DBpedia-like style)."""
-    return """
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { 
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-                background: #f5f5f5; 
-                color: #333;
-            }
-            .container { 
-                max-width: 1200px; 
-                margin: 30px auto; 
-                padding: 0 20px;
-                background: white;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            }
-            
-            /* Header section */
-            .page-header {
-                border-bottom: 1px solid #e5e5e5;
-                padding: 30px 0;
-                margin-bottom: 30px;
-            }
-            .page-title {
-                font-size: 28px;
-                font-weight: bold;
-                color: #1a472a;
-                margin-bottom: 5px;
-            }
-            .page-subtitle {
-                font-size: 14px;
-                color: #666;
-                line-height: 1.6;
-            }
-            .page-subtitle a {
-                color: #0066cc;
-                text-decoration: none;
-            }
-            .page-subtitle a:hover {
-                text-decoration: underline;
-            }
-            
-            /* Image section */
-            .infobox {
-                float: right;
-                width: 300px;
-                margin-left: 20px;
-                margin-bottom: 20px;
-                text-align: center;
-            }
-            .infobox img {
-                max-width: 100%;
-                height: auto;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-            }
-            
-            /* Properties table */
-            .properties-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 20px 0;
-                clear: both;
-            }
-            .properties-table tr {
-                border-bottom: 1px solid #e5e5e5;
-            }
-            .properties-table tr:hover {
-                background: #f9f9f9;
-            }
-            .properties-table th {
-                background: #f5f5f5;
-                text-align: left;
-                font-weight: 600;
-                padding: 12px 15px;
-                border-bottom: 2px solid #ddd;
-            }
-            .properties-table td {
-                padding: 12px 15px;
-                vertical-align: top;
-            }
-            .property-name {
-                font-weight: 600;
-                color: #0066cc;
-                width: 30%;
-                word-break: break-word;
-            }
-            .property-name a {
-                color: #0066cc;
-                text-decoration: none;
-            }
-            .property-name a:hover {
-                text-decoration: underline;
-            }
-            .property-value {
-                width: 70%;
-            }
-            .property-value a {
-                color: #0066cc;
-                text-decoration: none;
-            }
-            .property-value a:hover {
-                text-decoration: underline;
-            }
-            .value-list {
-                list-style: none;
-            }
-            .value-list li {
-                margin: 3px 0;
-            }
-            .value-list li:before {
-                content: "• ";
-                margin-right: 5px;
-            }
-            
-            /* Timeline section */
-            .timeline-section {
-                margin-top: 40px;
-                padding-top: 30px;
-                border-top: 1px solid #e5e5e5;
-                clear: both;
-            }
-            .timeline-section h2 {
-                color: #1a472a;
-                font-size: 18px;
-                margin-bottom: 15px;
-                border-bottom: 2px solid #1a472a;
-                padding-bottom: 10px;
-            }
-            .timeline-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 20px 0;
-            }
-            .timeline-table th {
-                background: #f5f5f5;
-                text-align: left;
-                font-weight: 600;
-                padding: 10px 12px;
-                border-bottom: 2px solid #ddd;
-            }
-            .timeline-table td {
-                padding: 8px 12px;
-                border-bottom: 1px solid #e5e5e5;
-            }
-            .timeline-table tr:hover {
-                background: #f9f9f9;
-            }
-            
-            /* Linked data section */
-            .linked-data {
-                margin-top: 30px;
-                padding: 15px;
-                background: #f0f8ff;
-                border: 1px solid #b3d9ff;
-                border-radius: 4px;
-                clear: both;
-            }
-            .linked-data h3 {
-                color: #1a472a;
-                margin-bottom: 10px;
-                font-size: 16px;
-            }
-            .format-links a {
-                display: inline-block;
-                margin-right: 15px;
-                padding: 6px 12px;
-                background: #0066cc;
-                color: white;
-                text-decoration: none;
-                border-radius: 3px;
-                font-size: 14px;
-            }
-            .format-links a:hover {
-                background: #0052a3;
-            }
-            
-            /* Footer */
-            .page-footer {
-                margin-top: 30px;
-                padding-top: 20px;
-                border-top: 1px solid #e5e5e5;
-                text-align: center;
-                font-size: 13px;
-                color: #666;
-            }
-            .page-footer a {
-                color: #0066cc;
-                text-decoration: none;
-                margin: 0 10px;
-            }
-            .page-footer a:hover {
-                text-decoration: underline;
-            }
-    """
 
 
 def generate_html_page(resource: ResourceData) -> str:
@@ -456,7 +262,7 @@ def generate_html_page(resource: ResourceData) -> str:
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{escape(resource.name)} - Tolkien Knowledge Graph</title>
         <style>
-            {get_css_styles()}
+            {get_resource_css()}
         </style>
     </head>
     <body>

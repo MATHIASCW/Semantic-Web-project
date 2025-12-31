@@ -20,7 +20,6 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
     Returns the resource URI if found, None otherwise.
     """
     sparql = SPARQLWrapper(FUSEKI_URL)
-    # 1) Try case-insensitive match on labels (schema:name, rdfs:label, kg-ont:name)
     name_predicates = [
         "http://schema.org/name",
         "http://www.w3.org/2000/01/rdf-schema#label",
@@ -28,7 +27,6 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
     ]
     predicates_values = " ".join(f"<{p}>" for p in name_predicates)
 
-    # Replace underscores/hyphens with spaces for label matching
     label_candidate = resource_name.replace("_", " ").replace("-", " ")
     safe_label = label_candidate.replace('"', '\"')
 
@@ -49,7 +47,6 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
     except Exception:
         pass
 
-    # 2) Try case-insensitive match on local name part of subject IRI
     local_candidate = resource_name.replace(" ", "_").replace("-", "_")
     safe_local = local_candidate.replace('"', '\"')
 
@@ -71,7 +68,6 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
     except Exception:
         pass
 
-    # 3) Fallback: direct IRI guesses (as-is)
     iri_guesses = [
         build_iri(resource_name, "http://tolkien-kg.org/resource/"),
         build_iri(resource_name, "http://tolkien-kg.org/ontology/"),
@@ -152,3 +148,147 @@ def get_character_by_name(name: str) -> Optional[List[Dict]]:
         ]
     except Exception:
         return None
+
+
+def get_statistics() -> Dict[str, int]:
+    """Retourne les statistiques globales du knowledge graph."""
+    sparql = SPARQLWrapper(FUSEKI_URL)
+    
+    stats = {
+        'total': 0,
+        'characters': 0,
+        'locations': 0,
+        'works': 0
+    }
+    
+    sparql.setQuery('''
+        SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
+            ?s a ?type .
+        }
+    ''')
+    sparql.setReturnFormat(JSON)
+    
+    try:
+        results = sparql.query().convert()
+        count = results["results"]["bindings"][0]["count"]["value"]
+        stats['total'] = int(count)
+    except Exception:
+        pass
+    
+    sparql.setQuery('''
+        SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
+            ?s a <http://tolkien-kg.org/ontology/Character> .
+        }
+    ''')
+    
+    try:
+        results = sparql.query().convert()
+        count = results["results"]["bindings"][0]["count"]["value"]
+        stats['characters'] = int(count)
+    except Exception:
+        pass
+    
+    sparql.setQuery('''
+        SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
+            ?s a <http://tolkien-kg.org/ontology/Location> .
+        }
+    ''')
+    
+    try:
+        results = sparql.query().convert()
+        count = results["results"]["bindings"][0]["count"]["value"]
+        stats['locations'] = int(count)
+    except Exception:
+        pass
+    
+    sparql.setQuery('''
+        SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
+            ?s a <http://schema.org/CreativeWork> .
+        }
+    ''')
+    
+    try:
+        results = sparql.query().convert()
+        count = results["results"]["bindings"][0]["count"]["value"]
+        stats['works'] = int(count)
+    except Exception:
+        pass
+    
+    return stats
+
+
+def get_entities_by_type(entity_type: str = None, limit: int = 20, offset: int = 0, 
+                        search_query: str = None) -> tuple:
+    """
+    Retourne une liste d'entités filtrées par type avec pagination.
+    
+    Returns:
+        (entities_list, total_count) where entities_list is list of dicts with name, uri, type
+    """
+    sparql = SPARQLWrapper(FUSEKI_URL)
+    
+    type_filter = ""
+    if entity_type == 'Character':
+        type_filter = '?s a <http://tolkien-kg.org/ontology/Character> .'
+    elif entity_type == 'Location':
+        type_filter = '?s a <http://tolkien-kg.org/ontology/Location> .'
+    elif entity_type == 'Work':
+        type_filter = '?s a <http://schema.org/CreativeWork> .'
+    else:
+        type_filter = '?s a ?type .'
+    
+    search_filter = ""
+    if search_query:
+        safe_query = search_query.replace('"', '\\"')
+        search_filter = f'''
+            ?s <http://schema.org/name> ?name .
+            FILTER(CONTAINS(LCASE(?name), LCASE("{safe_query}")))
+        '''
+    else:
+        search_filter = '?s <http://schema.org/name> ?name .'
+    
+    count_query = f'''
+        SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {{
+            {type_filter}
+            {search_filter}
+        }}
+    '''
+    
+    sparql.setQuery(count_query)
+    sparql.setReturnFormat(JSON)
+    
+    total_count = 0
+    try:
+        results = sparql.query().convert()
+        total_count = int(results["results"]["bindings"][0]["count"]["value"])
+    except Exception:
+        pass
+    
+    query = f'''
+        SELECT DISTINCT ?s ?name ?type WHERE {{
+            {type_filter}
+            {search_filter}
+            ?s a ?type .
+        }}
+        ORDER BY ?name
+        LIMIT {limit}
+        OFFSET {offset}
+    '''
+    
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    
+    entities = []
+    try:
+        results = sparql.query().convert()
+        for binding in results["results"]["bindings"]:
+            entity = {
+                'name': binding['name']['value'],
+                'uri': binding['s']['value'],
+                'type': binding['type']['value']
+            }
+            entities.append(entity)
+    except Exception:
+        pass
+    
+    return entities, total_count
