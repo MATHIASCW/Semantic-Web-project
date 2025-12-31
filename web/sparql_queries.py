@@ -9,7 +9,9 @@ FUSEKI_URL = "http://localhost:3030/kg-tolkiengateway/sparql"
 
 
 def build_iri(name: str, base: str) -> str:
-    """Construit un IRI à partir d'un nom en remplaçant espaces et tirets."""
+    """
+    Build an IRI from a name by replacing spaces and dashes.
+    """
     safe = name.replace(' ', '_').replace('-', '_')
     return f"{base}{safe}"
 
@@ -113,7 +115,9 @@ def get_resource_properties(subject_uri: str) -> Optional[Dict[str, List[str]]]:
 
 
 def get_characters_list(limit: int = 100) -> List[str]:
-    """Retourne une liste de noms de personnages du knowledge graph."""
+    """
+    Returns a list of character names from the knowledge graph.
+    """
     sparql = SPARQLWrapper(FUSEKI_URL)
     sparql.setQuery(f'''
         SELECT ?name WHERE {{
@@ -130,7 +134,7 @@ def get_characters_list(limit: int = 100) -> List[str]:
 
 
 def get_character_by_name(name: str) -> Optional[List[Dict]]:
-    """Retourne les infos d'un personnage par son nom exact."""
+    """Returns information about a character by their exact name."""
     sparql = SPARQLWrapper(FUSEKI_URL)
     sparql.setQuery(f'''
         SELECT ?p ?o WHERE {{
@@ -151,7 +155,7 @@ def get_character_by_name(name: str) -> Optional[List[Dict]]:
 
 
 def get_statistics() -> Dict[str, int]:
-    """Retourne les statistiques globales du knowledge graph."""
+    """Returns global statistics of the knowledge graph."""
     sparql = SPARQLWrapper(FUSEKI_URL)
     
     stats = {
@@ -220,7 +224,7 @@ def get_statistics() -> Dict[str, int]:
 def get_entities_by_type(entity_type: str = None, limit: int = 20, offset: int = 0, 
                         search_query: str = None) -> tuple:
     """
-    Retourne une liste d'entités filtrées par type avec pagination.
+    Returns a list of entities filtered by type with pagination.
     
     Returns:
         (entities_list, total_count) where entities_list is list of dicts with name, uri, type

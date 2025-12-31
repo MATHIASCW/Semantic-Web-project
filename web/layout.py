@@ -5,8 +5,8 @@ Shared layout helpers for the Tolkien KG web UI.
 def render_header(active: str = "home") -> str:
     """Return the top navigation bar with an active tab."""
     links = [
-        ("home", "Accueil", "/"),
-        ("browse", "Parcourir", "/browse"),
+        ("home", "Home", "/"),
+        ("browse", "Browse", "/browse"),
         ("api", "API", "/docs"),
     ]
     items = []
@@ -29,7 +29,7 @@ def render_footer() -> str:
     return (
         "<div class=\"footer\">"
         "<p>Tolkien Knowledge Graph | "
-        "<a href=\"/docs\">Documentation API</a> | "
+        "<a href=\"/docs\">API Docs</a> | "
         "<a href=\"https://github.com\">GitHub</a></p>"
         "</div>"
     )

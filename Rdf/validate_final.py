@@ -1,19 +1,19 @@
-"""Validation SHACL finale avec contraintes assouplies"""
+"""Final SHACL validation with relaxed constraints"""
 
 from pyshacl import validate
 from rdflib import Graph
 
-print("📂 Chargement des données RDF...")
+print("📂 Loading RDF data...")
 data = Graph()
 data.parse('RdfData/all_infoboxes.ttl', format='turtle')
-print(f"✅ {len(data)} triplets chargés")
+print(f"✅ {len(data)} triples loaded")
 
-print("\n📋 Chargement des shapes SHACL...")
+print("\n📋 Loading SHACL shapes...")
 shapes = Graph()
 shapes.parse('RdfData/tolkien-shapes.ttl', format='turtle')
-print(f"✅ {len(shapes)} shapes chargés")
+print(f"✅ {len(shapes)} shapes loaded")
 
-print("\n🔍 Validation SHACL en cours...")
+print("\n🔍 Running SHACL validation...")
 conforms, results, text = validate(
     data, 
     shacl_graph=shapes, 
@@ -22,21 +22,21 @@ conforms, results, text = validate(
 )
 
 print(f"\n{'='*60}")
-print(f"RÉSULTAT DE LA VALIDATION")
+print(f"VALIDATION RESULT")
 print(f"{'='*60}")
-print(f"\n✅ Conforme: {conforms}")
+print(f"\n✅ Conforms: {conforms}")
 
 if not conforms:
     violations = text.count("Constraint Violation")
-    print(f"📊 Nombre de violations: {violations}")
+    print(f"📊 Number of violations: {violations}")
     print(f"\n{'='*60}")
-    print("PREMIÈRES VIOLATIONS:")
+    print("FIRST VIOLATIONS:")
     print(f"{'='*60}\n")
     print(text[:2000])
 else:
-    print("\n🎉🎉🎉 AUCUNE VIOLATION SHACL!")
-    print("✅ Le RDF est parfaitement conforme aux shapes!")
-    print("\n📊 Statistiques finales:")
-    print(f"   - Triplets RDF: {len(data)}")
-    print(f"   - Triplets SHACL: {len(shapes)}")
-    print(f"   - Conformité: 100%")
+    print("\n🎉🎉🎉 NO SHACL VIOLATIONS!")
+    print("✅ The RDF is perfectly conforms to the shapes!")
+    print("\n📊 Final statistics:")
+    print(f"   - RDF triples: {len(data)}")
+    print(f"   - SHACL triples: {len(shapes)}")
+    print(f"   - Conformity: 100%")

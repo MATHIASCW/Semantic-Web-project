@@ -60,14 +60,16 @@ app.add_middleware(
 
 @app.get("/", tags=["Root"])
 def root():
-    """Page d'accueil - Affiche les statistiques et catégories."""
+    """Generate the home page with global statistics."""
     stats = get_statistics()
     html = generate_home_page(stats)
     return HTMLResponse(html)
 
 @app.get("/characters", tags=["Characters"])
 def list_characters(limit: int = Query(100, ge=1, le=500)):
-    """Retourne une liste de personnages (noms) du knowledge graph."""
+    """
+    Returns a list of character names from the knowledge graph.
+    """
     names = get_characters_list(limit)
     return {"count": len(names), "characters": names}
 
@@ -79,12 +81,12 @@ def browse_entities(
     search: str = Query(None, alias="search")
 ):
     """
-    Page de navigation interactive pour parcourir les entités.
+    Interactive browsing page to explore entities.
     
     Query params:
-    - type: Character, Location, Work (optionnel)
-    - page: numéro de page (défaut: 1)
-    - search: terme de recherche (optionnel)
+    - type: Character, Location, Work (optional)
+    - page: page number (default: 1)
+    - search: search term (optional)
     """
     ITEMS_PER_PAGE = 20
     offset = (page - 1) * ITEMS_PER_PAGE
@@ -112,16 +114,16 @@ def browse_entities(
 
 @app.get("/character/{name}", tags=["Characters"])
 def get_character(name: str):
-    """Retourne les infos d'un personnage par son nom exact."""
+    """Returns information about a character by their exact name."""
     props = get_character_by_name(name)
     if not props:
-        return JSONResponse(status_code=404, content={"error": f"Aucun personnage trouvé pour '{name}'"})
+        return JSONResponse(status_code=404, content={"error": f"No character found for '{name}'"})
     return {"name": name, "properties": props}
 
 @app.get("/resource/{name}", tags=["Linked Data"])
 async def get_resource(name: str, request: Request, format: str = Query(None, alias="format")):
     """
-    Endpoint Linked Data - Dereference une ressource et retourne sa description.
+    Linked Data endpoint - Dereference a resource and return its description.
     
     Content-Negotiation:
     - Accept: text/turtle → Turtle/RDF

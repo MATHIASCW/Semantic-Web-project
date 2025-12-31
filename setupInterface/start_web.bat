@@ -1,6 +1,6 @@
 ::
-:: Tolkien Knowledge Graph - Batch Script pour Windows
-:: Démarre le serveur web et ouvre le navigateur
+:: Tolkien Knowledge Graph - Batch Script for Windows
+:: Starts the web server and opens the browser
 ::
 
 @echo off
@@ -11,39 +11,39 @@ echo.
 echo ╔══════════════════════════════════════════════════════════╗
 echo ║   🧙 Tolkien Knowledge Graph - Web Interface             ║
 echo ║                                                          ║
-echo ║   Démarrage du serveur...                               ║
-echo ║                                                          ║
-echo ║   URLs disponibles:                                      ║
-echo ║   - Accueil:      http://localhost:8000/                ║
-echo ║   - Navigation:   http://localhost:8000/browse          ║
-echo ║   - API Docs:     http://localhost:8000/docs            ║
-echo ║                                                          ║
-echo ║   Appuyer sur Ctrl+C pour arrêter                       ║
+echo ▐   Starting server...                                   ▐
+echo ▐                                                          ▐
+echo ▐   Available URLs:                                      ▐
+echo ▐   - Home:      http://localhost:8000/                ▐
+echo ▐   - Browse:    http://localhost:8000/browse          ▐
+echo ▐   - API Docs:  http://localhost:8000/docs            ▐
+echo ▐                                                          ▐
+echo ▐   Press Ctrl+C to stop                                ▐
 echo ╚══════════════════════════════════════════════════════════╝
 echo.
 
-REM Vérifier que Fuseki est accessible
-echo Vérification de Fuseki...
+REM Check if Fuseki is accessible
+echo Checking Fuseki...
 curl -s http://localhost:3030/ > nul 2>&1
 if errorlevel 1 (
     echo.
-    echo ⚠️  ATTENTION: Fuseki n'est pas accessible sur http://localhost:3030/
+    echo ⚠️  WARNING: Fuseki is not accessible at http://localhost:3030/
     echo.
-    echo Fuseki doit être en cours d'exécution avant de démarrer l'interface web.
+    echo Fuseki must be running before starting the web interface.
     echo.
-    echo Pour démarrer Fuseki (depuis le répertoire d'installation):
+    echo To start Fuseki (from the installation directory):
     echo   fuseki-server --mem /kg-tolkiengateway
     echo.
     timeout /t 5
 ) else (
-    echo ✓ Fuseki détecté
+    echo ✓ Fuseki detected
     echo.
 )
 
-REM Activer l'environnement virtuel
+REM Activate virtual environment
 call .venv\Scripts\activate.bat
 
-REM Démarrer le serveur
+REM Start the server
 python run_web.py
 
 pause

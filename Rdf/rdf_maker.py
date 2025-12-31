@@ -348,9 +348,9 @@ def main():
     materialize_resources(g, main_subjects, resource_labels)
 
     g.serialize(destination=OUTPUT_FILE, format="turtle")
-    print(f"✅ RDF généré: {OUTPUT_FILE} ({len(g)} triplets)")
-    print(f"   - Sujets principaux: {len(main_subjects)}")
-    print(f"   - Ressources matérialisées: {len(resource_labels)}")
+    print(f"✅ RDF generated: {OUTPUT_FILE} ({len(g)} triples)")
+    print(f"   - Main subjects: {len(main_subjects)}")
+    print(f"   - Materialized resources: {len(resource_labels)}")
 
 if __name__ == "__main__":
     main()

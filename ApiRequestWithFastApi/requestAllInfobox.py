@@ -4,39 +4,39 @@ import time
 import os
 
 """
-Récupération des infobox Tolkien Gateway
+Fetch Tolkien Gateway infoboxes
 
-Ce script interroge l’API MediaWiki de tolkiengateway.net pour :
-- lister des pages (via `allpages`),
-- récupérer le wikitext de chaque page (`parse`),
-- extraire l’infobox (bloc {{Infobox ... }} avec gestion des accolades imbriquées),
-- enregistrer chaque infobox dans le dossier `infoboxes/` avec un nom de fichier sûr pour Windows,
-- consigner un journal d’état dans `infoboxes/infobox_log.txt`.
+This script queries the MediaWiki API of tolkiengateway.net to:
+- list pages (via `allpages`),
+- retrieve the wikitext of each page (`parse`),
+- extract the infobox (block {{Infobox ... }} with handling of nested braces),
+- save each infobox in the `infoboxes/` folder with a Windows-safe filename,
+- log status to `infoboxes/infobox_log.txt`.
 
-Fonctions principales
-- `safe_filename_from_title(title, max_length=180)`: normalise les titres en noms de fichiers valides Windows (remplace caractères interdits, gère noms réservés, tronque).
-- `get_infobox_wikitext(page_title)`: récupère le wikitext brut d’une page via `action=parse`.
-- `extract_infobox(wikitext)`: isole l’infobox en comptant les `{{` / `}}` pour couvrir l’imbrication.
-- `get_all_page_titles(limit=500)`: pagine sur `list=allpages` pour collecter des titres (le script utilise `limit=50` par défaut).
-- `get_all_infobox_template_titles(limit=500)`: (optionnel) liste les modèles d’infobox via la catégorie `Infobox_templates`.
+Main Functions
+- `safe_filename_from_title(title, max_length=180)`: normalizes titles into Windows-safe filenames (replaces forbidden characters, handles reserved names, truncates).
+- `get_infobox_wikitext(page_title)`: fetches raw wikitext of a page via `action=parse`.
+- `extract_infobox(wikitext)`: isolates the infobox by counting `{{` / `}}` to handle nesting.
+- `get_all_page_titles(limit=500)`: paginates through `list=allpages` to collect titles (script uses `limit=50` by default).
+- `get_all_infobox_template_titles(limit=500)`: (optional) lists infobox templates via the `Infobox_templates` category.
 
-Entrées/Sorties
-- Entrée: aucune entrée utilisateur (paramètre `limit` codé en dur, modifiable).
-- Sorties: fichiers `infobox_*.txt` dans `infoboxes/` + `infobox_log.txt` (OK / NO INFOBOX / NO WIKITEXT).
+Input/Output
+- Input: no user input (limit parameter hard-coded, modifiable).
+- Output: `infobox_*.txt` files in `infoboxes/` + `infobox_log.txt` (OK / NO INFOBOX / NO WIKITEXT).
 
-Prérequis
-- Python 3.8+ et le paquet `requests`.
-- Installer les dépendances: `pip install -r requirements.txt` (ou `pip install requests`).
+Requirements
+- Python 3.8+ and the `requests` package.
+- Install dependencies: `pip install -r requirements.txt` (or `pip install requests`).
 
-Utilisation
-- Exécuter: `python testApiRequest/requestAllInfobox.py`
-- Adapter `limit` si nécessaire (plus grand = plus de pages = plus lent).
-- Respect du site: le script utilise un `User-Agent` et traite séquentiellement; ajouter un `time.sleep()` si vous augmentez fortement `limit`.
+Usage
+- Run: `python ApiRequestWithFastApi/requestAllInfobox.py`
+- Adjust `limit` as needed (larger = more pages = slower).
+- Site courtesy: the script uses a `User-Agent` and processes sequentially; add `time.sleep()` if you significantly increase `limit`.
 
 Notes
-- Les noms de fichiers sont nettoyés pour éviter les erreurs Windows (caractères interdits, noms réservés comme CON/PRN, espaces/points en fin).
-- L’extraction de l’infobox tient compte des accolades imbriquées; si aucune infobox n’est trouvée, le journal note `NO INFOBOX`.
-- En cas d’erreur HTTP, le script affiche le code et un extrait de réponse.
+- Filenames are cleaned to avoid Windows errors (forbidden characters, reserved names like CON/PRN, trailing spaces/dots).
+- Infobox extraction accounts for nested braces; if no infobox is found, the log notes `NO INFOBOX`.
+- On HTTP error, the script prints the code and a response excerpt.
 """
 
 WINDOWS_RESERVED_NAMES = {
@@ -110,8 +110,8 @@ def extract_infobox(wikitext):
 
 def extract_section(wikitext, section_title="Other names"):
     """
-    Extrait le contenu d'une section wikitext (par exemple ==Other names==).
-    Retourne None si la section n'est pas trouvée.
+    Extracts the content of a wikitext section (e.g., ==Other names==).
+    Returns None if the section is not found.
     """
     pattern = rf"^==\s*{re.escape(section_title)}\s*==\s*(.*?)(?=^==[^=]|\Z)"
     match = re.search(pattern, wikitext, flags=re.IGNORECASE | re.DOTALL | re.MULTILINE)
@@ -122,9 +122,9 @@ def extract_section(wikitext, section_title="Other names"):
 
 def get_existing_titles_from_infoboxes(output_dir="infoboxes"):
     """
-    Récupère les titres de pages déjà téléchargées.
-    Extrait le titre depuis la première ligne: --- Page Title ---
-    Utile pour le mode incrémental.
+    Extracts the titles of pages already downloaded.
+    Extracts the title from the first line: --- Page Title ---
+    Useful for incremental mode.
     """
     existing_titles = set()
     
@@ -148,8 +148,8 @@ def get_existing_titles_from_infoboxes(output_dir="infoboxes"):
 
 def get_pages_from_category(category_name="Category:Characters", limit=500):
     """
-    Récupère les pages d'une catégorie spécifique.
-    Très efficace pour cibler un type de contenu (ex: personnages).
+    Retrieves pages from a specific category.
+    Very effective for targeting a type of content (e.g., characters).
     """
     API = "https://tolkiengateway.net/w/api.php"
     headers = {
@@ -195,8 +195,8 @@ def get_pages_from_category(category_name="Category:Characters", limit=500):
 
 def get_pages_with_infobox(limit=500):
     """
-    Récupère les pages qui utilisent les templates d'infobox.
-    Plus efficace que de récupérer toutes les pages.
+    Fetches pages that use infobox templates.
+    More efficient than fetching all pages.
     """
     API = "https://tolkiengateway.net/w/api.php"
     
@@ -396,13 +396,13 @@ INCREMENTAL = True
 start_time = time.time()
 
 if MODE == 1:
-    print("MODE 1: Récupération depuis la catégorie Characters...")
+    print("MODE 1: Fetching pages from Characters category...")
     all_titles = get_pages_from_category("Category:Characters", limit=500)
 elif MODE == 2:
-    print("MODE 2: Récupération des pages avec templates d'infobox...")
+    print("MODE 2: Fetching pages with infobox templates...")
     all_titles = get_pages_with_infobox(limit=500)
 else:
-    print("MODE 3: Récupération de toutes les pages (non recommandé)...")
+    print("MODE 3: Fetching all pages (not recommended)...")
     all_titles = get_all_page_titles(limit=50)
 
 if INCREMENTAL:
@@ -410,12 +410,12 @@ if INCREMENTAL:
     initial_count = len(all_titles)
     all_titles = [t for t in all_titles if t not in existing_titles]
     skipped_count = initial_count - len(all_titles)
-    print(f"Mode incrémental activé:")
-    print(f"  • Pages à traiter initialement: {initial_count}")
-    print(f"  • Pages déjà téléchargées:     {skipped_count}")
-    print(f"  • Pages à télécharger:         {len(all_titles)}")
+    print(f"Incremental mode enabled:")
+    print(f"  • Pages to process initially:  {initial_count}")
+    print(f"  • Pages already downloaded:    {skipped_count}")
+    print(f"  • Pages to download:           {len(all_titles)}")
 else:
-    print("Mode incrémental désactivé: toutes les pages seront traitées")
+    print("Incremental mode disabled: all pages will be processed")
 
 print(f"Found {len(all_titles)} pages to process.")
 

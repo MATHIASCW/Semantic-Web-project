@@ -2,18 +2,18 @@ from rdflib import Graph
 from rdflib.namespace import RDF, RDFS, OWL
 
 """
-Module de validation des propriétés RDF contre une ontologie.
-Ce module valide que toutes les propriétés utilisées dans un dataset RDF
-sont correctement définies dans l'ontologie correspondante.
-Fonctionnalité principale:
-- Charge une ontologie Tolkien depuis un fichier TTL
-- Charge un dataset RDF contenant des infoboxes depuis un fichier TTL
-- Extrait toutes les propriétés utilisées du namespace "http://tolkien-kg.org/ontology/"
-- Récupère toutes les propriétés définies dans l'ontologie (ObjectProperty et DatatypeProperty)
-- Compare les deux ensembles pour identifier les propriétés utilisées mais non définies
-- Affiche un rapport détaillé des propriétés manquantes ou une confirmation si tout est valide
-Le script aide à maintenir la cohérence et la validité du graphe de connaissances
-en détectant les incohérences entre l'ontologie et les données réelles.
+Module for validating RDF properties against an ontology.
+This module validates that all properties used in an RDF dataset
+are correctly defined in the corresponding ontology.
+Main functionality:
+- Load a Tolkien ontology from a TTL file
+- Load an RDF dataset containing infoboxes from a TTL file
+- Extract all properties used from the "http://tolkien-kg.org/ontology/" namespace
+- Retrieve all properties defined in the ontology (ObjectProperty and DatatypeProperty)
+- Compare the two sets to identify properties used but not defined
+- Display a detailed report of missing properties or confirmation if all is valid
+The script helps maintain the consistency and validity of the knowledge graph
+by detecting inconsistencies between the ontology and actual data.
 """
 
 ontology = Graph()
@@ -22,8 +22,8 @@ ontology.parse("RdfData/tolkien-kg-ontology.ttl", format="turtle")
 data = Graph()
 data.parse("RdfData/all_infoboxes.ttl", format="turtle")
 
-print(f"✅ Ontologie: {len(ontology)} triplets")
-print(f"✅ Données: {len(data)} triplets")
+print(f"✅ Ontology: {len(ontology)} triples")
+print(f"✅ Data: {len(data)} triples")
 
 KG_ONT = "http://tolkien-kg.org/ontology/"
 used_props = set()
@@ -40,8 +40,8 @@ for s in ontology.subjects(RDF.type, OWL.DatatypeProperty):
 
 undefined = used_props - defined_props
 if undefined:
-    print(f"\n⚠️  Propriétés utilisées mais NON définies dans l'ontologie:")
+    print(f"\n⚠️  Properties used but NOT defined in the ontology:")
     for prop in sorted(undefined):
         print(f"  - {prop}")
 else:
-    print("\n✅ Toutes les propriétés kg-ont:* sont définies!")
+    print("\n✅ All kg-ont:* properties are defined!")

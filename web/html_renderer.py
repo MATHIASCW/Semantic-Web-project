@@ -11,7 +11,7 @@ from .styles import get_resource_css
 
 
 def format_property_label(predicate_uri: str) -> str:
-    """Formate un URI de propriété en label lisible"""
+    """Format a property URI into a human-readable label."""
     if '#' in predicate_uri:
         label = predicate_uri.split('#')[-1]
     elif '/' in predicate_uri:
@@ -24,7 +24,7 @@ def format_property_label(predicate_uri: str) -> str:
 
 
 def clean_image(value: str) -> str:
-    """Nettoie les valeurs d'image issues de TolkienGateway (prefixes Image:/File:)."""
+    """Clean TolkienGateway image values (Image:/File: prefixes)."""
     cleaned = value.strip()
     if cleaned.lower().startswith('image:'):
         cleaned = cleaned[len('Image:'):].strip()
@@ -96,17 +96,17 @@ def build_summary_table(resource: ResourceData) -> str:
             )
     
     add_row('Race', 'http://tolkien-kg.org/ontology/race')
-    add_row('Sexe', 'http://tolkien-kg.org/ontology/gender')
-    add_row('Naissance', 'http://tolkien-kg.org/ontology/birthDate')
-    add_row('Décès', 'http://tolkien-kg.org/ontology/deathDate')
-    add_row('Lieu de naissance', 'http://tolkien-kg.org/ontology/birthLocation')
-    add_row('Lieu de décès', 'http://tolkien-kg.org/ontology/deathLocation')
-    add_row('Maison/Famille', 'http://tolkien-kg.org/ontology/family')
+    add_row('Gender', 'http://tolkien-kg.org/ontology/gender')
+    add_row('Birth', 'http://tolkien-kg.org/ontology/birthDate')
+    add_row('Death', 'http://tolkien-kg.org/ontology/deathDate')
+    add_row('Birth location', 'http://tolkien-kg.org/ontology/birthLocation')
+    add_row('Death location', 'http://tolkien-kg.org/ontology/deathLocation')
+    add_row('House/Family', 'http://tolkien-kg.org/ontology/family')
     add_row('Affiliation', 'http://tolkien-kg.org/ontology/affiliation')
-    add_row('Époux·se', 'http://tolkien-kg.org/ontology/spouse')
+    add_row('Spouse', 'http://tolkien-kg.org/ontology/spouse')
     
     if summary_rows:
-        return '<div class="section"><h2>Résumé</h2><table class="timeline-table">' + ''.join(summary_rows) + '</table></div>'
+        return '<div class="section"><h2>Summary</h2><table class="timeline-table">' + ''.join(summary_rows) + '</table></div>'
     return ""
 
 
@@ -118,7 +118,7 @@ def build_properties_section(resource: ResourceData) -> str:
         'http://tolkien-kg.org/ontology/additionalcredits',
     }
     
-    html = '<div class="properties"><h2>Propriétés</h2>'
+    html = '<div class="properties"><h2>Properties</h2>'
     
     for predicate, values in sorted(resource.properties.items()):
         if predicate in EXCLUDED_PROPERTIES:
@@ -152,9 +152,9 @@ def build_timeline_section(events: List[TimelineEvent]) -> str:
         return ""
     
     html = '<div class="section">'
-    html += '<h3>Chronologie</h3>'
+    html += '<h3>Timeline</h3>'
     html += '<table class="timeline-table">'
-    html += '<thead><tr><th>Période</th><th>Ère</th><th>Début</th><th>Fin</th></tr></thead><tbody>'
+    html += '<thead><tr><th>Period</th><th>Era</th><th>Start</th><th>End</th></tr></thead><tbody>'
     
     for event in events:
         html += f'<tr><td>{escape(event.label)}</td><td>{escape(event.era)}</td><td>{escape(event.start)}</td><td>{escape(event.end)}</td></tr>'
@@ -186,9 +186,9 @@ def generate_html_page(resource: ResourceData) -> str:
         <html>
         <head><meta charset="utf-8"><title>Not Found</title></head>
         <body>
-            <h1>Ressource non trouvée</h1>
-            <p>Ressource non disponible</p>
-            <a href="/">Retour</a>
+            <h1>Resource not found</h1>
+            <p>Resource not available</p>
+            <a href="/">Home</a>
         </body>
         </html>
         """
@@ -197,7 +197,7 @@ def generate_html_page(resource: ResourceData) -> str:
     timeline_text = resource.get_first_value('http://tolkien-kg.org/ontology/timeline')
     timeline_events = parse_timeline(timeline_text) if timeline_text else []
     
-    resource_type = "Ressource"
+    resource_type = "Resource"
     rdf_type = resource.get_first_value('http://www.w3.org/1999/02/22-rdf-syntax-ns#type')
     if rdf_type:
         resource_type = format_property_label(rdf_type)
@@ -237,7 +237,7 @@ def generate_html_page(resource: ResourceData) -> str:
         value_html = '<br>'.join(value_parts) if value_parts else "-"
         properties_rows.append(f'<tr><td class="property-name">{prop_link}</td><td class="property-value">{value_html}</td></tr>')
     
-    properties_table = '<table class="properties-table"><thead><tr><th>Propriété</th><th>Valeur</th></tr></thead><tbody>' + ''.join(properties_rows) + '</tbody></table>'
+    properties_table = '<table class="properties-table"><thead><tr><th>Property</th><th>Value</th></tr></thead><tbody>' + ''.join(properties_rows) + '</tbody></table>'
     
     timeline_html = ""
     if timeline_events:
@@ -246,9 +246,9 @@ def generate_html_page(resource: ResourceData) -> str:
             timeline_rows.append(f'<tr><td>{escape(event.label)}</td><td>{escape(event.era)}</td><td>{escape(event.start)}</td><td>{escape(event.end)}</td></tr>')
         timeline_html = f'''
         <div class="timeline-section">
-            <h2>Chronologie</h2>
+            <h2>Timeline</h2>
             <table class="timeline-table">
-                <thead><tr><th>Période</th><th>Ère</th><th>Début</th><th>Fin</th></tr></thead>
+                <thead><tr><th>Period</th><th>Era</th><th>Start</th><th>End</th></tr></thead>
                 <tbody>{"".join(timeline_rows)}</tbody>
             </table>
         </div>
@@ -256,7 +256,7 @@ def generate_html_page(resource: ResourceData) -> str:
     
     html = f"""
     <!DOCTYPE html>
-    <html lang="fr">
+    <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -282,7 +282,7 @@ def generate_html_page(resource: ResourceData) -> str:
             {timeline_html}
             
             <div class="linked-data">
-                <h3>Formats disponibles</h3>
+                <h3>Available formats</h3>
                 <div class="format-links">
                     <a href="/resource/{quote(resource.uri.rsplit('/', 1)[-1])}?format=turtle">📄 Turtle (RDF)</a>
                     <a href="/resource/{quote(resource.uri.rsplit('/', 1)[-1])}?format=json">📋 JSON</a>
@@ -291,8 +291,8 @@ def generate_html_page(resource: ResourceData) -> str:
             </div>
             
             <div class="page-footer">
-                <a href="/">← Accueil</a> | 
-                <a href="/characters">Personnages</a> |
+                <a href="/">← Home</a> | 
+                <a href="/browse?type=Character">Characters</a> |
                 <strong>URI:</strong> <code>{escape(resource.uri)}</code>
             </div>
         </div>

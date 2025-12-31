@@ -1,6 +1,6 @@
 """
-Extension automatique de l'ontologie Tolkien
-Ajoute toutes les propriétés manquantes détectées dans le RDF
+Automatic extension of the Tolkien ontology
+Adds all missing properties detected in the RDF
 """
 
 from rdflib import Graph, Namespace, Literal, URIRef
@@ -32,7 +32,7 @@ for s in ontology.subjects(RDF.type, OWL.DatatypeProperty):
 
 undefined = sorted(used_props - defined_props)
 
-print(f"🔍 Propriétés manquantes: {len(undefined)}\n")
+print(f"🔍 Missing properties: {len(undefined)}\n")
 
 for prop_uri in undefined:
     prop = URIRef(prop_uri)
@@ -40,18 +40,18 @@ for prop_uri in undefined:
     
     ontology.add((prop, RDF.type, OWL.DatatypeProperty))
     ontology.add((prop, RDFS.label, Literal(local_name.replace("_", " ").title())))
-    ontology.add((prop, RDFS.comment, Literal(f"Propriété extraite automatiquement des infoboxes.")))
+    ontology.add((prop, RDFS.comment, Literal(f"Property automatically extracted from infoboxes.")))
     ontology.add((prop, RDFS.range, XSD.string))
     
-    print(f"  ✅ Ajouté: {local_name}")
+    print(f"  ✅ Added: {local_name}")
 
 output_file = "RdfData/tolkien-kg-ontology.ttl"
 ontology.serialize(destination=output_file, format="turtle")
 
-print(f"\n📄 Ontologie mise à jour: {output_file}")
-print(f"📊 Total triplets: {len(ontology)}\n")
+print(f"\n📄 Ontology updated: {output_file}")
+print(f"📊 Total triples: {len(ontology)}\n")
 
-print("🔍 Revalidation...")
+print("🔍 Revalidating...")
 ontology2 = Graph()
 ontology2.parse(output_file, format="turtle")
 
@@ -73,6 +73,6 @@ for s in ontology2.subjects(RDF.type, OWL.DatatypeProperty):
 still_undefined = used2 - defined2
 
 if still_undefined:
-    print(f"❌ Encore {len(still_undefined)} propriétés non définies!")
+    print(f"❌ Still {len(still_undefined)} properties not defined!")
 else:
-    print("✅✅✅ TOUTES les propriétés sont maintenant définies!\n")
+    print("✅✅✅ ALL properties are now defined!\n")

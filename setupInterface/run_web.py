@@ -1,9 +1,11 @@
 """
 Tolkien Knowledge Graph - Web Interface Launcher
-Démarrer l'application FastAPI avec l'interface web
+Start the FastAPI application with the web interface
 """
-import uvicorn
 import sys
+from pathlib import Path
+
+import uvicorn
 
 if __name__ == "__main__":
     print("""
@@ -13,26 +15,30 @@ if __name__ == "__main__":
     ║   Configuration:                                         ║
     ║   - Host: 127.0.0.1                                    ║
     ║   - Port: 8000                                         ║
-    ║   - Reload: Activé (détecte changements)               ║
+    ║   - Reload: Enabled (detects changes)                ║
     ║                                                          ║
     ║   URLs:                                                  ║
-    ║   - Accueil:      http://localhost:8000/                ║
-    ║   - Navigation:   http://localhost:8000/browse          ║
-    ║   - API Docs:     http://localhost:8000/docs            ║
-    ║   - ReDoc:        http://localhost:8000/redoc           ║
+    ║   - Home:        http://localhost:8000/                ║
+    ║   - Browse:      http://localhost:8000/browse          ║
+    ║   - API Docs:    http://localhost:8000/docs            ║
+    ║   - ReDoc:       http://localhost:8000/redoc           ║
     ║                                                          ║
-    ║   Appuyer sur Ctrl+C pour arrêter                       ║
+    ║   Press Ctrl+C to stop                                ║
     ╚══════════════════════════════════════════════════════════╝
     """)
     
+    project_root = Path(__file__).resolve().parents[1]
+    sys.path.insert(0, str(project_root))
+
     try:
         uvicorn.run(
             "web.main:app",
             host="127.0.0.1",
             port=8000,
             reload=True,
-            log_level="info"
+            log_level="info",
+            app_dir=str(project_root),
         )
     except KeyboardInterrupt:
-        print("\n\n✓ Application arrêtée proprement")
+        print("\n\n✓ Application stopped cleanly")
         sys.exit(0)
