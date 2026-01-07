@@ -13,6 +13,29 @@ KGONT = Namespace("http://tolkien-kg.org/ontology/")
 KGRES = Namespace("http://tolkien-kg.org/resource/")
 SCHEMA = Namespace("http://schema.org/")
 
+def _normalize_template_key(template_name: str) -> str:
+    n = (template_name or "").strip().lower()
+    n = re.sub(r"^infobox\s+", "", n)
+    n = re.sub(r"\s+infobox$", "", n)
+    n = re.sub(r"\s+", " ", n)
+    return n
+
+
+def _extract_infobox_block(wikitext: str) -> str | None:
+    """Return the raw {{Infobox ...}} block if found (balanced braces)."""
+    start = wikitext.lower().find("{{infobox")
+    if start == -1:
+        return None
+    count = 0
+    for i in range(start, len(wikitext)):
+        if wikitext[i:i+2] == "{{":
+            count += 1
+        elif wikitext[i:i+2] == "}}":
+            count -= 1
+            if count == 0:
+                return wikitext[start:i+2]
+    return None
+
 def clean_value(value: str, preserve_timeline: bool = False) -> str:
     v = value or ""
     v = re.sub(r"<ref[^>]*>.*?</ref>", "", v, flags=re.DOTALL | re.IGNORECASE)
@@ -150,20 +173,53 @@ PROPERTY_MAP = {
 TYPE_MAP = {
     "character": KGONT.Character,
     "characters": KGONT.Character,
-    "person": KGONT.Character,
+    "person": SCHEMA.Person,
+    "people": SCHEMA.Person,
+    "author": SCHEMA.Person,
+    "artist": SCHEMA.Person,
+    "modernpeople": SCHEMA.Person,
+    "scholar": SCHEMA.Person,
+
     "location": KGONT.Location,
     "place": KGONT.Location,
+    "settlement": KGONT.Location,
+    "city": KGONT.Location,
+    "region": KGONT.Location,
+    "river": KGONT.Location,
+    "mountain": KGONT.Location,
+
     "film": SCHEMA.Movie,
     "movie": SCHEMA.Movie,
+    "episode": SCHEMA.TVEpisode,
     "tv": SCHEMA.TVSeries,
+    "tvseries": SCHEMA.TVSeries,
+    "series": SCHEMA.TVSeries,
     "book": SCHEMA.Book,
     "novel": SCHEMA.Book,
+    "poem": SCHEMA.CreativeWork,
+    "letter": SCHEMA.CreativeWork,
     "album": SCHEMA.MusicAlbum,
     "song": SCHEMA.MusicRecording,
     "single": SCHEMA.MusicRecording,
-    "game": SCHEMA.VideoGame,
     "video game": SCHEMA.VideoGame,
+    "videogame": SCHEMA.VideoGame,
+    "board game": SCHEMA.Game,
+    "puzzle": SCHEMA.Game,
+
+    "organization": SCHEMA.Organization,
+    "company": SCHEMA.Organization,
+    "group": SCHEMA.Organization,
+    "noble house": KGONT.House,
+    "house": KGONT.House,
+
+    "object": KGONT.Object,
+    "artifact": KGONT.Object,
+    "weapon": KGONT.Object,
+    "race": KGONT.Race,
+    "language": SCHEMA.Language,
+
     "battle": KGONT.Battle,
+    "war": KGONT.Battle,
 }
 
 def normalize_key(key: str) -> str:
@@ -184,30 +240,51 @@ def to_res_iri(title: str):
     return KGRES[sanitize_local(title)]
 
 def choose_type(template_name: str, data: dict):
-    name_low = (template_name or "").lower()
-    for key, rdf_type in TYPE_MAP.items():
-        if key in name_low:
-            return rdf_type
-    if any(k in data for k in ("gender", "birth", "death", "race", "parentage")):
+    key = _normalize_template_key(template_name)
+    if key in TYPE_MAP:
+        return TYPE_MAP[key]
+    for k, t in TYPE_MAP.items():
+        if k in key:
+            return t
+    if any(k in data for k in ("gender", "birth", "death", "race", "parentage", "children", "spouse")):
+        if any(k in data for k in ("occupation", "born", "died", "education", "website")):
+            return SCHEMA.Person
         return KGONT.Character
-    if any(k in data for k in ("location", "map", "settlement")):
+    if any(k in data for k in ("location", "map", "settlement", "regions", "towns", "inhabitants")):
         return KGONT.Location
+    if any(k in data for k in ("film", "episode", "runtime", "director", "imdb_id")):
+        return SCHEMA.CreativeWork
+    if any(k in data for k in ("book", "isbn", "publisher", "published")):
+        return SCHEMA.Book
+    if any(k in data for k in ("platform", "genre", "video game", "releasedate")):
+        return SCHEMA.VideoGame
     return SCHEMA.CreativeWork
 
 def parse_infobox_text(text: str):
     text_cleaned = re.sub(r"<ref[^>]*?/>", "", text, flags=re.IGNORECASE)
     text_cleaned = re.sub(r"<ref[^>]*?>.*?</ref>", "", text_cleaned, flags=re.DOTALL | re.IGNORECASE)
     text_cleaned = re.sub(r"</?ref[^>]*?>", "", text_cleaned, flags=re.IGNORECASE)
-    
-    parsed = wtp.parse(text_cleaned)
+
+    block = _extract_infobox_block(text_cleaned) or text_cleaned
+
+    parsed = wtp.parse(block)
+    chosen_tpl = None
     for tpl in parsed.templates:
-        name = tpl.name.strip()
-        if name.lower().startswith("infobox") or name:
-            args = {}
-            for arg in tpl.arguments:
-                args[arg.name.strip()] = arg.value.strip()
-            return name, args
-    return "", {}
+        name = (tpl.name or "").strip()
+        if name.lower().startswith("infobox"):
+            chosen_tpl = tpl
+            break
+        if chosen_tpl is None:
+            chosen_tpl = tpl  
+
+    if not chosen_tpl:
+        return "", {}
+
+    name = chosen_tpl.name.strip()
+    args = {}
+    for arg in chosen_tpl.arguments:
+        args[arg.name.strip()] = arg.value.strip()
+    return name, args
 
 def extract_other_names_section(full_text: str):
     """Extract other_names from embedded section after infobox"""
@@ -256,7 +333,6 @@ def emit_links(graph: Graph, subj, pred, text: str, resource_labels: dict):
             resource_labels[iri] = target
         wrote = True
     return wrote
-
 def emit_mixed(graph: Graph, subj, pred, raw: str, keep_literal_if_links: bool = False, resource_labels: dict = None):
     if not raw or resource_labels is None:
         return False
@@ -300,10 +376,10 @@ def materialize_resources(graph: Graph, main_subjects: set, resource_labels: dic
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     g = Graph()
-    g.bind("kg-ont", KGONT)
-    g.bind("kg-res", KGRES)
-    g.bind("schema", SCHEMA)
-    g.bind("rdfs", RDFS)
+    g.bind("kg-ont", KGONT, override=True)
+    g.bind("kg-res", KGRES, override=True)
+    g.bind("rdfs", RDFS, override=True)
+    g.bind("schema", SCHEMA, override=True)
 
     resource_labels = {}  
     main_subjects = set()  
@@ -348,6 +424,16 @@ def main():
     materialize_resources(g, main_subjects, resource_labels)
 
     g.serialize(destination=OUTPUT_FILE, format="turtle")
+    
+    with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+        content = f.read()
+    
+    if "@prefix schema1:" in content:
+        content = content.replace("@prefix schema1:", "@prefix schema:")
+        content = content.replace("schema1:", "schema:")
+    
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        f.write(content)
     print(f"✅ RDF generated: {OUTPUT_FILE} ({len(g)} triples)")
     print(f"   - Main subjects: {len(main_subjects)}")
     print(f"   - Materialized resources: {len(resource_labels)}")

@@ -27,14 +27,26 @@ def clean_value(v):
 
 
 def extract_infobox_block(wikitext):
-    """Extracts the raw {{Infobox ...}} block."""
-    start = wikitext.lower().find('{{infobox')
+    """Extracts the raw {{Infobox ...}} or {{Type infobox ...}} block."""
+    lower = wikitext.lower()
+    patterns = [
+        r'\{\{\s*infobox',
+        r'\{\{\s*\w+\s+infobox',
+    ]
+    start = -1
+    for pattern in patterns:
+        match = re.search(pattern, lower)
+        if match:
+            start = match.start()
+            break
+    
     if start == -1:
         match = re.search(r'\{\{(\w+)', wikitext)
         if match:
             start = match.start()
         else:
             return None
+    
     count = 0
     for i in range(start, len(wikitext)):
         if wikitext[i:i+2] == '{{':
@@ -49,16 +61,31 @@ def extract_infobox_block(wikitext):
 def parse_infobox(text):
     """Parse a template via wikitextparser and return (template_name, fields_dict)."""
     parsed = wtp.parse(text)
+    
+    infobox_tpl = None
+    fallback_tpl = None
+    
     for t in parsed.templates:
         name = t.name.strip().lower()
-        fields = {}
-        for arg in t.arguments:
-            key = arg.name.strip()
-            value = clean_value(arg.value.strip())
-            if value: 
-                fields[key] = value
-        return (name, fields)
-    return (None, {})
+        if 'infobox' in name:
+            infobox_tpl = t
+            break
+        if fallback_tpl is None:
+            fallback_tpl = t
+    
+    chosen = infobox_tpl or fallback_tpl
+    if not chosen:
+        return (None, {})
+    
+    name = chosen.name.strip().lower()
+    fields = {}
+    for arg in chosen.arguments:
+        key = arg.name.strip()
+        value = clean_value(arg.value.strip())
+        if value: 
+            fields[key] = value
+    
+    return (name, fields)
 
 
 def analyze_infoboxes():
