@@ -6,874 +6,889 @@
 
 kg-ont:1 a owl:DatatypeProperty ;
     rdfs:label "1" ;
-    rdfs:comment "Clé numérique issue d'une erreur d'extraction." .
+    rdfs:comment "Numeric key resulting from an extraction error." .
 
 kg-ont:2 a owl:DatatypeProperty ;
     rdfs:label "2" ;
-    rdfs:comment "Clé numérique issue d'une erreur d'extraction." .
+    rdfs:comment "Numeric key resulting from an extraction error." .
 
 kg-ont:3 a owl:DatatypeProperty ;
     rdfs:label "3" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:_ a owl:DatatypeProperty ;
     rdfs:label " " ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:additionalcredits a owl:DatatypeProperty ;
     rdfs:label "additional credits" ;
-    rdfs:comment "Crédits additionnels." ;
+    rdfs:comment "Additional credits." ;
     rdfs:range xsd:string .
 
 kg-ont:affiliation a owl:ObjectProperty ;
     rdfs:label "affiliation" ;
-    rdfs:comment "Organisation, maison ou groupe affilié." ;
+    rdfs:comment "Affiliated organization, house, or group." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range schema1:Organization .
 
 kg-ont:age a owl:DatatypeProperty ;
     rdfs:label "age" ;
-    rdfs:comment "Âge." ;
+    rdfs:comment "Age." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:ages a owl:DatatypeProperty ;
     rdfs:label "Ages" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:album a owl:DatatypeProperty ;
     rdfs:label "album" ;
-    rdfs:comment "Nom de l'album musical." ;
+    rdfs:comment "Name of the musical album." ;
     rdfs:domain schema1:MusicRecording ;
     rdfs:range xsd:string .
 
 kg-ont:appearance a owl:DatatypeProperty ;
     rdfs:label "Appearance" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:artist a owl:DatatypeProperty ;
     rdfs:label "Artist" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:audio a owl:DatatypeProperty ;
     rdfs:label "audio" ;
-    rdfs:comment "Fichier ou lien audio." ;
+    rdfs:comment "Audio file or link." ;
     rdfs:domain schema1:MusicRecording ;
     rdfs:range xsd:string .
 
 kg-ont:audiocaption a owl:DatatypeProperty ;
     rdfs:label "Audiocaption" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:author a owl:DatatypeProperty ;
     rdfs:label "Author" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:basedon a owl:DatatypeProperty ;
     rdfs:label "Basedon" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:birthDate a owl:DatatypeProperty ;
     rdfs:label "birth date" ;
-    rdfs:comment "Date de naissance." ;
+    rdfs:comment "Birth date." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:birthLocation a owl:ObjectProperty ;
     rdfs:label "birth location" ;
-    rdfs:comment "Lieu de naissance." ;
+    rdfs:comment "Birth location." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range kg-ont:Location .
 
 kg-ont:birthlocation a owl:ObjectProperty ;
     rdfs:label "birth location" ;
-    rdfs:comment "Alias pour birthLocation (corriger dans les données)." .
+    rdfs:comment "Alias for birthLocation (to be corrected in data)." .
 
 kg-ont:born a owl:DatatypeProperty ;
     rdfs:label "Born" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:brithlocation a owl:DatatypeProperty ;
     rdfs:label "Brithlocation" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:budget a owl:DatatypeProperty ;
     rdfs:label "Budget" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:caption a owl:DatatypeProperty ;
     rdfs:label "caption" ;
-    rdfs:comment "Légende ou description." ;
+    rdfs:comment "Caption or description." ;
     rdfs:range xsd:string .
 
 kg-ont:children a owl:ObjectProperty ;
     rdfs:label "children" ;
-    rdfs:comment "Enfants." ;
+    rdfs:comment "Children." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range kg-ont:Character .
 
 kg-ont:cinematography a owl:DatatypeProperty ;
     rdfs:label "Cinematography" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:clothing a owl:DatatypeProperty ;
     rdfs:label "clothing" ;
-    rdfs:comment "Description des vêtements." ;
+    rdfs:comment "Clothing description." ;
     rdfs:domain kg-ont:Character ;
+    rdfs:range xsd:string .
+
+kg-ont:color a owl:DatatypeProperty ;
+    rdfs:label "Color" ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:colour a owl:DatatypeProperty ;
     rdfs:label "Colour" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:composer a owl:DatatypeProperty ;
     rdfs:label "composer" ;
-    rdfs:comment "Compositeur de l'œuvre." ;
+    rdfs:comment "Composer of the work." ;
     rdfs:domain schema1:MusicRecording ;
     rdfs:range xsd:string .
 
 kg-ont:content1 a owl:DatatypeProperty ;
     rdfs:label "Content1" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:content2 a owl:DatatypeProperty ;
     rdfs:label "Content2" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:country a owl:DatatypeProperty ;
     rdfs:label "Country" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:coverart a owl:DatatypeProperty ;
     rdfs:label "Coverart" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:created a owl:DatatypeProperty ;
     rdfs:label "Created" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:createdlocation a owl:DatatypeProperty ;
     rdfs:label "Createdlocation" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:creator a owl:DatatypeProperty ;
     rdfs:label "Creator" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:date a owl:DatatypeProperty ;
     rdfs:label "Date" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:death a owl:DatatypeProperty ;
     rdfs:label "death" ;
-    rdfs:comment "Date ou circonstances de la mort." ;
+    rdfs:comment "Date or circumstances of death." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:deathDate a owl:DatatypeProperty ;
     rdfs:label "death date" ;
-    rdfs:comment "Date de décès." ;
+    rdfs:comment "Death date." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:deathLocation a owl:ObjectProperty ;
     rdfs:label "death location" ;
-    rdfs:comment "Lieu de décès." ;
+    rdfs:comment "Death location." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range kg-ont:Location .
 
 kg-ont:deathlocation a owl:ObjectProperty ;
     rdfs:label "death location" ;
-    rdfs:comment "Alias pour deathLocation (corriger dans les données)." .
+    rdfs:comment "Alias for deathLocation (to be corrected in data)." .
 
 kg-ont:description a owl:DatatypeProperty ;
     rdfs:label "Description" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:designer a owl:DatatypeProperty ;
     rdfs:label "Designer" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:destroyed a owl:DatatypeProperty ;
     rdfs:label "Destroyed" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:destroyedlocation a owl:DatatypeProperty ;
     rdfs:label "Destroyedlocation" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:destroyer a owl:DatatypeProperty ;
     rdfs:label "Destroyer" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:developer a owl:DatatypeProperty ;
     rdfs:label "Developer" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:development a owl:DatatypeProperty ;
     rdfs:label "Development" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:died a owl:DatatypeProperty ;
     rdfs:label "Died" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:director a owl:DatatypeProperty ;
     rdfs:label "Director" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:disbanded a owl:DatatypeProperty ;
     rdfs:label "Disbanded" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:distinctions a owl:DatatypeProperty ;
     rdfs:label "distinctions" ;
-    rdfs:comment "Distinctions ou titres honorifiques." ;
+    rdfs:comment "Distinctions or honorary titles." ;
     rdfs:range xsd:string .
 
 kg-ont:distribution a owl:DatatypeProperty ;
     rdfs:label "Distribution" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:distributor a owl:DatatypeProperty ;
     rdfs:label "Distributor" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:duration a owl:DatatypeProperty ;
     rdfs:label "duration" ;
-    rdfs:comment "Durée de l'œuvre." ;
+    rdfs:comment "Duration of the work." ;
     rdfs:domain schema1:MusicRecording ;
     rdfs:range xsd:string .
 
 kg-ont:editing a owl:DatatypeProperty ;
     rdfs:label "Editing" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:edition a owl:DatatypeProperty ;
     rdfs:label "Edition" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:education a owl:DatatypeProperty ;
     rdfs:label "Education" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:events a owl:DatatypeProperty ;
     rdfs:label "Events" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:eyeColor a owl:DatatypeProperty ;
     rdfs:label "eye color" ;
-    rdfs:comment "Couleur des yeux." ;
+    rdfs:comment "Eye color." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:eyes a owl:DatatypeProperty ;
     rdfs:label "eyes" ;
-    rdfs:comment "Description des yeux." ;
+    rdfs:comment "Eye description." ;
     rdfs:range xsd:string .
 
 kg-ont:family a owl:ObjectProperty ;
     rdfs:label "family" ;
-    rdfs:comment "Famille ou maison à laquelle le personnage appartient." ;
+    rdfs:comment "Family or house to which the character belongs." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range kg-ont:House .
 
 kg-ont:format a owl:DatatypeProperty ;
     rdfs:label "Format" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:founded a owl:DatatypeProperty ;
     rdfs:label "Founded" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:founder a owl:DatatypeProperty ;
     rdfs:label "Founder" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:gallery a owl:DatatypeProperty ;
     rdfs:label "gallery" ;
-    rdfs:comment "Galerie d'images ou de médias." ;
+    rdfs:comment "Image or media gallery." ;
     rdfs:range xsd:string .
 
 kg-ont:gender a owl:DatatypeProperty ;
     rdfs:label "gender" ;
-    rdfs:comment "Genre (ex: Male, Female, etc.)." ;
+    rdfs:comment "Gender (e.g., Male, Female, etc.)." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:genre a owl:DatatypeProperty ;
     rdfs:label "Genre" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:gross a owl:DatatypeProperty ;
     rdfs:label "Gross" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:hair a owl:DatatypeProperty ;
     rdfs:label "hair" ;
-    rdfs:comment "Description des cheveux." ;
+    rdfs:comment "Hair description." ;
     rdfs:range xsd:string .
 
 kg-ont:hairColor a owl:DatatypeProperty ;
     rdfs:label "hair color" ;
-    rdfs:comment "Couleur des cheveux." ;
+    rdfs:comment "Hair color." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:height a owl:DatatypeProperty ;
     rdfs:label "height" ;
-    rdfs:comment "Taille." ;
+    rdfs:comment "Height." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:heirlooms a owl:DatatypeProperty ;
     rdfs:label "Heirlooms" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:heritage a owl:DatatypeProperty ;
     rdfs:label "heritage" ;
-    rdfs:comment "Héritage ou ascendance." ;
+    rdfs:comment "Heritage or ancestry." ;
     rdfs:range xsd:string .
 
 kg-ont:hoard a owl:DatatypeProperty ;
     rdfs:label "Hoard" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:ice a owl:DatatypeProperty ;
     rdfs:label "Ice" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:illustrator a owl:DatatypeProperty ;
     rdfs:label "Illustrator" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:images a owl:DatatypeProperty ;
     rdfs:label "Images" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:imdb_id a owl:DatatypeProperty ;
     rdfs:label "Imdb Id" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:inhabitants a owl:DatatypeProperty ;
     rdfs:label "Inhabitants" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:isbn a owl:DatatypeProperty ;
     rdfs:label "Isbn" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:keypeople a owl:DatatypeProperty ;
     rdfs:label "Keypeople" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:label1 a owl:DatatypeProperty ;
     rdfs:label "Label1" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:label2 a owl:DatatypeProperty ;
     rdfs:label "Label2" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:language a owl:DatatypeProperty ;
     rdfs:label "language" ;
-    rdfs:comment "Langue." ;
+    rdfs:comment "Language." ;
     rdfs:range xsd:string .
 
 kg-ont:leader a owl:DatatypeProperty ;
     rdfs:label "Leader" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:legs a owl:DatatypeProperty ;
     rdfs:label "Legs" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:lifespan a owl:DatatypeProperty ;
     rdfs:label "Lifespan" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:lyricist a owl:DatatypeProperty ;
     rdfs:label "lyricist" ;
-    rdfs:comment "Auteur des paroles." ;
+    rdfs:comment "Lyricist." ;
     rdfs:domain schema1:MusicRecording ;
     rdfs:range xsd:string .
 
 kg-ont:map a owl:DatatypeProperty ;
     rdfs:label "Map" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:members a owl:DatatypeProperty ;
     rdfs:label "members" ;
-    rdfs:comment "Membres d'un groupe ou d'une organisation." ;
+    rdfs:comment "Members of a group or organization." ;
     rdfs:range xsd:string .
 
 kg-ont:modes a owl:DatatypeProperty ;
     rdfs:label "Modes" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:music a owl:DatatypeProperty ;
     rdfs:label "Music" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:narrator a owl:DatatypeProperty ;
     rdfs:label "Narrator" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:next a owl:ObjectProperty ;
     rdfs:label "next" ;
-    rdfs:comment "Ressource suivante dans une séquence." .
+    rdfs:comment "Next resource in a sequence." .
 
 kg-ont:notableFor a owl:DatatypeProperty ;
     rdfs:label "notable for" ;
-    rdfs:comment "Ce pour quoi le personnage est notable (champ notablefor dans l’infobox)." ;
+    rdfs:comment "What the character is notable for (notablefor field in infobox)." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:notable_for a owl:DatatypeProperty ;
     rdfs:label "notable for" ;
-    rdfs:comment "Alias pour notableFor (corriger dans les données)." .
+    rdfs:comment "Alias for notableFor (to be corrected in data)." .
 
 kg-ont:occupation a owl:DatatypeProperty ;
     rdfs:label "Occupation" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:origin a owl:DatatypeProperty ;
     rdfs:label "Origin" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:otherNames a owl:DatatypeProperty ;
     rdfs:label "other names" ;
-    rdfs:comment "Autres noms ou surnoms." ;
+    rdfs:comment "Other names or nicknames." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:other_names a owl:DatatypeProperty ;
     rdfs:label "Other Names" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:othernames a owl:DatatypeProperty ;
     rdfs:label "other names" ;
-    rdfs:comment "Alias pour otherNames (corriger dans les données)." .
+    rdfs:comment "Alias for otherNames (to be corrected in data)." .
 
 kg-ont:owner a owl:DatatypeProperty ;
     rdfs:label "Owner" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:parentage a owl:ObjectProperty ;
     rdfs:label "parentage" ;
-    rdfs:comment "Relation parentale (parent d’un personnage)." ;
+    rdfs:comment "Parental relationship (parent of a character)." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range kg-ont:Character .
 
 kg-ont:people a owl:DatatypeProperty ;
     rdfs:label "people" ;
-    rdfs:comment "Personnes associées." ;
+    rdfs:comment "Associated people." ;
     rdfs:range xsd:string .
 
 kg-ont:people-duplicated a owl:DatatypeProperty ;
     rdfs:label "people duplicated" ;
-    rdfs:comment "Personnes dupliquées (données redondantes)." ;
+    rdfs:comment "Duplicated people (redundant data)." ;
     rdfs:range xsd:string .
 
 kg-ont:people_duplicated a owl:DatatypeProperty ;
     rdfs:label "People Duplicated" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:performer a owl:DatatypeProperty ;
     rdfs:label "performer" ;
-    rdfs:comment "Interprète." ;
+    rdfs:comment "Performer." ;
     rdfs:domain schema1:MusicRecording ;
     rdfs:range xsd:string .
 
 kg-ont:pieces a owl:DatatypeProperty ;
     rdfs:label "Pieces" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:platform a owl:DatatypeProperty ;
     rdfs:label "Platform" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:players a owl:DatatypeProperty ;
     rdfs:label "Players" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:position a owl:DatatypeProperty ;
     rdfs:label "position or title" ;
-    rdfs:comment "Position, titre ou fonction." ;
+    rdfs:comment "Position, title, or role." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:previous a owl:ObjectProperty ;
     rdfs:label "previous" ;
-    rdfs:comment "Ressource précédente dans une séquence." .
+    rdfs:comment "Previous resource in a sequence." .
 
 kg-ont:producer a owl:DatatypeProperty ;
     rdfs:label "Producer" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:producers a owl:DatatypeProperty ;
     rdfs:label "Producers" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:products a owl:DatatypeProperty ;
     rdfs:label "Products" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:pronun a owl:DatatypeProperty ;
     rdfs:label "pronunciation" ;
-    rdfs:comment "Prononciation." ;
+    rdfs:comment "Pronunciation." ;
     rdfs:range xsd:string .
 
 kg-ont:pronunciation a owl:DatatypeProperty ;
     rdfs:label "Pronunciation" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:published a owl:DatatypeProperty ;
     rdfs:label "Published" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:publisher a owl:DatatypeProperty ;
     rdfs:label "Publisher" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:purpose a owl:DatatypeProperty ;
     rdfs:label "Purpose" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:race a owl:ObjectProperty ;
     rdfs:label "race" ;
-    rdfs:comment "Race du personnage (Elfe, Homme, etc.)." ;
+    rdfs:comment "Character race (Elf, Man, etc.)." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range kg-ont:Race .
 
 kg-ont:rating a owl:DatatypeProperty ;
     rdfs:label "Rating" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:realm a owl:DatatypeProperty ;
     rdfs:label "realm" ;
-    rdfs:comment "Royaume ou territoire." ;
+    rdfs:comment "Kingdom or territory." ;
     rdfs:range xsd:string .
 
 kg-ont:rebuilt a owl:DatatypeProperty ;
     rdfs:label "Rebuilt" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:regions a owl:DatatypeProperty ;
     rdfs:label "Regions" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:released a owl:DatatypeProperty ;
     rdfs:label "Released" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:releasedate a owl:DatatypeProperty ;
     rdfs:label "Releasedate" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:revised a owl:DatatypeProperty ;
     rdfs:label "Revised" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:ribboncolor a owl:DatatypeProperty ;
     rdfs:label "ribbon color" ;
-    rdfs:comment "Couleur du ruban (pour les distinctions visuelles)." ;
+    rdfs:comment "Ribbon color (for visual distinctions)." ;
     rdfs:range xsd:string .
 
 kg-ont:ribbonid a owl:DatatypeProperty ;
     rdfs:label "ribbon id" ;
-    rdfs:comment "Identifiant du ruban." ;
+    rdfs:comment "Ribbon identifier." ;
     rdfs:range xsd:string .
 
 kg-ont:rivalry a owl:DatatypeProperty ;
     rdfs:label "Rivalry" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:rule a owl:DatatypeProperty ;
     rdfs:label "rule" ;
-    rdfs:comment "Règne ou période de règne." ;
+    rdfs:comment "Reign or rule period." ;
     rdfs:range xsd:string .
 
 kg-ont:rulePeriod a owl:DatatypeProperty ;
     rdfs:label "rule period" ;
-    rdfs:comment "Période de règne (si applicable)." ;
+    rdfs:comment "Reign period (if applicable)." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range xsd:string .
 
 kg-ont:runtime a owl:DatatypeProperty ;
     rdfs:label "Runtime" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:sailedfrom a owl:DatatypeProperty ;
     rdfs:label "sailed from" ;
-    rdfs:comment "Lieu de départ (navigation)." ;
+    rdfs:comment "Departure location (navigation)." ;
     rdfs:range xsd:string .
 
 kg-ont:sailedto a owl:DatatypeProperty ;
     rdfs:label "sailed to" ;
-    rdfs:comment "Lieu d'arrivée (navigation)." ;
+    rdfs:comment "Arrival location (navigation)." ;
     rdfs:range xsd:string .
 
 kg-ont:sailedwest a owl:DatatypeProperty ;
     rdfs:label "sailed west" ;
-    rdfs:comment "A navigué vers l'ouest." ;
+    rdfs:comment "Sailed west." ;
     rdfs:range xsd:string .
 
 kg-ont:screenplay a owl:DatatypeProperty ;
     rdfs:label "Screenplay" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:settlements a owl:DatatypeProperty ;
     rdfs:label "Settlements" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
+    rdfs:range xsd:string .
+
+kg-ont:sibling a owl:DatatypeProperty ;
+    rdfs:label "Sibling" ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:siblings a owl:ObjectProperty ;
     rdfs:label "siblings" ;
-    rdfs:comment "Frères et sœurs." ;
+    rdfs:comment "Siblings." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range kg-ont:Character .
 
 kg-ont:size a owl:DatatypeProperty ;
     rdfs:label "Size" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:skin a owl:DatatypeProperty ;
     rdfs:label "skin" ;
-    rdfs:comment "Peau." ;
+    rdfs:comment "Skin." ;
+    rdfs:range xsd:string .
+
+kg-ont:skinColor a owl:DatatypeProperty ;
+    rdfs:label "Skincolor" ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:skin_colour a owl:DatatypeProperty ;
     rdfs:label "skin colour" ;
-    rdfs:comment "Couleur de peau." ;
+    rdfs:comment "Skin color." ;
     rdfs:range xsd:string .
 
 kg-ont:slainby a owl:DatatypeProperty ;
     rdfs:label "Slainby" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:slayer a owl:DatatypeProperty ;
     rdfs:label "slayer" ;
-    rdfs:comment "Tueur ou destructeur." ;
+    rdfs:comment "Slayer or destroyer." ;
     rdfs:range xsd:string .
 
 kg-ont:species a owl:DatatypeProperty ;
     rdfs:label "species" ;
-    rdfs:comment "Espèce." ;
+    rdfs:comment "Species." ;
     rdfs:range xsd:string .
 
 kg-ont:spotify a owl:DatatypeProperty ;
     rdfs:label "spotify" ;
-    rdfs:comment "Lien Spotify." ;
+    rdfs:comment "Spotify link." ;
     rdfs:range xsd:string .
 
 kg-ont:spouse a owl:ObjectProperty ;
     rdfs:label "spouse" ;
-    rdfs:comment "Conjoint(e)." ;
+    rdfs:comment "Spouse." ;
     rdfs:domain kg-ont:Character ;
     rdfs:range kg-ont:Character .
 
 kg-ont:starring a owl:DatatypeProperty ;
     rdfs:label "Starring" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:steed a owl:ObjectProperty ;
     rdfs:label "steed" ;
-    rdfs:comment "Monture ou destrier." ;
+    rdfs:comment "Steed or mount." ;
     rdfs:domain kg-ont:Character .
 
 kg-ont:studio a owl:DatatypeProperty ;
     rdfs:label "Studio" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:style a owl:DatatypeProperty ;
     rdfs:label "Style" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:subject a owl:DatatypeProperty ;
     rdfs:label "Subject" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:subtitle a owl:DatatypeProperty ;
     rdfs:label "subtitle" ;
-    rdfs:comment "Sous-titre." ;
+    rdfs:comment "Subtitle." ;
     rdfs:range xsd:string .
 
 kg-ont:succeededby a owl:DatatypeProperty ;
     rdfs:label "Succeededby" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:timeline a owl:DatatypeProperty ;
     rdfs:label "timeline" ;
-    rdfs:comment "Chronologie ou période." ;
+    rdfs:comment "Chronology or period." ;
     rdfs:range xsd:string .
 
 kg-ont:to a owl:DatatypeProperty ;
     rdfs:label "To" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:towns a owl:DatatypeProperty ;
     rdfs:label "Towns" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:track a owl:DatatypeProperty ;
     rdfs:label "track" ;
-    rdfs:comment "Numéro ou nom de la piste." ;
+    rdfs:comment "Track number or name." ;
     rdfs:domain schema1:MusicRecording ;
     rdfs:range xsd:string .
 
 kg-ont:type a owl:DatatypeProperty ;
     rdfs:label "Type" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:unknown a owl:DatatypeProperty ;
     rdfs:label "Unknown" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:weapons a owl:ObjectProperty ;
     rdfs:label "weapons" ;
-    rdfs:comment "Armes utilisées." ;
+    rdfs:comment "Weapons used." ;
     rdfs:domain kg-ont:Character .
 
 kg-ont:website a owl:DatatypeProperty ;
     rdfs:label "Website" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:wings a owl:DatatypeProperty ;
     rdfs:label "Wings" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:work a owl:DatatypeProperty ;
     rdfs:label "Work" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:writer a owl:DatatypeProperty ;
     rdfs:label "writer" ;
-    rdfs:comment "Auteur ou scénariste." ;
+    rdfs:comment "Writer or screenwriter." ;
     rdfs:range xsd:string .
 
 kg-ont:writers a owl:DatatypeProperty ;
     rdfs:label "Writers" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:written a owl:DatatypeProperty ;
     rdfs:label "Written" ;
-    rdfs:comment "Propriété extraite automatiquement des infoboxes." ;
+    rdfs:comment "Property automatically extracted from infoboxes." ;
     rdfs:range xsd:string .
 
 kg-ont:House a owl:Class ;
     rdfs:label "House" ;
-    rdfs:comment "Maison, lignée ou famille noble." .
+    rdfs:comment "House, lineage, or noble family." .
 
 kg-ont:Race a owl:Class ;
     rdfs:label "Race" ;
-    rdfs:comment "Race (Elfe, Homme, Nain, Hobbit, Maia, etc.)." .
+    rdfs:comment "Race (Elf, Man, Dwarf, Hobbit, Maia, etc.)." .
 
 kg-ont:Location a owl:Class ;
     rdfs:label "Location" ;
-    rdfs:comment "Lieu géographique (village, ville, région, royaume, etc.)." .
+    rdfs:comment "Geographic location (village, town, region, kingdom, etc.)." .
 
 kg-ont:Character a owl:Class ;
     rdfs:label "Character" ;
-    rdfs:comment "Personnage de l'univers de Tolkien (personnage fictif tel que défini sur Tolkien Gateway)." ;
+    rdfs:comment "Character from Tolkien's universe (fictional character as defined on Tolkien Gateway)." ;
     rdfs:subClassOf schema1:Person .
 

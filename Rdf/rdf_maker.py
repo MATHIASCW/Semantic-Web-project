@@ -42,7 +42,11 @@ def clean_value(value: str, preserve_timeline: bool = False) -> str:
     v = re.sub(r"<ref[^/>]*/>", "", v, flags=re.IGNORECASE)
     v = re.sub(r"</?ref[^>]*>", "", v, flags=re.IGNORECASE)
     
-    v = re.sub(r"<br\s*/?>", "|||", v, flags=re.IGNORECASE)  
+    external_link_match = re.search(r"\[(https?://[^\s\]]+)", v)
+    if external_link_match:
+        v = external_link_match.group(1)
+    
+    v = re.sub(r"<br\s*/?>", "|||", v, flags=re.IGNORECASE)
     v = re.sub(r"</?nowiki[^>]*>", "", v, flags=re.IGNORECASE)
     v = re.sub(r"</?(small|span|sup|sub|i|b|div|p|strong|em)[^>]*>", "", v, flags=re.IGNORECASE)
     v = re.sub(r"<[^>]+>", "", v) 
@@ -168,6 +172,50 @@ PROPERTY_MAP = {
     "description": SCHEMA.description,
     "timeline": KGONT.timeline,
     "chronology": KGONT.timeline,
+    "affiliation": KGONT.affiliation,
+    "siblings": KGONT.sibling,
+    "sibling": KGONT.sibling,
+    "website": SCHEMA.url,
+    "education": SCHEMA.educationalCredentialAwarded,
+    "educated": SCHEMA.educationalCredentialAwarded,
+    "language": SCHEMA.inLanguage,
+    "languages": SCHEMA.inLanguage,
+    "hair color": KGONT.hairColor,
+    "eye color": KGONT.eyeColor,
+    "skin": KGONT.skinColor,
+    "skin colour": KGONT.skinColor,
+    "color": KGONT.color,
+    "colour": KGONT.color,
+    "affiliation": KGONT.affiliation,
+    "realm": KGONT.realm,
+    "created": KGONT.created,
+    "destroyed": KGONT.destroyed,
+    "owner": KGONT.owner,
+    "creator": KGONT.creator,
+    "publisher": SCHEMA.publisher,
+    "author": SCHEMA.author,
+    "released": SCHEMA.datePublished,
+    "releasedate": SCHEMA.datePublished,
+    "published": SCHEMA.datePublished,
+    "director": SCHEMA.director,
+    "genre": SCHEMA.genre,
+    "platform": SCHEMA.applicationCategory,
+    "developer": SCHEMA.developer,
+    "founded": SCHEMA.foundingDate,
+    "founder": SCHEMA.founder,
+    "type": SCHEMA.additionalType,
+    "inhabitants": KGONT.inhabitants,
+    "events": KGONT.events,
+    "regions": KGONT.regions,
+    "settlements": KGONT.settlements,
+    "purpose": KGONT.purpose,
+    "members": KGONT.members,
+    "origin": KGONT.origin,
+    "lifespan": KGONT.lifespan,
+    "heritage": KGONT.heritage,
+    "hoard": KGONT.hoard,
+    "slayer": KGONT.slayer,
+    "ruler": KGONT.ruler,
 }
 
 TYPE_MAP = {
@@ -338,6 +386,13 @@ def emit_mixed(graph: Graph, subj, pred, raw: str, keep_literal_if_links: bool =
         return False
     raw = raw.strip()
     wrote = False
+
+    if pred == SCHEMA.url:
+        cleaned_url = clean_value(raw)
+        if cleaned_url:
+            graph.add((subj, pred, Literal(cleaned_url, datatype=XSD.string)))
+            return True
+        return False
     
     if pred in LITERAL_ONLY_PROPS:
         is_timeline = pred == KGONT.timeline or pred == KGONT.chronology

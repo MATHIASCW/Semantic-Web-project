@@ -7,53 +7,53 @@
 kg-ont:CharacterShape a sh:NodeShape ;
     sh:targetClass kg-ont:Character ;
     
-    # Nom obligatoire
+    # Required name
     sh:property [
         sh:path schema:name ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
-        sh:message "Chaque personnage doit avoir exactement un nom (schema:name)." ;
+        sh:message "Each character must have exactly one name (schema:name)." ;
     ] ;
     
-    # Genre avec valeurs contrôlées
+    # Gender (string)
     sh:property [
         sh:path schema:gender ;
         sh:datatype xsd:string ;
-        sh:message "Le genre doit être une chaîne de caractères." ;
+        sh:message "Gender must be a string." ;
     ] ;
     
-    # Dates (optionnelles)
+    # Dates (optional)
     sh:property [
         sh:path kg-ont:birthDate ;
         sh:datatype xsd:string ;
-        sh:message "La date de naissance doit être une chaîne." ;
+        sh:message "Birth date must be a string." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:deathDate ;
         sh:datatype xsd:string ;
-        sh:message "La date de décès doit être une chaîne." ;
+        sh:message "Death date must be a string." ;
     ] ;
     
-    # Relation avec une Maison (famille)
+    # Relationship to a House (family)
     sh:property [
         sh:path kg-ont:family ;
         sh:or (
             [ sh:node kg-ont:HouseShape ]
             [ sh:datatype xsd:string ]
         ) ;
-        sh:message "La famille doit être un IRI House ou une string." ;
+        sh:message "Family must be a House IRI or a string." ;
     ] ;
     
-    # Relations parentales (peuvent avoir plusieurs valeurs)
+    # Parental relations (can be multiple)
     sh:property [
         sh:path kg-ont:parentage ;
         sh:or (
             [ sh:nodeKind sh:IRI ]
             [ sh:datatype xsd:string ]
         ) ;
-        sh:message "Les parents doivent être des IRIs ou des strings." ;
+        sh:message "Parents must be IRIs or strings." ;
     ] ;
     
     sh:property [
@@ -62,7 +62,7 @@ kg-ont:CharacterShape a sh:NodeShape ;
             [ sh:nodeKind sh:IRI ]
             [ sh:datatype xsd:string ]
         ) ;
-        sh:message "Les enfants doivent être des IRIs ou des strings." ;
+        sh:message "Children must be IRIs or strings." ;
     ] ;
     
     sh:property [
@@ -71,23 +71,23 @@ kg-ont:CharacterShape a sh:NodeShape ;
             [ sh:nodeKind sh:IRI ]
             [ sh:datatype xsd:string ]
         ) ;
-        sh:message "L'epoux/epouse doit être un IRI ou une string." ;
+        sh:message "Spouse must be an IRI or a string." ;
     ] ;
     
-    # Affiliation (peut être multiple)
+    # Affiliation (may be multiple)
     sh:property [
         sh:path kg-ont:affiliation ;
-        sh:message "L'affiliation doit être vers une organisation ou un groupe." ;
+        sh:message "Affiliation must point to an organization or group." ;
     ] ;
     
-    # Lieux (peuvent être des IRIs OU des strings)
+    # Locations (IRI or string)
     sh:property [
         sh:path kg-ont:birthLocation ;
         sh:or (
             [ sh:nodeKind sh:IRI ]
             [ sh:datatype xsd:string ]
         ) ;
-        sh:message "Le lieu de naissance doit être soit un IRI, soit une string." ;
+        sh:message "Birth location must be either an IRI or a string." ;
     ] ;
     
     sh:property [
@@ -96,39 +96,39 @@ kg-ont:CharacterShape a sh:NodeShape ;
             [ sh:nodeKind sh:IRI ]
             [ sh:datatype xsd:string ]
         ) ;
-        sh:message "Le lieu de decès doit être soit un IRI, soit une string." ;
+        sh:message "Death location must be either an IRI or a string." ;
     ] ;
     
-    # Propriétés physiques
+    # Physical properties
     sh:property [
         sh:path kg-ont:height ;
         sh:datatype xsd:string ;
-        sh:message "La taille doit être une chaîne de caractères." ;
+        sh:message "Height must be a string." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:hairColor ;
         sh:datatype xsd:string ;
-        sh:message "La couleur des cheveux doit être une chaîne." ;
+        sh:message "Hair color must be a string." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:eyeColor ;
         sh:datatype xsd:string ;
-        sh:message "La couleur des yeux doit être une chaîne." ;
+        sh:message "Eye color must be a string." ;
     ] ;
     
-    # Armes et montures
+    # Weapons and mounts
     sh:property [
         sh:path kg-ont:weapons ;
         sh:datatype xsd:string ;
-        sh:message "Les armes doivent être décrites par une chaîne." ;
+        sh:message "Weapons must be described by a string." ;
     ] ;
     
     sh:property [
         sh:path kg-ont:steed ;
         sh:datatype xsd:string ;
-        sh:message "La monture doit être décrite par une chaîne." ;
+        sh:message "Mount must be described by a string." ;
     ] .
 
 # Forme pour les Maisons

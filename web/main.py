@@ -11,8 +11,14 @@ from web.sparql_queries import (
     get_character_by_name,
     get_statistics,
     get_entities_by_type,
+    get_ontology_property_info,
 )
-from web.html_renderer import generate_html_page, generate_turtle_for_resource
+from web.html_renderer import (
+    generate_html_page,
+    generate_turtle_for_resource,
+    generate_ontology_property_page,
+    generate_turtle_for_property,
+)
 from web.home_renderer import generate_home_page, generate_browse_page
 
 """
@@ -203,6 +209,36 @@ def get_page(name: str):
     resource = ResourceData(name=name, uri=resource_uri, properties=properties)
     html = generate_html_page(resource)
     return HTMLResponse(html)
+
+
+@app.get("/ontology/{name}", tags=["Ontology"])
+def get_ontology_property(name: str, request: Request, format: str = Query(None, alias="format")):
+    """Serve a local documentation page for ontology properties (kg-ont)."""
+    iri = f"http://tolkien-kg.org/ontology/{name}"
+    info = get_ontology_property_info(iri)
+    if not info:
+        return HTMLResponse("<h1>Ontology property not found</h1>", status_code=404)
+
+    accept_header = request.headers.get("accept", "text/html").lower()
+
+    if format:
+        if format.lower() == "turtle":
+            content = generate_turtle_for_property(info)
+            return PlainTextResponse(content, media_type="text/turtle")
+        elif format.lower() == "json":
+            return JSONResponse(info)
+        elif format.lower() == "html":
+            html = generate_ontology_property_page(info)
+            return HTMLResponse(html)
+
+    if "application/json" in accept_header or "application/ld+json" in accept_header:
+        return JSONResponse(info)
+    elif "text/turtle" in accept_header or "application/rdf+turtle" in accept_header:
+        content = generate_turtle_for_property(info)
+        return PlainTextResponse(content, media_type="text/turtle")
+    else:
+        html = generate_ontology_property_page(info)
+        return HTMLResponse(html)
 
 
 @app.get("/favicon.ico")

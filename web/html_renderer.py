@@ -110,12 +110,70 @@ def build_summary_table(resource: ResourceData) -> str:
     return ""
 
 
+def format_property_value(predicate: str, value: str) -> str:
+    """Format property value based on property type and value content."""
+    if not isinstance(value, str):
+        value = str(value)
+    
+    if value.startswith('http://') or value.startswith('https://'):
+        if value.startswith('http://tolkien-kg.org/ontology/') or value.startswith('http://schema.org/'):
+            return escape(format_property_label(value))
+        elif value.startswith('http://tolkien-kg.org/resource/') or value.startswith('http://dbpedia.org/resource/'):
+            local = value.rsplit('/', 1)[-1]
+            return f'<a href="/resource/{quote(local)}" title="{escape(value)}">{escape(format_property_label(value))}</a>'
+        elif 'url' in predicate.lower() or 'sameas' in predicate.lower() or 'website' in predicate.lower():
+            return f'<a href="{escape(value)}" target="_blank" rel="noopener noreferrer" title="External link">{escape(value)}</a>'
+        else:
+            return f'<a href="/resource/{quote(value.rsplit("/", 1)[-1])}">{escape(format_property_label(value))}</a>'
+    
+    if 'date' in predicate.lower() or 'birth' in predicate.lower() or 'death' in predicate.lower():
+        if re.match(r'^\d{4}-\d{2}-\d{2}', value):
+            return format_date_display(value)
+        elif re.match(r'^\d{4}$', value):
+            return f'{value} AD'
+    
+    if 'image' in predicate.lower():
+        clean_val = clean_image(value)
+        if clean_val:
+            return f'<img src="{escape(clean_val)}" alt="Image" style="max-width: 300px; border-radius: 4px;">'
+    
+    if 'caption' in predicate.lower():
+        return f'<em>{escape(value)}</em>'
+    
+    return escape(value)
+
+
+def format_date_display(date_str: str) -> str:
+    """Format ISO date for display."""
+    if not date_str:
+        return ""
+    
+    try:
+        if len(date_str) >= 10 and date_str[4] == '-' and date_str[7] == '-':
+            year, month, day = date_str[:4], date_str[5:7], date_str[8:10]
+            months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            try:
+                m_idx = int(month) - 1
+                if 0 <= m_idx < 12:
+                    return f'{day} {months[m_idx]} {year}'
+            except:
+                pass
+        elif re.match(r'^\d{4}$', date_str):
+            return f'{date_str} AD'
+    except:
+        pass
+    
+    return date_str
+
+
 def build_properties_section(resource: ResourceData) -> str:
     """Build properties section HTML (all properties list, excluding special fields)."""
     EXCLUDED_PROPERTIES = {
         'http://schema.org/image',
         'http://tolkien-kg.org/ontology/timeline',
         'http://tolkien-kg.org/ontology/additionalcredits',
+        'http://www.w3.org/2000/01/rdf-schema#label',
+        'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
     }
     
     html = '<div class="properties"><h2>Properties</h2>'
@@ -125,20 +183,24 @@ def build_properties_section(resource: ResourceData) -> str:
             continue
         
         prop_label = format_property_label(predicate)
+        if predicate.startswith('http://tolkien-kg.org/ontology/'):
+            local = predicate.rsplit('/', 1)[-1]
+            prop_name_html = f'<a href="/ontology/{quote(local)}" title="{escape(predicate)}">{escape(prop_label)}</a>'
+        elif predicate.startswith('http://schema.org/'):
+            prop_name_html = f'<a href="{escape(predicate)}" target="_blank" rel="noopener noreferrer" title="{escape(predicate)}">{escape(prop_label)}</a>'
+        else:
+            prop_name_html = f'<a href="{escape(predicate)}" title="{escape(predicate)}">{escape(prop_label)}</a>'
+
         html += f'<div class="property">'
-        html += f'<div class="property-name">{escape(prop_label)}</div>'
+        html += f'<div class="property-name">{prop_name_html}</div>'
         html += '<div class="property-value">'
         
         for value in values:
             if isinstance(value, str) and '{{Timeline' in value:
                 continue
             
-            if value.startswith('http://') or value.startswith('https://'):
-                value_label = format_property_label(value)
-                local = value.rsplit('/', 1)[-1]
-                html += f'<div class="value-item"><a href="/resource/{quote(local)}">{escape(value_label)}</a></div>'
-            else:
-                html += f'<div class="value-item">{escape(str(value))}</div>'
+            formatted = format_property_value(predicate, value)
+            html += f'<div class="value-item">{formatted}</div>'
         
         html += '</div></div>'
     
@@ -223,19 +285,21 @@ def generate_html_page(resource: ResourceData) -> str:
             continue
         
         prop_label = format_property_label(predicate)
-        prop_link = f'<a href="{escape(predicate)}" title="{escape(predicate)}">{escape(prop_label)}</a>'
+        if predicate.startswith('http://tolkien-kg.org/ontology/'):
+            local = predicate.rsplit('/', 1)[-1]
+            prop_name_html = f'<a href="/ontology/{quote(local)}" title="{escape(predicate)}">{escape(prop_label)}</a>'
+        elif predicate.startswith('http://schema.org/'):
+            prop_name_html = f'<a href="{escape(predicate)}" target="_blank" rel="noopener noreferrer" title="{escape(predicate)}">{escape(prop_label)}</a>'
+        else:
+            prop_name_html = f'<a href="{escape(predicate)}" title="{escape(predicate)}">{escape(prop_label)}</a>'
         
         value_parts = []
         for value in values:
-            if value.startswith('http://') or value.startswith('https://'):
-                value_label = format_property_label(value)
-                local = value.rsplit('/', 1)[-1]
-                value_parts.append(f'<a href="/resource/{quote(local)}">{escape(value_label)}</a>')
-            else:
-                value_parts.append(f'<span>{escape(str(value))}</span>')
+            formatted = format_property_value(predicate, value)
+            value_parts.append(formatted)
         
         value_html = '<br>'.join(value_parts) if value_parts else "-"
-        properties_rows.append(f'<tr><td class="property-name">{prop_link}</td><td class="property-value">{value_html}</td></tr>')
+        properties_rows.append(f'<tr><td class="property-name">{prop_name_html}</td><td class="property-value">{value_html}</td></tr>')
     
     properties_table = '<table class="properties-table"><thead><tr><th>Property</th><th>Value</th></tr></thead><tbody>' + ''.join(properties_rows) + '</tbody></table>'
     
@@ -301,6 +365,83 @@ def generate_html_page(resource: ResourceData) -> str:
     """
     
     return html
+
+
+def generate_ontology_property_page(prop_info: dict) -> str:
+    """Generate a simple HTML page describing an ontology property."""
+    title = format_property_label(prop_info.get('uri', 'Ontology Property'))
+    label = prop_info.get('label') or title
+    comment = prop_info.get('comment') or ''
+    ptype = format_property_label(prop_info.get('type', '')) if prop_info.get('type') else ''
+    domain = prop_info.get('domain') or ''
+    range_ = prop_info.get('range') or ''
+
+    def iri_link(iri: str):
+        if not iri:
+            return '-'
+        if iri.startswith('http://tolkien-kg.org/resource/'):
+            local = iri.rsplit('/', 1)[-1]
+            return f'<a href="/resource/{quote(local)}">{escape(format_property_label(iri))}</a>'
+        return f'<span title="{escape(iri)}">{escape(format_property_label(iri))}</span>'
+
+    html = f"""
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{escape(label)} - Ontology Property</title>
+        <style>{get_resource_css()}</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Property: {escape(label)}</h1>
+                <div class="page-subtitle"><code>{escape(prop_info.get('uri', ''))}</code></div>
+            </div>
+            <div class="properties">
+                <div class="property"><div class="property-name">Type</div><div class="property-value">{escape(ptype or '-')}</div></div>
+                <div class="property"><div class="property-name">Label</div><div class="property-value">{escape(label)}</div></div>
+                <div class="property"><div class="property-name">Comment</div><div class="property-value">{escape(comment or '-')}</div></div>
+                <div class="property"><div class="property-name">Domain</div><div class="property-value">{iri_link(domain)}</div></div>
+                <div class="property"><div class="property-name">Range</div><div class="property-value">{iri_link(range_)}</div></div>
+            </div>
+            <div class="linked-data">
+                <h3>Available formats</h3>
+                <div class="format-links">
+                    <a href="/ontology/{quote(prop_info.get('uri', '').rsplit('/', 1)[-1])}?format=turtle">📄 Turtle (RDF)</a>
+                    <a href="/ontology/{quote(prop_info.get('uri', '').rsplit('/', 1)[-1])}?format=json">📋 JSON</a>
+                    <a href="/ontology/{quote(prop_info.get('uri', '').rsplit('/', 1)[-1])}">🌐 HTML</a>
+                </div>
+            </div>
+            <div class="page-footer"><a href="/">← Home</a></div>
+        </div>
+    </body>
+    </html>
+    """
+    return html
+
+
+def generate_turtle_for_property(prop_info: dict) -> str:
+    """Generate Turtle for an ontology property from metadata."""
+    uri = prop_info.get('uri')
+    turtle = '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n' \
+             '@prefix owl: <http://www.w3.org/2002/07/owl#> .\n\n'
+    turtle += f'<{uri}> '
+    parts = []
+    if prop_info.get('type'):
+        parts.append(f'a <{prop_info["type"]}>')
+    if prop_info.get('label'):
+        lbl = prop_info['label'].replace('"', '\"')
+        parts.append(f'rdfs:label "{lbl}"')
+    if prop_info.get('comment'):
+        cmt = prop_info['comment'].replace('"', '\"')
+        parts.append(f'rdfs:comment "{cmt}"')
+    if prop_info.get('domain'):
+        parts.append(f'rdfs:domain <{prop_info["domain"]}>')
+    if prop_info.get('range'):
+        parts.append(f'rdfs:range <{prop_info["range"]}>')
+    turtle += ' ;\n    '.join(parts) + ' .\n'
+    return turtle
 
 
 def generate_turtle_for_resource(resource: ResourceData) -> str:

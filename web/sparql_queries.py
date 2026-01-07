@@ -113,6 +113,39 @@ def get_resource_properties(subject_uri: str) -> Optional[Dict[str, List[str]]]:
     except Exception:
         return None
 
+def get_ontology_property_info(name_or_uri: str) -> Optional[Dict[str, str]]:
+    """Fetch ontology property info (label, comment, type, domain, range) from Fuseki.
+    Accepts either local name (e.g., 'affiliation') or full URI.
+    """
+    if name_or_uri.startswith("http://") or name_or_uri.startswith("https://"):
+        iri = name_or_uri
+    else:
+        iri = f"http://tolkien-kg.org/ontology/{name_or_uri}"
+
+    sparql = SPARQLWrapper(FUSEKI_URL)
+    sparql.setQuery(f'''
+        SELECT ?type ?label ?comment ?domain ?range WHERE {{
+            OPTIONAL {{ <{iri}> a ?type }}
+            OPTIONAL {{ <{iri}> <http://www.w3.org/2000/01/rdf-schema#label> ?label }}
+            OPTIONAL {{ <{iri}> <http://www.w3.org/2000/01/rdf-schema#comment> ?comment }}
+            OPTIONAL {{ <{iri}> <http://www.w3.org/2000/01/rdf-schema#domain> ?domain }}
+            OPTIONAL {{ <{iri}> <http://www.w3.org/2000/01/rdf-schema#range> ?range }}
+        }} LIMIT 1
+    ''')
+    sparql.setReturnFormat(JSON)
+    try:
+        results = sparql.query().convert()
+        bindings = results["results"]["bindings"]
+        info = {"uri": iri}
+        if bindings:
+            b = bindings[0]
+            for key in ("type", "label", "comment", "domain", "range"):
+                if key in b:
+                    info[key] = b[key]["value"]
+        return info
+    except Exception:
+        return None
+
 
 def get_characters_list(limit: int = 100) -> List[str]:
     """
