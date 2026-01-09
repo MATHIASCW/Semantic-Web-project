@@ -1,0 +1,6121 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://tolkien-kg.org/resource/Adanel> rdfs:label "Adanel"@de,
+        "Adanel"@it,
+        "Adanela"@pl,
+        "Аданэль"@ru .
+
+<http://tolkien-kg.org/resource/Adorn> rdfs:label "Adorn"@de,
+        "Adorn"@es,
+        "Adorn"@fr,
+        "Adorn"@it,
+        "Adorn"@pl,
+        "Адорн"@ru .
+
+<http://tolkien-kg.org/resource/Adunaic> rdfs:label "Adûnaïsch"@de,
+        "Adûnaico"@es,
+        "Adûnaic"@fr,
+        "Adûnaico"@it,
+        "Adûnaic"@pl,
+        "Адунаик"@ru,
+        "Адунаїк"@uk .
+
+<http://tolkien-kg.org/resource/Aeglos_spear> rdfs:label "Aeglos (Speer)"@de,
+        "Aeglos"@es,
+        "Aeglos (Lance)"@fr,
+        "Aeglos (lancia)"@it,
+        "Aeglos"@pl,
+        "Аэглос"@ru .
+
+<http://tolkien-kg.org/resource/Aegnor> rdfs:label "Aegnor"@ca,
+        "Aegnor"@de,
+        "Aegnor"@es,
+        "Aegnor"@fr,
+        "Aegnor"@it,
+        "Aegnor"@pl,
+        "Аэгнор"@ru .
+
+<http://tolkien-kg.org/resource/Aerandir> rdfs:label "Aerandir"@de,
+        "Aerandir"@es,
+        "Aerandir"@it,
+        "Äerandir"@pl .
+
+<http://tolkien-kg.org/resource/Aerin> rdfs:label "Aerin"@de,
+        "Aerin"@fr,
+        "Aerin"@it,
+        "Aerina"@pl,
+        "Аэрин"@ru .
+
+<http://tolkien-kg.org/resource/Agandaur> rdfs:label "Agandaûr"@de,
+        "Agandaûr"@es,
+        "Agandaûr"@it,
+        "Agandaûr"@pl,
+        "Агандаур"@ru .
+
+<http://tolkien-kg.org/resource/Agathor> rdfs:label "Agathor"@es,
+        "Agathor"@pl,
+        "Агатор"@ru .
+
+<http://tolkien-kg.org/resource/Aghan> rdfs:label "Aghan"@de,
+        "Aghan"@pl .
+
+<http://tolkien-kg.org/resource/Aglahad> rdfs:label "Aglahad"@de,
+        "Aglahad"@es,
+        "Aglahad"@it,
+        "Aglahad"@nl,
+        "Aglahad"@pl,
+        "Аглахад"@ru .
+
+<http://tolkien-kg.org/resource/Ailinel> rdfs:label "Ailinel"@de,
+        "Ailinel"@it,
+        "Ailinel"@nl,
+        "Ailinel"@pl,
+        "Айлинель"@ru .
+
+<http://tolkien-kg.org/resource/Ainairos> rdfs:label "Айнайрос"@ru .
+
+<http://tolkien-kg.org/resource/Ainur> rdfs:label "Ainur"@ca,
+        "Ainur"@de,
+        "Ainur"@es,
+        "Ainur"@fr,
+        "איינור"@he,
+        "Ainur"@it,
+        "Ainur"@nl,
+        "Ainurowie"@pl,
+        "Ainur"@pt-br,
+        "Айнур"@ru,
+        "Ainur"@sk .
+
+<http://tolkien-kg.org/resource/Aldamir> rdfs:label "Aldamir"@de,
+        "Aldamir"@es,
+        "Aldamir"@it,
+        "Aldamir"@pl,
+        "Алдамир"@ru,
+        "Альдамір"@uk .
+
+<http://tolkien-kg.org/resource/Aldburg> rdfs:label "Aldburg"@de,
+        "Aldburg"@es,
+        "Aldburg"@fr,
+        "Aldburg"@it,
+        "Aldburg"@nl,
+        "Aldburg"@pl,
+        "Алдбург"@ru .
+
+<http://tolkien-kg.org/resource/Aldudenie> rdfs:label "Aldudénië"@de,
+        "Aldudénië"@pl,
+        "Алдудэниэ"@ru .
+
+<http://tolkien-kg.org/resource/Algund> rdfs:label "Algund"@de,
+        "Algund"@fr,
+        "Algund"@it,
+        "Algund"@pl,
+        "Алгунд"@ru .
+
+<http://tolkien-kg.org/resource/Almaren> rdfs:label "Almaren"@de,
+        "Almaren"@es,
+        "Almaren"@fr,
+        "Almaren"@it,
+        "Almaren"@nl,
+        "Almaren"@pl,
+        "Алмарен"@ru,
+        "Almaren"@sk,
+        "Алмарен"@uk .
+
+<http://tolkien-kg.org/resource/Almarian> rdfs:label "Almarian"@de,
+        "Almarian"@it,
+        "Almarian"@pl,
+        "Алмариан"@ru .
+
+<http://tolkien-kg.org/resource/Almariel> rdfs:label "Almáriel"@pl .
+
+<http://tolkien-kg.org/resource/Almiel> rdfs:label "Almiel"@de,
+        "Almiel"@it,
+        "Almiel"@pl,
+        "Алмиэль"@ru .
+
+<http://tolkien-kg.org/resource/Alphros> rdfs:label "Alphros"@de,
+        "Alphros"@es,
+        "Alphros"@it,
+        "Alphros"@nl,
+        "Alphros"@pl,
+        "Алфрос"@ru .
+
+<http://tolkien-kg.org/resource/Alqualonde> rdfs:label "Alqualondë"@ca,
+        "Alqualonde"@de,
+        "Alqualondë"@es,
+        "Alqualondë"@fr,
+        "Alqualondë"@it,
+        "Alqualondë"@pl,
+        "Алквалондэ"@ru,
+        "Alqualondë"@tr .
+
+<http://tolkien-kg.org/resource/Aman> rdfs:label "Aman"@de,
+        "Aman"@es,
+        "Aman"@fr,
+        "Aman"@it,
+        "Aman"@nl,
+        "Aman"@pl,
+        "Aman"@pt-br,
+        "Аман"@ru,
+        "Aman"@sk,
+        "Aman"@tr,
+        "Аман"@uk .
+
+<http://tolkien-kg.org/resource/Amandil> rdfs:label "Amandil"@de,
+        "Amandil"@es,
+        "Amandil"@fr,
+        "Amandil"@it,
+        "Amandil"@pl,
+        "Амандиль"@ru,
+        "Аманділ"@uk .
+
+<http://tolkien-kg.org/resource/Amarie> rdfs:label "Amarië"@de,
+        "Amarië"@it,
+        "Amarië"@pl,
+        "Амариэ"@ru .
+
+<http://tolkien-kg.org/resource/Ambar> rdfs:label "Ambar"@it,
+        "Ambar"@pl .
+
+<http://tolkien-kg.org/resource/Amdir> rdfs:label "Amdír"@de,
+        "Amdír"@es,
+        "Amdír"@fr,
+        "Amdír"@it,
+        "Amdir"@pl,
+        "Амдир"@ru .
+
+<http://tolkien-kg.org/resource/Amlach> rdfs:label "Amlach"@de,
+        "Amlach"@it,
+        "Amlach"@pl,
+        "Амлах"@ru .
+
+<http://tolkien-kg.org/resource/Amlaith> rdfs:label "Amlaith von Fornost"@de,
+        "Amlaith"@es,
+        "Amlaith"@it,
+        "Amlaith"@pl,
+        "Амлайт"@ru .
+
+<http://tolkien-kg.org/resource/Amras> rdfs:label "Amras"@de,
+        "Amras"@es,
+        "Amras"@fr,
+        "Amras"@it,
+        "Amras"@nl,
+        "Amras"@pl,
+        "Амрас"@ru .
+
+<http://tolkien-kg.org/resource/Amrod> rdfs:label "Amrod"@de,
+        "Amrod"@es,
+        "Amrod"@fr,
+        "Amrod"@it,
+        "Amrod"@pl,
+        "Амрод"@ru .
+
+<http://tolkien-kg.org/resource/Amroth> rdfs:label "Amroth"@de,
+        "Amroth"@es,
+        "Amroth"@it,
+        "Amroth"@pl,
+        "Амрот"@ru .
+
+<http://tolkien-kg.org/resource/Amrothos> rdfs:label "Amrothos"@de,
+        "Amrothos"@es,
+        "Amrothos"@it,
+        "Amrothos"@pl,
+        "Амротос"@ru .
+
+<http://tolkien-kg.org/resource/Anaire> rdfs:label "Anairë"@ca,
+        "Anairë"@de,
+        "Anairë"@es,
+        "Anairë"@fr,
+        "Anairë"@it,
+        "Anairë"@pl,
+        "Анайрэ"@ru .
+
+<http://tolkien-kg.org/resource/Anardil_King_of_Gondor> rdfs:label "Anardil"@de,
+        "Anardil"@es,
+        "Anardil"@fr,
+        "Anardil"@it,
+        "Anardil"@nl,
+        "Anardil"@pl,
+        "Анардиль"@ru .
+
+<http://tolkien-kg.org/resource/Anarion> rdfs:label "Anàrion"@ca,
+        "Anárion"@de,
+        "Anárion"@es,
+        "Anárion"@fr,
+        "Anárion"@it,
+        "Anárion"@pl,
+        "Anárion"@pt-br,
+        "Анарион"@ru,
+        "Anárion"@tr,
+        "Анаріон"@uk .
+
+<http://tolkien-kg.org/resource/Anborn> rdfs:label "Anborn"@de,
+        "Anborn"@es,
+        "Anborn"@fr,
+        "Anborn"@nl,
+        "Anborn"@pl,
+        "Анборн"@ru,
+        "Анборн"@uk .
+
+<http://tolkien-kg.org/resource/Ancalagon> rdfs:label "Ancàlagon"@ca,
+        "Ancalagon"@de,
+        "Ancalagon"@es,
+        "Ancalagon"@fr,
+        "Ancalagon il Nero"@it,
+        "Ancalagon"@nl,
+        "Ancalagon"@pl,
+        "Анкалагон"@ru,
+        "Ancalagon"@sk .
+
+<http://tolkien-kg.org/resource/Andram> rdfs:label "Andram"@de,
+        "Andram"@es,
+        "Andram"@it,
+        "Andram"@pl,
+        "Андрам"@ru .
+
+<http://tolkien-kg.org/resource/Andreth> rdfs:label "Andreth"@de,
+        "Andreth"@fr,
+        "Andreth"@it,
+        "Andretha"@pl,
+        "Андрет"@ru .
+
+<http://tolkien-kg.org/resource/Andriel> rdfs:label "Andriel"@de,
+        "Andriel"@es,
+        "Andriel"@it,
+        "Andriel"@pl,
+        "Андриель"@ru .
+
+<http://tolkien-kg.org/resource/Androg> rdfs:label "Andróg"@de,
+        "Andróg"@es,
+        "Andróg"@fr,
+        "Andróg"@it,
+        "Andróg"@pl,
+        "Андрог"@ru .
+
+<http://tolkien-kg.org/resource/Androth> rdfs:label "Höhlen von Androth"@de,
+        "Androth"@it,
+        "Androth"@pl,
+        "Андрот"@ru .
+
+<http://tolkien-kg.org/resource/Anduin> rdfs:label "Anduin"@de,
+        "Anduin"@es,
+        "Anduin"@fr,
+        "Anduin"@it,
+        "Anduin"@nl,
+        "Anduina"@pl,
+        "Anduin"@pt-br,
+        "Андуин"@ru,
+        "Anduin"@tr .
+
+<http://tolkien-kg.org/resource/Andunie> rdfs:label "Andúnië"@ca,
+        "Andúnië"@de,
+        "Andúnië"@es,
+        "Andúnië"@fr,
+        "Andúnië"@it,
+        "Andúnië"@pl,
+        "Андуниэ"@ru .
+
+<http://tolkien-kg.org/resource/Anduril> rdfs:label "Andúril"@de,
+        "Andúril"@es,
+        "Andúril"@it,
+        "Andúril"@pl,
+        "Andúril"@pt-br .
+
+<http://tolkien-kg.org/resource/Andustar> rdfs:label "Andustar"@de,
+        "Andustar"@es,
+        "Andustar"@fr,
+        "Andustar"@it,
+        "Andustar"@pl,
+        "Андустар"@ru .
+
+<http://tolkien-kg.org/resource/Andvir> rdfs:label "Andvír"@it,
+        "Andvír"@pl,
+        "Андвир"@ru .
+
+<http://tolkien-kg.org/resource/Anfalas> rdfs:label "Anfalas"@de,
+        "Anfalas"@es,
+        "Anfalas"@fr,
+        "Anfalas"@it,
+        "Anfalas"@nl,
+        "Anfalas"@pl,
+        "Анфалас"@ru .
+
+<http://tolkien-kg.org/resource/Angamaite> rdfs:label "Angamaitë"@de,
+        "Angamaitë"@it,
+        "Angamaitë"@nl,
+        "Angamaitë"@pl,
+        "Ангамайтэ"@ru .
+
+<http://tolkien-kg.org/resource/Angband> rdfs:label "Àngband"@ca,
+        "Angband"@de,
+        "Angband"@es,
+        "Angband"@fr,
+        "Angband"@it,
+        "Angband"@nl,
+        "Angband"@pl,
+        "Angband"@pt-br,
+        "Ангбанд"@ru,
+        "Angband"@tr,
+        "Анґбанд"@uk .
+
+<http://tolkien-kg.org/resource/Angbor> rdfs:label "Angbor"@de,
+        "Angbor"@es,
+        "Angbor"@fr,
+        "Angbor"@it,
+        "Angbor"@pl,
+        "Ангбор"@ru .
+
+<http://tolkien-kg.org/resource/Angelimir> rdfs:label "Angelimir"@de,
+        "Angelimir"@es,
+        "Angelimir"@it,
+        "Angelimir"@nl,
+        "Angelimar"@pl,
+        "Ангелимир"@ru .
+
+<http://tolkien-kg.org/resource/Anglachel> rdfs:label "Anglachel"@es,
+        "Gurthang"@fr,
+        "Anglachel"@it,
+        "Anglachel"@pl,
+        "Англахэль"@ru .
+
+<http://tolkien-kg.org/resource/Angle> rdfs:label "Ángulo"@es .
+
+<http://tolkien-kg.org/resource/Angmar> rdfs:label "Àngmar"@ca,
+        "Angmar"@de,
+        "Angmar"@es,
+        "Angmar"@fr,
+        "Angmar"@it,
+        "Angmar"@nl,
+        "Angmar"@pl,
+        "Ангмар"@ru .
+
+<http://tolkien-kg.org/resource/Angrim> rdfs:label "Angrim"@de,
+        "Angrim"@pl,
+        "Ангрим"@ru .
+
+<http://tolkien-kg.org/resource/Angrist> rdfs:label "Angrist"@de,
+        "Angrist"@es,
+        "Angrist"@it,
+        "Angrist"@pl,
+        "Ангрист"@ru,
+        "Angrist"@sk .
+
+<http://tolkien-kg.org/resource/Angrod> rdfs:label "Àngrod"@ca,
+        "Angrod"@de,
+        "Angrod"@es,
+        "Angrod"@fr,
+        "Angrod"@it,
+        "Angrod"@pl,
+        "Ангрод"@ru .
+
+<http://tolkien-kg.org/resource/Anguirel> rdfs:label "Anguirel"@de,
+        "Anguirel"@es,
+        "Anguirel"@fr,
+        "Anguirel"@it,
+        "Anguirel"@pl,
+        "Ангуирэль"@ru .
+
+<http://tolkien-kg.org/resource/Annael> rdfs:label "Annael"@de,
+        "Annael"@es,
+        "Annael"@fr,
+        "Annael"@it,
+        "Annael"@pl,
+        "Аннаэль"@ru .
+
+<http://tolkien-kg.org/resource/Annuminas> rdfs:label "Annúminas"@de,
+        "Annúminas"@es,
+        "Annúminas"@fr,
+        "Annúminas"@it,
+        "Annúminas"@nl,
+        "Annúminas"@pl,
+        "Аннуминас"@ru .
+
+<http://tolkien-kg.org/resource/Anorien> rdfs:label "Anórien"@de,
+        "Anórien"@es,
+        "Anórien"@fr,
+        "Anórien"@it,
+        "Anórien"@nl,
+        "Anórien"@pl,
+        "Анориэн"@ru,
+        "Анорієн"@uk .
+
+<http://tolkien-kg.org/resource/April> rdfs:label "April"@nl .
+
+<http://tolkien-kg.org/resource/April_4> rdfs:label "4 April"@nl .
+
+<http://tolkien-kg.org/resource/Arador> rdfs:label "Arador"@de,
+        "Arador"@es,
+        "Arador"@fr,
+        "Arador"@it,
+        "Arador"@nl,
+        "Arador I"@pl,
+        "Arador"@pt-br,
+        "Арадор"@ru .
+
+<http://tolkien-kg.org/resource/Araglas> rdfs:label "Araglas"@de,
+        "Araglas"@es,
+        "Araglas"@it,
+        "Araglas"@pl,
+        "Араглас"@ru .
+
+<http://tolkien-kg.org/resource/Aragorn_II> rdfs:label "Aragorn II. Elessar"@cs,
+        "Aragorn II."@de,
+        "Aragorn II"@es,
+        "Aragorn II"@fi,
+        "Aragorn"@fr,
+        "אראגורן השני אלסאר"@he,
+        "Aragorn II Elessar"@it,
+        "Aragorn"@nl,
+        "Aragorn II"@pl,
+        "Aragorn II Elessar"@pt-br,
+        "Арагорн II Элессар"@ru,
+        "Aragorn II Elessar"@tr,
+        "Араґорн ІІ Елессар"@uk,
+        "亞拉岡"@zh .
+
+<http://tolkien-kg.org/resource/Aragost> rdfs:label "Aragost"@de,
+        "Aragost"@es,
+        "Aragost"@it,
+        "Aragost"@pl,
+        "Арагост"@ru .
+
+<http://tolkien-kg.org/resource/Arahael> rdfs:label "Arahael"@de,
+        "Arahael"@es,
+        "Arahael"@it,
+        "Arahael"@pl,
+        "Арахаэль"@ru .
+
+<http://tolkien-kg.org/resource/Araman> rdfs:label "Araman"@de,
+        "Araman"@es,
+        "Araman"@fr,
+        "Araman"@it,
+        "Araman"@pl,
+        "Араман"@ru,
+        "Араман"@uk .
+
+<http://tolkien-kg.org/resource/Aranarth> rdfs:label "Aranarth"@de,
+        "Aranarth"@es,
+        "Aranarth"@it,
+        "Aranarth"@pl,
+        "Аранарт"@ru .
+
+<http://tolkien-kg.org/resource/Arandor> rdfs:label "Arandor"@de,
+        "Arandor"@es,
+        "Arandor"@fr,
+        "Arandor"@pl,
+        "Арандор"@ru .
+
+<http://tolkien-kg.org/resource/Aranruth> rdfs:label "Aranrúth"@de,
+        "Aranrúth"@es,
+        "Aranrúth"@fr,
+        "Aranrúth"@it,
+        "Aranrúth"@pl,
+        "Аранрут"@ru .
+
+<http://tolkien-kg.org/resource/Arantar> rdfs:label "Arantar"@de,
+        "Arantar"@es,
+        "Arantar"@it,
+        "Arantar"@pl,
+        "Арантар"@ru .
+
+<http://tolkien-kg.org/resource/Aranuir> rdfs:label "Aranuir"@de,
+        "Aranuir"@es,
+        "Aranuir"@it,
+        "Aranuir"@pl,
+        "Арануир"@ru .
+
+<http://tolkien-kg.org/resource/Aranwe> rdfs:label "Aranwë"@de,
+        "Aranwë"@it,
+        "Aranwë"@pl,
+        "Аранвэ"@ru .
+
+<http://tolkien-kg.org/resource/Araphant> rdfs:label "Araphant"@de,
+        "Araphant"@es,
+        "Araphant"@it,
+        "Araphant"@pl,
+        "Арафант"@ru .
+
+<http://tolkien-kg.org/resource/Araphor> rdfs:label "Araphor"@de,
+        "Araphor"@es,
+        "Araphor"@fr,
+        "Araphor"@it,
+        "Araphor"@pl,
+        "Арафор"@ru .
+
+<http://tolkien-kg.org/resource/Arassuil> rdfs:label "Arassuil"@de,
+        "Arassuil"@es,
+        "Arassuil"@it,
+        "Arassuil"@pl,
+        "Арассуиль"@ru .
+
+<http://tolkien-kg.org/resource/Aratan> rdfs:label "Aratan"@de,
+        "Aratan"@it,
+        "Aratan"@pl,
+        "Аратан"@ru,
+        "Аратан"@uk .
+
+<http://tolkien-kg.org/resource/Araval> rdfs:label "Araval"@de,
+        "Araval"@es,
+        "Araval"@it,
+        "Araval"@pl,
+        "Аравал"@ru .
+
+<http://tolkien-kg.org/resource/Aravir> rdfs:label "Aravir"@de,
+        "Aravir"@es,
+        "Aravir"@it,
+        "Aravir"@pl,
+        "Аравир"@ru .
+
+<http://tolkien-kg.org/resource/Aravorn> rdfs:label "Aravorn"@de,
+        "Aravorn"@es,
+        "Aravorn"@it,
+        "Aravorn"@pl,
+        "Араворн"@ru .
+
+<http://tolkien-kg.org/resource/Archet> rdfs:label "Archet"@de,
+        "Arceto"@it,
+        "Boogwolde"@nl,
+        "Archet"@pl,
+        "Арчет"@ru .
+
+<http://tolkien-kg.org/resource/Arciryas> rdfs:label "Arciryas"@de,
+        "Arciryas"@pl,
+        "Аркирьяс"@ru,
+        "Аркір'яс"@uk .
+
+<http://tolkien-kg.org/resource/Ard_galen> rdfs:label "Ard-galen"@de,
+        "Ard-Galen"@es,
+        "Ard-galen"@fr,
+        "Anfauglith"@it,
+        "Ard-galen"@pl,
+        "Анфауглит"@ru,
+        "Ард-ґален"@uk .
+
+<http://tolkien-kg.org/resource/Arda> rdfs:label "Arda"@ca,
+        "Arda"@de,
+        "Arda"@es,
+        "Arda"@fr,
+        "Arda"@it,
+        "Arda"@nl,
+        "Arda"@pl,
+        "Arda"@pt-br,
+        "Арда"@ru,
+        "Arda"@tr,
+        "Арда"@uk .
+
+<http://tolkien-kg.org/resource/Ardamir_son_of_Axantur> rdfs:label "Ardamir"@de,
+        "Ardamir"@pl,
+        "Ардамир"@ru .
+
+<http://tolkien-kg.org/resource/Aredhel> rdfs:label "Aredhel"@ca,
+        "Aredhel"@de,
+        "Aredhel"@es,
+        "Aredhel"@fr,
+        "Aredhel"@it,
+        "Aredhela"@pl,
+        "Аредэль"@ru .
+
+<http://tolkien-kg.org/resource/Argon> rdfs:label "Argon"@ca,
+        "Argon"@de,
+        "Argon"@es,
+        "Argon"@fr,
+        "Argon"@it,
+        "Argon"@pl,
+        "Аргон"@ru .
+
+<http://tolkien-kg.org/resource/Argonui> rdfs:label "Argonui"@de,
+        "Argonui"@es,
+        "Argonui"@it,
+        "Argonui"@pl,
+        "Аргонуи"@ru .
+
+<http://tolkien-kg.org/resource/Arien> rdfs:label "Arien"@ca,
+        "Arien"@de,
+        "Arien"@es,
+        "Arien"@fr,
+        "Arien"@it,
+        "Ariena"@pl,
+        "Ариэн"@ru,
+        "Arien"@sk,
+        "Арієн"@uk .
+
+<http://tolkien-kg.org/resource/Armenelos> rdfs:label "Armenelos"@de,
+        "Armenelos"@es,
+        "Armenelos"@fr,
+        "Armenelos"@it,
+        "Armenelos"@pl,
+        "Арменелос"@ru .
+
+<http://tolkien-kg.org/resource/Arminas> rdfs:label "Arminas"@de,
+        "Arminas"@fr,
+        "Arminas"@it,
+        "Arminas"@pl,
+        "Арминас"@ru .
+
+<http://tolkien-kg.org/resource/Arnor> rdfs:label "Arnor"@de,
+        "Arnor"@es,
+        "Arnor"@fr,
+        "Arnor"@it,
+        "Arnor"@nl,
+        "Arnor"@pl,
+        "Arnor"@pt-br,
+        "Арнор"@ru .
+
+<http://tolkien-kg.org/resource/Arod> rdfs:label "Arod"@de,
+        "Arod"@es,
+        "Arod"@fr,
+        "Arod"@it,
+        "Arod"@pl .
+
+<http://tolkien-kg.org/resource/Arondir> rdfs:label "Arondir (Serie)"@de,
+        "Arondir"@es,
+        "Arondir"@fr,
+        "Arondir"@it,
+        "Arondir"@pl,
+        "Arondir"@pt-br,
+        "Арондир"@ru,
+        "Арондір"@uk .
+
+<http://tolkien-kg.org/resource/Arossiach> rdfs:label "Arossiach"@de,
+        "Arossiach"@es,
+        "Arossiach"@it,
+        "Arossiach"@pl,
+        "Ароссиах"@ru .
+
+<http://tolkien-kg.org/resource/Arroch> rdfs:label "Arroch"@pl,
+        "Аррох"@ru .
+
+<http://tolkien-kg.org/resource/Artamir> rdfs:label "Artamir"@de,
+        "Artamir"@fr,
+        "Artamir"@it,
+        "Artamir"@pl,
+        "Артамир"@ru,
+        "Артамір"@uk .
+
+<http://tolkien-kg.org/resource/Arthad> rdfs:label "Arthad"@de,
+        "Arthad"@it,
+        "Артад"@ru .
+
+<http://tolkien-kg.org/resource/Arthedain> rdfs:label "Arthedain"@ca,
+        "Arthedain"@de,
+        "Arthedain"@es,
+        "Arthedain"@fr,
+        "Arthedain"@it,
+        "Arthedain"@nl,
+        "Arthedain"@pl,
+        "Артэдайн"@ru .
+
+<http://tolkien-kg.org/resource/Arvedui> rdfs:label "Arvedui"@de,
+        "Arvedui"@es,
+        "Arvedui"@fr,
+        "Arvedui"@it,
+        "Arvedui"@pl,
+        "Арведуи"@ru .
+
+<http://tolkien-kg.org/resource/Arvegil> rdfs:label "Arvegil"@de,
+        "Arvegil"@es,
+        "Arvegil"@fr,
+        "Arvegil"@it,
+        "Arvegil"@pl,
+        "Арвегиль"@ru .
+
+<http://tolkien-kg.org/resource/Arvernien> rdfs:label "Arvernien"@de,
+        "Arvernien"@pl,
+        "Арверниэн"@ru,
+        "Arvernien"@sk .
+
+<http://tolkien-kg.org/resource/Arwen> rdfs:label "Arwen"@ca,
+        "Arwen"@de,
+        "Arwen"@es,
+        "Arwen"@fr,
+        "Arwen"@it,
+        "Arwen"@nl,
+        "Arwena"@pl,
+        "Arwen"@pt-br,
+        "Арвен"@ru,
+        "Арвен"@uk .
+
+<http://tolkien-kg.org/resource/Asfaloth> rdfs:label "Asfaloth"@de,
+        "Asfaloth"@fr,
+        "Asfaloth"@it,
+        "Asfaloth"@nl,
+        "Asfaloth"@pl,
+        "Асфалот"@ru,
+        "Асфалот"@uk .
+
+<http://tolkien-kg.org/resource/Asgon> rdfs:label "Asgon"@de,
+        "Asgon"@fr,
+        "Asgon"@pl,
+        "Асгон"@ru .
+
+<http://tolkien-kg.org/resource/Atanalcar> rdfs:label "Atanalcar"@de,
+        "Atanalcar"@fr,
+        "Atanalcar"@pl,
+        "Атаналкар"@ru .
+
+<http://tolkien-kg.org/resource/Aule> rdfs:label "Aulë"@de,
+        "Aulë"@es,
+        "Aulë"@fr,
+        "Aulë"@it,
+        "Aulë"@pl,
+        "Aulë"@pt-br,
+        "Аулэ"@ru,
+        "Aulë"@sk,
+        "Ауле"@uk .
+
+<http://tolkien-kg.org/resource/Avallone> rdfs:label "Avallóne"@de,
+        "Avallónë"@es,
+        "Avallónë"@fr,
+        "Avallónë"@it,
+        "Avallónë"@pl,
+        "Аваллонэ"@ru,
+        "Аваллоне"@uk .
+
+<http://tolkien-kg.org/resource/Avari> rdfs:label "Avari"@de,
+        "Avari"@es,
+        "Avari"@fr,
+        "Avari"@it,
+        "Avari"@pl,
+        "Авари"@ru,
+        "Avari"@sk,
+        "Авари"@uk .
+
+<http://tolkien-kg.org/resource/Avathar> rdfs:label "Avathar"@de,
+        "Avathar"@es,
+        "Avathar"@fr,
+        "Avathar"@it,
+        "Avathar"@pl,
+        "Аватар"@ru .
+
+<http://tolkien-kg.org/resource/Axantur> rdfs:label "Axantur"@de,
+        "Axantur"@pl,
+        "Аксантур"@ru .
+
+<http://tolkien-kg.org/resource/Azaghal> rdfs:label "Azaghâl"@de,
+        "Azaghâl"@es,
+        "Azaghâl"@fr,
+        "Azaghâl"@it,
+        "Azaghâl"@nl,
+        "Azaghâl"@pl,
+        "Азагал"@ru,
+        "Azaghâl"@sk .
+
+<http://tolkien-kg.org/resource/Azanulbizar> rdfs:label "Azanulbizar"@de,
+        "Valle del Arroyo Sombrío"@es,
+        "Azanulbizar"@fr,
+        "Valle dei Rivi Tenebrosi"@it,
+        "Azanulbizar"@pl,
+        "Азанулбизар"@ru .
+
+<http://tolkien-kg.org/resource/Azog> rdfs:label "Azog"@ca,
+        "Azog"@de,
+        "Azog"@es,
+        "Azog"@fr,
+        "Azog"@it,
+        "Azog"@nl,
+        "Azog"@pl,
+        "Азог"@ru,
+        "Azog"@sk,
+        "Azog"@tr .
+
+<http://tolkien-kg.org/resource/Bain> rdfs:label "Bain"@de,
+        "Bain"@es,
+        "Bain"@fr,
+        "Bain"@it,
+        "Bain"@nl,
+        "Bain"@pl,
+        "Bain"@pt-br,
+        "Баин"@ru .
+
+<http://tolkien-kg.org/resource/Balchoth> rdfs:label "Balchoth"@de,
+        "Balkowie"@pl,
+        "Балхот"@ru .
+
+<http://tolkien-kg.org/resource/Balcmeg> rdfs:label "Balcmeg"@de,
+        "Balcmeg"@it,
+        "Балькмэг"@ru .
+
+<http://tolkien-kg.org/resource/Baldor> rdfs:label "Baldor"@de,
+        "Baldor"@fr,
+        "Baldor"@it,
+        "Baldor"@pl,
+        "Балдор"@ru,
+        "Бальдор"@uk .
+
+<http://tolkien-kg.org/resource/Balin> rdfs:label "Balin"@de,
+        "Balin"@es,
+        "Balin"@fr,
+        "באלין"@he,
+        "Balin"@it,
+        "Balin"@nl,
+        "Balin"@pl,
+        "Balin"@pt-br,
+        "Балин"@ru,
+        "Balin"@sk,
+        "Балін"@uk,
+        "巴林"@zh .
+
+<http://tolkien-kg.org/resource/Balrogs> rdfs:label "Bàlrog"@ca,
+        "Balrog"@de,
+        "Balrogs"@es,
+        "Balrogs"@fr,
+        "באלרוגים"@he,
+        "Balrog"@it,
+        "Balrogowie"@pl,
+        "Балроги"@ru .
+
+<http://tolkien-kg.org/resource/Bamfurlong> rdfs:label "Bonmeilen"@de,
+        "Bamvoorlang"@nl,
+        "Bamfurlong"@pl .
+
+<http://tolkien-kg.org/resource/Barach> rdfs:label "Barach"@de,
+        "Barach"@pl,
+        "Барах"@ru .
+
+<http://tolkien-kg.org/resource/Baragund> rdfs:label "Baragund"@de,
+        "Baragund"@fr,
+        "Baragund"@it,
+        "Baragund"@pl,
+        "Барагунд"@ru .
+
+<http://tolkien-kg.org/resource/Baran> rdfs:label "Baran"@de,
+        "Baran"@it,
+        "Baran"@nl,
+        "Baran"@pl,
+        "Баран"@ru .
+
+<http://tolkien-kg.org/resource/Bard> rdfs:label "Bard l'Arquer"@ca,
+        "Bard I."@de,
+        "Bardo"@es,
+        "Bard"@fr,
+        "Bard"@it,
+        "Bard"@nl,
+        "Bard I Łucznik"@pl,
+        "Бард Лучник"@ru,
+        "Бард"@uk .
+
+<http://tolkien-kg.org/resource/Barrow_downs> rdfs:label "Hügelgräberhöhen"@de,
+        "Quebradas de los Túmulos"@es,
+        "Hauts-des-galgals"@fr,
+        "Tumulilande"@it,
+        "Grafheuvels"@nl,
+        "Tyrn Gorthad"@pl,
+        "Могильники"@ru,
+        "Тирн-Ґортад"@uk .
+
+<http://tolkien-kg.org/resource/Beechbone> rdfs:label "Buchenbein"@de,
+        "Faggiosso"@it,
+        "Brzozowiec"@pl,
+        "Буковень"@ru .
+
+<http://tolkien-kg.org/resource/Beldir> rdfs:label "Beldir"@de,
+        "Beldir"@it,
+        "Beldir"@nl,
+        "Beldir"@pl,
+        "Бельдир"@ru .
+
+<http://tolkien-kg.org/resource/Beldis> rdfs:label "Beldis"@it,
+        "Beldis"@nl,
+        "Beldis"@pl,
+        "Бельдис"@ru .
+
+<http://tolkien-kg.org/resource/Belegaer> rdfs:label "Belegaer"@de,
+        "Belegaer"@es,
+        "Belegaer"@fr,
+        "Belegaer"@it,
+        "Belegaer"@nl,
+        "Belegaer"@pl,
+        "Белегаэр"@ru,
+        "Belegaer"@tr,
+        "Белеґаер"@uk .
+
+<http://tolkien-kg.org/resource/Belegor> rdfs:label "Belegor"@it .
+
+<http://tolkien-kg.org/resource/Belegorn> rdfs:label "Belegorn"@de,
+        "Belegorn"@fr,
+        "Belegorn"@it,
+        "Belegorn"@pl,
+        "Белегорн"@ru .
+
+<http://tolkien-kg.org/resource/Belegund> rdfs:label "Belegund"@de,
+        "Belegund"@fr,
+        "Belegund"@it,
+        "Belegund"@pl,
+        "Белегунд"@ru .
+
+<http://tolkien-kg.org/resource/Belemir> rdfs:label "Belemir"@de,
+        "Belemir"@it,
+        "Belemir"@nl,
+        "Belemir"@pl,
+        "Белемир"@ru .
+
+<http://tolkien-kg.org/resource/Belen> rdfs:label "Belen"@de,
+        "Belen"@it,
+        "Belen"@nl,
+        "Belen"@pl,
+        "Белен"@ru .
+
+<http://tolkien-kg.org/resource/Beleram> rdfs:label "Beleram"@de,
+        "Beleram"@es,
+        "Beleram"@pl,
+        "Белерам"@ru .
+
+<http://tolkien-kg.org/resource/Beleriand> rdfs:label "Beleríand"@ca,
+        "Beleriand"@de,
+        "Beleriand"@es,
+        "Beleriand"@fr,
+        "Beleriand"@it,
+        "Beleriand"@pl,
+        "Beleriand"@pt-br,
+        "Белерианд"@ru,
+        "Beleriand"@tr,
+        "Белеріанд"@uk .
+
+<http://tolkien-kg.org/resource/Beleth> rdfs:label "Beleth"@de,
+        "Beleth"@it,
+        "Beleth"@pl,
+        "Белет"@ru .
+
+<http://tolkien-kg.org/resource/Belfalas> rdfs:label "Belfalas"@de,
+        "Belfalas"@es,
+        "Belfalas"@fr,
+        "Belfalas"@it,
+        "Belfalas"@pl,
+        "Бельфалас"@ru .
+
+<http://tolkien-kg.org/resource/Belthronding> rdfs:label "Belthronding"@de,
+        "Belthronding"@es,
+        "Belthronding"@fr,
+        "Belthronding"@it,
+        "Belthronding"@pl,
+        "Белтрондинг"@ru .
+
+<http://tolkien-kg.org/resource/Beor> rdfs:label "Beor der Alte"@de,
+        "Balan"@es,
+        "Bëor"@fr,
+        "Bëor il Vecchio"@it,
+        "Bëor de Oude"@nl,
+        "Bëor"@pl,
+        "Беор"@ru .
+
+<http://tolkien-kg.org/resource/Beornings> rdfs:label "Beorninger"@de,
+        "Beórnidas"@es,
+        "Béornides"@fr,
+        "Beorniani"@it,
+        "Beorningowie"@pl,
+        "Беорнинги"@ru .
+
+<http://tolkien-kg.org/resource/Beregar> rdfs:label "Beregar"@de,
+        "Beregar"@pl,
+        "Берегар"@ru .
+
+<http://tolkien-kg.org/resource/Berelach> rdfs:label "Berelach"@pl .
+
+<http://tolkien-kg.org/resource/Bergil> rdfs:label "Bergil"@de,
+        "Bergil"@it,
+        "Bergil"@pl,
+        "Бергиль"@ru .
+
+<http://tolkien-kg.org/resource/Beril> rdfs:label "Beril"@fr,
+        "Beril"@it,
+        "Beril"@nl .
+
+<http://tolkien-kg.org/resource/Beruthiel> rdfs:label "Berúthiel"@de,
+        "Berúthiel"@it,
+        "Berúthiel"@pl,
+        "Берутиэль"@ru .
+
+<http://tolkien-kg.org/resource/Bifur> rdfs:label "Bifur"@de,
+        "Bifur"@es,
+        "Bifur"@fr,
+        "Bifur"@it,
+        "Bifur"@nl,
+        "Bifur"@pl,
+        "Bifur"@pt-br,
+        "Бифур"@ru,
+        "Bifur"@sk,
+        "Біфур"@uk .
+
+<http://tolkien-kg.org/resource/Black_Gate> rdfs:label "Morannon"@de,
+        "Puerta Negra"@es,
+        "Porte Noire"@fr,
+        "Nero Cancello"@it,
+        "Morannon"@pl,
+        "Portão Negro"@pt-br,
+        "Мораннон"@ru .
+
+<http://tolkien-kg.org/resource/Bladorthin> rdfs:label "Bladorthin"@de,
+        "Bladorthin"@pl,
+        "Бладортин"@ru .
+
+<http://tolkien-kg.org/resource/Blanco> rdfs:label "Blanco"@de,
+        "Blancon"@fr,
+        "Blanco"@it,
+        "Blanco"@pl .
+
+<http://tolkien-kg.org/resource/Bob> rdfs:label "Hinz"@de,
+        "Bob"@it,
+        "Bob"@nl,
+        "Bob"@pl,
+        "Боб"@ru .
+
+<http://tolkien-kg.org/resource/Bodruith> rdfs:label "Бодруит"@ru .
+
+<http://tolkien-kg.org/resource/Bofur> rdfs:label "Bofur"@de,
+        "Bofur"@es,
+        "Bofur"@fr,
+        "Bofur"@it,
+        "Bofur"@nl,
+        "Bofur"@pl,
+        "Bofur"@pt-br,
+        "Бофур"@ru,
+        "Bofur"@sk,
+        "Bofur"@tr,
+        "Бофур"@uk .
+
+<http://tolkien-kg.org/resource/Bolg> rdfs:label "Bolg"@ca,
+        "Bolg"@de,
+        "Bolgo"@es,
+        "Bolg"@fr,
+        "Bolg"@it,
+        "Bolg"@nl,
+        "Bolg"@pl,
+        "Bolg"@pt-br,
+        "Больг"@ru .
+
+<http://tolkien-kg.org/resource/Bolger_Family> rdfs:label "Bolger"@de,
+        "Famille Bolger"@fr,
+        "Famiglia Bolgeri"@it,
+        "Bolgerowie"@pl,
+        "Виприни"@uk .
+
+<http://tolkien-kg.org/resource/Bombur> rdfs:label "Bombur"@de,
+        "Bombur"@es,
+        "Bombur"@fr,
+        "Bombur"@it,
+        "Bombur"@nl,
+        "Bombur"@pl,
+        "Bombur"@pt-br,
+        "Бомбур"@ru,
+        "Bombur"@sk,
+        "Bombur"@tr,
+        "Бомбур"@uk .
+
+<http://tolkien-kg.org/resource/Bor> rdfs:label "Bór"@de,
+        "Bór"@it,
+        "Bór"@pl,
+        "Бор"@ru .
+
+<http://tolkien-kg.org/resource/Borin> rdfs:label "Borin"@de,
+        "Borin"@fr,
+        "Borin"@it,
+        "Borin"@nl,
+        "Borin"@pl,
+        "Борин"@ru .
+
+<http://tolkien-kg.org/resource/Borlach> rdfs:label "Borlach"@de,
+        "Borlach"@it,
+        "Borlach"@pl,
+        "Борлах"@ru .
+
+<http://tolkien-kg.org/resource/Borlad> rdfs:label "Borlad"@de,
+        "Borlad"@it,
+        "Borlad"@nl,
+        "Borlad"@pl,
+        "Борлад"@ru .
+
+<http://tolkien-kg.org/resource/Borlas> rdfs:label "Borlas"@pl .
+
+<http://tolkien-kg.org/resource/Boron> rdfs:label "Boron"@de,
+        "Boron"@it,
+        "Boron"@nl,
+        "Boron"@pl,
+        "Борон"@ru .
+
+<http://tolkien-kg.org/resource/Borondir> rdfs:label "Borondir"@de,
+        "Borondir"@fr,
+        "Borondir di Gondor"@it,
+        "Borondir"@pl,
+        "Борондир"@ru .
+
+<http://tolkien-kg.org/resource/Borthand> rdfs:label "Borthand"@de,
+        "Borthand"@it,
+        "Borthand"@pl,
+        "Бортанд"@ru .
+
+<http://tolkien-kg.org/resource/Brand> rdfs:label "Brand"@de,
+        "Brand"@es,
+        "Brand"@fr,
+        "Brand"@it,
+        "Brand"@nl,
+        "Brand"@pl,
+        "Бранд"@ru .
+
+<http://tolkien-kg.org/resource/Brandybuck> rdfs:label "Brandybock"@de,
+        "Famiglia Brandibuck"@it,
+        "Brandebok (familie)"@nl,
+        "Brandybuckowie"@pl .
+
+<http://tolkien-kg.org/resource/Brandywine_Bridge> rdfs:label "Brandyweinbrücke"@de,
+        "Ponte sul Brandivino"@it,
+        "Brandewijnbrug"@nl,
+        "Most na Brandywinie"@pl .
+
+<http://tolkien-kg.org/resource/Brank> rdfs:label "Brânk"@fr .
+
+<http://tolkien-kg.org/resource/Bree> rdfs:label "Bree"@ca,
+        "Bree"@de,
+        "Bree"@es,
+        "Bree"@fr,
+        "Brea"@it,
+        "Breeg"@nl,
+        "Bree (miasto)"@pl,
+        "Бри"@ru,
+        "Брі"@uk .
+
+<http://tolkien-kg.org/resource/Bregalad> rdfs:label "Bregalad"@de,
+        "Ramaviva"@es,
+        "Sveltolampo"@it,
+        "Bregalad"@pl,
+        "Брегалад"@ru .
+
+<http://tolkien-kg.org/resource/Bregil> rdfs:label "Bregil"@it,
+        "Bregil"@nl,
+        "Bregil"@pl,
+        "Брегиль"@ru .
+
+<http://tolkien-kg.org/resource/Bregolas> rdfs:label "Bregolas"@de,
+        "Bregolas"@fr,
+        "Bregolas"@it,
+        "Bregolas"@nl,
+        "Bregolas"@pl,
+        "Бреголас"@ru .
+
+<http://tolkien-kg.org/resource/Bregor> rdfs:label "Bregor"@de,
+        "Bregor"@fr,
+        "Bregor"@it,
+        "Bregor"@nl,
+        "Bregor"@pl,
+        "Брегор"@ru .
+
+<http://tolkien-kg.org/resource/Brethil> rdfs:label "Brethil"@de,
+        "Bosque de Brethil"@es,
+        "Brethil"@fr,
+        "Brethil"@it,
+        "Brethil"@pl,
+        "Бретиль"@ru,
+        "Brethil"@tr .
+
+<http://tolkien-kg.org/resource/Brithombar> rdfs:label "Brithombar"@de,
+        "Brithombar"@es,
+        "Brithombar"@fr,
+        "Brithombar"@it,
+        "Brithombar"@nl,
+        "Brithombar"@pl,
+        "Бритомбар"@ru,
+        "Brithombar"@sk .
+
+<http://tolkien-kg.org/resource/Brithon> rdfs:label "Brithon"@de,
+        "Brithon"@fr,
+        "Brithon"@it,
+        "De Brithon"@nl,
+        "Brithon"@pl,
+        "Бритон"@ru,
+        "Brithon"@sk .
+
+<http://tolkien-kg.org/resource/Broadbeams> rdfs:label "Torses-larges"@fr,
+        "Vastifasci"@it,
+        "Breedbalken"@nl,
+        "Широкозады"@ru .
+
+<http://tolkien-kg.org/resource/Brodda> rdfs:label "Brodda"@de,
+        "Brodda"@es,
+        "Brodda"@it,
+        "Brodda"@pl,
+        "Бродда"@ru .
+
+<http://tolkien-kg.org/resource/Bronwyn> rdfs:label "Bronwyn (Serie)"@de,
+        "Bronwyn"@es,
+        "Bronwyn"@fr,
+        "Bronwyn"@it,
+        "Bronwyn"@pl,
+        "Bronwyn"@pt-br,
+        "Бронвин"@ru .
+
+<http://tolkien-kg.org/resource/Brown_Lands> rdfs:label "Braune Lande"@de,
+        "Tierras Pardas"@es,
+        "Terre Brune"@it,
+        "Bruine landen"@nl,
+        "Бурые земли"@ru .
+
+<http://tolkien-kg.org/resource/Buckland> rdfs:label "Bockland"@de,
+        "Los Gamos"@es,
+        "Pays-de-Bouc"@fr,
+        "Terra di Buck"@it,
+        "Bokland"@nl,
+        "Buckland"@pl,
+        "Buckland"@pt-br,
+        "Бакленд"@ru,
+        "Цапокрай"@uk .
+
+<http://tolkien-kg.org/resource/Bucklebury> rdfs:label "Bockenburg"@de,
+        "Buckburgo"@it,
+        "Bokkelburg"@nl,
+        "Bucklebury"@pl .
+
+<http://tolkien-kg.org/resource/Budgeford> rdfs:label "Balgfurt (Ansiedlung)"@de,
+        "Gué-du-Pont"@fr,
+        "Boldigenio"@it,
+        "Bolgevoorde"@nl,
+        "Bystry Bród"@pl .
+
+<http://tolkien-kg.org/resource/Buldar> rdfs:label "Buldar"@pl .
+
+<http://tolkien-kg.org/resource/Bumpkin> rdfs:label "Humpel"@de,
+        "Lomperd"@nl,
+        "Ciura"@pl .
+
+<http://tolkien-kg.org/resource/Bywater> rdfs:label "Wasserau"@de,
+        "Delagua"@es,
+        "Lèzeau"@fr,
+        "Lungacque"@it,
+        "Bijwater"@nl,
+        "Nad Wodą"@pl .
+
+<http://tolkien-kg.org/resource/Calacirya> rdfs:label "Calacirya"@ca,
+        "Calacirya"@de,
+        "Calacirya"@fr,
+        "Calacirya"@it,
+        "De Calacirya"@nl,
+        "Calacirya"@pl,
+        "Калакирья"@ru,
+        "Calacirya"@sk .
+
+<http://tolkien-kg.org/resource/Calembel> rdfs:label "Calembel"@de,
+        "Calembel"@fr,
+        "Calembel"@it,
+        "Calembel"@nl,
+        "Calembel"@pl,
+        "Калембел"@ru .
+
+<http://tolkien-kg.org/resource/Calimmacil> rdfs:label "Calimmacil"@de,
+        "Calimmacil"@fr,
+        "Calimmacil"@pl,
+        "Калиммакиль"@ru,
+        "Каліммакіл"@uk .
+
+<http://tolkien-kg.org/resource/Caliondo> rdfs:label "Caliondo"@de,
+        "Caliondo"@pl .
+
+<http://tolkien-kg.org/resource/Calmacil_King_of_Gondor> rdfs:label "Calmacil"@de,
+        "Calmacil"@es,
+        "Calmacil"@it,
+        "Calmacil"@pl,
+        "Калмакиль"@ru,
+        "Кальмакіл"@uk .
+
+<http://tolkien-kg.org/resource/Caragdur> rdfs:label "Caragdûr"@de,
+        "Caragdûr"@it,
+        "Caragdûr"@pl,
+        "Карагдур"@ru .
+
+<http://tolkien-kg.org/resource/Caranthir> rdfs:label "Carànthir"@ca,
+        "Caranthir"@de,
+        "Caranthir"@es,
+        "Caranthir"@fr,
+        "Caranthir"@it,
+        "Caranthir"@pl,
+        "Карантир"@ru .
+
+<http://tolkien-kg.org/resource/Carc> rdfs:label "Carc"@de,
+        "Carc"@fr,
+        "Carc"@it,
+        "Kark"@pl,
+        "Карк"@ru,
+        "Carc"@sk .
+
+<http://tolkien-kg.org/resource/Carcharoth> rdfs:label "Carcharoth"@de,
+        "Carcharoth"@es,
+        "Carcharoth"@fr,
+        "Carcharoth"@it,
+        "Carcharoth"@pl,
+        "Кархарот"@ru .
+
+<http://tolkien-kg.org/resource/Cardolan> rdfs:label "Cardolan"@de,
+        "Cardolan"@es,
+        "Cardolan"@fr,
+        "Cardolan"@it,
+        "Cardolan"@nl,
+        "Cardolan"@pl,
+        "Кардолан"@ru .
+
+<http://tolkien-kg.org/resource/Carnen> rdfs:label "Carnen"@de,
+        "Carnen"@es,
+        "Carnen"@fr,
+        "Carnen"@it,
+        "Carnen"@pl,
+        "Карнен"@ru .
+
+<http://tolkien-kg.org/resource/Carrock> rdfs:label "Carrock"@de,
+        "La Carroca"@es,
+        "Carrock"@fr,
+        "Carroccia"@it,
+        "Karrots"@nl,
+        "Samotna Skała"@pl,
+        "Каррок"@ru .
+
+<http://tolkien-kg.org/resource/Celebrian> rdfs:label "Celebrían"@ca,
+        "Celebrían"@de,
+        "Celebrían"@es,
+        "Celebrían"@fr,
+        "Celebrían"@it,
+        "Celebríana"@pl,
+        "Келебриан"@ru .
+
+<http://tolkien-kg.org/resource/Celebrimbor> rdfs:label "Celebrímbor"@ca,
+        "Celebrimbor"@de,
+        "Celebrimbor"@es,
+        "Celebrimbor"@fr,
+        "Celebrimbor"@it,
+        "Celebrimbor"@nl,
+        "Celebrimbor"@pl,
+        "Celebrimbor"@pt-br,
+        "Келебримбор"@ru,
+        "Celebrimbor"@tr,
+        "Келебрімбор"@uk .
+
+<http://tolkien-kg.org/resource/Celebrindor> rdfs:label "Celebrindor"@de,
+        "Celebrindor"@es,
+        "Celebrindor"@it,
+        "Celebrindor"@pl,
+        "Келебриндор"@ru .
+
+<http://tolkien-kg.org/resource/Celebros> rdfs:label "Celebros"@de,
+        "Celebros"@fr,
+        "Celebros"@it,
+        "Celebros"@pl,
+        "Келеброс"@ru .
+
+<http://tolkien-kg.org/resource/Celegorm> rdfs:label "Cèlegorm"@ca,
+        "Celegorm"@de,
+        "Celegorm"@es,
+        "Celegorm"@fr,
+        "Celegorm"@it,
+        "Celegorm"@pl,
+        "Celegorm"@pt-br,
+        "Келегорм"@ru,
+        "Celegorm"@tr .
+
+<http://tolkien-kg.org/resource/Celepharn> rdfs:label "Celepharn"@de,
+        "Celepharn"@es,
+        "Celepharn"@it,
+        "Celepharn"@pl,
+        "Келефарн"@ru .
+
+<http://tolkien-kg.org/resource/Celon> rdfs:label "Celon"@de,
+        "Celon"@es,
+        "Celon"@fr,
+        "Celon"@it,
+        "Celon"@pl,
+        "Келон"@ru .
+
+<http://tolkien-kg.org/resource/Ceorl> rdfs:label "Ceorl"@de,
+        "Ceorl"@es,
+        "Ceorl"@fr,
+        "Ceorl"@pl .
+
+<http://tolkien-kg.org/resource/Chetwood> rdfs:label "Chetwald"@de,
+        "Bosque de Chet"@es,
+        "Bois de Chet"@fr,
+        "Bosco Cet"@it,
+        "Kijtbos"@nl,
+        "Chetwood"@pl .
+
+<http://tolkien-kg.org/resource/Children_of_Iluvatar> rdfs:label "Eruhíni"@de,
+        "Hijos de Ilúvatar"@es,
+        "Figli di Ilúvatar"@it,
+        "Dzieci Ilúvatara"@pl,
+        "Дети Эру"@ru,
+        "Ilúvatarove deti"@sk .
+
+<http://tolkien-kg.org/resource/Cirdan> rdfs:label "Círdan"@ca,
+        "Círdan"@de,
+        "Círdan"@es,
+        "Círdan"@fr,
+        "Círdan"@it,
+        "Círdan"@pl,
+        "Círdan"@pt-br,
+        "Кирдан"@ru,
+        "Кірдан"@uk .
+
+<http://tolkien-kg.org/resource/Cirion> rdfs:label "Cirion"@de,
+        "Cirion (Gondor)"@es,
+        "Cirion"@fr,
+        "Cirion"@it,
+        "Cirion"@pl,
+        "Кирион"@ru .
+
+<http://tolkien-kg.org/resource/Ciryandil> rdfs:label "Ciryandil"@de,
+        "Ciryandil"@es,
+        "Ciryandil"@it,
+        "Ciryandil"@pl,
+        "Кирьяндиль"@ru .
+
+<http://tolkien-kg.org/resource/Ciryatur> rdfs:label "Ciryatur"@de,
+        "Ciryatur"@it,
+        "Ciryatur"@nl,
+        "Ciryatur"@pl,
+        "Кирьятур"@ru .
+
+<http://tolkien-kg.org/resource/Ciryon> rdfs:label "Ciryon"@de,
+        "Ciryon (Vëandur)"@es,
+        "Ciryon"@it,
+        "Ciryon"@pl,
+        "Кирьон"@ru,
+        "Кіріон, син Ісільдура"@uk .
+
+<http://tolkien-kg.org/resource/Coldfells> rdfs:label "Стылые холмы"@ru .
+
+<http://tolkien-kg.org/resource/Combe> rdfs:label "Schlucht"@de,
+        "Conca"@it,
+        "Kom"@nl,
+        "Combe"@pl .
+
+<http://tolkien-kg.org/resource/Common_Eldarin> rdfs:label "Eldarin Comune"@it,
+        "Eldarin"@pl,
+        "Общий эльдарин"@ru,
+        "Загальний ельдарин"@uk .
+
+<http://tolkien-kg.org/resource/Corsairs_of_Umbar> rdfs:label "Corsaren von Umbar"@de,
+        "Corsarios de Umbar"@es,
+        "Corsari di Umbar"@it,
+        "Korsarze z Umbaru"@pl,
+        "Умбарские пираты"@ru .
+
+<http://tolkien-kg.org/resource/Cotman> rdfs:label "Hüttner"@de,
+        "Cotman"@it,
+        "Cotman"@pl .
+
+<http://tolkien-kg.org/resource/Cottar> rdfs:label "Hütter"@de,
+        "Cottar"@fr,
+        "Cottar"@it,
+        "Cottar"@pl .
+
+<http://tolkien-kg.org/resource/Crickhollow> rdfs:label "Krickloch"@de,
+        "Creux-de-Crique"@fr,
+        "Crifosso"@it,
+        "Krikhol"@nl,
+        "Ustroń"@pl,
+        "Крикхоллоу"@ru .
+
+<http://tolkien-kg.org/resource/Crissaegrim> rdfs:label "Crissaegrim"@de,
+        "Crissaegrim"@es,
+        "Crissaegrim"@it,
+        "Crissaegrim"@pl,
+        "Криссаэгрим"@ru,
+        "Crissaegrim"@sk .
+
+<http://tolkien-kg.org/resource/Cuivienen> rdfs:label "Cuiviénen"@ca,
+        "Cuiviénen"@de,
+        "Cuiviénen"@es,
+        "Cuiviénen"@fr,
+        "Cuiviénen"@it,
+        "Cuiviénen"@pl,
+        "Cuiviénen"@pt-br,
+        "Куивиэнен"@ru,
+        "Cuiviénen"@tr,
+        "Куівієнен"@uk .
+
+<http://tolkien-kg.org/resource/Curufin> rdfs:label "Curufin"@ca,
+        "Curufin"@de,
+        "Curufin"@es,
+        "Curufin"@fr,
+        "Curufin"@it,
+        "Curufin"@nl,
+        "Curufin"@pl,
+        "Куруфин"@ru,
+        "Curufin"@tr .
+
+<http://tolkien-kg.org/resource/Daeron> rdfs:label "Daeron"@ca,
+        "Daeron"@de,
+        "Daeron"@it,
+        "Daeron"@pl,
+        "Даэрон"@ru .
+
+<http://tolkien-kg.org/resource/Dagnir> rdfs:label "Dagnir"@de,
+        "Dagnir"@pl,
+        "Дагнир"@ru .
+
+<http://tolkien-kg.org/resource/Dairuin> rdfs:label "Dairuin"@de,
+        "Dairuin"@it,
+        "Dairuin"@pl,
+        "Дайруин"@ru .
+
+<http://tolkien-kg.org/resource/Dale> rdfs:label "Thal"@de,
+        "Ciudad de Valle"@es,
+        "Dale"@fr,
+        "Dale"@it,
+        "Dal"@nl,
+        "Dale"@pl,
+        "Дейл"@ru .
+
+<http://tolkien-kg.org/resource/Damrod> rdfs:label "Damrod"@de,
+        "Damrod"@es,
+        "Damrod"@it,
+        "Damrod"@pl,
+        "Дамрод"@ru .
+
+<http://tolkien-kg.org/resource/Days_before_days> rdfs:label "Zeitalter vor den Tagen"@de,
+        "Edades de las Lámparas"@es,
+        "Années des Lampes"@fr,
+        "Anni delle Lampade"@it,
+        "Era Latarń"@pl,
+        "Дни прежде дней"@ru .
+
+<http://tolkien-kg.org/resource/Deagol> rdfs:label "Déagol"@de,
+        "Déagol"@es,
+        "Déagol"@fr,
+        "Déagol"@it,
+        "Déagol"@nl,
+        "Déagol"@pl,
+        "Деагол"@ru .
+
+<http://tolkien-kg.org/resource/Deephallow> rdfs:label "Tiefenhain"@de,
+        "Grandcroix"@fr,
+        "Dieprading"@nl,
+        "Kotlinka"@pl .
+
+<http://tolkien-kg.org/resource/Deor> rdfs:label "Déor (Rohan)"@de,
+        "Déor"@fr,
+        "Déor"@it,
+        "Déor"@pl,
+        "Деор"@ru,
+        "Деор"@uk .
+
+<http://tolkien-kg.org/resource/Deorwine> rdfs:label "Déorwine"@de,
+        "Déorwine"@es .
+
+<http://tolkien-kg.org/resource/Derndingle> rdfs:label "Tarntobel"@de,
+        "Het Schuildal"@nl .
+
+<http://tolkien-kg.org/resource/Derufin> rdfs:label "Derufin"@de,
+        "Derufin"@es,
+        "Derufin"@it,
+        "Derufin"@pl .
+
+<http://tolkien-kg.org/resource/Dervorin> rdfs:label "Dervorin"@de,
+        "Dervorin"@es,
+        "Dervorin"@it,
+        "Dervorin"@pl .
+
+<http://tolkien-kg.org/resource/Dimbar> rdfs:label "Dimbar"@de,
+        "Dimbar"@it,
+        "Dimbar"@pl,
+        "Димбар"@ru .
+
+<http://tolkien-kg.org/resource/Dirhael> rdfs:label "Dírhael"@de,
+        "Dírhael"@es,
+        "Dirhael"@fr,
+        "Dírhael"@it,
+        "Dírhael"@pl,
+        "Дирхаэль"@ru .
+
+<http://tolkien-kg.org/resource/Dirhaval> rdfs:label "Dírhavel"@de,
+        "Dírhavel"@pl .
+
+<http://tolkien-kg.org/resource/Dis> rdfs:label "Dís"@de,
+        "Dís"@es,
+        "Dís"@it,
+        "Dís"@nl,
+        "Dís"@pl,
+        "Дис"@ru,
+        "Dís"@sk,
+        "Діс"@uk .
+
+<http://tolkien-kg.org/resource/Disa> rdfs:label "Disa (Serie)"@de,
+        "Disa"@es,
+        "Disa"@fr,
+        "Disa"@it,
+        "Disa"@pl,
+        "Disa"@pt-br,
+        "Диса"@ru,
+        "Діса"@uk .
+
+<http://tolkien-kg.org/resource/Dori> rdfs:label "Dori"@de,
+        "Dori"@es,
+        "Dori"@fr,
+        "דורי"@he,
+        "Dori"@it,
+        "Dori"@nl,
+        "Dori"@pl,
+        "Dori"@pt-br,
+        "Дори"@ru,
+        "Dori"@sk,
+        "Дорі"@uk .
+
+<http://tolkien-kg.org/resource/Doriath> rdfs:label "Dòriath"@ca,
+        "Doriath"@de,
+        "Doriath"@es,
+        "Doriath"@fr,
+        "Doriath"@it,
+        "Doriath"@pl,
+        "Дориат"@ru,
+        "Doriath"@tr .
+
+<http://tolkien-kg.org/resource/Dorlas> rdfs:label "Dorlas"@de,
+        "Dorlas"@fr,
+        "Dorlas"@it,
+        "Dorlas"@pl,
+        "Дорлас"@ru .
+
+<http://tolkien-kg.org/resource/Dorthonion> rdfs:label "Dorthonion"@de,
+        "Dorthonion"@es,
+        "Dorthonion"@fr,
+        "Dorthonion"@it,
+        "Dorthonion"@pl,
+        "Дортонион"@ru,
+        "Дортоніон"@uk .
+
+<http://tolkien-kg.org/resource/Dorwinion> rdfs:label "Dorwinion"@de,
+        "Dorwinion"@fr,
+        "Dorwinion"@it,
+        "Dorwinion"@pl,
+        "Дорвинион"@ru .
+
+<http://tolkien-kg.org/resource/Dramborleg> rdfs:label "Dramborleg"@de,
+        "Dramborleg"@es,
+        "Dramborleg"@fr,
+        "Dramborleg"@it,
+        "Dramborleg"@pl,
+        "Драмборлег"@ru .
+
+<http://tolkien-kg.org/resource/Draugluin> rdfs:label "Draugluin"@de,
+        "Draugluin"@es,
+        "Draugluin"@fr,
+        "Draugluin"@it,
+        "Draugluin"@pl,
+        "Драуглуин"@ru .
+
+<http://tolkien-kg.org/resource/Druedain> rdfs:label "Drúedain"@de,
+        "Drúedain"@es,
+        "Drúedain"@fr,
+        "Drúedain"@it,
+        "Друэдайн"@ru .
+
+<http://tolkien-kg.org/resource/Duinhir> rdfs:label "Duinhir"@de,
+        "Duinhir"@es,
+        "Duinhir"@it,
+        "Duinhir"@pl .
+
+<http://tolkien-kg.org/resource/Dunedain> rdfs:label "Dúnedain"@ca,
+        "Dúnedain"@es,
+        "Dúnedain"@fr,
+        "Dúnedain"@it,
+        "Dúnedainowie"@pl,
+        "Dúnedain"@pt-br,
+        "Нуменорцы"@ru,
+        "Дунедайн"@uk .
+
+<http://tolkien-kg.org/resource/Dunedain_of_Arnor> rdfs:label "Arnorczycy"@pl,
+        "Арнорцы"@ru .
+
+<http://tolkien-kg.org/resource/Dunharrow> rdfs:label "Dunharg"@de,
+        "Dunharrow"@fr,
+        "Dunclivo"@it,
+        "Dunharrow"@pl,
+        "Дунхарроу"@ru .
+
+<http://tolkien-kg.org/resource/Dunhere> rdfs:label "Dúnhere (Krieger)"@de,
+        "Dúnhere"@es,
+        "Dúnhere"@it,
+        "Dúnhere"@pl .
+
+<http://tolkien-kg.org/resource/Dunland> rdfs:label "Dunland"@de,
+        "Dunland"@es,
+        "Dunland"@it,
+        "Donkerland"@nl,
+        "Dunland"@pl,
+        "Дунланд"@ru .
+
+<http://tolkien-kg.org/resource/Dunlendings> rdfs:label "Dunländer"@de,
+        "Dunlendinos"@es,
+        "Uomini del Dunland"@it,
+        "Dunlendingowie"@pl,
+        "Дунландцы"@ru,
+        "Смурноземці"@uk .
+
+<http://tolkien-kg.org/resource/Durthang> rdfs:label "Durthang"@de,
+        "Durthang"@es,
+        "Durthang"@fr,
+        "Durthang"@it,
+        "Durthang"@pl,
+        "Дуртанг"@ru .
+
+<http://tolkien-kg.org/resource/Dwalin> rdfs:label "Dwalin"@ca,
+        "Dwalin"@de,
+        "Dwalin"@es,
+        "Dwalin"@fr,
+        "דוואלין"@he,
+        "Dwalin"@it,
+        "Dwalin"@nl,
+        "Dwalin"@pl,
+        "Dwalin"@pt-br,
+        "Двалин"@ru,
+        "Двалін"@uk,
+        "德瓦林 (Dwalin)"@zh .
+
+<http://tolkien-kg.org/resource/Dwaling> rdfs:label "Dwollingen"@de,
+        "Follogis"@fr,
+        "Dwaling"@it,
+        "Dullingen"@nl,
+        "Dwaling"@pl .
+
+<http://tolkien-kg.org/resource/Dwarves> rdfs:label "Khazad"@ca,
+        "Zwerge"@de,
+        "Enanos"@es,
+        "Nains"@fr,
+        "גמדים"@he,
+        "Nani"@it,
+        "Dwerg"@nl,
+        "Krasnoludowie"@pl,
+        "Anões"@pt-br,
+        "Гномы"@ru,
+        "Cüceler"@tr,
+        "Ґноми"@uk .
+
+<http://tolkien-kg.org/resource/Dwimorberg> rdfs:label "Dwimorberg"@de,
+        "Dwimor"@es,
+        "Dwimorberg"@it,
+        "Dwimorberg"@pl,
+        "Двиморберг"@ru .
+
+<http://tolkien-kg.org/resource/Ea> rdfs:label "Eä"@ca,
+        "Ea"@de,
+        "Eä"@es,
+        "Eä"@fr,
+        "Eä"@it,
+        "Eä"@nl,
+        "Eä"@pl,
+        "Eä"@pt-br,
+        "Эа"@ru,
+        "Eä"@sk,
+        "Еа"@uk .
+
+<http://tolkien-kg.org/resource/Eambar> rdfs:label "Eambar"@de,
+        "Eämbar"@it,
+        "Eämbar"@pl,
+        "Эамбар"@ru .
+
+<http://tolkien-kg.org/resource/Earien> rdfs:label "Earien (Serie)"@de,
+        "Eärien"@fr,
+        "Eärien"@it,
+        "Eärien"@pl,
+        "Eärien"@pt-br,
+        "Эариен"@ru .
+
+<http://tolkien-kg.org/resource/Earnur> rdfs:label "Ëarnur"@de,
+        "Eärnur"@es,
+        "Eärnur"@fr,
+        "Eärnur"@it,
+        "Eärnur"@pl,
+        "Эарнур"@ru,
+        "Еарнур"@uk .
+
+<http://tolkien-kg.org/resource/Earwen> rdfs:label "Eärwen"@ca,
+        "Earwen"@de,
+        "Eärwen"@es,
+        "Eärwen"@fr,
+        "Eärwen"@it,
+        "Eärwena"@pl,
+        "Eärwen"@pt-br,
+        "Эарвен"@ru,
+        "Eärwen"@sk .
+
+<http://tolkien-kg.org/resource/East_West_Road> rdfs:label "Grande Route de l'Est"@fr,
+        "Grande Via Est"@it,
+        "Grote Oosterweg"@nl,
+        "Wschodni Gościniec"@pl .
+
+<http://tolkien-kg.org/resource/Eastemnet> rdfs:label "Ostemnet"@de,
+        "Estemnet"@fr,
+        "Estemnet"@it,
+        "Истэмнет"@ru .
+
+<http://tolkien-kg.org/resource/Eastfarthing> rdfs:label "Ostviertel"@de,
+        "Quartier Est"@fr,
+        "Decumano Est"@it,
+        "Oosterkwartier"@nl,
+        "Wschodnia Ćwiartka"@pl,
+        "Восточная Четь"@ru,
+        "Східна Чверть"@uk .
+
+<http://tolkien-kg.org/resource/Eastfold> rdfs:label "Ostfold"@de,
+        "Estfolde"@fr,
+        "Estfalda"@it,
+        "Oostfold"@nl,
+        "Истфолд"@ru .
+
+<http://tolkien-kg.org/resource/Ebor> rdfs:label "Ebor"@pl .
+
+<http://tolkien-kg.org/resource/Echoriad> rdfs:label "Echoriath"@de,
+        "Echoriath"@es,
+        "Echoriath"@fr,
+        "Ered Echoriath"@it,
+        "Echoriath"@pl,
+        "Эхориат"@ru,
+        "Echoriath"@sk .
+
+<http://tolkien-kg.org/resource/Edain> rdfs:label "Edain"@ca,
+        "Edain"@de,
+        "Atani (Edain)"@es,
+        "Edain"@fr,
+        "Edain"@it,
+        "Edainowie"@pl,
+        "Эдайн"@ru,
+        "Atani"@sk .
+
+<http://tolkien-kg.org/resource/Edhellond> rdfs:label "Edhellond"@es,
+        "Edhellond"@it,
+        "Edhellond"@pl,
+        "Эделлонд"@ru,
+        "Еделлонд"@uk .
+
+<http://tolkien-kg.org/resource/Edoras> rdfs:label "Edoras"@de,
+        "Edoras"@es,
+        "Edoras"@fr,
+        "Edoras"@it,
+        "Edoras"@nl,
+        "Edoras"@pl,
+        "Эдорас"@ru,
+        "Едорас"@uk .
+
+<http://tolkien-kg.org/resource/Edrahil> rdfs:label "Edrahil"@de,
+        "Эдрахиль"@ru .
+
+<http://tolkien-kg.org/resource/Eglarest> rdfs:label "Eglarest"@de,
+        "Eglarest"@es,
+        "Eglarest"@it,
+        "Eglarest"@nl,
+        "Eglarest"@pl,
+        "Эгларест"@ru,
+        "Eglarest"@sk .
+
+<http://tolkien-kg.org/resource/Eilinel> rdfs:label "Eilinel"@de,
+        "Eilinela"@pl,
+        "Эйлинель"@ru .
+
+<http://tolkien-kg.org/resource/Ekkaia> rdfs:label "Ekkaia"@de,
+        "Ekkaia"@es,
+        "Ekkaia"@it,
+        "Ekkaia"@pl,
+        "Ekkaia"@pt-br,
+        "Эккайа"@ru .
+
+<http://tolkien-kg.org/resource/Elatan> rdfs:label "Elatan"@de,
+        "Elatan"@fr,
+        "Elatan di Andúnië"@it,
+        "Elatan"@pl,
+        "Элатан"@ru .
+
+<http://tolkien-kg.org/resource/Elboron> rdfs:label "Elboron"@de,
+        "Elboron"@es,
+        "Elboron"@fr,
+        "Elboron"@it,
+        "Elboron"@pl,
+        "Эльборон"@ru .
+
+<http://tolkien-kg.org/resource/Eldalonde> rdfs:label "Eldalondë"@de,
+        "Eldalondë"@es,
+        "Eldalondë"@fr,
+        "Eldalondë"@it,
+        "Eldalondë"@pl,
+        "Эльдалондэ"@ru .
+
+<http://tolkien-kg.org/resource/Eldamar> rdfs:label "Eldamar"@ca,
+        "Eldamar"@de,
+        "Eldamar"@es,
+        "Eldamar"@fr,
+        "Eldamar"@it,
+        "Eldamar"@pl,
+        "Эльдамар"@ru,
+        "Eldamar"@sk .
+
+<http://tolkien-kg.org/resource/Eldar> rdfs:label "Eldar"@de,
+        "Eldar"@es,
+        "Eldar"@fr,
+        "Эльдар"@ru .
+
+<http://tolkien-kg.org/resource/Eldarion> rdfs:label "Eldarion"@de,
+        "Eldarion"@es,
+        "Eldarion"@fr,
+        "Eldarion"@it,
+        "Eldarion"@pl,
+        "Eldarion"@pt-br,
+        "Эльдарион"@ru,
+        "Eldarion"@tr,
+        "Ельдаріон"@uk .
+
+<http://tolkien-kg.org/resource/Elemmakil> rdfs:label "Elemmakil"@de,
+        "Elemmakil"@es,
+        "Elemmakil"@it,
+        "Elemmakil"@pl,
+        "Элеммакиль"@ru .
+
+<http://tolkien-kg.org/resource/Elemmire_Elf> rdfs:label "Elemmírë (Stern)"@de,
+        "Elemmírë"@it,
+        "Elemmírë"@pl,
+        "Элеммирэ"@ru .
+
+<http://tolkien-kg.org/resource/Elendil> rdfs:label "Elendil"@de,
+        "Elendil"@es,
+        "Elendil"@fr,
+        "Elendil"@it,
+        "Elendil"@nl,
+        "Elendil"@pl,
+        "Elendil"@pt-br,
+        "Элендиль"@ru,
+        "Elendil"@tr,
+        "Еленділ"@uk .
+
+<http://tolkien-kg.org/resource/Elenwe> rdfs:label "Elenwë"@ca,
+        "Elenwe"@de,
+        "Elenwë"@it,
+        "Elenwë"@pl,
+        "Эленвэ"@ru .
+
+<http://tolkien-kg.org/resource/Elfhelm> rdfs:label "Elfhelm"@de,
+        "Elfhelm"@es,
+        "Elfhelm"@it,
+        "Elfhelm"@pl,
+        "Эльфхельм"@ru .
+
+<http://tolkien-kg.org/resource/Elfhild> rdfs:label "Elfhild"@de,
+        "Elfhild"@fr,
+        "Elfhild"@it,
+        "Elfhild"@nl,
+        "Elfhilda"@pl,
+        "Эльфхильд"@ru .
+
+<http://tolkien-kg.org/resource/Elfstone> rdfs:label "Elessar (Stein)"@de,
+        "Elessar"@it,
+        "Elessar"@pl,
+        "Элессар (камень)"@ru .
+
+<http://tolkien-kg.org/resource/Elfwine> rdfs:label "Elfwine der Schöne"@de,
+        "Elfwine"@es,
+        "Elfwine"@fr,
+        "Elfwine"@it,
+        "Elfwine"@nl,
+        "Elfwine"@pl,
+        "Эльфвине"@ru .
+
+<http://tolkien-kg.org/resource/Elladan_and_Elrohir> rdfs:label "Elladan e Elrohir"@it,
+        "Elladan en Elrohir"@nl,
+        "Elladan i Elrohir"@pl,
+        "Элладан и Эльрохир"@ru .
+
+<http://tolkien-kg.org/resource/Elmo> rdfs:label "Elmo"@de,
+        "Elmo"@es,
+        "Elmo"@fr,
+        "Elmo"@it,
+        "Elmo"@pl,
+        "Эльмо"@ru .
+
+<http://tolkien-kg.org/resource/Elphir> rdfs:label "Elphir"@de,
+        "Elphir"@es,
+        "Elphir"@it,
+        "Elphir"@nl,
+        "Elphir"@pl,
+        "Эльфир"@ru .
+
+<http://tolkien-kg.org/resource/Elrond> rdfs:label "Élrond"@ca,
+        "Elrond"@de,
+        "Elrond"@es,
+        "Elrond"@fr,
+        "אלרונד"@he,
+        "Elrond"@it,
+        "Elrond"@nl,
+        "Elrond"@pl,
+        "Elrond"@pt-br,
+        "Эльронд"@ru,
+        "Elrond"@tr,
+        "Ельронд"@uk .
+
+<http://tolkien-kg.org/resource/Elros> rdfs:label "Elros"@de,
+        "Elros"@es,
+        "Elros"@fr,
+        "Elros"@it,
+        "Elros Tar-Minyatur"@pl,
+        "Elros"@pt-br,
+        "Эльрос"@ru,
+        "Ельрос"@uk .
+
+<http://tolkien-kg.org/resource/Elured_and_Elurin> rdfs:label "Eluréd"@de,
+        "Eluréd e Elurín"@it,
+        "Eluréd"@pl,
+        "Элуред и Элурин"@ru,
+        "Елуред"@uk .
+
+<http://tolkien-kg.org/resource/Elves> rdfs:label "Elfs"@ca,
+        "Elfové"@cs,
+        "Elben"@de,
+        "Elfos"@es,
+        "Elfes"@fr,
+        "אלפים"@he,
+        "Elfi"@it,
+        "Elf"@nl,
+        "Elfowie"@pl,
+        "Elfos"@pt-br,
+        "Эльфы"@ru,
+        "Ельфи"@uk,
+        "精灵"@zh .
+
+<http://tolkien-kg.org/resource/Elwing> rdfs:label "Elwing"@de,
+        "Elwing"@es,
+        "Elwing"@fr,
+        "Elwing"@it,
+        "Elwing"@nl,
+        "Elwinga"@pl,
+        "Эльвинг"@ru,
+        "Elwing"@tr,
+        "Ельвінґ"@uk .
+
+<http://tolkien-kg.org/resource/Emeldir> rdfs:label "Emeldir"@de,
+        "Emeldir"@fr,
+        "Emeldir"@it,
+        "Emeldir"@nl,
+        "Emeldira"@pl,
+        "Эмельдир"@ru .
+
+<http://tolkien-kg.org/resource/Emerie> rdfs:label "Emerië"@de,
+        "Emerië"@fr,
+        "Emerië"@pl,
+        "Эмериэ"@ru .
+
+<http://tolkien-kg.org/resource/Enedwaith> rdfs:label "Enedwaith"@de,
+        "Enedwaith"@es,
+        "Enedwaith"@fr,
+        "Enedwaith"@it,
+        "Enedwaith"@pl,
+        "Энедвайт"@ru .
+
+<http://tolkien-kg.org/resource/Enel> rdfs:label "Enel"@de,
+        "Enel"@it,
+        "Enel"@nl,
+        "Enel"@pl,
+        "Энель"@ru,
+        "Enel"@sk,
+        "Енель"@uk .
+
+<http://tolkien-kg.org/resource/Enelye> rdfs:label "Enelyë"@de,
+        "Enelyë"@pl,
+        "Энелье"@ru,
+        "Enelyë"@sk,
+        "Енельє"@uk .
+
+<http://tolkien-kg.org/resource/Enerdhil> rdfs:label "Enerdhil"@de,
+        "Enerdhil"@pl,
+        "Энердиль"@ru .
+
+<http://tolkien-kg.org/resource/Enthor> rdfs:label "Enthor"@pl .
+
+<http://tolkien-kg.org/resource/Entmoot> rdfs:label "Entthing"@de,
+        "Entaconsulta"@it,
+        "Энтомолвище"@ru .
+
+<http://tolkien-kg.org/resource/Ents> rdfs:label "Ent"@ca,
+        "Ents"@de,
+        "Ents"@es,
+        "Entit"@fi,
+        "Ents"@fr,
+        "אנטים"@he,
+        "Ent"@it,
+        "Entowie"@pl,
+        "Энты"@ru .
+
+<http://tolkien-kg.org/resource/Entwives> rdfs:label "Entfrauen"@de,
+        "Entesse"@it,
+        "Жёны энтов"@ru .
+
+<http://tolkien-kg.org/resource/Enya> rdfs:label "Enya"@pl .
+
+<http://tolkien-kg.org/resource/Eol> rdfs:label "Eöl"@ca,
+        "Eol"@de,
+        "Eöl"@es,
+        "Eöl"@fr,
+        "Eöl"@it,
+        "Eöl"@pl,
+        "Эол"@ru .
+
+<http://tolkien-kg.org/resource/Eomer> rdfs:label "Éomer"@de,
+        "Éomer"@es,
+        "Éomer"@fr,
+        "Éomer"@it,
+        "Éomer"@pl,
+        "Éomer"@pt-br,
+        "Эомер"@ru,
+        "Éomer"@sk,
+        "Еомер"@uk .
+
+<http://tolkien-kg.org/resource/Eonwe> rdfs:label "Eönwë"@ca,
+        "Eonwe"@de,
+        "Eönwë"@es,
+        "Eönwë"@fr,
+        "Eönwë"@it,
+        "Eönwë"@pl,
+        "Eönwë"@pt-br,
+        "Эонвэ"@ru,
+        "Eönwë"@sk .
+
+<http://tolkien-kg.org/resource/Eorl_the_Young> rdfs:label "Eorl"@de,
+        "Eorl"@es,
+        "Eorl"@fr,
+        "Eorl"@it,
+        "Eorl de Jonge"@nl,
+        "Eorl"@pl,
+        "Эорл"@ru,
+        "Еорл Юний"@uk .
+
+<http://tolkien-kg.org/resource/Eotheod> rdfs:label "Éothéod (Begriffsklärung)"@de,
+        "Éothéod"@fr,
+        "Éothéod"@it,
+        "Éothéod"@nl,
+        "Éothéodzi"@pl,
+        "Эотеод"@ru .
+
+<http://tolkien-kg.org/resource/Eowyn> rdfs:label "Éowyn"@de,
+        "Éowyn"@es,
+        "Éowyn"@fr,
+        "Éowyn"@it,
+        "Éowina"@pl,
+        "Éowyn"@pt-br,
+        "Эовин"@ru,
+        "Éowyn"@sk,
+        "Éowyn"@tr,
+        "Еовин"@uk .
+
+<http://tolkien-kg.org/resource/Erchirion> rdfs:label "Erchirion"@de,
+        "Erchirion"@es,
+        "Erchirion"@it,
+        "Erchirion"@pl,
+        "Эрхирион"@ru .
+
+<http://tolkien-kg.org/resource/Eregion> rdfs:label "Eregion"@de,
+        "Eregion"@es,
+        "Eregion"@fr,
+        "Eregion"@it,
+        "Eregion"@nl,
+        "Eregion"@pl,
+        "Эрегион"@ru .
+
+<http://tolkien-kg.org/resource/Erelas> rdfs:label "Erelas"@de,
+        "Erelas"@fr,
+        "Erelas"@it,
+        "Erelas"@nl,
+        "Erelas"@pl .
+
+<http://tolkien-kg.org/resource/Erendis> rdfs:label "Erendis"@de,
+        "Erendis"@fr,
+        "Erendis"@it,
+        "Erendis"@pl,
+        "Эрендис"@ru .
+
+<http://tolkien-kg.org/resource/Erestor> rdfs:label "Erestor"@de,
+        "Erestor"@es,
+        "Erestor"@fr,
+        "Erestor"@it,
+        "Erestor"@pl,
+        "Эрестор"@ru .
+
+<http://tolkien-kg.org/resource/Eriador> rdfs:label "Èriador"@ca,
+        "Eriador"@de,
+        "Eriador"@es,
+        "Eriador"@fr,
+        "Eriador"@it,
+        "Eriador"@nl,
+        "Eriador"@pl,
+        "Eriador"@pt-br,
+        "Эриадор"@ru .
+
+<http://tolkien-kg.org/resource/Erkenbrand> rdfs:label "Erkenbrand"@de,
+        "Erkenbrand"@es,
+        "Erkenbrand"@fr,
+        "Erkenbrand"@it,
+        "Erkenbrand"@pl,
+        "Эркенбранд"@ru .
+
+<http://tolkien-kg.org/resource/Errantry> rdfs:label "Wędrówka"@pl .
+
+<http://tolkien-kg.org/resource/Erui> rdfs:label "Erui"@de,
+        "Erui"@it,
+        "Erui"@pl,
+        "Эруи"@ru .
+
+<http://tolkien-kg.org/resource/Esgalduin> rdfs:label "Esgalduin"@de,
+        "Esgalduin"@es,
+        "Esgalduin"@fr,
+        "Esgalduin"@it,
+        "Esgalduin"@nl,
+        "Esgalduina"@pl,
+        "Эсгалдуин"@ru .
+
+<http://tolkien-kg.org/resource/Este> rdfs:label "Este"@de,
+        "Estë"@es,
+        "Estë"@fr,
+        "Estë"@it,
+        "Estë"@pl,
+        "Эстэ"@ru,
+        "Estë"@sk,
+        "Есте"@uk .
+
+<http://tolkien-kg.org/resource/Estelmo> rdfs:label "Estelmo"@de,
+        "Estelmo"@it,
+        "Estelmo"@pl,
+        "Эстельмо"@ru .
+
+<http://tolkien-kg.org/resource/Estolad> rdfs:label "Estolad"@de,
+        "Estolad"@es,
+        "Estolad"@fr,
+        "Estolad"@it,
+        "Estolad"@pl,
+        "Эстолад"@ru .
+
+<http://tolkien-kg.org/resource/Ettenmoors> rdfs:label "Ettenöden"@de,
+        "Landas de Etten"@es,
+        "Erenbrulli"@it,
+        "Reuzenheide"@nl,
+        "Ettenmoors"@pl,
+        "Эттенмурс"@ru .
+
+<http://tolkien-kg.org/resource/Ezellohar> rdfs:label "Ezellohar"@de,
+        "Ezellohar"@es,
+        "Ezellohar"@it,
+        "Ezellohar"@pl,
+        "Эзеллохар"@ru,
+        "Ezellohar"@sk .
+
+<http://tolkien-kg.org/resource/Faithful> rdfs:label "Getreue"@de,
+        "Fieles"@es,
+        "Fidèles"@fr,
+        "Fedeli"@it,
+        "Wierni"@pl,
+        "Fiéis"@pt-br,
+        "Верные"@ru .
+
+<http://tolkien-kg.org/resource/Falas> rdfs:label "Falas"@de,
+        "Falas"@es,
+        "Falas"@fr,
+        "Falas"@it,
+        "Falas"@pl,
+        "Фалас"@ru,
+        "Falas"@sk .
+
+<http://tolkien-kg.org/resource/Falathrim> rdfs:label "Falàthrim"@ca,
+        "Falathrim"@de,
+        "Falathrim"@es,
+        "Falathrim"@fr,
+        "Falathrim"@it,
+        "Falathrimowie"@pl,
+        "Фалатрим"@ru .
+
+<http://tolkien-kg.org/resource/Falmari> rdfs:label "Falmari"@es,
+        "Falmari"@fr,
+        "Falmari"@it,
+        "Falmari"@pl,
+        "Фалмари"@ru,
+        "Falmari"@sk,
+        "Falmari"@tr .
+
+<http://tolkien-kg.org/resource/Fang_dog> rdfs:label "Greep, Klauw en Wolf"@nl .
+
+<http://tolkien-kg.org/resource/Fangluin> rdfs:label "Fangluin"@it,
+        "Fangluin"@pl .
+
+<http://tolkien-kg.org/resource/Fangorn_Forest> rdfs:label "Fàngorn"@ca,
+        "Fangorn (Wald)"@de,
+        "Fangorn"@es,
+        "Forêt de Fangorn"@fr,
+        "Foresta di Fangorn"@it,
+        "Fangorn"@nl,
+        "Fangorn"@pl,
+        "Фангорн"@ru,
+        "Fangorn Ormanı"@tr .
+
+<http://tolkien-kg.org/resource/Fastitocalon> rdfs:label "Fastitokalon"@de,
+        "Fastitocalón"@es,
+        "Fastitocalon"@pl,
+        "Фаститокалон"@ru .
+
+<http://tolkien-kg.org/resource/Fastred_rider_of_Rohan> rdfs:label "Fastred (Sohn von Folcwine)"@de,
+        "Fastred"@fr,
+        "Fastred"@it,
+        "Fastred"@pl,
+        "Фастред (брат Фолкреда)"@ru,
+        "Фастред"@uk .
+
+<http://tolkien-kg.org/resource/Feanor> rdfs:label "Fèanor"@ca,
+        "Feanor"@de,
+        "Curufinwë"@es,
+        "Fëanor"@fr,
+        "Fëanor"@it,
+        "Fëanor"@pl,
+        "Fëanor"@pt-br,
+        "Феанор"@ru .
+
+<http://tolkien-kg.org/resource/February> rdfs:label "Februari"@nl .
+
+<http://tolkien-kg.org/resource/Felarof> rdfs:label "Felaróf"@de,
+        "Felaróf"@es,
+        "Felaróf"@it,
+        "Felaróf"@pl,
+        "Фелароф"@ru .
+
+<http://tolkien-kg.org/resource/Fengel> rdfs:label "Fengel"@de,
+        "Fengel"@fr,
+        "Fengel"@it,
+        "Fengel"@pl,
+        "Фенгель"@ru .
+
+<http://tolkien-kg.org/resource/Fenmarch> rdfs:label "Fenmark"@fr .
+
+<http://tolkien-kg.org/resource/Feren> rdfs:label "Feren"@de,
+        "Feren"@pl .
+
+<http://tolkien-kg.org/resource/Figwit> rdfs:label "Figwit"@fr .
+
+<http://tolkien-kg.org/resource/Fimbrethil> rdfs:label "Fimbrethil"@de,
+        "Fimbrethil"@it,
+        "Fimbrethil"@pl,
+        "Фимбретиль"@ru .
+
+<http://tolkien-kg.org/resource/Fimbul> rdfs:label "Fimbul"@de,
+        "Fimbul"@es,
+        "Fimbul"@pl,
+        "Fimbul"@pt-br,
+        "Фимбул"@ru .
+
+<http://tolkien-kg.org/resource/Finarfin> rdfs:label "Finarfin"@ca,
+        "Finarfin"@de,
+        "Finarfin"@es,
+        "Finarfin"@fr,
+        "Finarfin"@it,
+        "Finarfin"@pl,
+        "Finarfin"@pt-br,
+        "Финарфин"@ru,
+        "Finarfin"@sk .
+
+<http://tolkien-kg.org/resource/Findegil> rdfs:label "Findegil"@de,
+        "Findegil"@it,
+        "Findegil"@pl,
+        "Финдегиль"@ru .
+
+<http://tolkien-kg.org/resource/Findis> rdfs:label "Findis"@it,
+        "Findis"@pl,
+        "Финдис"@ru,
+        "Фіндіс"@uk .
+
+<http://tolkien-kg.org/resource/Fingolfin> rdfs:label "Fingolfin"@ca,
+        "Fingolfin"@de,
+        "Fingolfin"@es,
+        "Fingolfin"@fr,
+        "Fingolfin"@it,
+        "Fingolfin"@pl,
+        "Fingolfin"@pt-br,
+        "Финголфин"@ru,
+        "Фінґольфін"@uk .
+
+<http://tolkien-kg.org/resource/Fingon> rdfs:label "Fingon"@ca,
+        "Fingon"@de,
+        "Fingon"@es,
+        "Fingon"@fr,
+        "Fingon"@it,
+        "Fingon"@pl,
+        "Fingon"@pt-br,
+        "Фингон"@ru .
+
+<http://tolkien-kg.org/resource/Finrod> rdfs:label "Fínrod"@ca,
+        "Finrod"@de,
+        "Finrod"@es,
+        "Finrod"@fr,
+        "Finrod"@it,
+        "Finrod Felagund"@nl,
+        "Finrod"@pl,
+        "Finrod"@pt-br,
+        "Финрод"@ru .
+
+<http://tolkien-kg.org/resource/Finwe> rdfs:label "Finwë"@ca,
+        "Finwe"@de,
+        "Finwë"@es,
+        "Finwë"@fr,
+        "Finwë"@it,
+        "Finwë"@pl,
+        "Finwë"@pt-br,
+        "Финвэ"@ru,
+        "Finwë"@tr,
+        "Фінве"@uk .
+
+<http://tolkien-kg.org/resource/Firebeards> rdfs:label "Barbes-de-feu"@fr,
+        "Barbafiamma"@it,
+        "Ognistobrodzi"@pl,
+        "Огнебороды"@ru,
+        "Вогнебороди"@uk .
+
+<http://tolkien-kg.org/resource/Firefoot> rdfs:label "Feuerfuß"@de,
+        "Pies de Fuego"@es,
+        "Piedardent"@fr,
+        "Ognisty"@pl .
+
+<http://tolkien-kg.org/resource/Floi> rdfs:label "Flói"@de,
+        "Flói"@fr,
+        "Flói"@nl,
+        "Flói"@pl,
+        "Флои"@ru .
+
+<http://tolkien-kg.org/resource/Folca> rdfs:label "Folca"@de,
+        "Folca"@fr,
+        "Folca"@it,
+        "Folka"@pl,
+        "Фолка"@ru .
+
+<http://tolkien-kg.org/resource/Folcred> rdfs:label "Folcred (Sohn von Folcwine)"@de,
+        "Folcred"@fr,
+        "Folcred"@it,
+        "Folkred"@pl,
+        "Фолкред"@ru,
+        "Фолькред"@uk .
+
+<http://tolkien-kg.org/resource/Folcwine> rdfs:label "Folcwine"@de,
+        "Folcwine"@fr,
+        "Folcwine"@it,
+        "Folkwin"@pl,
+        "Фолквине"@ru .
+
+<http://tolkien-kg.org/resource/Folde> rdfs:label "Folde"@fr,
+        "Фолд"@ru .
+
+<http://tolkien-kg.org/resource/Forest_of_Region> rdfs:label "Region (Wald)"@de,
+        "Bosque de Region"@es,
+        "Region"@fr,
+        "Foresta di Region"@it,
+        "Region"@pl,
+        "Регион"@ru .
+
+<http://tolkien-kg.org/resource/Forlindon> rdfs:label "Forlindon"@de,
+        "Forlindon"@fr,
+        "Forlindon"@it,
+        "Forlindon"@pl,
+        "Форлиндон"@ru .
+
+<http://tolkien-kg.org/resource/Forlond> rdfs:label "Forlond"@de,
+        "Forlond"@es,
+        "Forlond"@fr,
+        "Forlond"@it,
+        "Forlond"@pl,
+        "Форлонд"@ru .
+
+<http://tolkien-kg.org/resource/Forlong> rdfs:label "Forlong"@de,
+        "Forlong"@es,
+        "Forlong"@it,
+        "Forlong"@nl,
+        "Forlong"@pl,
+        "Форлонг"@ru .
+
+<http://tolkien-kg.org/resource/Formenos> rdfs:label "Formenos"@de,
+        "Formenos"@es,
+        "Formenos"@fr,
+        "Formenos"@it,
+        "Formenos"@pl,
+        "Форменос"@ru .
+
+<http://tolkien-kg.org/resource/Fornost> rdfs:label "Fornost"@de,
+        "Fornost"@es,
+        "Fornost"@fr,
+        "Fornost"@it,
+        "Fornost Erain"@nl,
+        "Fornost"@pl,
+        "Форност"@ru .
+
+<http://tolkien-kg.org/resource/Forochel> rdfs:label "Forochel"@ca,
+        "Forochel"@de,
+        "Forochel"@es,
+        "Forochel"@fr,
+        "Forochel"@it,
+        "Forochel"@pl,
+        "Форохель"@ru .
+
+<http://tolkien-kg.org/resource/Forodwaith> rdfs:label "Forodwaith (Land)"@de,
+        "Forodwaith"@es,
+        "Forodwaith"@it,
+        "Forodwaith (Land)"@nl,
+        "Forodwaith"@pl,
+        "Фородвайт"@ru .
+
+<http://tolkien-kg.org/resource/Forostar> rdfs:label "Forostar"@de,
+        "Forostar"@es,
+        "Forostar"@fr,
+        "Forostar"@it,
+        "Forostar"@pl,
+        "Форостар"@ru .
+
+<http://tolkien-kg.org/resource/Forthwini> rdfs:label "Forthwini"@de,
+        "Forthwini"@fr,
+        "Forthwini"@it,
+        "Forthwini"@nl,
+        "Forthwini"@pl,
+        "Фортвини"@ru .
+
+<http://tolkien-kg.org/resource/Forweg> rdfs:label "Forweg"@de,
+        "Forweg"@fr,
+        "Forweg"@it,
+        "Forweg"@pl,
+        "Форвег"@ru .
+
+<http://tolkien-kg.org/resource/Fosco_Baggins> rdfs:label "Fosco Beutlin"@de,
+        "Fosco Baggins"@it,
+        "Fosco Baggins"@pl .
+
+<http://tolkien-kg.org/resource/Fram> rdfs:label "Fram"@de,
+        "Fram"@fr,
+        "Fram"@it,
+        "Fram"@nl,
+        "Fram"@pl,
+        "Фрам"@ru .
+
+<http://tolkien-kg.org/resource/Framsburg> rdfs:label "Framsburg"@de,
+        "Framsburg"@fr,
+        "Framsburg"@it,
+        "Framsburg"@pl,
+        "Фрамсбург"@ru .
+
+<http://tolkien-kg.org/resource/Frar> rdfs:label "Frár"@de,
+        "Frár"@fr,
+        "Frár"@nl,
+        "Frár"@pl,
+        "Фрар"@ru .
+
+<http://tolkien-kg.org/resource/Frea> rdfs:label "Fréa"@de,
+        "Fréa"@fr,
+        "Fréa"@it,
+        "Fréa"@pl,
+        "Фреа"@ru,
+        "Фреа"@uk .
+
+<http://tolkien-kg.org/resource/Freawine> rdfs:label "Fréawine"@de,
+        "Fréawine"@fr,
+        "Fréawine"@it,
+        "Fréawine"@pl,
+        "Фреавине"@ru,
+        "Фреавайн"@uk .
+
+<http://tolkien-kg.org/resource/Freca> rdfs:label "Freca"@de,
+        "Freca"@fr,
+        "Freca"@it,
+        "Freka"@pl,
+        "Фрека"@ru,
+        "Фрека"@uk .
+
+<http://tolkien-kg.org/resource/Freda> rdfs:label "Freda"@de,
+        "Freda"@it,
+        "Freda"@pl .
+
+<http://tolkien-kg.org/resource/Frerin> rdfs:label "Frerin"@ca,
+        "Frerin"@de,
+        "Frerin"@fr,
+        "Frerin"@it,
+        "Frerin"@pl,
+        "Фрерин"@ru .
+
+<http://tolkien-kg.org/resource/Frodo_Baggins> rdfs:label "Frodo Pytlík"@cs,
+        "Frodo Beutlin"@de,
+        "Frodo Bolsón"@es,
+        "Frodo Reppuli"@fi,
+        "Frodon Sacquet"@fr,
+        "פרודו בגינס"@he,
+        "Frodo Baggins"@it,
+        "Frodo Balings"@nl,
+        "Frodo Baggins"@pl,
+        "Frodo Bolseiro"@pt-br,
+        "Фродо Бэггинс"@ru,
+        "Frodo"@sk,
+        "Frodo Baggins"@tr,
+        "Фродо Торбин"@uk .
+
+<http://tolkien-kg.org/resource/Fror> rdfs:label "Frór"@de,
+        "Fror"@es,
+        "Frór"@fr,
+        "Frór"@it,
+        "Frór"@pl,
+        "Frór"@pt-br,
+        "Фрор"@ru .
+
+<http://tolkien-kg.org/resource/Frumgar> rdfs:label "Frumgar"@de,
+        "Frumgar"@it,
+        "Frumgar"@nl,
+        "Фрумгар"@ru .
+
+<http://tolkien-kg.org/resource/Fuinur> rdfs:label "Fuinur"@de,
+        "Fuinur"@es,
+        "Fuinur"@fr,
+        "Fuinur"@it,
+        "Fuinur"@pl,
+        "Фуинур"@ru .
+
+<http://tolkien-kg.org/resource/Fundin> rdfs:label "Fundin"@ca,
+        "Fundin"@de,
+        "Fundin"@es,
+        "Fundin"@fr,
+        "פונדין"@he,
+        "Fundin"@it,
+        "Fundin"@nl,
+        "Fundin"@pl,
+        "Fundin"@pt-br,
+        "Фундин"@ru .
+
+<http://tolkien-kg.org/resource/Galadhon> rdfs:label "Galadhon"@de,
+        "Galadhon"@fr,
+        "Galadhon"@it,
+        "Galadhon"@pl,
+        "Галадон"@ru .
+
+<http://tolkien-kg.org/resource/Galadhrim> rdfs:label "Galadhrim"@fr,
+        "Galadhrim"@it,
+        "Galadhrimowie"@pl,
+        "Галадрим"@ru .
+
+<http://tolkien-kg.org/resource/Galador> rdfs:label "Galador"@de,
+        "Galador"@es,
+        "Galador"@fr,
+        "Galador"@it,
+        "Galador"@nl,
+        "Galador"@pl,
+        "Галадор"@ru .
+
+<http://tolkien-kg.org/resource/Galadriel> rdfs:label "Galàdriel"@ca,
+        "Galadriel"@de,
+        "Galadriel"@es,
+        "Galadriel"@fr,
+        "Galadriel"@it,
+        "Galadriela"@pl,
+        "Galadriel"@pt-br,
+        "Галадриэль"@ru,
+        "Alatáriel"@sk,
+        "Galadriel"@tr,
+        "Ґаладріель"@uk .
+
+<http://tolkien-kg.org/resource/Galathil> rdfs:label "Galathil"@de,
+        "Galathil"@fr,
+        "Galathil"@it,
+        "Galathil"@pl,
+        "Галатиль"@ru .
+
+<http://tolkien-kg.org/resource/Galathilion> rdfs:label "Galathilion"@de,
+        "Galathilion"@fr,
+        "Galathilion"@it,
+        "Galathilion"@pl,
+        "Галатилион"@ru,
+        "Galathilion"@sk .
+
+<http://tolkien-kg.org/resource/Galion> rdfs:label "Galion"@de,
+        "Galion"@it,
+        "Galion"@pl,
+        "Галион"@ru .
+
+<http://tolkien-kg.org/resource/Galmod> rdfs:label "Gálmód"@de,
+        "Gálmód"@es,
+        "Галмод"@ru .
+
+<http://tolkien-kg.org/resource/Galvorn> rdfs:label "Galvorn"@de,
+        "Galvorn"@it,
+        "Galvorn"@pl,
+        "Галворн"@ru .
+
+<http://tolkien-kg.org/resource/Gamgee> rdfs:label "Gamdschie"@de,
+        "Famiglia Gamgee"@it,
+        "Gamgee"@pl .
+
+<http://tolkien-kg.org/resource/Gamli> rdfs:label "Gamli (Serie)"@de,
+        "Gamli"@fr .
+
+<http://tolkien-kg.org/resource/Gamling> rdfs:label "Gamling"@ca,
+        "Gamling"@de,
+        "Gamelin"@es,
+        "Gamling"@it,
+        "Gamling"@pl,
+        "Гамлинг"@ru .
+
+<http://tolkien-kg.org/resource/Gamwich> rdfs:label "Gamwich"@de,
+        "Gamwich"@it,
+        "Gamwich"@pl .
+
+<http://tolkien-kg.org/resource/Gandalf> rdfs:label "Gàndalf"@ca,
+        "Gandalf"@cs,
+        "Gandalf"@de,
+        "Gandalf"@es,
+        "Gandalf"@fi,
+        "Gandalf"@fr,
+        "גנדלף"@he,
+        "Gandalf"@it,
+        "Gandalf"@nl,
+        "Gandalf"@pl,
+        "Gandalf"@pt-br,
+        "Гэндальф"@ru,
+        "Gandalf"@sk,
+        "Gandalf"@tr,
+        "Ґандальф"@uk .
+
+<http://tolkien-kg.org/resource/Garulf> rdfs:label "Gárulf (Rohir)"@de,
+        "Gárulf"@fr .
+
+<http://tolkien-kg.org/resource/Gaurwaith> rdfs:label "Gaurwaith"@de,
+        "Gaurwaith"@es,
+        "Gaurwaith"@fr,
+        "Gaurwaith"@it,
+        "Gaurwaith"@pl,
+        "Гаурвайт"@ru .
+
+<http://tolkien-kg.org/resource/Gelion> rdfs:label "Gelion"@de,
+        "Gelion"@es,
+        "Gelion"@fr,
+        "Gelion"@it,
+        "Gelion"@pl,
+        "Гелион"@ru .
+
+<http://tolkien-kg.org/resource/Gerda> rdfs:label "Gerda (Serie)"@de,
+        "Gerda"@fr .
+
+<http://tolkien-kg.org/resource/Gethron> rdfs:label "Gethron"@de,
+        "Gethron"@fr,
+        "Gethron"@it,
+        "Гетрон"@ru .
+
+<http://tolkien-kg.org/resource/Ghan> rdfs:label "Ghân"@de,
+        "Ghân"@es,
+        "Ghân"@fr,
+        "Ghân"@it,
+        "Ghân"@pl,
+        "Ган"@ru .
+
+<http://tolkien-kg.org/resource/Giants> rdfs:label "Steinriesen"@de,
+        "Gigante de piedra"@es,
+        "Géants de Pierre"@fr,
+        "Giganti"@it,
+        "Kamienne Olbrzymy"@pl,
+        "Великаны"@ru .
+
+<http://tolkien-kg.org/resource/Gilbarad> rdfs:label "Gilbarad"@de,
+        "Гильбарад"@ru .
+
+<http://tolkien-kg.org/resource/Gildis> rdfs:label "Gildis"@it,
+        "Gildis"@pl .
+
+<http://tolkien-kg.org/resource/Gilmith> rdfs:label "Gilmith"@de,
+        "Gilmith"@fr,
+        "Gilmith"@it,
+        "Gilmith"@pl,
+        "Гильмит"@ru .
+
+<http://tolkien-kg.org/resource/Gilraen> rdfs:label "Gilraen"@de,
+        "Gilraen"@es,
+        "Gilraen"@fr,
+        "Gilraen"@it,
+        "Gilraena"@pl,
+        "Gilraen"@pt-br,
+        "Гильраэн"@ru .
+
+<http://tolkien-kg.org/resource/Gilwen> rdfs:label "Gilwen"@it,
+        "Gilwen"@nl,
+        "Gilwen"@pl,
+        "Гильвен"@ru .
+
+<http://tolkien-kg.org/resource/Gimilkhad> rdfs:label "Gimilkhâd"@de,
+        "Gimilkhâd"@fr,
+        "Gimilkhâd"@it,
+        "Gimilkhâd"@pl,
+        "Гимильхад"@ru .
+
+<http://tolkien-kg.org/resource/Gimilzagar> rdfs:label "Gimilzagar"@de,
+        "Gimilzagar"@pl,
+        "Гимильзагар"@ru .
+
+<http://tolkien-kg.org/resource/Gimli> rdfs:label "Gimli"@de,
+        "Gimli"@es,
+        "Gimli"@fi,
+        "Gimli"@fr,
+        "גימלי"@he,
+        "Gimli"@it,
+        "Gimli"@nl,
+        "Gimli"@pl,
+        "Gimli"@pt-br,
+        "Гимли"@ru,
+        "Gimli"@tr,
+        "Ґімлі"@uk .
+
+<http://tolkien-kg.org/resource/Girion> rdfs:label "Girion"@de,
+        "Girion"@es,
+        "Girion"@fr,
+        "Girion"@it,
+        "Girion"@pl,
+        "Гирион"@ru .
+
+<http://tolkien-kg.org/resource/Glamdring> rdfs:label "Glamdring"@cs,
+        "Glamdring"@de,
+        "Glamdring"@es,
+        "Glamdring"@fr,
+        "Glamdring"@it,
+        "Glamdring"@pl,
+        "Гламдринг"@ru,
+        "Glamdring"@sk .
+
+<http://tolkien-kg.org/resource/Glanduin> rdfs:label "Glanduin"@de,
+        "Glanduin"@es,
+        "Glanduin"@fr,
+        "Glanduin"@it,
+        "Glanduina"@pl,
+        "Гландуин"@ru .
+
+<http://tolkien-kg.org/resource/Glaurung> rdfs:label "Glàurung"@ca,
+        "Glaurung"@de,
+        "Glaurung"@es,
+        "Glaurung"@fr,
+        "Glaurung"@it,
+        "Glaurung"@pl,
+        "Глаурунг"@ru,
+        "Ґлаурунґ"@uk .
+
+<http://tolkien-kg.org/resource/Gleowine> rdfs:label "Gléowine"@de,
+        "Gléowine"@pl .
+
+<http://tolkien-kg.org/resource/Glirhuin> rdfs:label "Glirhuin"@de,
+        "Glirhuin"@pl,
+        "Глирхуин"@ru .
+
+<http://tolkien-kg.org/resource/Gloredhel> rdfs:label "Glóredhel"@de,
+        "Glóredhel"@fr,
+        "Glóredhel"@it,
+        "Glóredhela"@pl,
+        "Глорэдель"@ru .
+
+<http://tolkien-kg.org/resource/Glorfindel> rdfs:label "Glorfíndel"@ca,
+        "Glorfindel"@de,
+        "Glorfindel"@es,
+        "Glorfindel"@fr,
+        "Glorfindel"@it,
+        "Glorfindel"@nl,
+        "Glorfindel"@pl,
+        "Глорфиндель"@ru,
+        "Glorfindel"@tr .
+
+<http://tolkien-kg.org/resource/Golasgil> rdfs:label "Golasgil"@de,
+        "Golasgil"@es,
+        "Golasgil"@it,
+        "Golasgil"@pl .
+
+<http://tolkien-kg.org/resource/Goldberry> rdfs:label "Goldbeere"@de,
+        "Baya de Oro"@es,
+        "Baie d'Or"@fr,
+        "Baccadoro"@it,
+        "Goudbezie"@nl,
+        "Złota Jagoda"@pl,
+        "Златеника"@ru .
+
+<http://tolkien-kg.org/resource/Goldwine> rdfs:label "Goldwine"@de,
+        "Goldwine"@es,
+        "Goldwine"@fr,
+        "Goldwine"@it,
+        "Goldwine"@pl,
+        "Голдвине"@ru,
+        "Ґольдвайн"@uk .
+
+<http://tolkien-kg.org/resource/Golfimbul> rdfs:label "Golfimbul"@de,
+        "Golfimbul"@es,
+        "Golfimbul"@it,
+        "Golfimbul"@pl,
+        "Гольфимбул"@ru .
+
+<http://tolkien-kg.org/resource/Gollum> rdfs:label "Gollum"@de,
+        "Gollum"@es,
+        "Gollum"@fr,
+        "גולום"@he,
+        "Gollum"@it,
+        "Gollem"@nl,
+        "Gollum"@pl,
+        "Gollum"@pt-br,
+        "Голлум"@ru,
+        "Gollum"@tr,
+        "Ґолум"@uk .
+
+<http://tolkien-kg.org/resource/Gondolin> rdfs:label "Gondolin"@ca,
+        "Gondolin"@de,
+        "Gondolin"@es,
+        "Gondolin"@fr,
+        "Gondolin"@it,
+        "Gondolin"@pl,
+        "Гондолин"@ru,
+        "Gondolin"@tr .
+
+<http://tolkien-kg.org/resource/Gondolindrim> rdfs:label "Gondolindrim"@de,
+        "Gondolindrim"@fr,
+        "Gondolindrim"@it,
+        "Gondolindrimowie"@pl,
+        "Гондолиндрим"@ru,
+        "Gondolindrim"@tr .
+
+<http://tolkien-kg.org/resource/Gondor> rdfs:label "Gondor"@de,
+        "Gondor"@es,
+        "Gondor"@fi,
+        "Gondor"@fr,
+        "Gondor"@it,
+        "Gondor"@nl,
+        "Gondor"@pl,
+        "Gondor"@pt-br,
+        "Гондор"@ru,
+        "Ґондор"@uk .
+
+<http://tolkien-kg.org/resource/Gondorians> rdfs:label "Hombres de Gondor"@es,
+        "Uomini di Gondor"@it,
+        "Гондорцы"@ru,
+        "Gondorčania"@sk .
+
+<http://tolkien-kg.org/resource/Gorbag> rdfs:label "Gorbag"@de,
+        "Gorbag"@es,
+        "Gorbag"@fr,
+        "Gorbag"@it,
+        "Gorbag"@pl,
+        "Gorbag"@pt-br,
+        "Горбаг"@ru .
+
+<http://tolkien-kg.org/resource/Gorgol> rdfs:label "Gorgol"@it,
+        "Горгол Мясник"@ru .
+
+<http://tolkien-kg.org/resource/Gorgumoth> rdfs:label "Gorgumoth"@de .
+
+<http://tolkien-kg.org/resource/Gorlim> rdfs:label "Gorlim"@de,
+        "Gorlim"@it,
+        "Gorlim"@pl,
+        "Горлим"@ru .
+
+<http://tolkien-kg.org/resource/Gram> rdfs:label "Gram"@de,
+        "Gram"@es,
+        "Gram"@fr,
+        "Gram"@it,
+        "Gram (berg)"@nl,
+        "Gram"@pl,
+        "Грам"@ru,
+        "Ґрам"@uk .
+
+<http://tolkien-kg.org/resource/Greenholm> rdfs:label "Grünholm"@de,
+        "Verdolmo"@it,
+        "Greenholm"@pl .
+
+<http://tolkien-kg.org/resource/Greenway> rdfs:label "Groeneweg"@nl .
+
+<http://tolkien-kg.org/resource/Grey_Havens> rdfs:label "Rades Grises"@ca,
+        "Graue Anfurten"@de,
+        "Mithlond"@es,
+        "Les Havres Gris"@fr,
+        "Porti Grigi"@it,
+        "Grijze Havens"@nl,
+        "Szara Przystań"@pl,
+        "Митлонд"@ru .
+
+<http://tolkien-kg.org/resource/Grima> rdfs:label "Gríma Schlangenzunge"@de,
+        "Gríma"@es,
+        "Gríma"@fr,
+        "Gríma Vermilinguo"@it,
+        "Gríma"@pl,
+        "Грима"@ru .
+
+<http://tolkien-kg.org/resource/Grimbeorn> rdfs:label "Grimbeorn"@de,
+        "Grimbeorn"@es,
+        "Grimbeorn"@fr,
+        "Grimbeorn il Vecchio"@it,
+        "Grimbeorn"@nl,
+        "Grimbeorn"@pl,
+        "Гримбеорн"@ru .
+
+<http://tolkien-kg.org/resource/Grimbold> rdfs:label "Grimbold"@de,
+        "Grimbold"@es,
+        "Grimbold"@it,
+        "Grimbold"@pl,
+        "Гримбольд"@ru .
+
+<http://tolkien-kg.org/resource/Grimslade> rdfs:label "Grimslade"@de .
+
+<http://tolkien-kg.org/resource/Grinnah> rdfs:label "Grinnah"@pl .
+
+<http://tolkien-kg.org/resource/Grishnakh> rdfs:label "Grischnákh"@de,
+        "Grishnákh"@it,
+        "Grisznák"@pl,
+        "Grishnakh"@pt-br,
+        "Гришнак"@ru .
+
+<http://tolkien-kg.org/resource/Grithnir> rdfs:label "Grithnir"@de,
+        "Grithnir"@fr,
+        "Grithnir"@it,
+        "Гритнир"@ru .
+
+<http://tolkien-kg.org/resource/Groin> rdfs:label "Gróin"@de,
+        "Gróin"@es,
+        "Gróin"@fr,
+        "Gróin"@it,
+        "Gróin"@nl,
+        "Gróin"@pl,
+        "Гроин"@ru,
+        "Ґроїн"@uk .
+
+<http://tolkien-kg.org/resource/Grond_Hammer_of_the_Underworld> rdfs:label "Grond (Ramme)"@de,
+        "Grond"@fr,
+        "Grond (Ariete)"@it,
+        "Grond (taran)"@pl,
+        "Гронд"@ru .
+
+<http://tolkien-kg.org/resource/Gror> rdfs:label "Grór"@ca,
+        "Grór"@de,
+        "Grór"@fr,
+        "Grór"@it,
+        "Grór"@nl,
+        "Grór"@pl,
+        "Грор"@ru .
+
+<http://tolkien-kg.org/resource/Grubb_Family> rdfs:label "Gruber"@de .
+
+<http://tolkien-kg.org/resource/Guilin> rdfs:label "Guilin"@de,
+        "Guilin"@it,
+        "Guilin"@pl,
+        "Гуилин"@ru,
+        "Ґуїлін"@uk .
+
+<http://tolkien-kg.org/resource/Gundor> rdfs:label "Gundor"@de,
+        "Gundor"@fr,
+        "Gundor"@it,
+        "Gundor"@pl,
+        "Gundor"@pt-br,
+        "Гундор"@ru .
+
+<http://tolkien-kg.org/resource/Guritz> rdfs:label "Guritz"@de,
+        "Guritz"@nl,
+        "Guritz"@pl .
+
+<http://tolkien-kg.org/resource/Guthlaf> rdfs:label "Guthláf"@de,
+        "Guthláf"@it,
+        "Gúthlaf"@nl,
+        "Guthláf"@pl .
+
+<http://tolkien-kg.org/resource/Gwaihir> rdfs:label "Gwaihir"@ca,
+        "Gwaihir"@de,
+        "Gwaihir"@es,
+        "Gwaihir"@fr,
+        "Gwaihir"@it,
+        "Gwaihir"@pl,
+        "Гваихир"@ru,
+        "Gwaihir"@sk,
+        "Гвайгір"@uk .
+
+<http://tolkien-kg.org/resource/Gwathlo> rdfs:label "Gwathló"@de,
+        "Aguada Gris"@es,
+        "Gwathló"@fr,
+        "Gwathló"@it,
+        "Grijsvloed"@nl,
+        "Gwathló"@pl,
+        "Гватло"@ru .
+
+<http://tolkien-kg.org/resource/Gwindor> rdfs:label "Gwindor"@de,
+        "Gwindor"@es,
+        "Gwindor"@fr,
+        "Gwindor"@it,
+        "Gwindor"@pl,
+        "Гвиндор"@ru .
+
+<http://tolkien-kg.org/resource/Haerast> rdfs:label "Haerast"@it,
+        "Haerast"@pl,
+        "Гаераст"@uk .
+
+<http://tolkien-kg.org/resource/Halad> rdfs:label "Halad"@pl,
+        "Халад"@ru .
+
+<http://tolkien-kg.org/resource/Halbarad> rdfs:label "Halbarad"@de,
+        "Halbarad"@es,
+        "Halbarad"@it,
+        "Halbarad"@pl,
+        "Халбарад"@ru,
+        "Гальбард"@uk .
+
+<http://tolkien-kg.org/resource/Haldad> rdfs:label "Haldad"@de,
+        "Haldad"@it,
+        "Haldad"@pl,
+        "Халдад"@ru .
+
+<http://tolkien-kg.org/resource/Haldan> rdfs:label "Haldan"@de,
+        "Haldan"@it,
+        "Haldan"@pl,
+        "Халдан"@ru .
+
+<http://tolkien-kg.org/resource/Haldar> rdfs:label "Haldar"@de,
+        "Haldar"@it,
+        "Haldar"@pl,
+        "Халдар"@ru .
+
+<http://tolkien-kg.org/resource/Hallacar> rdfs:label "Hallacar"@de,
+        "Hallacar"@it,
+        "Hallacar"@pl,
+        "Халлакар"@ru .
+
+<http://tolkien-kg.org/resource/Hallas> rdfs:label "Hallas"@de,
+        "Hallas"@it,
+        "Hallas"@pl,
+        "Халлас"@ru .
+
+<http://tolkien-kg.org/resource/Hallatan> rdfs:label "Hallatan"@de,
+        "Hallatan"@pl,
+        "Халлатан"@ru .
+
+<http://tolkien-kg.org/resource/Halmir> rdfs:label "Halmir"@de,
+        "Halmir"@it,
+        "Halmir"@pl,
+        "Халмир"@ru .
+
+<http://tolkien-kg.org/resource/Handir> rdfs:label "Handir"@de,
+        "Handir"@fr,
+        "Handir"@it,
+        "Handir"@pl,
+        "Хандир"@ru .
+
+<http://tolkien-kg.org/resource/Harad> rdfs:label "Harad"@de,
+        "Harad"@es,
+        "Haradwaith"@fr,
+        "Harad"@it,
+        "Harad"@pl,
+        "Харад"@ru .
+
+<http://tolkien-kg.org/resource/Haradrim> rdfs:label "Haradrim"@ca,
+        "Haradrim"@de,
+        "Haradrim"@es,
+        "Haradrim"@fr,
+        "Haradrim"@it,
+        "Haradrim"@nl,
+        "Haradrimowie"@pl,
+        "Харадрим"@ru .
+
+<http://tolkien-kg.org/resource/Hardang> rdfs:label "Hardang"@pl,
+        "Харданг"@ru .
+
+<http://tolkien-kg.org/resource/Hardbottle> rdfs:label "Steinbüttel"@de,
+        "Pietracasa"@it,
+        "Kamienne Sioło"@pl .
+
+<http://tolkien-kg.org/resource/Harding_rider_of_Rohan> rdfs:label "Harding"@de,
+        "Harding"@pl,
+        "Хардинг"@ru .
+
+<http://tolkien-kg.org/resource/Hareth> rdfs:label "Hareth"@de,
+        "Hareth"@it,
+        "Haretha"@pl,
+        "Харет"@ru,
+        "Гарет"@uk .
+
+<http://tolkien-kg.org/resource/Harfoots> rdfs:label "Pelosos"@es,
+        "Piévelus"@fr,
+        "Pelopiedi"@it,
+        "Bruivels"@nl,
+        "Harfootowie"@pl,
+        "Pés-peludos"@pt-br,
+        "Мохноноги"@ru .
+
+<http://tolkien-kg.org/resource/Harlindon> rdfs:label "Harlindon"@de,
+        "Harlindon"@fr,
+        "Harlindon"@it,
+        "Harlindon"@pl,
+        "Харлиндон"@ru .
+
+<http://tolkien-kg.org/resource/Harlond_Lindon> rdfs:label "Harlond (Lindon)"@de,
+        "Harlond"@es,
+        "Harlond (Harlindon)"@fr,
+        "Harlond (Lindon)"@it,
+        "Harlond"@pl,
+        "Харлонд"@ru .
+
+<http://tolkien-kg.org/resource/Harnen> rdfs:label "Harnen"@de,
+        "Harnen"@es,
+        "Harnen"@pl,
+        "Харнен"@ru .
+
+<http://tolkien-kg.org/resource/Harrowdale> rdfs:label "Hargtal"@de,
+        "Clivovalle"@it,
+        "Harrowdale"@pl,
+        "Харроудейл"@ru .
+
+<http://tolkien-kg.org/resource/Harry_Goatleaf> rdfs:label "Heinrich Geißblatt"@de,
+        "Enrico Lanicardo"@it,
+        "Harry Geiteblad"@nl,
+        "Harry Goatleaf"@pl .
+
+<http://tolkien-kg.org/resource/Hasufel> rdfs:label "Hasufel"@de,
+        "Hasufel"@es,
+        "Hasufel"@fr,
+        "Hasufel"@it,
+        "Hasufel"@pl,
+        "Хасуфель"@ru,
+        "Hasufel"@sk .
+
+<http://tolkien-kg.org/resource/Hathaldir> rdfs:label "Hathaldir"@de,
+        "Hathaldir"@it,
+        "Хаталдир"@ru .
+
+<http://tolkien-kg.org/resource/Hathol> rdfs:label "Hathol"@de,
+        "Hathol"@it,
+        "Hathol"@pl,
+        "Хатол"@ru .
+
+<http://tolkien-kg.org/resource/Hatholdir> rdfs:label "Hatholdir"@de,
+        "Hatholdir"@pl,
+        "Хатолдир"@ru .
+
+<http://tolkien-kg.org/resource/Haysend> rdfs:label "Hagsend"@de,
+        "Finfratta"@it,
+        "Haageinde"@nl,
+        "Ostatnia Łąka"@pl .
+
+<http://tolkien-kg.org/resource/Hayward_Family> rdfs:label "Feldhüter"@de,
+        "Famille Gardeclôture"@fr .
+
+<http://tolkien-kg.org/resource/Helcaraxe> rdfs:label "Helcaraxe"@de,
+        "Helcaraxë"@es,
+        "Helcaraxë"@fr,
+        "Helcaraxë"@it,
+        "Helcaraxë"@pl,
+        "Хелькараксэ"@ru,
+        "Гелькараксе"@uk .
+
+<http://tolkien-kg.org/resource/Helm> rdfs:label "Helm"@de,
+        "Helm"@es,
+        "Helm Main-Marteau"@fr,
+        "Helm Mandimartello"@it,
+        "Helm Hamerhand"@nl,
+        "Helm Żelaznoręki"@pl,
+        "Хельм"@ru,
+        "Гельм Молоторукий"@uk .
+
+<http://tolkien-kg.org/resource/Henderch> rdfs:label "Henderch"@de,
+        "Хендерх"@ru .
+
+<http://tolkien-kg.org/resource/Hendor> rdfs:label "Hendor"@it,
+        "Hendor"@pl .
+
+<http://tolkien-kg.org/resource/Herion> rdfs:label "Herion"@de,
+        "Herion"@fr,
+        "Herion"@it,
+        "Herion"@pl,
+        "Херион"@ru .
+
+<http://tolkien-kg.org/resource/Herubrand> rdfs:label "Herubrand"@de,
+        "Herubrand"@pl .
+
+<http://tolkien-kg.org/resource/Herucalmo> rdfs:label "Herucalmo"@de,
+        "Tar-Anducal"@it,
+        "Herucalmo"@pl,
+        "Тар-Андукал"@ru .
+
+<http://tolkien-kg.org/resource/Herumor> rdfs:label "Herumor"@de,
+        "Herumor"@es,
+        "Herumor"@fr,
+        "Herumor"@it,
+        "Herumor"@pl,
+        "Херумор"@ru .
+
+<http://tolkien-kg.org/resource/Hild> rdfs:label "Hild"@de,
+        "Hild"@fr,
+        "Hild"@it,
+        "Hilda"@pl,
+        "Хильд"@ru,
+        "Гільда"@uk .
+
+<http://tolkien-kg.org/resource/Hildorien> rdfs:label "Hildórien"@ca,
+        "Hildórien"@de,
+        "Hildórien"@es,
+        "Hildórien"@it,
+        "Hildórien"@pl,
+        "Хильдориэн"@ru .
+
+<http://tolkien-kg.org/resource/Himlad> rdfs:label "Himlad"@de,
+        "Himlad"@es,
+        "Himlad"@fr,
+        "Himlad"@it,
+        "Himlad"@nl,
+        "Himlad"@pl,
+        "Химлад"@ru,
+        "Гімлад"@uk .
+
+<http://tolkien-kg.org/resource/Himring> rdfs:label "Himring"@de,
+        "Himring"@es,
+        "Himring"@it,
+        "De Bergen van Himring"@nl,
+        "Himring"@pl,
+        "Химринг"@ru .
+
+<http://tolkien-kg.org/resource/Hirgon> rdfs:label "Hirgon"@de,
+        "Hirgon"@es,
+        "Hirgon"@it,
+        "Hirgon"@pl .
+
+<http://tolkien-kg.org/resource/Hirluin> rdfs:label "Hirluin"@de,
+        "Hirluin"@es,
+        "Hirluin"@it,
+        "Hirluin Piękny"@pl .
+
+<http://tolkien-kg.org/resource/Hirwen> rdfs:label "Hirwen"@it .
+
+<http://tolkien-kg.org/resource/Hithlum> rdfs:label "Hithlum"@de,
+        "Hithlum"@es,
+        "Hithlum"@it,
+        "Hithlum"@pl,
+        "Хитлум"@ru,
+        "Hithlum"@sk .
+
+<http://tolkien-kg.org/resource/Hobbiton> rdfs:label "Hobbingen"@de,
+        "Hobbiton"@es,
+        "Hobbitebourg"@fr,
+        "Hobbiville"@it,
+        "Hobbitstee"@nl,
+        "Hobbiton"@pl,
+        "Hobbiton"@pt-br,
+        "Хоббитон"@ru .
+
+<http://tolkien-kg.org/resource/Hobbits> rdfs:label "Hobbits"@de,
+        "Hobbits"@es,
+        "Hobbits"@fr,
+        "הוביטים"@he,
+        "Hobbit"@it,
+        "Hobbit"@nl,
+        "Hobbici"@pl,
+        "Hobbits"@pt-br,
+        "Хоббиты"@ru,
+        "Hobbitler"@tr,
+        "Гобіти"@uk .
+
+<http://tolkien-kg.org/resource/Horn_rider_of_Rohan> rdfs:label "Horn (Mensch von Rohan)"@de,
+        "Horn"@pl .
+
+<http://tolkien-kg.org/resource/Hornburg> rdfs:label "Hornburg"@de,
+        "Fort-le-Cor"@fr,
+        "Trombatorrione"@it,
+        "De Hoornburg"@nl,
+        "Súthburg"@pl,
+        "Хорнбург"@ru,
+        "Горнбурґ"@uk .
+
+<http://tolkien-kg.org/resource/Horses> rdfs:label "Pferde"@de .
+
+<http://tolkien-kg.org/resource/House_of_Haleth> rdfs:label "Haus Haleth"@de,
+        "Casa de Haleth (Haladin)"@es,
+        "Casa di Haleth"@it,
+        "Haladinowie"@pl,
+        "Дом Халет"@ru .
+
+<http://tolkien-kg.org/resource/Huan> rdfs:label "Huan"@de,
+        "Huan"@es,
+        "Huan"@fr,
+        "Huan"@it,
+        "Huan"@pl,
+        "Хуан"@ru .
+
+<http://tolkien-kg.org/resource/Hundad> rdfs:label "Hundad"@pl,
+        "Хундад"@ru .
+
+<http://tolkien-kg.org/resource/Hundar> rdfs:label "Hundar"@de,
+        "Hundar"@pl,
+        "Хундар"@ru .
+
+<http://tolkien-kg.org/resource/Hunthor> rdfs:label "Hunthor"@de,
+        "Hunthor"@it,
+        "Hunthor"@pl,
+        "Хунтор"@ru .
+
+<http://tolkien-kg.org/resource/Huor> rdfs:label "Huor"@de,
+        "Huor"@es,
+        "Huor"@fr,
+        "Huor"@it,
+        "Huor"@pl,
+        "Хуор"@ru,
+        "Huor"@tr .
+
+<http://tolkien-kg.org/resource/Huorns> rdfs:label "Huorns"@de,
+        "Ucornos"@es,
+        "Huorns"@fr,
+        "Ucorni"@it,
+        "Huornowie"@pl,
+        "Хуорны"@ru .
+
+<http://tolkien-kg.org/resource/Hyarastorni> rdfs:label "Hyarastorni"@fr,
+        "Hyarastorni"@pl,
+        "Хьярасторни"@ru .
+
+<http://tolkien-kg.org/resource/Hyarnustar> rdfs:label "Hyarnustar"@de,
+        "Hyarnustar"@es,
+        "Hyarnustar"@fr,
+        "Hyarnustar"@it,
+        "Hyarnustar"@pl,
+        "Хьярнустар"@ru .
+
+<http://tolkien-kg.org/resource/Hyarrostar> rdfs:label "Hyarrostar"@de,
+        "Hyarrostar"@es,
+        "Hyarrostar"@fr,
+        "Hyarrostar"@it,
+        "Hyarrostar"@pl,
+        "Хьярростар"@ru .
+
+<http://tolkien-kg.org/resource/Ibal> rdfs:label "Îbal"@de,
+        "Îbal"@it,
+        "Ибал"@ru .
+
+<http://tolkien-kg.org/resource/Idis> rdfs:label "Idis"@nl .
+
+<http://tolkien-kg.org/resource/Idril> rdfs:label "Idril"@ca,
+        "Idril"@de,
+        "Idril"@es,
+        "Idril"@fr,
+        "Idril"@it,
+        "Idril"@pl,
+        "Идриль"@ru .
+
+<http://tolkien-kg.org/resource/Ilmare> rdfs:label "Ilmarë"@ca,
+        "Ilmare"@de,
+        "Ilmarë"@es,
+        "Ilmarë"@fr,
+        "Ilmarë"@it,
+        "Ilmarë"@pl,
+        "Ильмарэ"@ru,
+        "Ilmarë"@sk .
+
+<http://tolkien-kg.org/resource/Ilmarin> rdfs:label "Ilmarin"@de,
+        "Ilmarin"@es,
+        "Ilmarin"@it,
+        "Ilmarin"@nl,
+        "Ilmarin"@pl .
+
+<http://tolkien-kg.org/resource/Ilmen> rdfs:label "Ilmen"@de,
+        "Ilmen"@es,
+        "Ilmen"@it,
+        "Ilmen"@pl,
+        "Ильмен"@ru .
+
+<http://tolkien-kg.org/resource/Iluvatar> rdfs:label "Eru"@ca,
+        "Ilúvatar"@de,
+        "Ilúvatar"@es,
+        "Eru Ilúvatar"@fr,
+        "ארו אילובאטאר"@he,
+        "Eru Ilúvatar"@it,
+        "Eru Ilúvatar"@nl,
+        "Eru Ilúvatar"@pl,
+        "Eru Ilúvatar"@pt-br,
+        "Эру Илуватар"@ru,
+        "Eru"@sk,
+        "Eru Ilúvatar"@tr,
+        "Еру Ілуватар"@uk .
+
+<http://tolkien-kg.org/resource/Ilwen> rdfs:label "Ильвен"@ru .
+
+<http://tolkien-kg.org/resource/Imin> rdfs:label "Imin"@de,
+        "Imin"@it,
+        "Imin"@nl,
+        "Imin"@pl,
+        "Имин"@ru,
+        "Imin"@sk,
+        "Імін"@uk .
+
+<http://tolkien-kg.org/resource/Iminye> rdfs:label "Iminyë"@de,
+        "Iminyë"@pl,
+        "Иминье"@ru,
+        "Iminyë"@sk,
+        "Іміньє"@uk .
+
+<http://tolkien-kg.org/resource/Imlach> rdfs:label "Imlach"@de,
+        "Imlach"@it,
+        "Imlach"@pl,
+        "Имлах"@ru .
+
+<http://tolkien-kg.org/resource/Imrazor> rdfs:label "Imrazôr"@de,
+        "Imrazôr"@fr,
+        "Imrazôr"@it,
+        "Imrazôr"@nl,
+        "Imrazôr"@pl,
+        "Имразор"@ru .
+
+<http://tolkien-kg.org/resource/Indis> rdfs:label "Indis"@ca,
+        "Indis"@de,
+        "Indis"@es,
+        "Indis"@fr,
+        "Indis"@it,
+        "Indis"@pl,
+        "Indis"@pt-br,
+        "Индис"@ru,
+        "Індіс"@uk .
+
+<http://tolkien-kg.org/resource/Ingold> rdfs:label "Ingold"@de,
+        "Ingold"@es,
+        "Ingold"@nl .
+
+<http://tolkien-kg.org/resource/Ingwe> rdfs:label "Ingwë"@ca,
+        "Ingwe"@de,
+        "Ingwë"@es,
+        "Ingwë"@it,
+        "Ingwë"@pl,
+        "Ингвэ"@ru,
+        "Ingwë"@sk .
+
+<http://tolkien-kg.org/resource/Ingwion> rdfs:label "Ingwion"@fr,
+        "Ingwion"@it,
+        "Ingwion"@pl,
+        "Ингвион"@ru .
+
+<http://tolkien-kg.org/resource/Inzilbeth> rdfs:label "Inzilbêth"@de,
+        "Inzilbêth"@it,
+        "Inzilbêth"@pl,
+        "Инзильбет"@ru .
+
+<http://tolkien-kg.org/resource/Ioreth> rdfs:label "Ioreth"@de,
+        "Ioreth"@es,
+        "Ioreth (guaritrice)"@it,
+        "Ioreth"@pl .
+
+<http://tolkien-kg.org/resource/Iorlas> rdfs:label "Iorlas"@de,
+        "Iorlas"@es,
+        "Иорлас"@ru .
+
+<http://tolkien-kg.org/resource/Irilde> rdfs:label "Írildë"@de,
+        "Írildë"@pl .
+
+<http://tolkien-kg.org/resource/Irime> rdfs:label "Írimë"@it,
+        "Írimë"@pl,
+        "Иримэ"@ru,
+        "Іріме"@uk .
+
+<http://tolkien-kg.org/resource/Irolas> rdfs:label "Irolas"@de,
+        "Irolas"@es,
+        "Irolas"@pl,
+        "Иролас"@ru .
+
+<http://tolkien-kg.org/resource/Iron_Hills> rdfs:label "Eisenberge"@de,
+        "Colinas de Hierro"@es,
+        "Collines de Fer"@fr,
+        "גזעות הברזל"@he,
+        "Żelazne Wzgórza"@pl,
+        "Железные Холмы"@ru .
+
+<http://tolkien-kg.org/resource/Ironfists> rdfs:label "Poings-de-fer"@fr,
+        "Pugniferro"@it,
+        "IJzervuisten"@nl,
+        "Żelaznoręcy"@pl,
+        "Железноруки"@ru .
+
+<http://tolkien-kg.org/resource/Isengard> rdfs:label "Ísengard"@ca,
+        "Isengart"@de,
+        "Isengard"@es,
+        "Isengard"@fr,
+        "Isengard"@it,
+        "Isengard"@nl,
+        "Isengard"@pl,
+        "Isengard"@pt-br,
+        "Изенгард"@ru,
+        "Ісенґард"@uk .
+
+<http://tolkien-kg.org/resource/Isildur> rdfs:label "Isildur"@de,
+        "Isildur"@es,
+        "Isildur"@fr,
+        "Isildur"@it,
+        "Isildur"@nl,
+        "Isildur"@pl,
+        "Isildur"@pt-br,
+        "Исильдур"@ru,
+        "Isildur"@tr,
+        "Ісільдур"@uk .
+
+<http://tolkien-kg.org/resource/Isilme> rdfs:label "Isilmë"@de,
+        "Isilmë"@pl,
+        "Исильмэ"@ru .
+
+<http://tolkien-kg.org/resource/Isilmo> rdfs:label "Isilmo"@de,
+        "Isilmo"@it,
+        "Isilmo"@pl,
+        "Исильмо"@ru .
+
+<http://tolkien-kg.org/resource/Ithilien> rdfs:label "Ithilien"@de,
+        "Ithilien"@es,
+        "Ithilien"@fr,
+        "Ithilien"@it,
+        "Ithilien"@nl,
+        "Ithilien"@pl,
+        "Ithilien"@pt-br,
+        "Итилиэн"@ru,
+        "Ітілієн"@uk,
+        "伊西利安（Ithilien）"@zh .
+
+<http://tolkien-kg.org/resource/Ivorwen> rdfs:label "Ivorwen"@de,
+        "Ivorwen"@es,
+        "Ivorwen"@fr,
+        "Ivorwen"@it,
+        "Ivorwen"@nl,
+        "Ivorwena"@pl,
+        "Иворвен"@ru .
+
+<http://tolkien-kg.org/resource/Ivriniel> rdfs:label "Ivriniel"@de,
+        "Ivriniel"@es,
+        "Ivriniel"@it,
+        "Ivriniel"@pl .
+
+<http://tolkien-kg.org/resource/J.R.R._Tolkien> rdfs:label "John Ronald Reuel Tolkien"@ca,
+        "J. R. R. Tolkien"@de,
+        "J.R.R. Tolkien"@es,
+        "J. R. R. Tolkien"@fr,
+        "John Ronald Reuel Tolkien"@it,
+        "J・R・R・トールキン"@ja,
+        "J.R.R. Tolkien"@nl,
+        "John Ronald Reuel Tolkien"@pl,
+        "J.R.R. Tolkien"@pt-br,
+        "Джон Рональд Руэл Толкин"@ru,
+        "J.R.R. Tolkien"@tr,
+        "Джон Роналд Руел Толкін"@uk .
+
+<http://tolkien-kg.org/resource/January> rdfs:label "Januari"@nl .
+
+<http://tolkien-kg.org/resource/July> rdfs:label "Juli"@nl .
+
+<http://tolkien-kg.org/resource/June> rdfs:label "Juni"@nl .
+
+<http://tolkien-kg.org/resource/Karsh> rdfs:label "Carthaen"@de,
+        "Karsh"@es,
+        "Karsh"@fr,
+        "Kapitein Carthean"@nl,
+        "Karsh"@pl,
+        "Картаэн"@ru .
+
+<http://tolkien-kg.org/resource/Kemen_The_Rings_of_Power> rdfs:label "Kemen (Serie)"@de,
+        "Kemen"@fr,
+        "Kemen"@it,
+        "Kemen"@pl,
+        "Kemen"@pt-br,
+        "Кемен"@ru .
+
+<http://tolkien-kg.org/resource/Khamul> rdfs:label "Khamûl"@de,
+        "Khamûl"@es,
+        "Khamûl"@fr,
+        "Khamûl l'Esterling"@it,
+        "Khamûl"@nl,
+        "Khamûl"@pl,
+        "Кхамул"@ru .
+
+<http://tolkien-kg.org/resource/Khand> rdfs:label "Khand"@de,
+        "Khand"@es,
+        "Khand"@fr,
+        "Khand"@it,
+        "Khand"@nl,
+        "Khand"@pl,
+        "Кханд"@ru .
+
+<http://tolkien-kg.org/resource/Khim> rdfs:label "Khîm"@de,
+        "Khîm"@es,
+        "Khîm"@fr,
+        "Khîm"@it,
+        "Khîm"@nl,
+        "Khîm"@pl,
+        "Кхим"@ru .
+
+<http://tolkien-kg.org/resource/Ladros> rdfs:label "Ladros"@de,
+        "Ladros"@fr,
+        "Ladros"@it,
+        "Ladros"@pl,
+        "Ладрос"@ru .
+
+<http://tolkien-kg.org/resource/Lagduf> rdfs:label "Lagduf"@de,
+        "Lagduf"@it,
+        "Lagduf"@pl,
+        "Lagduf"@pt-br,
+        "Лагдуф"@ru .
+
+<http://tolkien-kg.org/resource/Lake_men> rdfs:label "Hommes du Lac"@fr,
+        "Uomini del Lago"@it,
+        "Озёрные жители"@ru .
+
+<http://tolkien-kg.org/resource/Lake_town> rdfs:label "Esgaroth"@de,
+        "Esgaroth"@es,
+        "Esgaroth"@fr,
+        "Esgaroth"@it,
+        "Esgaroth"@nl,
+        "Esgaroth"@pl,
+        "Esgaroth"@pt-br,
+        "Эсгарот"@ru .
+
+<http://tolkien-kg.org/resource/Lamedon> rdfs:label "Lamedon"@de,
+        "Lamedon"@es,
+        "Lamedon"@fr,
+        "Lamedon"@it,
+        "Lamedon"@pl,
+        "Ламедон"@ru .
+
+<http://tolkien-kg.org/resource/Landroval> rdfs:label "Landroval"@de,
+        "Landroval"@es,
+        "Landroval"@fr,
+        "Landroval"@it,
+        "Landrowal"@pl,
+        "Ландроваль"@ru,
+        "Landroval"@sk .
+
+<http://tolkien-kg.org/resource/Languages> rdfs:label "Langues et écritures inventées par Tolkien"@fr .
+
+<http://tolkien-kg.org/resource/Larnach> rdfs:label "Larnach"@de,
+        "Ларнах"@ru .
+
+<http://tolkien-kg.org/resource/Lebennin> rdfs:label "Lebennin"@de,
+        "Lebennin"@es,
+        "Lebennin"@fr,
+        "Lebennin"@it,
+        "Lebennin"@nl,
+        "Lebennin"@pl,
+        "Лебеннин"@ru .
+
+<http://tolkien-kg.org/resource/Lefnui> rdfs:label "Lefnui"@de,
+        "Lefnui"@fr,
+        "Lefnui"@it,
+        "Lefnui"@pl .
+
+<http://tolkien-kg.org/resource/Lembas> rdfs:label "Lembas"@de,
+        "Lembas"@fr,
+        "Lembas"@it,
+        "Lembas"@nl,
+        "Lembasy"@pl,
+        "Лембас"@ru .
+
+<http://tolkien-kg.org/resource/Lenwe> rdfs:label "Lenwë"@ca,
+        "Lenwë"@de,
+        "Lenwë"@fr,
+        "Lenwë"@it,
+        "Lenwë"@pl,
+        "Лэнвэ"@ru,
+        "Lenwë"@sk,
+        "Ленве"@uk .
+
+<http://tolkien-kg.org/resource/Leod> rdfs:label "Léod"@de,
+        "Léod"@fr,
+        "Léod"@it,
+        "Léod"@nl,
+        "Léod"@pl,
+        "Леод"@ru .
+
+<http://tolkien-kg.org/resource/Lethuin> rdfs:label "Lethuin"@pl .
+
+<http://tolkien-kg.org/resource/Letter_12> rdfs:label "List 12"@pl .
+
+<http://tolkien-kg.org/resource/Letter_14> rdfs:label "List 14"@pl .
+
+<http://tolkien-kg.org/resource/Letter_20> rdfs:label "List 20"@pl .
+
+<http://tolkien-kg.org/resource/Letter_348> rdfs:label "List 348"@pl .
+
+<http://tolkien-kg.org/resource/Letter_37> rdfs:label "List 37"@pl .
+
+<http://tolkien-kg.org/resource/Letter_4> rdfs:label "List 4"@pl .
+
+<http://tolkien-kg.org/resource/Letter_55> rdfs:label "List 55"@pl .
+
+<http://tolkien-kg.org/resource/Letter_6> rdfs:label "List 6"@pl .
+
+<http://tolkien-kg.org/resource/Letter_7> rdfs:label "List 7"@pl .
+
+<http://tolkien-kg.org/resource/Lindir> rdfs:label "Lindir"@de,
+        "Lindir"@es,
+        "Lindir"@fr,
+        "Lindir"@it,
+        "Lindir"@nl,
+        "Lindir"@pl,
+        "Линдир"@ru .
+
+<http://tolkien-kg.org/resource/Lindisse> rdfs:label "Lindissë"@de,
+        "Lindissë"@pl .
+
+<http://tolkien-kg.org/resource/Lindo> rdfs:label "Lindo"@de,
+        "Lindo"@it .
+
+<http://tolkien-kg.org/resource/Lindon> rdfs:label "Lindon"@ca,
+        "Lindon"@de,
+        "Lindon"@es,
+        "Lindon"@fr,
+        "Lindon"@it,
+        "Lindon"@nl,
+        "Lindon"@pl,
+        "Линдон"@ru,
+        "Lindon"@tr .
+
+<http://tolkien-kg.org/resource/Lindorie> rdfs:label "Lindórië"@de,
+        "Lindórië"@es,
+        "Lindórië"@fr,
+        "Lindórië"@pl .
+
+<http://tolkien-kg.org/resource/Lithlad> rdfs:label "Lithlad"@de,
+        "Lithlad"@fr,
+        "Lithlad"@it,
+        "Lithlad"@pl .
+
+<http://tolkien-kg.org/resource/Littleheart> rdfs:label "Winzigherz"@de,
+        "Ilfrin"@it .
+
+<http://tolkien-kg.org/resource/Lonely_Mountain> rdfs:label "Erèbor"@ca,
+        "Einsamer Berg"@de,
+        "Erebor"@es,
+        "Mont Solitaire"@fr,
+        "ארבור"@he,
+        "Montagna Solitaria"@it,
+        "Eenzame Berg"@nl,
+        "Erebor"@pl,
+        "Erebor"@pt-br,
+        "Эребор"@ru,
+        "Erebor"@sk .
+
+<http://tolkien-kg.org/resource/Longbottom> rdfs:label "Langgrund"@de,
+        "Pianilungone"@it,
+        "Langedaal"@nl,
+        "Longbottom"@pl .
+
+<http://tolkien-kg.org/resource/Loni> rdfs:label "Lóni"@de,
+        "Lóni"@fr,
+        "Lóni"@nl,
+        "Lóni"@pl,
+        "Лони"@ru .
+
+<http://tolkien-kg.org/resource/Lorellin> rdfs:label "Lórellin"@it,
+        "Lórellin"@pl,
+        "Лорелин"@ru .
+
+<http://tolkien-kg.org/resource/Lorgan> rdfs:label "Lorgan"@de,
+        "Lorgan"@it,
+        "Lorgan"@pl,
+        "Лорган"@ru .
+
+<http://tolkien-kg.org/resource/Lossarnach> rdfs:label "Lossarnach"@de,
+        "Lossarnach"@es,
+        "Lossarnach"@it,
+        "Lossarnach"@nl,
+        "Lossarnach"@pl,
+        "Лоссарнах"@ru .
+
+<http://tolkien-kg.org/resource/Lossoth> rdfs:label "Lossoth"@de,
+        "Lossoth"@es,
+        "Lossoth"@it,
+        "Lossothowie"@pl,
+        "Лоссот"@ru .
+
+<http://tolkien-kg.org/resource/Lothiriel> rdfs:label "Lothíriel"@de,
+        "Lothíriel"@es,
+        "Lothíriel"@fr,
+        "Lothíriel"@it,
+        "Lothíriel"@nl,
+        "Lothíriel"@pl,
+        "Лотириэль"@ru .
+
+<http://tolkien-kg.org/resource/Lothlann> rdfs:label "Lothlann"@de,
+        "Lothlann"@fr,
+        "Lothlann"@it,
+        "Lothlann"@pl,
+        "Лотланн"@ru .
+
+<http://tolkien-kg.org/resource/Lothlorien> rdfs:label "Lothlórien"@ca,
+        "Lothlórien"@de,
+        "Lothlórien"@es,
+        "Lothlórien"@fr,
+        "Lothlórien"@it,
+        "Lothlórien"@nl,
+        "Lothlórien"@pl,
+        "Lothlórien"@pt-br,
+        "Лотлориэн"@ru,
+        "Lothlórien"@tr .
+
+<http://tolkien-kg.org/resource/Lugdush> rdfs:label "Lugdusch"@de,
+        "Lugdush"@it,
+        "Lugdusz"@pl,
+        "Lugdush"@pt-br .
+
+<http://tolkien-kg.org/resource/Lumbi> rdfs:label "Lumbi"@de .
+
+<http://tolkien-kg.org/resource/Lungorthin> rdfs:label "Lungorthin"@de,
+        "Lungorthin"@es,
+        "Lungorthin"@it,
+        "Lungorthin"@pl,
+        "Лунгортин"@ru .
+
+<http://tolkien-kg.org/resource/Lurka> rdfs:label "Lurka"@pl .
+
+<http://tolkien-kg.org/resource/Lurtz> rdfs:label "Lurtz"@ca,
+        "Lurtz"@de,
+        "Lurtz"@es,
+        "Lurtz"@fr,
+        "Lurtz"@it,
+        "Lurtz"@nl,
+        "Lurtz"@pl,
+        "Lurtz"@pt-br,
+        "Луртц"@ru .
+
+<http://tolkien-kg.org/resource/Madril> rdfs:label "Madril"@de,
+        "Madril"@es,
+        "Madril"@fr,
+        "Madril"@pl,
+        "Мадрил"@ru .
+
+<http://tolkien-kg.org/resource/Maedhros> rdfs:label "Maedhros"@ca,
+        "Maedhros"@de,
+        "Maedhros"@es,
+        "Maedhros"@fr,
+        "Maedhros"@it,
+        "Maedhros"@pl,
+        "Maedhros"@pt-br,
+        "Маэдрос"@ru,
+        "Maedhros"@tr .
+
+<http://tolkien-kg.org/resource/Maeglin> rdfs:label "Maeglin"@ca,
+        "Maeglin"@de,
+        "Maeglin"@es,
+        "Maeglin"@fr,
+        "Maeglin"@it,
+        "Maeglin"@pl,
+        "Маэглин"@ru,
+        "Maeglin"@tr .
+
+<http://tolkien-kg.org/resource/Maglor> rdfs:label "Màglor"@ca,
+        "Maglor"@de,
+        "Maglor"@es,
+        "Maglor"@fr,
+        "Maglor"@it,
+        "Maglor"@nl,
+        "Maglor"@pl,
+        "Маглор"@ru .
+
+<http://tolkien-kg.org/resource/Magor> rdfs:label "Magor"@de,
+        "Magor"@it,
+        "Magor"@pl,
+        "Магор"@ru .
+
+<http://tolkien-kg.org/resource/Magrot> rdfs:label "Magrot (Serie)"@de,
+        "Magrot"@pl .
+
+<http://tolkien-kg.org/resource/Mahanaxar> rdfs:label "Máhanaxar"@de,
+        "Máhanaxar"@fr,
+        "Máhanaxar"@it,
+        "Krąg Przeznaczenia"@pl,
+        "Маханаксар"@ru .
+
+<http://tolkien-kg.org/resource/Mahtan> rdfs:label "Mahtan"@de,
+        "Mahtan"@it,
+        "Mahtan"@pl,
+        "Mahtan"@pt-br,
+        "Махтан"@ru .
+
+<http://tolkien-kg.org/resource/Maiar> rdfs:label "Maiar"@ca,
+        "Maiar"@de,
+        "Maiar"@es,
+        "Maiar"@fr,
+        "Maiar"@it,
+        "De Maiar"@nl,
+        "Majarowie"@pl,
+        "Maiar"@pt-br,
+        "Майар"@ru,
+        "Maiar"@sk,
+        "Маяри"@uk .
+
+<http://tolkien-kg.org/resource/Mairen> rdfs:label "Mairen"@de,
+        "Mairen"@fr,
+        "Mairen"@pl .
+
+<http://tolkien-kg.org/resource/Malach> rdfs:label "Malach Aradan"@de,
+        "Malach"@es,
+        "Malach"@it,
+        "Malach Aradan"@pl,
+        "Малах"@ru .
+
+<http://tolkien-kg.org/resource/Malantur> rdfs:label "Malantur"@de,
+        "Malantur"@pl,
+        "Малантур"@ru .
+
+<http://tolkien-kg.org/resource/Malbeth> rdfs:label "Malbeth"@de,
+        "Malbeth le Voyant"@fr,
+        "Malbeth il Veggente"@it,
+        "Malbeth Jasnowidzący"@pl,
+        "Малбет"@ru .
+
+<http://tolkien-kg.org/resource/Mallor> rdfs:label "Mallor"@de,
+        "Mallor"@es,
+        "Mallor"@it,
+        "Mallor"@pl,
+        "Маллор"@ru .
+
+<http://tolkien-kg.org/resource/Malvegil> rdfs:label "Malvegil"@de,
+        "Malvegil"@es,
+        "Malvegil"@it,
+        "Malvegil"@pl,
+        "Малвегиль"@ru .
+
+<http://tolkien-kg.org/resource/Mandos> rdfs:label "Mandos"@de,
+        "Mandos"@es,
+        "Námo"@fr,
+        "Mandos"@it,
+        "Námo"@pl,
+        "Mandos"@pt-br,
+        "Мандос"@ru,
+        "Námo"@sk,
+        "Намо"@uk .
+
+<http://tolkien-kg.org/resource/Mannish> rdfs:label "Menschisch"@de .
+
+<http://tolkien-kg.org/resource/Manthor> rdfs:label "Manthor"@pl,
+        "Мантор"@ru .
+
+<http://tolkien-kg.org/resource/Manwe> rdfs:label "Manwë"@de,
+        "Manwë"@es,
+        "Manwë"@fr,
+        "Manwë"@it,
+        "Manwë"@pl,
+        "Manwë Súlimo"@pt-br,
+        "Манвэ"@ru,
+        "Manwë"@sk,
+        "Manwë"@tr,
+        "Манве"@uk .
+
+<http://tolkien-kg.org/resource/Manwendil> rdfs:label "Manwendil"@de,
+        "Manwëndil"@pl .
+
+<http://tolkien-kg.org/resource/Marach> rdfs:label "Marach"@de,
+        "Marach"@es,
+        "Marach"@it,
+        "Marach"@pl,
+        "Марах"@ru .
+
+<http://tolkien-kg.org/resource/March> rdfs:label "Maart"@nl .
+
+<http://tolkien-kg.org/resource/March_1> rdfs:label "1 maart"@nl,
+        "1 марта"@ru .
+
+<http://tolkien-kg.org/resource/Marcho> rdfs:label "Marcho"@de,
+        "Marchon"@fr,
+        "Marcho"@it,
+        "Marcho"@pl .
+
+<http://tolkien-kg.org/resource/Marhari> rdfs:label "Marhari"@de,
+        "Marhari"@it,
+        "Marhari"@pl,
+        "Мархари"@ru .
+
+<http://tolkien-kg.org/resource/Marhwini> rdfs:label "Marhwini"@de,
+        "Marhwini"@it,
+        "Marhwini"@nl,
+        "Marhwini"@pl,
+        "Мархвини"@ru .
+
+<http://tolkien-kg.org/resource/Marish> rdfs:label "Moer"@nl,
+        "Moczary"@pl,
+        "Моква"@uk .
+
+<http://tolkien-kg.org/resource/Mauhur> rdfs:label "Mauhúr"@de,
+        "Mauhúr"@es,
+        "Mauhúr"@fr,
+        "Mauhúr"@it,
+        "Mauhúr"@pl,
+        "Mauhur"@pt-br,
+        "Маухур"@ru .
+
+<http://tolkien-kg.org/resource/Mearas> rdfs:label "Mearas"@de,
+        "Mearas"@fr,
+        "Mearas"@it,
+        "Mearasy"@pl,
+        "Меарас"@ru .
+
+<http://tolkien-kg.org/resource/Medhor> rdfs:label "Médhor"@pl .
+
+<http://tolkien-kg.org/resource/Meduseld> rdfs:label "Meduseld"@de,
+        "Meduseld"@es,
+        "Meduseld"@fr,
+        "Meduseld"@it,
+        "Meduseld"@pl,
+        "Медусельд"@ru,
+        "Медусельд"@uk .
+
+<http://tolkien-kg.org/resource/Melian> rdfs:label "Mèlian"@ca,
+        "Melian"@de,
+        "Melian"@es,
+        "Melian"@fr,
+        "Melian"@it,
+        "Meliana"@pl,
+        "Мелиан"@ru,
+        "Melian"@sk,
+        "Melian"@tr,
+        "Меліан"@uk .
+
+<http://tolkien-kg.org/resource/Men> rdfs:label "Menschen"@de,
+        "Hombres"@es,
+        "Hommes"@fr,
+        "בני אדם"@he,
+        "Uomini"@it,
+        "Mensen"@nl,
+        "Ludzie"@pl,
+        "Homens"@pt-br,
+        "Люди"@ru,
+        "Люди"@uk .
+
+<http://tolkien-kg.org/resource/Menegroth> rdfs:label "Menegroth"@de,
+        "Menegroth"@es,
+        "Menegroth"@fr,
+        "Menegroth"@it,
+        "Menegroth"@pl,
+        "Менегрот"@ru .
+
+<http://tolkien-kg.org/resource/Meneldil> rdfs:label "Meneldil"@de,
+        "Meneldil"@es,
+        "Meneldil"@fr,
+        "Meneldil"@it,
+        "Meneldil"@pl,
+        "Менельдиль"@ru .
+
+<http://tolkien-kg.org/resource/Meneldor> rdfs:label "Meneldor"@de,
+        "Meneldor"@es,
+        "Meneldor"@fr,
+        "Meneldor"@pl,
+        "Менельдор"@ru,
+        "Meneldor"@sk,
+        "Менельдор"@uk .
+
+<http://tolkien-kg.org/resource/Meneltarma> rdfs:label "Meneltarma"@de,
+        "Meneltarma"@es,
+        "Meneltarma"@fr,
+        "Meneltarma"@it,
+        "Meneltarma"@pl,
+        "Менельтарма"@ru .
+
+<http://tolkien-kg.org/resource/Meriadoc_Brandybuck> rdfs:label "Meriadoc Brandybock"@de,
+        "Meriadoc Brandigamo"@es,
+        "Meriadoc Brandebouc"@fr,
+        "מריאדוק ברנדיבאק"@he,
+        "Meriadoc Brandibuck"@it,
+        "Meriadoc Brandebok"@nl,
+        "Meriadok Brandybuck"@pl,
+        "Meriadoc Brandebuque"@pt-br,
+        "Мериадок Брендибак"@ru,
+        "Meriadoc Brandybuck"@tr,
+        "Меріадок Брендіцап"@uk .
+
+<http://tolkien-kg.org/resource/Miaule> rdfs:label "Miaulë"@it .
+
+<http://tolkien-kg.org/resource/Middle_earth> rdfs:label "Mittelerde"@de,
+        "Tierra Media"@es,
+        "Terre du Milieu"@fr,
+        "הארץ התיכונה"@he,
+        "Terra di Mezzo"@it,
+        "中つ国 (トールキン)"@ja,
+        "Midden-aarde"@nl,
+        "Śródziemie"@pl,
+        "Terra-Média"@pt-br,
+        "Средиземье"@ru,
+        "Orta Dünya"@tr,
+        "Середзем'я"@uk .
+
+<http://tolkien-kg.org/resource/Mim> rdfs:label "Mîm"@de,
+        "Mîm"@es,
+        "Mîm"@fr,
+        "Mîm"@it,
+        "Mîm"@pl,
+        "Мим"@ru .
+
+<http://tolkien-kg.org/resource/Minardil> rdfs:label "Minardil"@de,
+        "Minardil"@es,
+        "Minardil"@fr,
+        "Minardil"@it,
+        "Minardil"@pl,
+        "Минардиль"@ru,
+        "Мінарділ"@uk .
+
+<http://tolkien-kg.org/resource/Minastan> rdfs:label "Minastan"@de,
+        "Minastan"@it,
+        "Minastan"@pl,
+        "Минастан"@ru,
+        "Мінастан"@uk .
+
+<http://tolkien-kg.org/resource/Minhiriath> rdfs:label "Minhiriath"@de,
+        "Minhiriath"@es,
+        "Minhiriath"@fr,
+        "Minhiriath"@it,
+        "Minhiriath"@pl,
+        "Минхириат"@ru .
+
+<http://tolkien-kg.org/resource/Minohtar> rdfs:label "Minohtar"@de,
+        "Minohtar"@it,
+        "Minohtar"@pl,
+        "Минохтар"@ru .
+
+<http://tolkien-kg.org/resource/Miriel> rdfs:label "Míriel"@ca,
+        "Míriel"@de,
+        "Míriel"@es,
+        "Míriel"@fr,
+        "Míriel"@it,
+        "Míriel"@pl,
+        "Míriel"@pt-br,
+        "Мириэль Тэриндэ"@ru .
+
+<http://tolkien-kg.org/resource/Mirkwood> rdfs:label "Düsterwald"@de,
+        "Bosque Negro"@es,
+        "Forêt Noire"@fr,
+        "Bosco Atro"@it,
+        "Demsterwold"@nl,
+        "Mroczna Puszcza"@pl,
+        "Trevamata"@pt-br,
+        "Лихолесье"@ru,
+        "Mirkwood"@tr,
+        "Велике Зеленолісся"@uk .
+
+<http://tolkien-kg.org/resource/Mithrellas> rdfs:label "Mithrellas"@de,
+        "Mithrellas"@it,
+        "Mithrellas"@pl,
+        "Митреллас"@ru .
+
+<http://tolkien-kg.org/resource/Mithrim> rdfs:label "Mithrim"@de,
+        "Mithrim"@es,
+        "Mithrim"@fr,
+        "Mithrim"@it,
+        "Mithrim"@pl,
+        "Митрим"@ru .
+
+<http://tolkien-kg.org/resource/Mittalmar> rdfs:label "Mittalmar"@de,
+        "Mittalmar"@es,
+        "Mittalmar"@fr,
+        "Mittalmar"@it,
+        "Mittalmar"@pl,
+        "Митталмар"@ru .
+
+<http://tolkien-kg.org/resource/Moon> rdfs:label "Mond"@de,
+        "Lune"@fr,
+        "Luna"@it,
+        "Isil"@pl,
+        "Луна"@ru .
+
+<http://tolkien-kg.org/resource/Mordor> rdfs:label "Mórdor"@ca,
+        "Mordor"@de,
+        "Mordor"@es,
+        "Mordor"@fr,
+        "Mordor"@it,
+        "Mordor"@nl,
+        "Mordor"@pl,
+        "Mordor"@pt-br,
+        "Мордор"@ru,
+        "Мордор"@uk,
+        "魔多"@zh .
+
+<http://tolkien-kg.org/resource/Morgoth> rdfs:label "Mórgoth"@ca,
+        "Melkor"@cs,
+        "Melkor"@de,
+        "Melkor (Morgoth)"@es,
+        "Morgoth"@fr,
+        "Melkor"@it,
+        "Morgoth"@nl,
+        "Morgoth"@pl,
+        "Melkor (Morgoth)"@pt-br,
+        "Мелькор"@ru,
+        "Melkor"@sk,
+        "Melkor"@tr,
+        "Мелькор"@uk .
+
+<http://tolkien-kg.org/resource/Morthond> rdfs:label "Morthond"@de,
+        "Morthond"@es,
+        "Morthond"@fr,
+        "Morthond"@it,
+        "Morthond"@pl,
+        "Мортонд"@ru .
+
+<http://tolkien-kg.org/resource/Morwe> rdfs:label "Morwë"@it,
+        "Morwë"@pl .
+
+<http://tolkien-kg.org/resource/Mount_Doom> rdfs:label "Orodruin"@ca,
+        "Schicksalsberg"@de,
+        "Monte del Destino"@es,
+        "Montagne du Destin"@fr,
+        "Monte Fato"@it,
+        "Góra Przeznaczenia"@pl,
+        "Montanha da Perdição"@pt-br,
+        "Ородруин"@ru .
+
+<http://tolkien-kg.org/resource/Mount_Gundabad> rdfs:label "Gundabad"@de,
+        "Monte Gundabad"@es,
+        "Mont Gundabad"@fr,
+        "Gundabad"@it,
+        "Gundabad"@nl,
+        "Góra Gundabad"@pl,
+        "Гундабад"@ru .
+
+<http://tolkien-kg.org/resource/Muzgash> rdfs:label "Muzgasch"@de,
+        "Muzgash"@it,
+        "Muzgash"@pl,
+        "Музгаш"@ru .
+
+<http://tolkien-kg.org/resource/Mystics> rdfs:label "Les Mystiques"@fr .
+
+<http://tolkien-kg.org/resource/Nahar> rdfs:label "Nahar"@de,
+        "Nahar"@it,
+        "Nahar"@pl,
+        "Nahar"@pt-br,
+        "Нахар"@ru .
+
+<http://tolkien-kg.org/resource/Nali> rdfs:label "Náli"@de,
+        "Náli"@fr,
+        "Náli"@nl,
+        "Náli"@pl,
+        "Нали"@ru .
+
+<http://tolkien-kg.org/resource/Nandor> rdfs:label "Nandor"@de,
+        "Nandor"@es,
+        "Nandor"@fr,
+        "Elfi Silvani"@it,
+        "Nandorowie"@pl,
+        "Нандор"@ru,
+        "Nandor"@sk,
+        "Нандор"@uk .
+
+<http://tolkien-kg.org/resource/Nandorin> rdfs:label "Nandorin"@es,
+        "Sylvain"@fr,
+        "Nandorin"@it,
+        "Nandorin"@pl,
+        "Нандорин"@ru .
+
+<http://tolkien-kg.org/resource/Nar> rdfs:label "Nár"@de,
+        "Nár"@fr,
+        "Nár"@it,
+        "Nár"@pl,
+        "Нар"@ru .
+
+<http://tolkien-kg.org/resource/Nargothrond> rdfs:label "Nargòthrond"@ca,
+        "Nargothrond"@de,
+        "Nargothrond"@es,
+        "Nargothrond"@fr,
+        "Nargothrond"@it,
+        "Nargothrond"@nl,
+        "Nargothrond"@pl,
+        "Nargothrond"@pt-br,
+        "Нарготронд"@ru,
+        "Nargothrond"@tr .
+
+<http://tolkien-kg.org/resource/Narog> rdfs:label "Narog"@de,
+        "Narog"@es,
+        "Narog"@fr,
+        "Narog"@it,
+        "Narog"@nl,
+        "Narog"@pl,
+        "Нарог"@ru .
+
+<http://tolkien-kg.org/resource/Narsil> rdfs:label "Narsil/Andúril"@cs,
+        "Narsil"@de,
+        "Narsil"@es,
+        "Narsil - Andúril"@fr,
+        "Narsil"@it,
+        "Narsil"@pl,
+        "Narsil"@pt-br,
+        "Нарсиль"@ru .
+
+<http://tolkien-kg.org/resource/Narvi> rdfs:label "Narvi"@de,
+        "Narvi"@it,
+        "Narvi"@nl,
+        "Narvi"@pl,
+        "Нарви"@ru .
+
+<http://tolkien-kg.org/resource/Narya> rdfs:label "Narya"@de,
+        "Narya"@es,
+        "Narya"@fr,
+        "Narya"@it,
+        "Narya"@pl,
+        "Нарья"@ru .
+
+<http://tolkien-kg.org/resource/Narzug> rdfs:label "Liste von Film-Figuren#Narzug"@de,
+        "Narzug"@pl,
+        "Narzug"@pt-br,
+        "Нарзуг"@ru .
+
+<http://tolkien-kg.org/resource/Naugladur> rdfs:label "Naugladur"@de,
+        "Naugladur"@it,
+        "Naugladur"@nl,
+        "Naugladur"@pl,
+        "Наугладур"@ru .
+
+<http://tolkien-kg.org/resource/Nazgul> rdfs:label "Nazgûl"@de,
+        "Nazgûl"@es,
+        "Nazgûl"@fr,
+        "Nazgûl"@it,
+        "Nazgûl"@nl,
+        "Nazgûle"@pl,
+        "Nazgûl"@pt-br,
+        "Назгул"@ru,
+        "Nazgûl"@sk,
+        "Nazgûl"@tr .
+
+<http://tolkien-kg.org/resource/Needlehole> rdfs:label "Nadelhohl"@de,
+        "Needlehole"@es,
+        "Naaldhol"@nl,
+        "Świerkowy Dwór"@pl .
+
+<http://tolkien-kg.org/resource/Nellas> rdfs:label "Nellas"@de,
+        "Nellas"@fr,
+        "Nellas"@pl,
+        "Неллас"@ru .
+
+<http://tolkien-kg.org/resource/Nen_Girith> rdfs:label "Dimrost"@de,
+        "Dimrost"@it,
+        "Dimrost"@pl,
+        "Димрост"@ru .
+
+<http://tolkien-kg.org/resource/Nenning> rdfs:label "Nenning"@de,
+        "Nenning"@es,
+        "Nenning"@fr,
+        "Nenning"@it,
+        "De Nenning"@nl,
+        "Nenning"@pl,
+        "Неннинг"@ru,
+        "Nenning"@sk .
+
+<http://tolkien-kg.org/resource/Nenya> rdfs:label "Nenya"@de,
+        "Nenya"@es,
+        "Nenya"@fr,
+        "Nenya"@it,
+        "Nenya"@pl,
+        "Nenya"@pt-br,
+        "Нэнья"@ru .
+
+<http://tolkien-kg.org/resource/Nerdanel> rdfs:label "Nerdanel"@ca,
+        "Nerdanel"@de,
+        "Nerdanel"@es,
+        "Nerdanel"@fr,
+        "Nerdanel"@it,
+        "Nerdanela"@pl,
+        "Нерданель"@ru .
+
+<http://tolkien-kg.org/resource/Nessa> rdfs:label "Nessa"@de,
+        "Nessa"@es,
+        "Nessa"@fr,
+        "Nessa"@it,
+        "Nessa"@pl,
+        "Нэсса"@ru,
+        "Nessa"@sk,
+        "Несса"@uk .
+
+<http://tolkien-kg.org/resource/Nessanie> rdfs:label "Nessanië"@de,
+        "Nessanië"@pl .
+
+<http://tolkien-kg.org/resource/Nevrast> rdfs:label "Nevrast"@de,
+        "Nevrast"@es,
+        "Nevrast"@fr,
+        "Nevrast"@it,
+        "Nevrast"@pl,
+        "Невраст"@ru,
+        "Nevrast"@sk,
+        "Nevrast"@tr,
+        "Невраст"@uk .
+
+<http://tolkien-kg.org/resource/Newbury> rdfs:label "Neuburg"@de,
+        "Novoburgo"@it,
+        "Nieburg"@nl,
+        "Newbury"@pl .
+
+<http://tolkien-kg.org/resource/Nieliqui> rdfs:label "Nielíqui"@it .
+
+<http://tolkien-kg.org/resource/Nienna> rdfs:label "Nienna"@de,
+        "Nienna"@es,
+        "Nienna"@fr,
+        "Nienna"@it,
+        "Niënna"@pl,
+        "Nienna"@pt-br,
+        "Ниэнна"@ru,
+        "Nienna"@sk,
+        "Нієнна"@uk .
+
+<http://tolkien-kg.org/resource/Nimbrethil> rdfs:label "Nimbrethil"@de,
+        "Nimbretril"@es,
+        "Nimbrethil"@fr,
+        "Nimbrethil"@pl,
+        "Нимбретиль"@ru .
+
+<http://tolkien-kg.org/resource/Nimloth_of_Doriath> rdfs:label "Nímloth (elfa)"@ca,
+        "Nimloth (Elbin)"@de,
+        "Nimloth"@fr,
+        "Nimloth"@it,
+        "Nimloth (córka Galathila)"@pl,
+        "Нимлот из Дориата"@ru,
+        "Німлот з Доріату"@uk .
+
+<http://tolkien-kg.org/resource/Nimrodel> rdfs:label "Nimrodel (Elbin)"@de,
+        "Nimrodel (Elfa)"@es,
+        "Nimrodel"@fr,
+        "Nimrodel (Elfa)"@it,
+        "Nimrodel"@pl,
+        "Нимродель"@ru .
+
+<http://tolkien-kg.org/resource/Nindalf> rdfs:label "Nindalf"@de,
+        "Nindalf"@it,
+        "Nindalf"@pl,
+        "Ниндалв"@ru .
+
+<http://tolkien-kg.org/resource/Nindamos> rdfs:label "Nindamos"@de,
+        "Nindamos"@es,
+        "Nindamos"@fr,
+        "Nindamos"@it,
+        "Nindamos"@pl,
+        "Ниндамос"@ru .
+
+<http://tolkien-kg.org/resource/Nisinen> rdfs:label "Nísinen"@de,
+        "Nísinen"@fr,
+        "Nísinen"@it,
+        "Nísinen"@pl,
+        "Нисинен"@ru .
+
+<http://tolkien-kg.org/resource/Nob> rdfs:label "Kunz"@de,
+        "Nob"@it,
+        "Nob"@nl,
+        "Nob"@pl,
+        "Ноб"@ru .
+
+<http://tolkien-kg.org/resource/Nogrod> rdfs:label "Nogrod"@de,
+        "Nogrod"@es,
+        "Nogrod"@fr,
+        "Nogrod"@it,
+        "Nogrod"@nl,
+        "Nogrod"@pl,
+        "Ногрод"@ru .
+
+<http://tolkien-kg.org/resource/Nolondil> rdfs:label "Nolondil"@de,
+        "Nolondil"@es,
+        "Nolondil"@pl,
+        "Нолондиль"@ru .
+
+<http://tolkien-kg.org/resource/Nori> rdfs:label "Nori"@de,
+        "Nori"@es,
+        "Nori"@fr,
+        "Nori"@it,
+        "Nori"@nl,
+        "Nori"@pl,
+        "Nori"@pt-br,
+        "Нори"@ru,
+        "Nori"@sk,
+        "Норі"@uk .
+
+<http://tolkien-kg.org/resource/Northfarthing> rdfs:label "Nordviertel"@de,
+        "Quartier Nord"@fr,
+        "Decumano Nord"@it,
+        "Noorderkwartier"@nl,
+        "Północna Ćwiartka"@pl,
+        "Северная Четь"@ru,
+        "Північна Чверть"@uk .
+
+<http://tolkien-kg.org/resource/Northmen> rdfs:label "Nordmenschen"@de,
+        "Hombres"@es,
+        "Hommes du Nord"@fr,
+        "Uomini del Nord"@it,
+        "Nortowie"@pl,
+        "Северяне"@ru .
+
+<http://tolkien-kg.org/resource/Numendil> rdfs:label "Númendil"@de,
+        "Númendil"@es,
+        "Númendil"@fr,
+        "Númendil di Andúnië"@it,
+        "Númendil"@pl,
+        "Нумендиль"@ru .
+
+<http://tolkien-kg.org/resource/Numenor> rdfs:label "Númenor"@ca,
+        "Númenor"@de,
+        "Númenor"@es,
+        "Númenor"@fr,
+        "Númenor"@it,
+        "Númenor"@nl,
+        "Númenor"@pl,
+        "Númenor"@pt-br,
+        "Нуменор"@ru,
+        "Númenor"@sk,
+        "Númenor"@tr,
+        "Нуменор"@uk .
+
+<http://tolkien-kg.org/resource/Numenoreans> rdfs:label "Númenórer"@de,
+        "Númenóreanos"@es,
+        "Númenóréens"@fr,
+        "Númenóreani"@it,
+        "Númenorejczycy"@pl,
+        "Нуменорцы"@ru .
+
+<http://tolkien-kg.org/resource/Nuneth> rdfs:label "Núneth"@de,
+        "Núnetha"@pl,
+        "Нунет"@ru .
+
+<http://tolkien-kg.org/resource/Nurwe> rdfs:label "Nurwë"@it,
+        "Nurwë"@pl .
+
+<http://tolkien-kg.org/resource/Ogres> rdfs:label "Огры"@ru .
+
+<http://tolkien-kg.org/resource/Ohtar> rdfs:label "Ohtar"@de,
+        "Ohtar"@it,
+        "Ohtar"@pl,
+        "Охтар"@ru .
+
+<http://tolkien-kg.org/resource/Oiomure> rdfs:label "Oiomúre"@de,
+        "Oiomúrë"@fr,
+        "Oiomúrë"@it,
+        "Oiomurë"@pl,
+        "Ойомурэ"@ru .
+
+<http://tolkien-kg.org/resource/Olwe> rdfs:label "Olwë"@ca,
+        "Olwe"@de,
+        "Olwë"@es,
+        "Olwë"@fr,
+        "Olwë"@it,
+        "Olwë"@pl,
+        "Олвэ"@ru .
+
+<http://tolkien-kg.org/resource/Olwyn> rdfs:label "Olwyn"@fr .
+
+<http://tolkien-kg.org/resource/Omar> rdfs:label "Ómar"@it .
+
+<http://tolkien-kg.org/resource/Ondoher> rdfs:label "Ondoher"@de,
+        "Ondoher"@es,
+        "Ondoher"@fr,
+        "Ondoher"@it,
+        "Ondoher"@pl,
+        "Ондохер"@ru,
+        "Ондогер"@uk .
+
+<http://tolkien-kg.org/resource/Ontamo> rdfs:label "Ontamo (Serie)"@de,
+        "Ontamo"@fr .
+
+<http://tolkien-kg.org/resource/Orchaldor> rdfs:label "Orchaldor"@de,
+        "Orchaldor"@pl,
+        "Орхалдор"@ru .
+
+<http://tolkien-kg.org/resource/Orcobal> rdfs:label "Orcobal"@de,
+        "Orcobal"@it,
+        "Оркобал"@ru .
+
+<http://tolkien-kg.org/resource/Orcs> rdfs:label "Orcs"@ca,
+        "Orks"@de,
+        "Orco"@es,
+        "Orques"@fr,
+        "אורקים"@he,
+        "Orchi"@it,
+        "Orks"@nl,
+        "Orkowie"@pl,
+        "Orques"@pt-br,
+        "Орки"@ru .
+
+<http://tolkien-kg.org/resource/Order_of_Wizards> rdfs:label "Istari"@ca,
+        "Istari"@cs,
+        "Istari"@de,
+        "Istari"@es,
+        "Istari (Magiciens)"@fr,
+        "Istari"@it,
+        "Istari"@pl,
+        "Истари"@ru,
+        "Чарівники"@uk .
+
+<http://tolkien-kg.org/resource/Ori> rdfs:label "Ori"@de,
+        "Ori"@es,
+        "Ori"@fr,
+        "Ori"@it,
+        "Ori"@nl,
+        "Ori"@pl,
+        "Ori"@pt-br,
+        "Ори"@ru,
+        "Ori"@sk .
+
+<http://tolkien-kg.org/resource/Orkish> rdfs:label "Orkisch"@de,
+        "Orkish"@it,
+        "Язык орков"@ru .
+
+<http://tolkien-kg.org/resource/Orleg> rdfs:label "Orleg"@de,
+        "Orleg"@fr,
+        "Orleg"@pl,
+        "Орлег"@ru .
+
+<http://tolkien-kg.org/resource/Ormal> rdfs:label "Ormal"@es,
+        "Lampe d'Ormal"@fr,
+        "Ormal"@it,
+        "Ormal"@pl,
+        "Ормал"@ru,
+        "Ormal"@sk .
+
+<http://tolkien-kg.org/resource/Ornendil> rdfs:label "Ornendil"@de,
+        "Ornendil"@fr,
+        "Ornendil"@it,
+        "Ornendil"@pl,
+        "Орнендиль"@ru,
+        "Орненділ"@uk .
+
+<http://tolkien-kg.org/resource/Orome> rdfs:label "Orome"@de,
+        "Oromë"@es,
+        "Oromë"@fr,
+        "Oromë"@it,
+        "Oromë"@pl,
+        "Oromë"@pt-br,
+        "Оромэ"@ru,
+        "Oromë"@sk,
+        "Ороме"@uk .
+
+<http://tolkien-kg.org/resource/Oromendil> rdfs:label "Oromendil"@de,
+        "Oromendil"@pl .
+
+<http://tolkien-kg.org/resource/Oropher> rdfs:label "Oropher"@de,
+        "Oropher"@es,
+        "Oropher"@fr,
+        "Oropher"@it,
+        "Oropher"@pl,
+        "Oropher"@pt-br,
+        "Орофер"@ru .
+
+<http://tolkien-kg.org/resource/Orophin> rdfs:label "Orophin"@de,
+        "Orophin"@nl,
+        "Orophin"@pl,
+        "Орофин"@ru .
+
+<http://tolkien-kg.org/resource/Orrostar> rdfs:label "Orrostar"@de,
+        "Orrostar"@es,
+        "Orrostar"@fr,
+        "Orrostar"@it,
+        "Orrostar"@pl,
+        "Орростар"@ru .
+
+<http://tolkien-kg.org/resource/Orthanc> rdfs:label "Orthanc"@de,
+        "Orthanc"@es,
+        "Orthanc"@fr,
+        "Orthanc"@it,
+        "Orthanc"@nl,
+        "Orthank"@pl,
+        "Ортанк"@ru .
+
+<http://tolkien-kg.org/resource/Osgiliath> rdfs:label "Osgiliath"@de,
+        "Osgiliath"@es,
+        "Osgiliath"@fr,
+        "Osgiliath"@it,
+        "Osgiliath"@nl,
+        "Osgiliath"@pl,
+        "Осгилиат"@ru,
+        "奥斯吉利亚斯(Osgiliath)"@zh .
+
+<http://tolkien-kg.org/resource/Osse> rdfs:label "Ossë"@ca,
+        "Osse"@de,
+        "Ossë"@es,
+        "Ossë"@fr,
+        "Ossë"@it,
+        "Ossë"@pl,
+        "Оссэ"@ru,
+        "Ossë"@sk,
+        "Оссе"@uk .
+
+<http://tolkien-kg.org/resource/Ossiriand> rdfs:label "Ossiriand"@de,
+        "Ossiriand"@es,
+        "Ossiriand"@fr,
+        "Ossiriand"@it,
+        "Ossiriand"@pl,
+        "Оссирианд"@ru,
+        "Оссіріанд"@uk .
+
+<http://tolkien-kg.org/resource/Ostoher> rdfs:label "Ostoher"@de,
+        "Ostoher"@es,
+        "Ostoher"@it,
+        "Ostoher"@pl,
+        "Остохер"@ru,
+        "Остогер"@uk .
+
+<http://tolkien-kg.org/resource/Othrod> rdfs:label "Othrod"@de,
+        "Othrod"@it,
+        "Othrod"@pl .
+
+<http://tolkien-kg.org/resource/Overhill> rdfs:label "Oberbühl"@de,
+        "Overheuvel"@nl,
+        "Za Pagórkiem"@pl .
+
+<http://tolkien-kg.org/resource/Palantiri> rdfs:label "Palantír"@de,
+        "Palantír"@es,
+        "Palantíri"@fr,
+        "Palantír"@it,
+        "Palantíry"@pl,
+        "Палантиры"@ru,
+        "Palantíri"@tr .
+
+<http://tolkien-kg.org/resource/Palisor> rdfs:label "Palisor"@es,
+        "Palisor"@pl .
+
+<http://tolkien-kg.org/resource/Pelargir> rdfs:label "Pelargir"@de,
+        "Pelargir"@es,
+        "Pelargir"@fr,
+        "Pelargir"@it,
+        "Pelargir"@nl,
+        "Pelargir"@pl,
+        "Пеларгир"@ru,
+        "Пеларґір"@uk .
+
+<http://tolkien-kg.org/resource/Pelendur> rdfs:label "Pelendur"@de,
+        "Pelendur"@es,
+        "Pelendur"@fr,
+        "Pelendur"@it,
+        "Pelendur"@pl,
+        "Пелендур"@ru .
+
+<http://tolkien-kg.org/resource/Pelori> rdfs:label "Pelóri"@ca,
+        "Pelóri"@de,
+        "Pelóri"@es,
+        "Pelóri"@fr,
+        "Pelóri"@it,
+        "Pelóri"@pl,
+        "Пелори"@ru,
+        "Pelóri"@sk .
+
+<http://tolkien-kg.org/resource/Pengolodh> rdfs:label "Pengolodh"@pl,
+        "Пенголод"@ru .
+
+<http://tolkien-kg.org/resource/Penlod> rdfs:label "Penlod von Gondolin"@de,
+        "Penlod (Gondolin)"@it,
+        "Penlod"@pl,
+        "Пенлод"@ru .
+
+<http://tolkien-kg.org/resource/Percy> rdfs:label "Peridur (Percy)"@de,
+        "Percy"@es,
+        "Percy"@pl .
+
+<http://tolkien-kg.org/resource/Peregrin_Took> rdfs:label "Peregrin Tuk"@de,
+        "Peregrin Tuk"@es,
+        "Peregrin Touque"@fr,
+        "Peregrino Tuc"@it,
+        "Peregrijn Toek"@nl,
+        "Peregrin Tuk"@pl,
+        "Peregrin Tûk"@pt-br,
+        "Перегрин Тук"@ru,
+        "Peregrin Took"@tr,
+        "Переґрін Тук"@uk .
+
+<http://tolkien-kg.org/resource/Pincup> rdfs:label "Finkenschlupf"@de,
+        "Capo Colle"@it,
+        "Vinkop"@nl,
+        "Igielniczka"@pl .
+
+<http://tolkien-kg.org/resource/Poros> rdfs:label "Poros"@de,
+        "Poros"@es,
+        "Poros"@fr,
+        "Poros"@it,
+        "Poros"@pl,
+        "Порос"@ru .
+
+<http://tolkien-kg.org/resource/Quarry> rdfs:label "Steinbruch"@de,
+        "Quarry"@it,
+        "Kamieniołom"@pl .
+
+<http://tolkien-kg.org/resource/Quenya> rdfs:label "Quenya"@ca,
+        "Quenya"@de,
+        "Quenya"@es,
+        "Quenya"@fr,
+        "Quenya"@it,
+        "Quenya"@nl,
+        "Quenya"@pl,
+        "Quenya"@pt-br,
+        "Квенья"@ru,
+        "Квенья"@uk .
+
+<http://tolkien-kg.org/resource/Radagast> rdfs:label "Radagast"@cs,
+        "Radagast"@de,
+        "Radagast"@es,
+        "Radagast"@fr,
+        "רדגאסט"@he,
+        "Radagast"@it,
+        "Radagast"@nl,
+        "Radagast"@pl,
+        "Radagast"@pt-br,
+        "Радагаст"@ru,
+        "Radagast"@sk .
+
+<http://tolkien-kg.org/resource/Radhruin> rdfs:label "Radhruin"@de,
+        "Radhruin"@it,
+        "Radhruin"@pl,
+        "Радруин"@ru .
+
+<http://tolkien-kg.org/resource/Ragash> rdfs:label "Ragash"@pl,
+        "Рагаш"@ru .
+
+<http://tolkien-kg.org/resource/Ragnor> rdfs:label "Ragnor"@de,
+        "Ragnor"@it,
+        "Ragnor"@pl,
+        "Рагнор"@ru .
+
+<http://tolkien-kg.org/resource/Ratbag> rdfs:label "Ratbag"@fr .
+
+<http://tolkien-kg.org/resource/Ravenhill> rdfs:label "Rabenberg"@de,
+        "Ravenhill"@fr,
+        "Collecorvo"@it,
+        "Krucze Wzgórze"@pl .
+
+<http://tolkien-kg.org/resource/Ravens> rdfs:label "Corvi Imperiali"@it .
+
+<http://tolkien-kg.org/resource/Revion> rdfs:label "Revion (Serie)"@de,
+        "Revion"@pl .
+
+<http://tolkien-kg.org/resource/Rhimdath> rdfs:label "Rhimdath"@fr .
+
+<http://tolkien-kg.org/resource/Rhosgobel> rdfs:label "Rhosgobel"@de,
+        "Rhosgobel"@es,
+        "Rhosgobel"@it,
+        "Rhosgobel"@nl,
+        "Rhosgobel"@pl,
+        "Росгобель"@ru .
+
+<http://tolkien-kg.org/resource/Rhovanion> rdfs:label "Rhovànion"@ca,
+        "Rhovanion"@de,
+        "Rhovanion"@es,
+        "Rhovanion"@fr,
+        "Rhovanion"@it,
+        "Rhovanion"@nl,
+        "Rhovanion"@pl,
+        "Rhovanion"@pt-br,
+        "Рованион"@ru,
+        "Rhovanion"@tr,
+        "Рованіон"@uk .
+
+<http://tolkien-kg.org/resource/Rhudaur> rdfs:label "Rhudaur"@ca,
+        "Rhudaur"@de,
+        "Rhudaur"@es,
+        "Rhudaur"@fr,
+        "Rhudaur"@it,
+        "Rhudaur"@nl,
+        "Rhudaur"@pl,
+        "Рудаур"@ru .
+
+<http://tolkien-kg.org/resource/Rhun> rdfs:label "Rhûn"@ca,
+        "Rhûn"@de,
+        "Rhûn"@es,
+        "Rhûn"@fr,
+        "Rhûn"@it,
+        "Rhûn"@pl,
+        "Rhûn"@pt-br,
+        "Рун"@ru .
+
+<http://tolkien-kg.org/resource/Ringlo> rdfs:label "Ringló"@de,
+        "Ringló"@es,
+        "Ringló"@fr,
+        "Ringló"@it,
+        "Ringló"@pl .
+
+<http://tolkien-kg.org/resource/Rivendell> rdfs:label "Rivendell"@ca,
+        "Roklinka"@cs,
+        "Bruchtal"@de,
+        "Rivendel"@es,
+        "Fondcombe"@fr,
+        "Gran Burrone"@it,
+        "Rivendel"@nl,
+        "Rivendell"@pl,
+        "Rivendell"@pt-br,
+        "Ривенделл"@ru,
+        "Rivendell"@tr,
+        "Ривенделл"@uk .
+
+<http://tolkien-kg.org/resource/Roac> rdfs:label "Roac"@de,
+        "Roäc"@fr,
+        "Roäc"@it,
+        "Roak"@pl,
+        "Роак"@ru,
+        "Roäc"@sk .
+
+<http://tolkien-kg.org/resource/Rochallor> rdfs:label "Rochallor"@de,
+        "Rochallor"@it,
+        "Rochallor"@pl,
+        "Рохаллор"@ru .
+
+<http://tolkien-kg.org/resource/Rog> rdfs:label "Rog von Gondolin"@de,
+        "Rog (Gondolin)"@it,
+        "Rog"@pl,
+        "Рог"@ru .
+
+<http://tolkien-kg.org/resource/Rohan> rdfs:label "Ròhan"@ca,
+        "Rohan"@de,
+        "Rohan"@es,
+        "Rohan"@fi,
+        "Rohan"@fr,
+        "Rohan"@it,
+        "Rohan"@nl,
+        "Rohan"@pl,
+        "Rohan"@pt-br,
+        "Рохан"@ru,
+        "Роган"@uk .
+
+<http://tolkien-kg.org/resource/Rohanese> rdfs:label "Rohirrische Sprache"@de,
+        "Rohirric"@it,
+        "Język rohirricki"@pl,
+        "Роханский язык"@ru .
+
+<http://tolkien-kg.org/resource/Roheryn> rdfs:label "Roheryn"@de,
+        "Roheryn"@es,
+        "Рохерюн"@ru .
+
+<http://tolkien-kg.org/resource/Rohirrim> rdfs:label "Ròhirrim"@ca,
+        "Rohirrim"@de,
+        "Rohirrim"@es,
+        "Rohirrim"@fr,
+        "Rohirrim"@it,
+        "Rohirrimowie"@pl,
+        "Rohirrim"@pt-br,
+        "Рохиррим"@ru .
+
+<http://tolkien-kg.org/resource/Romenna> rdfs:label "Rómenna"@de,
+        "Rómenna"@es,
+        "Rómenna"@fr,
+        "Rómenna"@it,
+        "Rómenna"@pl,
+        "Роменна"@ru .
+
+<http://tolkien-kg.org/resource/Ruffians> rdfs:label "Hommes de Sharcoux"@fr,
+        "Ruffiani"@it,
+        "Розбійники"@uk .
+
+<http://tolkien-kg.org/resource/Sador> rdfs:label "Sador"@de,
+        "Sador"@fr,
+        "Sador"@it,
+        "Sador"@pl,
+        "Садор"@ru .
+
+<http://tolkien-kg.org/resource/Saeros> rdfs:label "Sàeros"@ca,
+        "Saeros"@de,
+        "Saeros"@es,
+        "Saeros"@fr,
+        "Saeros"@it,
+        "Saeros"@pl,
+        "Саэрос"@ru .
+
+<http://tolkien-kg.org/resource/Salgant> rdfs:label "Salgant von Gondolin"@de,
+        "Salgant"@it,
+        "Salgant"@pl,
+        "Салгант"@ru .
+
+<http://tolkien-kg.org/resource/Salmar> rdfs:label "Salmar"@de,
+        "Salmar"@es,
+        "Salmar"@fr,
+        "Salmar"@it,
+        "Salmar"@pl,
+        "Салмар"@ru,
+        "Salmar"@sk .
+
+<http://tolkien-kg.org/resource/Samwise_Gamgee> rdfs:label "Samweis Gamdschie"@de,
+        "Samsagaz Gamyi"@es,
+        "Samsagace Gamegie"@fr,
+        "סאם גאמג'י"@he,
+        "Samvise Gamgee"@it,
+        "Sam Gewissies"@nl,
+        "Samwise Gamgee"@pl,
+        "Samwise Gamgee"@pt-br,
+        "Сэмуайз Гэмджи"@ru,
+        "Samwise Gamgee"@tr,
+        "Семвайз Грунич"@uk .
+
+<http://tolkien-kg.org/resource/Sandyman> rdfs:label "Sandigmann"@de,
+        "Sabbioso"@it,
+        "Roothooft"@nl,
+        "Пісковик"@uk .
+
+<http://tolkien-kg.org/resource/Sangahyando> rdfs:label "Sangahyando"@de,
+        "Sangahyando"@it,
+        "Sangahyando"@nl,
+        "Sangahyando"@pl,
+        "Сангахьяндо"@ru .
+
+<http://tolkien-kg.org/resource/Sarati> rdfs:label "Sarati"@pl,
+        "Сарати"@ru .
+
+<http://tolkien-kg.org/resource/Saruman> rdfs:label "Sàruman"@ca,
+        "Saruman"@cs,
+        "Saruman"@de,
+        "Saruman"@es,
+        "Saroumane"@fr,
+        "Saruman"@it,
+        "Saruman"@nl,
+        "Saruman"@pl,
+        "Saruman, o Branco"@pt-br,
+        "Саруман"@ru,
+        "Saruman"@sk,
+        "Saruman"@tr,
+        "Саруман"@uk .
+
+<http://tolkien-kg.org/resource/Sauron> rdfs:label "Sàuron"@ca,
+        "Sauron"@de,
+        "Sauron"@es,
+        "Sauron"@fr,
+        "סאורון"@he,
+        "Sauron"@it,
+        "Sauron"@nl,
+        "Sauron"@pl,
+        "Sauron"@pt-br,
+        "Саурон"@ru,
+        "Sauron"@sk,
+        "Sauron"@tr .
+
+<http://tolkien-kg.org/resource/Scary> rdfs:label "Schären"@de,
+        "Scary"@it,
+        "Klip"@nl,
+        "Scary"@pl .
+
+<http://tolkien-kg.org/resource/Scatha> rdfs:label "Scatha"@de,
+        "Scatha"@es,
+        "Scatha"@fr,
+        "Scatha"@it,
+        "Scatha de Worm"@nl,
+        "Skat"@pl,
+        "Ската"@ru .
+
+<http://tolkien-kg.org/resource/Shagrat> rdfs:label "Schagrat"@de,
+        "Shagrat"@es,
+        "Shagrat"@fr,
+        "Shagrat"@it,
+        "Szagrat"@pl,
+        "Shagrat"@pt-br,
+        "Шаграт"@ru .
+
+<http://tolkien-kg.org/resource/Sharku> rdfs:label "Sharkû"@de,
+        "Sharku"@es,
+        "Sharku"@pl,
+        "Шарку"@ru .
+
+<http://tolkien-kg.org/resource/Shelob> rdfs:label "Kankra"@de,
+        "Ella-Laraña"@es,
+        "Arachne"@fr,
+        "Shelob"@it,
+        "Szeloba"@pl,
+        "Шелоб"@ru,
+        "Shelob"@tr .
+
+<http://tolkien-kg.org/resource/Shirebourn> rdfs:label "Auenbronn"@de,
+        "Bourneclaire"@fr,
+        "Rzeka Graniczna"@pl .
+
+<http://tolkien-kg.org/resource/Shirriffs> rdfs:label "Landbüttel"@de,
+        "Shirriffs"@fr,
+        "Guardacontea"@it,
+        "Ополчение Шира"@ru .
+
+<http://tolkien-kg.org/resource/Sigrid> rdfs:label "Sigrid"@es,
+        "Sigrid"@fr,
+        "Sigrid"@pl,
+        "Сигрид"@ru .
+
+<http://tolkien-kg.org/resource/Silmarien> rdfs:label "Silmariën"@de,
+        "Silmariën"@es,
+        "Silmariën"@it,
+        "Silmariën"@pl,
+        "Сильмариэн"@ru .
+
+<http://tolkien-kg.org/resource/Silmarils> rdfs:label "Silmaril"@de,
+        "Silmarils"@es,
+        "Silmarils"@fr,
+        "Silmaril"@it,
+        "Silmaril"@nl,
+        "Silmarile"@pl,
+        "Silmarils"@pt-br,
+        "Сильмарили"@ru .
+
+<http://tolkien-kg.org/resource/Sindar> rdfs:label "Sindar"@de,
+        "Sindar"@es,
+        "Sindar"@fr,
+        "Sindar"@it,
+        "Sindar"@nl,
+        "Sindarowie"@pl,
+        "Sindar"@pt-br,
+        "Синдар"@ru,
+        "Sindar"@sk .
+
+<http://tolkien-kg.org/resource/Sindarin> rdfs:label "Sindarin"@de,
+        "Sindarin"@es,
+        "Sindarin"@fr,
+        "Sindarin"@it,
+        "Sindarijns"@nl,
+        "Sindarin"@pl,
+        "Sindarin"@pt-br,
+        "Синдарин"@ru,
+        "Sindarin"@tr,
+        "Синдарин"@uk .
+
+<http://tolkien-kg.org/resource/Sirannon> rdfs:label "Sirannon"@de,
+        "Sirannon"@fr,
+        "Sirannon"@pl,
+        "Сираннон"@ru .
+
+<http://tolkien-kg.org/resource/Siril> rdfs:label "Siril"@de,
+        "Siril"@fr,
+        "Siril"@it,
+        "Siril"@pl,
+        "Сирил"@ru .
+
+<http://tolkien-kg.org/resource/Sirion> rdfs:label "Sirion"@de,
+        "Sirion"@es,
+        "Sirion"@fr,
+        "Sirion"@it,
+        "Sirion"@pl,
+        "Сирион"@ru,
+        "Sirion"@tr .
+
+<http://tolkien-kg.org/resource/Sirnumen> rdfs:label "Sirnúmen"@it .
+
+<http://tolkien-kg.org/resource/Smaug> rdfs:label "Smaug"@ca,
+        "Smaug"@de,
+        "Smaug"@es,
+        "Smaug"@fr,
+        "סמאוג"@he,
+        "Smaug"@it,
+        "Smaug"@nl,
+        "Smaug"@pl,
+        "Smaug"@pt-br,
+        "Смауг"@ru,
+        "Smaug"@sk,
+        "Smaug"@tr .
+
+<http://tolkien-kg.org/resource/Snaga_orc_of_Mordor> rdfs:label "Snaga"@de,
+        "Snaga (Isengard)"@fr,
+        "Snaga (Cirith Ungol)"@it,
+        "Snaga (Cirith Ungol)"@pl,
+        "Снага"@ru .
+
+<http://tolkien-kg.org/resource/Snowbourn> rdfs:label "Schneeborn"@de,
+        "Nevado"@es,
+        "Snowbourn"@fr,
+        "Acquaneve"@it,
+        "Sneeuwborn"@nl,
+        "Snowbourn"@pl,
+        "Снежница"@ru .
+
+<http://tolkien-kg.org/resource/Snowmane> rdfs:label "Schneemähne"@de,
+        "Nivacrin"@fr,
+        "Nevecrino"@it,
+        "Śnieżnogrzywy"@pl,
+        "Снежногривый"@ru .
+
+<http://tolkien-kg.org/resource/Soronto> rdfs:label "Soronto"@de,
+        "Soronto"@pl,
+        "Соронто"@ru .
+
+<http://tolkien-kg.org/resource/Soury> rdfs:label "Soury"@pl .
+
+<http://tolkien-kg.org/resource/Southfarthing> rdfs:label "Südviertel"@de,
+        "Decumano Sud"@it,
+        "Zuiderkwartier"@nl,
+        "Południowa Ćwiartka"@pl,
+        "Южная Четь"@ru .
+
+<http://tolkien-kg.org/resource/Spiders> rdfs:label "Große Spinnen"@de,
+        "Arañas"@es,
+        "Araignées géantes"@fr,
+        "עכבישים ענקיים"@he,
+        "Ragni"@it,
+        "Wielkie Pająki"@pl,
+        "Гигантские пауки"@ru .
+
+<http://tolkien-kg.org/resource/Starkhorn> rdfs:label "Starkhorn"@de,
+        "Starkhorn"@fr,
+        "Starcorno"@it,
+        "Nagi Wierch"@pl .
+
+<http://tolkien-kg.org/resource/Stars> rdfs:label "Gwiazdy"@pl,
+        "Звёзды Средиземья"@ru .
+
+<http://tolkien-kg.org/resource/Stiffbeards> rdfs:label "Barbes-raides"@fr,
+        "Barbedure"@it,
+        "Stijfbaarden"@nl,
+        "Sztywnobrodzi"@pl,
+        "Жёсткобороды"@ru .
+
+<http://tolkien-kg.org/resource/Stock> rdfs:label "Stock"@de,
+        "Stock"@fr,
+        "Stok"@nl,
+        "Słupki"@pl .
+
+<http://tolkien-kg.org/resource/Stock_brook> rdfs:label "Stockbach"@de,
+        "Stokbeek"@nl,
+        "Strumień Słupianka"@pl,
+        "Амбарный ручей"@ru,
+        "Колодний Ручай"@uk .
+
+<http://tolkien-kg.org/resource/Stoors> rdfs:label "Forts"@fr,
+        "Sturoi"@it,
+        "Stoerders"@nl,
+        "Stoorowie"@pl,
+        "Хваты"@ru .
+
+<http://tolkien-kg.org/resource/Sun> rdfs:label "Sonne"@de,
+        "Soleil"@fr,
+        "Sole"@it,
+        "Anar"@pl,
+        "Солнце"@ru .
+
+<http://tolkien-kg.org/resource/Swanfleet> rdfs:label "Nîn-in-Eilph"@de,
+        "Nîn-in-Eilph"@it,
+        "Zwanenvliet"@nl,
+        "Nîn-in-Eilph"@pl,
+        "Лебедянь"@ru .
+
+<http://tolkien-kg.org/resource/Taeglin> rdfs:label "Teiglin"@de,
+        "Teiglin"@es,
+        "Taeglin"@fr,
+        "Teiglin"@it,
+        "Taeglin"@pl,
+        "Тейглин"@ru .
+
+<http://tolkien-kg.org/resource/Talion> rdfs:label "Talion"@de,
+        "Talion"@fr,
+        "Talion"@it,
+        "Talion"@pl,
+        "Талион"@ru .
+
+<http://tolkien-kg.org/resource/Taliska> rdfs:label "Taliska"@de,
+        "Taliska"@es,
+        "Taliska"@fr,
+        "Taliska"@it,
+        "Талиска"@ru .
+
+<http://tolkien-kg.org/resource/Taniquetil> rdfs:label "Taniquetil"@ca,
+        "Taniquetil"@de,
+        "Taniquetil"@es,
+        "Taniquetil"@fr,
+        "Taniquetil"@it,
+        "Taniquetil"@nl,
+        "Taniquetil"@pl,
+        "Таниквэтиль"@ru .
+
+<http://tolkien-kg.org/resource/Tar_Miriel> rdfs:label "Tar-Míriel"@de,
+        "Tar-Míriel"@es,
+        "Tar-Míriel"@fr,
+        "Tar-Míriel"@it,
+        "Tar-Míriel"@pl,
+        "Tar-Míriel"@pt-br,
+        "Тар-Мириэль"@ru .
+
+<http://tolkien-kg.org/resource/Tarcil> rdfs:label "Tarcil"@de,
+        "Tarcil"@es,
+        "Tarcil"@it,
+        "Tarcil"@pl,
+        "Таркиль"@ru .
+
+<http://tolkien-kg.org/resource/Tarciryan> rdfs:label "Tarciryan"@de,
+        "Tarciryan"@es,
+        "Tarciryan"@fr,
+        "Tarciryan"@it,
+        "Tarciryan"@pl,
+        "Таркирьян"@ru,
+        "Таркір'ян"@uk .
+
+<http://tolkien-kg.org/resource/Tareg> rdfs:label "Tareg"@it .
+
+<http://tolkien-kg.org/resource/Targon> rdfs:label "Targon"@de,
+        "Targon"@es,
+        "Targon"@nl .
+
+<http://tolkien-kg.org/resource/Tata> rdfs:label "Tata"@de,
+        "Tata"@it,
+        "Tata"@nl,
+        "Tata"@pl,
+        "Тата"@ru,
+        "Tata"@sk,
+        "Тата"@uk .
+
+<http://tolkien-kg.org/resource/Tatie> rdfs:label "Tatië"@de,
+        "Tatië"@pl,
+        "Татиэ"@ru,
+        "Tatië"@sk,
+        "Татіє"@uk .
+
+<http://tolkien-kg.org/resource/Tauriel> rdfs:label "Tauriel"@de,
+        "Tauriel"@es,
+        "Tauriel"@fr,
+        "Tauriel"@it,
+        "Tauriel"@nl,
+        "Tauriel"@pl,
+        "Тауриэль"@ru .
+
+<http://tolkien-kg.org/resource/Tavrobel> rdfs:label "Tavrobel"@de,
+        "Tavrobel"@pl,
+        "Tavrobel"@sk .
+
+<http://tolkien-kg.org/resource/Telchar> rdfs:label "Telchar"@de,
+        "Telchar"@it,
+        "Telchar"@nl,
+        "Telchar"@pl,
+        "Тельхар"@ru,
+        "Telchar"@sk,
+        "Тельхар"@uk .
+
+<http://tolkien-kg.org/resource/Telemnar> rdfs:label "Telemnar"@de,
+        "Telemnar"@es,
+        "Telemnar"@it,
+        "Telemnar"@pl,
+        "Телемнар"@ru,
+        "Телемнар"@uk .
+
+<http://tolkien-kg.org/resource/Teleri> rdfs:label "Teleri"@de,
+        "Teleri"@es,
+        "Teleri"@fr,
+        "Teleri"@it,
+        "De Teleri"@nl,
+        "Teleri"@pl,
+        "Тэлери"@ru,
+        "Lindar"@sk,
+        "Teleri"@tr .
+
+<http://tolkien-kg.org/resource/Telerin> rdfs:label "Telerin"@es,
+        "Telerin"@it,
+        "Telerin"@pl,
+        "Тэлерин"@ru .
+
+<http://tolkien-kg.org/resource/Telumehtar_Umbardacil> rdfs:label "Telumehtar Umbardacil"@de,
+        "Telumehtar"@es,
+        "Telumehtar"@it,
+        "Telumehtar"@pl,
+        "Телумехтар"@ru,
+        "Телумехтар"@uk .
+
+<http://tolkien-kg.org/resource/Tengwar> rdfs:label "Tengwar"@de,
+        "Tengwar"@es,
+        "Tengwar"@fr,
+        "Tengwar"@it,
+        "Tengwar"@pl,
+        "Тенгвар"@ru .
+
+<http://tolkien-kg.org/resource/Tevildo> rdfs:label "Tevildo"@de,
+        "Tevildo"@fr,
+        "Tevildo"@it,
+        "Tevildo"@pl .
+
+<http://tolkien-kg.org/resource/Thangorodrim> rdfs:label "Thangorodrim"@de,
+        "Thangorodrim"@es,
+        "Thangorodrim"@it,
+        "Thangorodrim"@pl,
+        "Тангородрим"@ru,
+        "Thangorodrim"@tr .
+
+<http://tolkien-kg.org/resource/Thargelion> rdfs:label "Thargelion"@de,
+        "Thargelion"@es,
+        "Thargelion"@fr,
+        "Thargelion"@it,
+        "Thargelion"@pl,
+        "Таргелион"@ru .
+
+<http://tolkien-kg.org/resource/Tharzog> rdfs:label "Tharzog"@de,
+        "Tharzog"@pl,
+        "Тарзог"@ru .
+
+<http://tolkien-kg.org/resource/Thengel> rdfs:label "Thengel"@de,
+        "Thengel"@fr,
+        "Thengel"@it,
+        "Thengel"@nl,
+        "Thengel"@pl,
+        "Тенгель"@ru .
+
+<http://tolkien-kg.org/resource/Theo> rdfs:label "Theo (Serie)"@de,
+        "Theo"@es,
+        "Theo"@fr,
+        "Theo"@it,
+        "Theo"@pl,
+        "Theo"@pt-br,
+        "Тео"@ru .
+
+<http://tolkien-kg.org/resource/Theoden> rdfs:label "Théoden"@de,
+        "Théoden"@es,
+        "Théoden"@fr,
+        "Théoden"@it,
+        "Théoden"@nl,
+        "Théoden"@pl,
+        "Теоден"@ru,
+        "Théoden"@sk,
+        "Теоден"@uk .
+
+<http://tolkien-kg.org/resource/Theodred> rdfs:label "Théodred"@de,
+        "Théodred"@es,
+        "Théodred"@fr,
+        "Théodred"@it,
+        "Théodred"@pl,
+        "Теодред"@ru .
+
+<http://tolkien-kg.org/resource/Theodwyn> rdfs:label "Théodwyn"@de,
+        "Théodwyn"@fr,
+        "Théodwyn"@it,
+        "Théodwina"@pl,
+        "Теодвин"@ru .
+
+<http://tolkien-kg.org/resource/Thingol> rdfs:label "Thíngol"@ca,
+        "Elwe"@de,
+        "Thingol"@es,
+        "Elwë"@fr,
+        "Thingol"@it,
+        "Thingol"@nl,
+        "Thingol"@pl,
+        "Thingol"@pt-br,
+        "Элу Тингол"@ru,
+        "Thingol"@sk,
+        "Тінґол"@uk .
+
+<http://tolkien-kg.org/resource/Thondir> rdfs:label "Thondir (Serie)"@de,
+        "Thondir"@es,
+        "Thondir"@fr,
+        "Thondir"@it,
+        "Thondir"@pl,
+        "Thondir"@pt-br,
+        "Тондир"@ru .
+
+<http://tolkien-kg.org/resource/Thorondir> rdfs:label "Thorondir"@de,
+        "Thorondir"@fr,
+        "Thorondir"@it,
+        "Thorondir"@pl,
+        "Торондир"@ru .
+
+<http://tolkien-kg.org/resource/Thorondor> rdfs:label "Thoròndor"@ca,
+        "Thorondor"@de,
+        "Thorondor"@es,
+        "Thorondor"@fr,
+        "Thorondor"@it,
+        "Thorondor"@pl,
+        "Торондор"@ru,
+        "Thorondor"@sk .
+
+<http://tolkien-kg.org/resource/Thranduil> rdfs:label "Thranduil"@de,
+        "Thranduil"@es,
+        "Thranduil"@fr,
+        "Thranduil"@it,
+        "Thranduil"@pl,
+        "Thranduil"@pt-br,
+        "Трандуиль"@ru .
+
+<http://tolkien-kg.org/resource/Thror> rdfs:label "Thrór"@de,
+        "Thrór"@es,
+        "Thrór"@fr,
+        "Thrór"@it,
+        "Thrór"@nl,
+        "Thrór"@pl,
+        "Thrór"@pt-br,
+        "Трор"@ru .
+
+<http://tolkien-kg.org/resource/Thu> rdfs:label "Tû"@it .
+
+<http://tolkien-kg.org/resource/Thuringwethil> rdfs:label "Thuringwethil"@de,
+        "Thuringwethil"@es,
+        "Thuringwethil"@fr,
+        "Thuringwethil"@it,
+        "Thuringwethil"@nl,
+        "Thuringwethil"@pl,
+        "Турингвэтиль"@ru .
+
+<http://tolkien-kg.org/resource/Tighfield> rdfs:label "Reepfeld"@de,
+        "Champtoron"@fr,
+        "Piandifune"@it,
+        "Tighfield"@pl .
+
+<http://tolkien-kg.org/resource/Tilda> rdfs:label "Tilda"@de,
+        "Tilda"@fr,
+        "Tilda"@pl,
+        "Тильда"@ru .
+
+<http://tolkien-kg.org/resource/Tilion> rdfs:label "Tilion"@ca,
+        "Tilion"@de,
+        "Tilion"@es,
+        "Tilion"@fr,
+        "Tilion"@it,
+        "Tilion"@pl,
+        "Тилион"@ru,
+        "Tilion"@sk,
+        "Тіліон"@uk .
+
+<http://tolkien-kg.org/resource/Tindomiel> rdfs:label "Tindómiel"@de,
+        "Tindómiel"@pl .
+
+<http://tolkien-kg.org/resource/Tirharad> rdfs:label "Tirharad"@es,
+        "Tirharad"@fr,
+        "Tirharad"@it,
+        "Tirharad"@pl,
+        "Тирхарад"@ru .
+
+<http://tolkien-kg.org/resource/Tirion> rdfs:label "Tirion"@de,
+        "Tirion"@es,
+        "Tirion"@fr,
+        "Tirion"@it,
+        "Tirion"@pl,
+        "Тирион"@ru,
+        "Tirion"@sk,
+        "Tirion"@tr,
+        "Тіріон"@uk .
+
+<http://tolkien-kg.org/resource/Tolkien_Estate> rdfs:label "Tolkien Estate"@it,
+        "The Tolkien Estate"@pl .
+
+<http://tolkien-kg.org/resource/Tookland> rdfs:label "Tukland"@de,
+        "Tuclandia"@it,
+        "Toekland"@nl,
+        "Tukland"@pl .
+
+<http://tolkien-kg.org/resource/Tredwill> rdfs:label "Tredwill (Serie)"@de .
+
+<http://tolkien-kg.org/resource/Treebeard> rdfs:label "Barbarbrat"@ca,
+        "Baumbart"@de,
+        "Bárbol"@es,
+        "Sylvebarbe"@fr,
+        "Barbalbero"@it,
+        "Drzewiec"@pl,
+        "Древень"@ru,
+        "Древлен"@uk .
+
+<http://tolkien-kg.org/resource/Trolls> rdfs:label "Trolle"@de,
+        "Trolls"@es,
+        "Trolls"@fr,
+        "טרולים"@he,
+        "Troll"@it,
+        "Trollen"@nl,
+        "Trolle"@pl,
+        "Trolls"@pt-br,
+        "Тролли"@ru,
+        "Troller"@tr,
+        "Тролі"@uk .
+
+<http://tolkien-kg.org/resource/Trollshaws> rdfs:label "Trollhöhen"@de,
+        "Bosque de los Trolls"@es,
+        "Fourrés aux Trolls"@fr,
+        "Тролличья роща"@ru .
+
+<http://tolkien-kg.org/resource/Tuckborough> rdfs:label "Tuckbergen"@de,
+        "Tucboro"@it,
+        "Toekburg"@nl,
+        "Tukon"@pl .
+
+<http://tolkien-kg.org/resource/Tulkas> rdfs:label "Tulkas"@de,
+        "Tulkas"@es,
+        "Tulkas"@fr,
+        "Tulkas"@it,
+        "Tulkas"@pl,
+        "Tulkas"@pt-br,
+        "Тулкас"@ru,
+        "Tulkas"@sk,
+        "Тулкас"@uk .
+
+<http://tolkien-kg.org/resource/Tulkastor> rdfs:label "Tulkastor"@de,
+        "Tulkastor"@it .
+
+<http://tolkien-kg.org/resource/Tumhalad> rdfs:label "Tumhalad"@de,
+        "Tumhalad"@it,
+        "Tumhalad"@pl .
+
+<http://tolkien-kg.org/resource/Tuna> rdfs:label "Túna"@de,
+        "Túna"@it,
+        "Túna"@pl,
+        "Туна"@ru,
+        "Túna"@sk .
+
+<http://tolkien-kg.org/resource/Tuor> rdfs:label "Tuor"@de,
+        "Tuor"@es,
+        "Tuor"@fr,
+        "Tuor"@it,
+        "Tuor"@pl,
+        "Туор"@ru .
+
+<http://tolkien-kg.org/resource/Turambar_King_of_Gondor> rdfs:label "Turambar (König von Gondor)"@de,
+        "Turambar (Gondor)"@es,
+        "Turambar (Gondor)"@fr,
+        "Turambar"@it,
+        "Turambar"@pl,
+        "Турамбар (король Гондора)"@ru,
+        "Турамбар"@uk .
+
+<http://tolkien-kg.org/resource/Turin> rdfs:label "Túrin Turambar"@de,
+        "Túrin Turambar"@es,
+        "Túrin Turambar"@fr,
+        "Túrin Turambar"@it,
+        "Túrin Turambar"@pl,
+        "Túrin"@pt-br,
+        "Турин Турамбар"@ru,
+        "Турін Турамбар"@uk .
+
+<http://tolkien-kg.org/resource/Ugluk> rdfs:label "Uglúk"@de,
+        "Uglúk"@es,
+        "Ugluk"@fi,
+        "Uglúk"@fr,
+        "Uglúk"@it,
+        "Uglûk"@nl,
+        "Uglúk"@pl,
+        "Uglúk"@pt-br,
+        "Углук"@ru .
+
+<http://tolkien-kg.org/resource/Uin> rdfs:label "Uin"@it,
+        "Uin"@pl,
+        "Уин"@ru .
+
+<http://tolkien-kg.org/resource/Uinen> rdfs:label "Uinen"@de,
+        "Uinen"@es,
+        "Uinen"@fr,
+        "Uinen"@it,
+        "Uinena"@pl,
+        "Уинен"@ru,
+        "Uinen"@sk,
+        "Уїнен"@uk .
+
+<http://tolkien-kg.org/resource/Ulbar> rdfs:label "Ulbar"@de,
+        "Улбар"@ru .
+
+<http://tolkien-kg.org/resource/Uldor> rdfs:label "Uldor"@de,
+        "Uldor"@es,
+        "Uldor"@fr,
+        "Uldor Przeklęty"@pl,
+        "Улдор Проклятый"@ru .
+
+<http://tolkien-kg.org/resource/Ulfang> rdfs:label "Ulfang"@de,
+        "Ulfang"@fr,
+        "Ulfang"@it,
+        "Ulfang"@pl,
+        "Улфанг"@ru .
+
+<http://tolkien-kg.org/resource/Ulfast> rdfs:label "Ulfast"@de,
+        "Ulfast"@es,
+        "Ulfast"@fr,
+        "Ulfast"@pl,
+        "Улфаст"@ru .
+
+<http://tolkien-kg.org/resource/Ulmo> rdfs:label "Ulmo"@de,
+        "Ulmo"@es,
+        "Ulmo"@fr,
+        "Ulmo"@it,
+        "Ulmo"@pl,
+        "Ulmo"@pt-br,
+        "Улмо"@ru,
+        "Ulmo"@sk,
+        "Ульмо"@uk .
+
+<http://tolkien-kg.org/resource/Ulrad> rdfs:label "Ulrad"@de,
+        "Ulrad"@fr,
+        "Ulrad"@it,
+        "Улрад"@ru .
+
+<http://tolkien-kg.org/resource/Ulumuri> rdfs:label "Ulumúri"@de,
+        "Ulumúri"@it,
+        "Ulumúri"@pl,
+        "Улумури"@ru .
+
+<http://tolkien-kg.org/resource/Ulwarth> rdfs:label "Ulwarth"@de,
+        "Ulwarth"@fr,
+        "Ulwarth"@pl,
+        "Улварт"@ru .
+
+<http://tolkien-kg.org/resource/Umbar> rdfs:label "Umbar"@de,
+        "Umbar"@es,
+        "Umbar"@fr,
+        "Umbar"@it,
+        "Umbar"@pl,
+        "Умбар"@ru .
+
+<http://tolkien-kg.org/resource/Umuiyan> rdfs:label "Umuiyan"@de,
+        "Umuiyan"@fr,
+        "Umuiyan"@it .
+
+<http://tolkien-kg.org/resource/Undeeps> rdfs:label "Płycizny"@pl .
+
+<http://tolkien-kg.org/resource/Underharrow> rdfs:label "Sousharrow"@fr .
+
+<http://tolkien-kg.org/resource/Undertowers> rdfs:label "Untertürmen"@de,
+        "Sottotorri"@it,
+        "Pod Wieżami"@pl .
+
+<http://tolkien-kg.org/resource/Ungoliant> rdfs:label "Ungoliant"@de,
+        "Ungoliant"@es,
+        "Ungoliant"@fr,
+        "Ungoliant"@it,
+        "Ungolianta"@pl,
+        "Унголиант"@ru,
+        "Ungoliant"@sk,
+        "Унґоліанта"@uk .
+
+<http://tolkien-kg.org/resource/Upbourn> rdfs:label "Hochborn"@de,
+        "Upbourn"@it,
+        "Opborn"@nl,
+        "Upbourn"@pl,
+        "Апбурн"@ru .
+
+<http://tolkien-kg.org/resource/Urthel> rdfs:label "Urthel"@de,
+        "Urthel"@it,
+        "Urthel"@pl,
+        "Уртэль"@ru .
+
+<http://tolkien-kg.org/resource/Urwen> rdfs:label "Urwen"@de,
+        "Urwen"@fr,
+        "Lalaith"@it,
+        "Urwena Lalaith"@pl,
+        "Лалайт"@ru,
+        "Урвен Лалаіт"@uk .
+
+<http://tolkien-kg.org/resource/Utumno> rdfs:label "Utumno"@ca,
+        "Utumno"@de,
+        "Utumno"@es,
+        "Utumno"@fr,
+        "Utumno"@it,
+        "Utumno"@pl,
+        "Utumno"@pt-br,
+        "Утумно"@ru,
+        "Utumno"@sk,
+        "Utumno"@tr .
+
+<http://tolkien-kg.org/resource/Valacar> rdfs:label "Valacar"@de,
+        "Valacar"@it,
+        "Valacar"@pl,
+        "Валакар"@ru,
+        "Валакар"@uk .
+
+<http://tolkien-kg.org/resource/Valandur> rdfs:label "Valandur"@de,
+        "Valandur"@es,
+        "Valandur"@it,
+        "Valandur"@pl,
+        "Валандур"@ru .
+
+<http://tolkien-kg.org/resource/Valar> rdfs:label "Vàlar"@ca,
+        "Valar"@de,
+        "Valar"@es,
+        "Valar"@fr,
+        "ואלאר"@he,
+        "Valar"@it,
+        "Valar"@nl,
+        "Valarowie"@pl,
+        "Valar"@pt-br,
+        "Валар"@ru,
+        "Valar"@sk,
+        "Валари"@uk .
+
+<http://tolkien-kg.org/resource/Valarin> rdfs:label "Valarin"@es,
+        "Valarin"@fr,
+        "Valarin"@it,
+        "Valarin"@pl,
+        "Валарин"@ru,
+        "Валарин"@uk .
+
+<http://tolkien-kg.org/resource/Valinor> rdfs:label "Valinor"@de,
+        "Valinor"@es,
+        "Valinor"@fr,
+        "Valinor"@it,
+        "Valinor"@nl,
+        "Valinor"@pl,
+        "Валинор"@ru,
+        "Valinor"@sk,
+        "Valinor"@tr,
+        "Валінор"@uk .
+
+<http://tolkien-kg.org/resource/Valwe> rdfs:label "Valwë"@pl .
+
+<http://tolkien-kg.org/resource/Vampires> rdfs:label "Vampires"@fr,
+        "Vampiri"@it,
+        "Nietoperze"@pl .
+
+<http://tolkien-kg.org/resource/Vana> rdfs:label "Vána"@de,
+        "Vána"@es,
+        "Vána"@fr,
+        "Vána"@it,
+        "Vána"@pl,
+        "Вана"@ru,
+        "Vána"@sk,
+        "Вана"@uk .
+
+<http://tolkien-kg.org/resource/Vanyar> rdfs:label "Vànyar"@ca,
+        "Vanyar"@de,
+        "Vanyar"@es,
+        "Vanyar"@fr,
+        "Vanyar"@it,
+        "Vanyarowie"@pl,
+        "Ваньяр"@ru,
+        "Minyar"@sk .
+
+<http://tolkien-kg.org/resource/Varda> rdfs:label "Varda"@de,
+        "Varda"@es,
+        "Varda"@fr,
+        "Varda"@it,
+        "Elbereth"@nl,
+        "Varda"@pl,
+        "Varda"@pt-br,
+        "Варда"@ru,
+        "Varda"@sk,
+        "Варда"@uk .
+
+<http://tolkien-kg.org/resource/Vardilme> rdfs:label "Vardilme"@de,
+        "Vardilmë"@pl .
+
+<http://tolkien-kg.org/resource/Veanne> rdfs:label "Vëannë"@fr,
+        "Vëannë"@it .
+
+<http://tolkien-kg.org/resource/Veantur> rdfs:label "Veantur"@de,
+        "Vëantur"@it,
+        "Vëantur"@pl,
+        "Вэантур"@ru .
+
+<http://tolkien-kg.org/resource/Vidugavia> rdfs:label "Vidugavia"@de,
+        "Vidugavia"@es,
+        "Vidugavia"@it,
+        "Vidugavia"@nl,
+        "Vidugavia"@pl,
+        "Видугавиа"@ru .
+
+<http://tolkien-kg.org/resource/Vidumavi> rdfs:label "Vidumavi"@de,
+        "Vidumavi"@es,
+        "Vidumavi"@fr,
+        "Vidumavi"@it,
+        "Vidumavi"@nl,
+        "Vidumavi"@pl,
+        "Видумави"@ru,
+        "Відумаві"@uk .
+
+<http://tolkien-kg.org/resource/Vilya> rdfs:label "Vilya"@de,
+        "Vilya"@es,
+        "Vilya"@fr,
+        "Vilya"@it,
+        "Vilya"@pl,
+        "Вилья"@ru .
+
+<http://tolkien-kg.org/resource/Vinyamar> rdfs:label "Vinyamar"@de,
+        "Vinyamar"@es,
+        "Vinyamar"@fr,
+        "Vinyamar"@it,
+        "Vinyamar"@pl,
+        "Виньямар"@ru .
+
+<http://tolkien-kg.org/resource/Vorondil> rdfs:label "Vorondil"@de,
+        "Vorondil"@fr,
+        "Vorondil"@it,
+        "Vorondil"@pl,
+        "Ворондиль"@ru .
+
+<http://tolkien-kg.org/resource/Vrath> rdfs:label "Vrath (Serie)"@de,
+        "Vrath"@es,
+        "Vrath"@fr,
+        "Vrath"@it,
+        "Vrath"@pl,
+        "Vrath"@pt-br .
+
+<http://tolkien-kg.org/resource/Wainriders> rdfs:label "Wagenfahrer"@de,
+        "Carrieri"@it,
+        "Woźnicy"@pl,
+        "Люди Повозок"@ru .
+
+<http://tolkien-kg.org/resource/Walda> rdfs:label "Walda"@de,
+        "Walda"@fr,
+        "Walda"@it,
+        "Walda"@pl,
+        "Валда"@ru .
+
+<http://tolkien-kg.org/resource/Waldreg> rdfs:label "Waldreg (Serie)"@de .
+
+<http://tolkien-kg.org/resource/Wargs> rdfs:label "Warge"@de,
+        "Huargos"@es,
+        "Wargs"@fr,
+        "Warg"@it,
+        "Wargowie"@pl,
+        "Варги"@ru .
+
+<http://tolkien-kg.org/resource/Weathertop> rdfs:label "Amon sûl"@ca,
+        "Amon Sûl"@de,
+        "Amon Sûl"@es,
+        "Mont Venteux"@fr,
+        "Amon Sûl"@it,
+        "Amon Sûl"@nl,
+        "Amon Sûl"@pl,
+        "Амон Сул"@ru .
+
+<http://tolkien-kg.org/resource/Werewolves> rdfs:label "Werwölfe"@de,
+        "Licántropos"@es,
+        "Loups-garous"@fr,
+        "Mannari"@it,
+        "Волколаки"@ru .
+
+<http://tolkien-kg.org/resource/Westfarthing> rdfs:label "Westviertel"@de,
+        "Quartier Ouest"@fr,
+        "Decumano Ovest"@it,
+        "Westerkwartier"@nl,
+        "Zachodnia Ćwiartka"@pl,
+        "Западная Четь"@ru .
+
+<http://tolkien-kg.org/resource/Westfold> rdfs:label "Westfold"@de,
+        "Ouestfolde"@fr,
+        "Ovestfalda"@it,
+        "Zachodnia Bruzda"@pl,
+        "Вестфолд"@ru .
+
+<http://tolkien-kg.org/resource/Westmarch> rdfs:label "Westmark"@de,
+        "Westmark"@nl,
+        "Marchia Zachodnia"@pl,
+        "Западный Кром"@ru .
+
+<http://tolkien-kg.org/resource/Westron> rdfs:label "Westron"@de,
+        "Oestron"@es,
+        "Ouistrain"@fr,
+        "Ovestron"@it,
+        "Westron"@pl,
+        "Вестрон"@ru .
+
+<http://tolkien-kg.org/resource/Widfara> rdfs:label "Wídfara"@de .
+
+<http://tolkien-kg.org/resource/Willowbottom> rdfs:label "Weidengrund"@de,
+        "Wilgedal"@nl,
+        "Wierzbina"@pl .
+
+<http://tolkien-kg.org/resource/Windfola> rdfs:label "Windfola"@de,
+        "Hoja de Viento"@es,
+        "Windfola"@pl .
+
+<http://tolkien-kg.org/resource/Withywindle> rdfs:label "Weidenwinde"@de,
+        "Tornasauce"@es,
+        "Tournesaules"@fr,
+        "Sinuosalice"@it,
+        "Wilgewinde"@nl,
+        "Wija"@pl,
+        "Ивлинка"@ru,
+        "Верболозка"@uk .
+
+<http://tolkien-kg.org/resource/Wolf_dog> rdfs:label "Wölfe"@de,
+        "Greep, Klauw en Wolf"@nl .
+
+<http://tolkien-kg.org/resource/Woodmen> rdfs:label "Waldmenschen"@de,
+        "Boscaioli di Bosco Atro"@it,
+        "Woudmensen"@nl,
+        "Leśni Ludzie"@pl,
+        "Лесовики Лихолесья"@ru .
+
+<http://tolkien-kg.org/resource/Wulf> rdfs:label "Wulf"@de,
+        "Wulf"@es,
+        "Wulf"@fr,
+        "Wulf"@it,
+        "Wulf I"@pl,
+        "Вульф"@ru,
+        "Вульф"@uk .
+
+<http://tolkien-kg.org/resource/Yavanna> rdfs:label "Yavanna"@de,
+        "Yavanna"@es,
+        "Yavanna"@fr,
+        "Yavanna"@it,
+        "Yavanna"@pl,
+        "Yavanna"@pt-br,
+        "Йаванна"@ru,
+        "Yavanna"@sk,
+        "Яванна"@uk .
+
+<http://tolkien-kg.org/resource/Yavien> rdfs:label "Yávien"@de,
+        "Yávien"@pl,
+        "Йавиэн"@ru .
+
+<http://tolkien-kg.org/resource/Yazneg> rdfs:label "Yazneg"@de,
+        "Yazneg"@es,
+        "Yazneg"@pl,
+        "Язнег"@ru .
+
+<http://tolkien-kg.org/resource/Zamin> rdfs:label "Zamîn"@de .
+
+<http://tolkien-kg.org/resource/Zimrahin> rdfs:label "Zimrahin"@it .
+
+<http://tolkien-kg.org/resource/mithril> rdfs:label "Mithril"@ca,
+        "Mithril"@de,
+        "Mithril"@es,
+        "Mithril"@fr,
+        "Mithril"@it,
+        "Mithril"@nl,
+        "Mithril"@pl,
+        "Митриль"@ru,
+        "Мітрил"@uk .
+
+<http://tolkien-kg.org/resource/pipe_weed> rdfs:label "Pfeifenkraut"@de,
+        "Herbe à pipe"@fr,
+        "Erba Pipa"@it,
+        "Fajkowe ziele"@pl,
+        "Трубочное зелье"@ru .
+
+<http://tolkien-kg.org/resource/Ælfwine> rdfs:label "Ælfwine"@de,
+        "Eriol"@it,
+        "Eriol"@nl,
+        "Eriol"@pl,
+        "Эльфвинэ из Англии"@ru .
+

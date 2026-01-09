@@ -11,11 +11,11 @@ from .styles import get_home_css
 
 def generate_home_page(stats: dict) -> str:
     """Generate the home page HTML."""
-    characters = stats.get('characters', 0)
-    locations = stats.get('locations', 0)
-    works = stats.get('works', 0)
-    total = stats.get('total', 0)
-    
+    characters = stats.get("characters", 0)
+    locations = stats.get("locations", 0)
+    works = stats.get("works", 0)
+    total = stats.get("total", 0)
+
     html = f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -26,14 +26,14 @@ def generate_home_page(stats: dict) -> str:
         <style>{get_home_css()}</style>
     </head>
     <body>
-        {render_header('home')}
-        
+        {render_header("home")}
+
         <div class="container">
             <div class="hero">
                 <h1>Welcome to the Tolkien Knowledge Graph</h1>
                 <p>Explore the rich universe of Middle-earth across characters, places, and works</p>
             </div>
-            
+
             <div class="stats">
                 <div class="stat-card">
                     <div class="number">{total}</div>
@@ -52,32 +52,32 @@ def generate_home_page(stats: dict) -> str:
                     <div class="label">Works</div>
                 </div>
             </div>
-            
+
             <h2 class="section-title">Main categories</h2>
             <div class="categories-grid">
                 <a href="/browse?type=Character" class="category-card">
-                    <div class="category-icon">👤</div>
+                    <div class="category-icon">[C]</div>
                     <div class="category-name">Characters</div>
                     <div class="category-count">{characters} entries</div>
                     <div class="category-desc">Heroes, sages, villains, and creatures</div>
                 </a>
-                
+
                 <a href="/browse?type=Location" class="category-card">
-                    <div class="category-icon">🗺️</div>
+                    <div class="category-icon">[L]</div>
                     <div class="category-name">Locations</div>
                     <div class="category-count">{locations} entries</div>
                     <div class="category-desc">Kingdoms, cities, and legendary lands</div>
                 </a>
-                
+
                 <a href="/browse?type=Work" class="category-card">
-                    <div class="category-icon">📖</div>
+                    <div class="category-icon">[W]</div>
                     <div class="category-name">Works</div>
                     <div class="category-count">{works} entries</div>
                     <div class="category-desc">Books, movies, games, and adaptations</div>
                 </a>
             </div>
         </div>
-        
+
         {render_footer()}
     </body>
     </html>
@@ -85,41 +85,54 @@ def generate_home_page(stats: dict) -> str:
     return html
 
 
-def generate_browse_page(entities: list, entity_type: str = None, page: int = 1, 
-                        total_pages: int = 1, search_query: str = None) -> str:
+def generate_browse_page(
+    entities: list,
+    entity_type: str = None,
+    page: int = 1,
+    total_pages: int = 1,
+    search_query: str = None,
+) -> str:
     """Generate the entity browsing page."""
-    
+
     type_labels = {
-        'Character': '👤 Characters',
-        'Location': '🗺️ Locations',
-        'Work': '📖 Works',
-        None: '🔍 All entities'
+        "Character": "[C] Characters",
+        "Location": "[L] Locations",
+        "Work": "[W] Works",
+        None: "All entities",
     }
-    
+
     type_descriptions = {
-        'Character': 'Explore the characters of Tolkien\'s legendarium',
-        'Location': 'Discover the places and realms of Middle-earth',
-        'Work': 'Browse the books, movies, and adaptations',
-        None: 'Browse every entity in the knowledge graph'
+        "Character": "Explore the characters of Tolkien's legendarium",
+        "Location": "Discover the places and realms of Middle-earth",
+        "Work": "Browse the books, movies, and adaptations",
+        None: "Browse every entity in the knowledge graph",
     }
-    
+
     current_type = type_labels.get(entity_type, type_labels[None])
     current_desc = type_descriptions.get(entity_type, type_descriptions[None])
-    
+
     cards_html = ""
     if entities:
         for entity in entities:
-            raw_name = entity.get('name') or ""
-            entity_uri = entity.get('uri', '')
-            entity_class = entity.get('type', 'Unknown').split('/')[-1]
+            raw_name = entity.get("name") or ""
+            entity_uri = entity.get("uri", "")
+            entity_class = entity.get("type", "Unknown").split("/")[-1]
 
-            display_name = raw_name.strip() or (entity_uri.rsplit('/', 1)[-1] if entity_uri else "Resource")
+            display_name = raw_name.strip() or (
+                entity_uri.rsplit("/", 1)[-1] if entity_uri else "Resource"
+            )
             display_name = display_name.strip('"').strip("'")
             if not display_name:
                 continue
 
-            slug = quote(display_name.replace(' ', '_'))
-            type_icon = '👤' if 'Character' in entity_class else '🗺️' if 'Location' in entity_class else '📖'
+            slug = quote(display_name.replace(" ", "_"))
+            type_icon = (
+                "[C]"
+                if "Character" in entity_class
+                else "[L]"
+                if "Location" in entity_class
+                else "[W]"
+            )
 
             cards_html += f"""
             <a href="/resource/{slug}" class="character-card">
@@ -136,61 +149,70 @@ def generate_browse_page(entities: list, entity_type: str = None, page: int = 1,
             <p>Try another search or pick a different category.</p>
         </div>
         """
-    
+
     pagination_html = ""
     if total_pages > 1:
         pagination_html = '<div class="pagination">'
-        
+
         if page > 1:
             prev_page = page - 1
             query_param = f"&search={search_query}" if search_query else ""
             type_param = f"&type={entity_type}" if entity_type else ""
-            pagination_html += f'<a href="/browse?page={prev_page}{type_param}{query_param}">← Previous</a>'
+            pagination_html += (
+                f'<a href="/browse?page={prev_page}{type_param}{query_param}">Previous</a>'
+            )
         else:
-            pagination_html += '<span class="disabled">← Previous</span>'
-        
+            pagination_html += '<span class="disabled">Previous</span>'
+
         start_page = max(1, page - 2)
         end_page = min(total_pages, page + 2)
-        
+
         if start_page > 1:
-            pagination_html += f'<a href="/browse?page=1">1</a>'
+            pagination_html += '<a href="/browse?page=1">1</a>'
             if start_page > 2:
-                pagination_html += '<span>...</span>'
-        
+                pagination_html += "<span>...</span>"
+
         for p in range(start_page, end_page + 1):
             if p == page:
                 pagination_html += f'<span class="active">{p}</span>'
             else:
                 type_param = f"&type={entity_type}" if entity_type else ""
                 query_param = f"&search={search_query}" if search_query else ""
-                pagination_html += f'<a href="/browse?page={p}{type_param}{query_param}">{p}</a>'
-        
+                pagination_html += (
+                    f'<a href="/browse?page={p}{type_param}{query_param}">{p}</a>'
+                )
+
         if end_page < total_pages:
             if end_page < total_pages - 1:
-                pagination_html += '<span>...</span>'
+                pagination_html += "<span>...</span>"
             type_param = f"&type={entity_type}" if entity_type else ""
             query_param = f"&search={search_query}" if search_query else ""
-            pagination_html += f'<a href="/browse?page={total_pages}{type_param}{query_param}">{total_pages}</a>'
-        
+            pagination_html += (
+                f'<a href="/browse?page={total_pages}{type_param}{query_param}">'
+                f"{total_pages}</a>"
+            )
+
         if page < total_pages:
             next_page = page + 1
             query_param = f"&search={search_query}" if search_query else ""
             type_param = f"&type={entity_type}" if entity_type else ""
-            pagination_html += f'<a href="/browse?page={next_page}{type_param}{query_param}">Next →</a>'
+            pagination_html += (
+                f'<a href="/browse?page={next_page}{type_param}{query_param}">Next</a>'
+            )
         else:
-            pagination_html += '<span class="disabled">Next →</span>'
-        
-        pagination_html += '</div>'
-    
+            pagination_html += '<span class="disabled">Next</span>'
+
+        pagination_html += "</div>"
+
     filter_html = f"""
     <div class="filters">
         <a href="/browse" class="filter-btn {'active' if not entity_type else ''}">All</a>
-        <a href="/browse?type=Character" class="filter-btn {'active' if entity_type == 'Character' else ''}">👤 Characters</a>
-        <a href="/browse?type=Location" class="filter-btn {'active' if entity_type == 'Location' else ''}">🗺️ Locations</a>
-        <a href="/browse?type=Work" class="filter-btn {'active' if entity_type == 'Work' else ''}">📖 Works</a>
+        <a href="/browse?type=Character" class="filter-btn {'active' if entity_type == 'Character' else ''}">[C] Characters</a>
+        <a href="/browse?type=Location" class="filter-btn {'active' if entity_type == 'Location' else ''}">[L] Locations</a>
+        <a href="/browse?type=Work" class="filter-btn {'active' if entity_type == 'Work' else ''}">[W] Works</a>
     </div>
     """
-    
+
     search_value = search_query if search_query else ""
     search_form = f"""
     <form class="search-box" action="/browse" method="get" style="margin-bottom: 20px;">
@@ -198,7 +220,7 @@ def generate_browse_page(entities: list, entity_type: str = None, page: int = 1,
         <button type="submit">Search</button>
     </form>
     """
-    
+
     html = f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -209,8 +231,8 @@ def generate_browse_page(entities: list, entity_type: str = None, page: int = 1,
         <style>{get_home_css()}</style>
     </head>
     <body>
-        {render_header('browse')}
-        
+        {render_header("browse")}
+
         <div class="container">
             <div class="characters-header">
                 <h1>{current_type}</h1>
@@ -218,14 +240,14 @@ def generate_browse_page(entities: list, entity_type: str = None, page: int = 1,
                 {search_form}
                 {filter_html}
             </div>
-            
+
             <div class="characters-grid">
                 {cards_html}
             </div>
-            
+
             {pagination_html}
         </div>
-        
+
         {render_footer()}
     </body>
     </html>

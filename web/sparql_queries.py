@@ -54,7 +54,7 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
 
     query_local = f'''
         SELECT ?s WHERE {{
-            VALUES ?base {{ "http://tolkien-kg.org/resource/" "http://tolkien-kg.org/ontology/" }}
+            VALUES ?base {{ "http://tolkien-kg.org/resource/" "http://tolkien-kg.org/ontology/" "http://tolkien-kg.org/card/" }}
             ?s ?p ?o .
             FILTER(STRSTARTS(STR(?s), ?base))
             BIND(STRAFTER(STR(?s), ?base) AS ?local)
@@ -73,6 +73,7 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
     iri_guesses = [
         build_iri(resource_name, "http://tolkien-kg.org/resource/"),
         build_iri(resource_name, "http://tolkien-kg.org/ontology/"),
+        build_iri(resource_name, "http://tolkien-kg.org/card/"),
     ]
 
     for iri in iri_guesses:
@@ -88,27 +89,46 @@ def get_resource_by_name_or_iri(resource_name: str) -> Optional[str]:
 
 
 def get_resource_properties(subject_uri: str) -> Optional[Dict[str, List[str]]]:
-    """Fetch all properties of a resource by its URI."""
+    """Fetch all properties of a resource by its URI (incoming + outgoing, sameAs-aware)."""
     sparql = SPARQLWrapper(FUSEKI_URL)
-    
-    sparql.setQuery(f'''
-        SELECT ?p ?o WHERE {{
-            <{subject_uri}> ?p ?o .
+
+    sparql.setQuery(f"""
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        SELECT ?p ?o ?dir WHERE {{
+            {{
+                ?equiv (owl:sameAs|^owl:sameAs)* <{subject_uri}> .
+                ?equiv ?p ?o .
+                BIND("out" AS ?dir)
+            }}
+            UNION
+            {{
+                ?equiv (owl:sameAs|^owl:sameAs)* <{subject_uri}> .
+                ?s ?p ?equiv .
+                BIND(?s AS ?o)
+                BIND("in" AS ?dir)
+            }}
         }}
-    ''')
+    """)
     sparql.setReturnFormat(JSON)
-    
+
     try:
         results = sparql.query().convert()
         props = {}
-        
+
         for binding in results["results"]["bindings"]:
             pred = binding["p"]["value"]
             obj = binding["o"]["value"]
+            if binding["o"].get("type") == "literal":
+                lang = binding["o"].get("xml:lang")
+                if lang:
+                    obj = f"{obj}||lang:{lang}"
+            direction = binding.get("dir", {}).get("value", "out")
+            if direction == "in":
+                pred = f"^{pred}"
             if pred not in props:
                 props[pred] = []
             props[pred].append(obj)
-        
+
         return props
     except Exception:
         return None
@@ -329,3 +349,42 @@ def get_entities_by_type(entity_type: str = None, limit: int = 20, offset: int =
         pass
     
     return entities, total_count
+
+
+def get_related_cards(subject_uri: str) -> List[Dict[str, str]]:
+    """Return related METW card info (label, image) for a resource."""
+    sparql = SPARQLWrapper(FUSEKI_URL)
+    sparql.setQuery(f"""
+        PREFIX schema: <http://schema.org/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        SELECT DISTINCT ?card ?label ?image WHERE {{
+            {{
+                <{subject_uri}> schema:subjectOf ?card .
+            }}
+            UNION
+            {{
+                ?card schema:about <{subject_uri}> .
+            }}
+            OPTIONAL {{
+                ?card rdfs:label ?label .
+                FILTER(lang(?label) = "" || lang(?label) = "en")
+            }}
+            OPTIONAL {{ ?card schema:image ?image . }}
+        }}
+    """)
+    sparql.setReturnFormat(JSON)
+
+    cards = {}
+    try:
+        results = sparql.query().convert()
+        for binding in results["results"]["bindings"]:
+            card_uri = binding["card"]["value"]
+            entry = cards.setdefault(card_uri, {"uri": card_uri, "label": None, "image": None})
+            if "label" in binding and not entry["label"]:
+                entry["label"] = binding["label"]["value"]
+            if "image" in binding and not entry["image"]:
+                entry["image"] = binding["image"]["value"]
+    except Exception:
+        return []
+
+    return list(cards.values())

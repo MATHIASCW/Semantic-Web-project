@@ -10,8 +10,6 @@ This script:
 
 import os
 import re
-from pathlib import Path
-from collections import defaultdict
 
 
 def extract_page_title(infobox_file):
@@ -36,18 +34,18 @@ def get_infoboxes_from_directory(directory):
     Returns a dictionary {filename: page_title}
     """
     infoboxes = {}
-    
+
     if not os.path.exists(directory):
-        print(f"⚠️  Directory not found: {directory}")
+        print(f"Directory not found: {directory}")
         return infoboxes
-    
+
     for filename in os.listdir(directory):
         if filename.startswith("infobox_") and filename.endswith(".txt"):
             filepath = os.path.join(directory, filename)
             title = extract_page_title(filepath)
             if title:
                 infoboxes[filename] = title
-    
+
     return infoboxes
 
 
@@ -58,72 +56,72 @@ def compare_infoboxes():
     print("=" * 80)
     print("INFOBOX COMPARISON")
     print("=" * 80)
-    
+
     current_dir = "infoboxes"
     old_dir = "infoboxes_old_data"
-    
+
     current_infoboxes = get_infoboxes_from_directory(current_dir)
     old_infoboxes = get_infoboxes_from_directory(old_dir)
-    
-    print(f"\n📊 STATISTICS:")
-    print(f"  • Current infoboxes ({current_dir}): {len(current_infoboxes)}")
-    print(f"  • Old infoboxes ({old_dir}):     {len(old_infoboxes)}")
-    
+
+    print("\nSTATISTICS:")
+    print(f"  - Current infoboxes ({current_dir}): {len(current_infoboxes)}")
+    print(f"  - Old infoboxes ({old_dir}): {len(old_infoboxes)}")
+
     current_titles = set(current_infoboxes.values())
     old_titles = set(old_infoboxes.values())
-    
+
     common_titles = current_titles & old_titles
     only_current = current_titles - old_titles
     only_old = old_titles - current_titles
-    
-    print(f"\n📈 COMPARISON:")
-    print(f"  • Common titles:              {len(common_titles)}")
-    print(f"  • Only in {current_dir}: {len(only_current)}")
-    print(f"  • Only in {old_dir}:     {len(only_old)}")
-    
+
+    print("\nCOMPARISON:")
+    print(f"  - Common titles: {len(common_titles)}")
+    print(f"  - Only in {current_dir}: {len(only_current)}")
+    print(f"  - Only in {old_dir}: {len(only_old)}")
+
     total = max(len(current_titles), len(old_titles))
     if total > 0:
         similarity = (len(common_titles) / total) * 100
-        print(f"  • Similarity rate:           {similarity:.1f}%")
-    
+        print(f"  - Similarity rate: {similarity:.1f}%")
+
     if only_current:
-        print(f"\n✨ NEW PAGES IN {current_dir.upper()} ({len(only_current)}):")
+        print(f"\nNEW PAGES IN {current_dir.upper()} ({len(only_current)}):")
         for title in sorted(only_current)[:20]:
-            print(f"    - {title}")
+            print(f"  - {title}")
         if len(only_current) > 20:
-            print(f"    ... and {len(only_current) - 20} others")
-    
+            print(f"  ... and {len(only_current) - 20} others")
+
     if only_old:
-        print(f"\n🗑️  PAGES ONLY IN {old_dir.upper()} ({len(only_old)}):")
+        print(f"\nPAGES ONLY IN {old_dir.upper()} ({len(only_old)}):")
         for title in sorted(only_old)[:20]:
-            print(f"    - {title}")
+            print(f"  - {title}")
         if len(only_old) > 20:
-            print(f"    ... and {len(only_old) - 20} others")
-    
-    print(f"\n" + "=" * 80)
-    print(f"SUMMARY:")
-    print(f"  • Pages to fetch (not present):  {len(only_current)}")
-    print(f"  • Total coverage:                   {len(current_titles | old_titles)} pages")
-    print(f"=" * 80 + "\n")
-    
+            print(f"  ... and {len(only_old) - 20} others")
+
+    print("\n" + "=" * 80)
+    print("SUMMARY:")
+    print(f"  - Pages to fetch (not present): {len(only_current)}")
+    print(f"  - Total coverage: {len(current_titles | old_titles)} pages")
+    print("=" * 80 + "\n")
+
     report_file = "infobox_comparison_report.txt"
     with open(report_file, "w", encoding="utf-8") as f:
         f.write("DETAILED COMPARISON REPORT\n")
         f.write("=" * 80 + "\n\n")
-        
+
         f.write(f"NEW PAGES ({len(only_current)}):\n")
         for title in sorted(only_current):
             f.write(f"  {title}\n")
-        
+
         f.write(f"\n\nDELETED PAGES ({len(only_old)}):\n")
         for title in sorted(only_old):
             f.write(f"  {title}\n")
-        
+
         f.write(f"\n\nCOMMON PAGES ({len(common_titles)}):\n")
         for title in sorted(common_titles):
             f.write(f"  {title}\n")
-    
-    print(f"✅ Detailed report saved: {report_file}\n")
+
+    print(f"OK. Detailed report saved: {report_file}\n")
 
 
 if __name__ == "__main__":
