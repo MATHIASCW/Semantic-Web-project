@@ -56,21 +56,21 @@ def generate_home_page(stats: dict) -> str:
             <h2 class="section-title">Main categories</h2>
             <div class="categories-grid">
                 <a href="/browse?type=Character" class="category-card">
-                    <div class="category-icon">[C]</div>
+                    <div class="category-icon"></div>
                     <div class="category-name">Characters</div>
                     <div class="category-count">{characters} entries</div>
                     <div class="category-desc">Heroes, sages, villains, and creatures</div>
                 </a>
 
                 <a href="/browse?type=Location" class="category-card">
-                    <div class="category-icon">[L]</div>
+                    <div class="category-icon"></div>
                     <div class="category-name">Locations</div>
                     <div class="category-count">{locations} entries</div>
                     <div class="category-desc">Kingdoms, cities, and legendary lands</div>
                 </a>
 
                 <a href="/browse?type=Work" class="category-card">
-                    <div class="category-icon">[W]</div>
+                    <div class="category-icon"></div>
                     <div class="category-name">Works</div>
                     <div class="category-count">{works} entries</div>
                     <div class="category-desc">Books, movies, games, and adaptations</div>
@@ -95,9 +95,9 @@ def generate_browse_page(
     """Generate the entity browsing page."""
 
     type_labels = {
-        "Character": "[C] Characters",
-        "Location": "[L] Locations",
-        "Work": "[W] Works",
+        "Character": "Characters",
+        "Location": "Locations",
+        "Work": "Works",
         None: "All entities",
     }
 
@@ -207,9 +207,9 @@ def generate_browse_page(
     filter_html = f"""
     <div class="filters">
         <a href="/browse" class="filter-btn {'active' if not entity_type else ''}">All</a>
-        <a href="/browse?type=Character" class="filter-btn {'active' if entity_type == 'Character' else ''}">[C] Characters</a>
-        <a href="/browse?type=Location" class="filter-btn {'active' if entity_type == 'Location' else ''}">[L] Locations</a>
-        <a href="/browse?type=Work" class="filter-btn {'active' if entity_type == 'Work' else ''}">[W] Works</a>
+        <a href="/browse?type=Character" class="filter-btn {'active' if entity_type == 'Character' else ''}">Characters</a>
+        <a href="/browse?type=Location" class="filter-btn {'active' if entity_type == 'Location' else ''}"> Locations</a>
+        <a href="/browse?type=Work" class="filter-btn {'active' if entity_type == 'Work' else ''}">Works</a>
     </div>
     """
 

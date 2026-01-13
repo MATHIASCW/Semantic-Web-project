@@ -31,6 +31,6 @@ def render_footer() -> str:
         '<div class="footer">'
         "<p>Tolkien Knowledge Graph | "
         '<a href="/docs">API Docs</a> | '
-        '<a href="https://github.com">GitHub</a></p>'
+        '<a href="https://github.com/MATHIASCW/Semantic-Web-project.git">GitHub</a></p>'
         "</div>"
     )

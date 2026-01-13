@@ -81,7 +81,7 @@ kg-res:Aldamir rdfs:label "Aldamir"@en ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Aldamir> .
 
-kg-res:Aldor_film_character rdfs:label "Aldor"@en ;
+kg-res:Aldor rdfs:label "Aldor"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "TA 2544" ;
     kg-ont:deathDate "TA 2645" ;
@@ -720,7 +720,7 @@ kg-res:Baragund rdfs:label "Baragund"@en ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Baragund> .
 
-kg-res:Barahir_Steward_of_Gondor rdfs:label "Barahir"@en ;
+kg-res:Barahir_grandson_of_Faramir rdfs:label "Barahir"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "FA 402" ;
     kg-ont:deathDate "FA 460" ;
@@ -738,7 +738,7 @@ kg-res:Baran rdfs:label "Baran"@en ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Baran> .
 
-kg-res:Baranor_son_of_Baran rdfs:label "Baranor"@en ;
+kg-res:Baranor_man_of_Gondor rdfs:label "Baranor"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "FA 317" ;
     kg-ont:race "Men" ;
@@ -810,7 +810,7 @@ kg-res:Belecthor_II rdfs:label "Belecthor II"@en ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Belecthor_II> .
 
-kg-res:Beleg rdfs:label "Beleg"@en ;
+kg-res:Beleg_King_of_Arthedain rdfs:label "Beleg"@en ;
     schema1:gender "Male" ;
     kg-ont:deathDate "FA 489" ;
     kg-ont:race "Elves" ;
@@ -966,7 +966,7 @@ kg-res:Borlas rdfs:label "Borlas"@en ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Borlas> .
 
-kg-res:Boromir_Lord_of_Ladros rdfs:label "Boromir"@en ;
+kg-res:Boromir_Steward_of_Gondor rdfs:label "Boromir"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "TA 2978" ;
     kg-ont:deathDate "February 26 ,3019" ;
@@ -1011,7 +1011,7 @@ kg-res:Bowman_Cotton rdfs:label "Bowman Cotton"@en ;
     kg-ont:spouse "None" ;
     owl:sameAs <http://dbpedia.org/resource/Bowman_Cotton> .
 
-kg-res:Brandir_son_of_Arachon rdfs:label "Brandir"@en ;
+kg-res:Brandir rdfs:label "Brandir"@en ;
     kg-ont:birthDate "First Age" ;
     kg-ont:deathDate "FA 499" ;
     kg-ont:race "Men" ;
@@ -1024,7 +1024,7 @@ kg-res:Bregalad rdfs:label "Bregalad"@en ;
     kg-ont:race "Ents" ;
     owl:sameAs <http://dbpedia.org/resource/Bregalad> .
 
-kg-res:Brego_horse rdfs:label "Brego"@en ;
+kg-res:Brego rdfs:label "Brego"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "TA 2512" ;
     kg-ont:deathDate "TA 2570" ;
@@ -1348,7 +1348,7 @@ kg-res:Dinodas_Brandybuck rdfs:label "Dinodas Brandybuck"@en ;
     kg-ont:race "Hobbits" ;
     owl:sameAs <http://dbpedia.org/resource/Dinodas_Brandybuck> .
 
-kg-res:Dior_Steward_of_Gondor rdfs:label "Dior"@en ;
+kg-res:Dior rdfs:label "Dior"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "FA 470," ;
     kg-ont:deathDate "FA 506," ;
@@ -1448,7 +1448,7 @@ kg-res:Durin_VII rdfs:label "Durin VII"@en ;
     kg-ont:realm "Khazad-dum" ;
     owl:sameAs <http://dbpedia.org/resource/Durin_VII> .
 
-kg-res:Earendil rdfs:label "Eärendil"@en ;
+kg-res:Earendil_King_of_Gondor rdfs:label "Eärendil"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "FA 503" ;
     kg-ont:deathDate "Still Alive" ;
@@ -1619,7 +1619,7 @@ kg-res:Elendil rdfs:label "Elendil"@en ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Elendil> .
 
-kg-res:Elendur_King_of_Arnor rdfs:label "Elendur"@en ;
+kg-res:Elendur_son_of_Isildur rdfs:label "Elendur"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "SA 3299" ;
     kg-ont:deathDate "TA 2" ;
@@ -1828,7 +1828,7 @@ kg-res:Faramir_son_of_Ondoher rdfs:label "Faramir (son of Ondoher)"@en ;
     kg-ont:race "Men" ;
     owl:sameAs <http://dbpedia.org/resource/Faramir_%28son_of_Ondoher%29> .
 
-kg-res:Farin rdfs:label "Farin"@en ;
+kg-res:Farin_video_game_character rdfs:label "Farin"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "TA 2560" ;
     kg-ont:deathDate "TA 2803" ;
@@ -1930,7 +1930,7 @@ kg-res:Findis rdfs:label "Findis"@en ;
     kg-ont:race "Elves" ;
     owl:sameAs <http://dbpedia.org/resource/Findis> .
 
-kg-res:Finduilas rdfs:label "Finduilas"@en ;
+kg-res:Finduilas_wife_of_Denethor rdfs:label "Finduilas"@en ;
     schema1:gender "Female" ;
     kg-ont:birthDate "First Age" ;
     kg-ont:deathDate "FA 495" ;
@@ -2247,7 +2247,7 @@ kg-res:Gildis rdfs:label "Gildis"@en ;
     kg-ont:spouse "Hador, Lórindol" ;
     owl:sameAs <http://dbpedia.org/resource/Gildis> .
 
-kg-res:Gilfanon_elf_of_Alqalunte rdfs:label "Gilfanon"@en ;
+kg-res:Gilfanon rdfs:label "Gilfanon"@en ;
     schema1:gender "Male" ;
     kg-ont:deathDate "Presumably still alive" ;
     kg-ont:race "Elves" ;
@@ -2313,6 +2313,15 @@ kg-res:Glirhuin rdfs:label "Glirhuin"@en ;
     kg-ont:race "Men" ;
     owl:sameAs <http://dbpedia.org/resource/Glirhuin> .
 
+kg-res:Gloin_King_of_Durin_s_Folk rdfs:label "Glóin (King of Durin's Folk)"@en ;
+    schema1:gender "Male" ;
+    kg-ont:birthDate "TA 2136" ;
+    kg-ont:deathDate "TA 2385" ;
+    kg-ont:race "Dwarves" ;
+    kg-ont:realm "Grey Mountains" ;
+    kg-ont:spouse "Unnamed wife" ;
+    owl:sameAs <http://dbpedia.org/resource/Gl%C3%B3in_%28King_of_Durin%27s_Folk%29> .
+
 kg-res:Gloredhel rdfs:label "Glóredhel"@en ;
     schema1:gender "Female" ;
     kg-ont:birthDate "FA 415" ;
@@ -2376,6 +2385,16 @@ kg-res:Gorlim rdfs:label "Gorlim"@en ;
     kg-ont:race "Men,Wraith" ;
     kg-ont:spouse "Eilinel" ;
     owl:sameAs <http://dbpedia.org/resource/Gorlim> .
+
+kg-res:Gothmog_Lieutenant_of_Morgul rdfs:label "Gothmog (Lieutenant of Morgul)"@en ;
+    schema1:gender "Male" ;
+    kg-ont:deathDate "March 15, 3019 (film)" ;
+    kg-ont:hair "white/gray, possibly light brown (film)" ;
+    kg-ont:height "5'9\" - 6'4\" (film)" ;
+    kg-ont:race "Orc" ;
+    kg-ont:realm "Minas Morgul,the Witch-King" ;
+    kg-ont:spouse "None" ;
+    owl:sameAs <http://dbpedia.org/resource/Gothmog_%28Lieutenant_of_Morgul%29> .
 
 kg-res:Gram rdfs:label "Gram"@en ;
     schema1:gender "Male" ;
@@ -2482,7 +2501,7 @@ kg-res:Haldad rdfs:label "Haldad"@en ;
 kg-res:Haldar rdfs:label "Haldar"@en ;
     owl:sameAs <http://dbpedia.org/resource/Haldar> .
 
-kg-res:Haleth_film_character rdfs:label "Haleth"@en ;
+kg-res:Haleth_son_of_Helm rdfs:label "Haleth"@en ;
     schema1:gender "Female" ;
     kg-ont:birthDate "FA 341" ;
     kg-ont:deathDate "FA 420" ;
@@ -2493,17 +2512,17 @@ kg-res:Haleth_film_character rdfs:label "Haleth"@en ;
 kg-res:Halfast_Gamgee rdfs:label "Halfast Gamgee"@en ;
     owl:sameAs <http://dbpedia.org/resource/Halfast_Gamgee> .
 
+kg-res:Halfred_Gamgee rdfs:label "Halfred Gamgee"@en ;
+    schema1:gender "Male" ;
+    kg-ont:birthDate "TA 2969" ;
+    kg-ont:race "Hobbits" ;
+    owl:sameAs <http://dbpedia.org/resource/Halfred_Gamgee> .
+
 kg-res:Halfred_Greenhand rdfs:label "Halfred Greenhand"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "TA 2851" ;
     kg-ont:race "Hobbits" ;
     owl:sameAs <http://dbpedia.org/resource/Halfred_Greenhand> .
-
-kg-res:Halfred_of_Overhill rdfs:label "Halfred Gamgee"@en ;
-    schema1:gender "Male" ;
-    kg-ont:birthDate "TA 2969" ;
-    kg-ont:race "Hobbits" ;
-    owl:sameAs <http://dbpedia.org/resource/Halfred_Gamgee> .
 
 kg-res:Hallacar rdfs:label "Hallacar"@en ;
     schema1:gender "Male" ;
@@ -2891,7 +2910,7 @@ kg-res:Indis rdfs:label "Indis"@en ;
     kg-ont:spouse "Finwë" ;
     owl:sameAs <http://dbpedia.org/resource/Indis> .
 
-kg-res:Indor_grandfather_of_Tuor rdfs:label "Indor"@en ;
+kg-res:Indor rdfs:label "Indor"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "Mid ,First Age" ;
     kg-ont:deathDate "FA 495" ;
@@ -3178,7 +3197,7 @@ kg-res:Lungorthin rdfs:label "Lungorthin"@en ;
     kg-ont:race "Balrog" ;
     owl:sameAs <http://dbpedia.org/resource/Lungorthin> .
 
-kg-res:Luthien rdfs:label "Lúthien"@en ;
+kg-res:Luthien_son_of_Telimektar rdfs:label "Lúthien"@en ;
     schema1:gender "Female" ;
     kg-ont:birthDate "YT 1200" ;
     kg-ont:deathDate "FA 503" ;
@@ -3533,20 +3552,25 @@ kg-res:Morwe rdfs:label "Morwë"@en ;
     kg-ont:race "Elves" ;
     owl:sameAs <http://dbpedia.org/resource/Morw%C3%AB> .
 
-kg-res:Morwen_Steelsheen rdfs:label "Morwen"@en,
-        "Morwen Steelsheen"@en ;
+kg-res:Morwen_Steelsheen rdfs:label "Morwen Steelsheen"@en ;
     schema1:gender "Female" ;
-    kg-ont:birthDate "FA 443",
-        "TA 2922" ;
-    kg-ont:deathDate "FA 500" ;
-    kg-ont:hair "Dark",
-        "Dark, grey in old age" ;
+    kg-ont:birthDate "TA 2922" ;
+    kg-ont:hair "Dark" ;
     kg-ont:height "Tall" ;
     kg-ont:race "Men" ;
     kg-ont:realm "Rohan" ;
-    kg-ont:spouse "Húrin Thalion",
-        "Thengel" ;
+    kg-ont:spouse "Thengel" ;
     owl:sameAs <http://dbpedia.org/resource/Morwen_Steelsheen> .
+
+kg-res:Morwen_daughter_of_Belecthor rdfs:label "Morwen"@en ;
+    schema1:gender "Female" ;
+    kg-ont:birthDate "FA 443" ;
+    kg-ont:deathDate "FA 500" ;
+    kg-ont:hair "Dark, grey in old age" ;
+    kg-ont:height "Tall" ;
+    kg-ont:race "Men" ;
+    kg-ont:spouse "Húrin Thalion" ;
+    owl:sameAs <http://dbpedia.org/resource/Morwen> .
 
 kg-res:Mosco_Burrows rdfs:label "Mosco Burrows"@en ;
     owl:sameAs <http://dbpedia.org/resource/Mosco_Burrows> .
@@ -3963,7 +3987,7 @@ kg-res:Radhruin rdfs:label "Radhruin"@en ;
     kg-ont:race "Men" ;
     owl:sameAs <http://dbpedia.org/resource/Radhruin> .
 
-kg-res:Ragnir_servant rdfs:label "Ragnir"@en ;
+kg-res:Ragnir_outlaw rdfs:label "Ragnir"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "Late ,First Age" ;
     kg-ont:deathDate "Late First Age" ;
@@ -3980,7 +4004,7 @@ kg-res:Ragnor rdfs:label "Ragnor"@en ;
 kg-res:Reginard_Took rdfs:label "Reginard Took"@en ;
     owl:sameAs <http://dbpedia.org/resource/Reginard_Took> .
 
-kg-res:Rian rdfs:label "Rían"@en ;
+kg-res:Rian_daughter_of_Steward_Barahir rdfs:label "Rían"@en ;
     schema1:gender "Female" ;
     kg-ont:birthDate "FA 450" ;
     kg-ont:deathDate "FA 473" ;
@@ -4070,7 +4094,7 @@ kg-res:Sador rdfs:label "Sador"@en ;
     kg-ont:spouse "None known" ;
     owl:sameAs <http://dbpedia.org/resource/Sador> .
 
-kg-res:Saelon_daughter_of_Malach rdfs:label "Saelon"@en ;
+kg-res:Saelon rdfs:label "Saelon"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "Fourth Age" ;
     kg-ont:race "Men" ;
@@ -4373,7 +4397,7 @@ kg-res:Targon rdfs:label "Targon"@en ;
     kg-ont:race "Men" ;
     owl:sameAs <http://dbpedia.org/resource/Targon> .
 
-kg-res:Tarondor_King_of_Gondor rdfs:label "Tarondor"@en ;
+kg-res:Tarondor_King_of_Arnor rdfs:label "Tarondor"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "TA 1577" ;
     kg-ont:deathDate "TA 1798" ;
@@ -4594,7 +4618,7 @@ kg-res:Turambar_King_of_Gondor rdfs:label "Turambar"@en ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Turambar> .
 
-kg-res:Turgon_Steward_of_Gondor rdfs:label "Turgon"@en ;
+kg-res:Turgon rdfs:label "Turgon"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "YT 1300" ;
     kg-ont:deathDate "FA 510" ;
@@ -4721,7 +4745,7 @@ kg-res:Valacar rdfs:label "Valacar"@en ;
     kg-ont:spouse "Vidumavi" ;
     owl:sameAs <http://dbpedia.org/resource/Valacar> .
 
-kg-res:Valandil_Lord_of_Andunie rdfs:label "Valandil"@en ;
+kg-res:Valandil_The_Lost_Road rdfs:label "Valandil"@en ;
     schema1:gender "Male" ;
     kg-ont:birthDate "SA 3430" ;
     kg-ont:deathDate "TA 249" ;
@@ -5298,7 +5322,7 @@ kg-card:LE-10 a schema1:CreativeWork ;
         "Eradan"@es,
         "Eradan"@fr,
         "Eradan"@nl ;
-    schema1:about kg-res:Eradan_video_game_character ;
+    schema1:about kg-res:Eradan ;
     schema1:identifier "LE-10" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/le/Eradan.jpg> .
 
@@ -5338,7 +5362,7 @@ kg-card:LE-14 a schema1:CreativeWork ;
         "Hador"@es,
         "Hador"@fr,
         "Hador"@nl ;
-    schema1:about kg-res:Hador_Steward_of_Gondor ;
+    schema1:about kg-res:Hador ;
     schema1:identifier "LE-14" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/le/Hador.jpg> .
 
@@ -5448,7 +5472,7 @@ kg-card:LE-326 a schema1:CreativeWork ;
         "El Anillo Único"@es,
         "L'Anneau Unique"@fr,
         "The One Ring"@nl ;
-    schema1:about kg-res:The_One_Ring_role_playing_game ;
+    schema1:about kg-res:the_One_Ring ;
     schema1:identifier "LE-326" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/le/TheOneRing.jpg> .
 
@@ -5948,7 +5972,7 @@ kg-card:TD-28 a schema1:CreativeWork ;
         "Gothmog"@fr,
         "ゴスモグ"@ja,
         "Gothmog"@nl ;
-    schema1:about kg-res:Gothmog_Lieutenant_of_Morgul ;
+    schema1:about kg-res:Gothmog ;
     schema1:identifier "TD-28" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/td/Gothmog.jpg> .
 
@@ -6025,7 +6049,7 @@ kg-card:TD-92 a schema1:CreativeWork ;
         "Galdor"@fr,
         "ガルドール"@ja,
         "Galdor"@nl ;
-    schema1:about kg-res:Galdor ;
+    schema1:about kg-res:Galdor_elf_of_Gondolin ;
     schema1:identifier "TD-92" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/td/Galdor.jpg> .
 
@@ -6177,7 +6201,7 @@ kg-card:TW-126 a schema1:CreativeWork ;
         "Beorn"@it,
         "ビヨルン"@ja,
         "Beorn"@nl ;
-    schema1:about kg-res:Beorn ;
+    schema1:about kg-res:Beorn_son_of_Heden ;
     schema1:identifier "TW-126" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Beorn.jpg> .
 
@@ -6528,7 +6552,7 @@ kg-card:TW-160 a schema1:CreativeWork ;
         "Glóin"@it,
         "グローイン"@ja,
         "Glóin"@nl ;
-    schema1:about kg-res:Gloin_King_of_Durin_s_Folk ;
+    schema1:about kg-res:Gloin ;
     schema1:identifier "TW-160" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Gloin.jpg> .
 
@@ -6554,7 +6578,7 @@ kg-card:TW-164 a schema1:CreativeWork ;
         "Haldir"@it,
         "ハルディア"@ja,
         "Haldir"@nl ;
-    schema1:about kg-res:Haldir ;
+    schema1:about kg-res:Haldir_son_of_Orodreth ;
     schema1:identifier "TW-164" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Haldir.jpg> .
 
@@ -6619,7 +6643,7 @@ kg-card:TW-169 a schema1:CreativeWork ;
         "Mablung"@it,
         "マブルング"@ja,
         "Mablung"@nl ;
-    schema1:about kg-res:Mablung_ranger_of_Ithilien ;
+    schema1:about kg-res:Mablung ;
     schema1:identifier "TW-169" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Mablung.jpg> .
 
@@ -7191,7 +7215,7 @@ kg-card:TW-326 a schema1:CreativeWork ;
         "Ombromanto"@it,
         "飛蔭"@ja,
         "Shadowfax"@nl ;
-    schema1:about kg-res:Shadowfax_video_game ;
+    schema1:about kg-res:Shadowfax ;
     schema1:identifier "TW-326" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Shadowfax.jpg> .
 
@@ -7256,7 +7280,7 @@ kg-card:TW-347 a schema1:CreativeWork ;
         "L'Unico Anello"@it,
         "一つの指輪"@ja,
         "The One Ring"@nl ;
-    schema1:about kg-res:The_One_Ring_role_playing_game ;
+    schema1:about kg-res:the_One_Ring ;
     schema1:identifier "TW-347" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/TheOneRing.jpg> .
 
@@ -8114,7 +8138,7 @@ kg-card:TW-486 a schema1:CreativeWork ;
         "La Contea"@it,
         "ホビット庄"@ja,
         "The Shire"@nl ;
-    schema1:about kg-res:The_Shire ;
+    schema1:about kg-res:The_Shire_video_game ;
     schema1:identifier "TW-486" ;
     schema1:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/TheShire.jpg> .
 
@@ -8511,7 +8535,7 @@ kg-res:Belfalas rdfs:label "Belfalas"@de,
     schema1:subjectOf kg-card:TW-448 ;
     owl:sameAs <http://dbpedia.org/resource/Belfalas> .
 
-kg-res:Beorn rdfs:label "Beorn"@de,
+kg-res:Beorn_son_of_Heden rdfs:label "Beorn"@de,
         "Beorn"@en,
         "Beorn"@es,
         "Beorn"@fi,
@@ -8940,7 +8964,7 @@ kg-res:Eowyn rdfs:label "Éowyn"@de,
     schema1:subjectOf kg-card:TW-147 ;
     owl:sameAs <http://dbpedia.org/resource/%C3%89owyn> .
 
-kg-res:Eradan_video_game_character rdfs:label "Eradan"@de,
+kg-res:Eradan rdfs:label "Eradan"@de,
         "Eradan"@en,
         "Eradan"@es,
         "Eradan"@fr,
@@ -9114,7 +9138,7 @@ kg-res:Galadriel rdfs:label "Galadriel"@de,
     kg-ont:spouse "Celeborn" ;
     owl:sameAs <http://dbpedia.org/resource/Galadriel> .
 
-kg-res:Galdor rdfs:label "Galdor"@de,
+kg-res:Galdor_elf_of_Gondolin rdfs:label "Galdor"@de,
         "Galdor"@en,
         "Galdor"@es,
         "Galdor"@fr,
@@ -9187,9 +9211,8 @@ kg-res:Glamdring rdfs:label "Glamdring"@de,
     schema1:subjectOf kg-card:TW-244 ;
     owl:sameAs <http://dbpedia.org/resource/Glamdring> .
 
-kg-res:Gloin_King_of_Durin_s_Folk rdfs:label "Glóin"@de,
+kg-res:Gloin rdfs:label "Glóin"@de,
         "Glóin"@en,
-        "Glóin (King of Durin's Folk)"@en,
         "Gloin"@es,
         "Glóin"@fi,
         "Glóïn"@fr,
@@ -9198,13 +9221,10 @@ kg-res:Gloin_King_of_Durin_s_Folk rdfs:label "Glóin"@de,
         "Glóin"@nl ;
     schema1:gender "Male" ;
     schema1:subjectOf kg-card:TW-160 ;
-    kg-ont:birthDate "TA 2136",
-        "TA 2783" ;
-    kg-ont:deathDate "FO 15",
-        "TA 2385" ;
+    kg-ont:birthDate "TA 2783" ;
+    kg-ont:deathDate "FO 15" ;
     kg-ont:hair "Red, later White" ;
     kg-ont:race "Dwarves" ;
-    kg-ont:realm "Grey Mountains" ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Gl%C3%B3in> .
 
@@ -9248,9 +9268,8 @@ kg-res:Gorbag rdfs:label "Gorbag"@de,
     kg-ont:realm "Cirith Ungol" ;
     owl:sameAs <http://dbpedia.org/resource/Gorbag> .
 
-kg-res:Gothmog_Lieutenant_of_Morgul rdfs:label "Gothmog"@de,
+kg-res:Gothmog rdfs:label "Gothmog"@de,
         "Gothmog"@en,
-        "Gothmog (Lieutenant of Morgul)"@en,
         "Gothmog"@es,
         "Gothmog"@fr,
         "ゴスモグ"@ja,
@@ -9258,14 +9277,8 @@ kg-res:Gothmog_Lieutenant_of_Morgul rdfs:label "Gothmog"@de,
     schema1:gender "Male" ;
     schema1:subjectOf kg-card:TD-28 ;
     kg-ont:birthDate "Before the creation of ,Arda" ;
-    kg-ont:deathDate "FA 510",
-        "March 15, 3019 (film)" ;
-    kg-ont:hair "white/gray, possibly light brown (film)" ;
-    kg-ont:height "5'9\" - 6'4\" (film)" ;
-    kg-ont:race "Maiar,Balrogs",
-        "Orc" ;
-    kg-ont:realm "Minas Morgul,the Witch-King" ;
-    kg-ont:spouse "None" ;
+    kg-ont:deathDate "FA 510" ;
+    kg-ont:race "Maiar,Balrogs" ;
     owl:sameAs <http://dbpedia.org/resource/Gothmog> .
 
 kg-res:Grishnakh rdfs:label "Grishnákh"@de,
@@ -9311,7 +9324,7 @@ kg-res:Gwaihir rdfs:label "Gwaihir"@de,
     kg-ont:race "Great Eagles" ;
     owl:sameAs <http://dbpedia.org/resource/Gwaihir> .
 
-kg-res:Hador_Steward_of_Gondor rdfs:label "Hador"@de,
+kg-res:Hador rdfs:label "Hador"@de,
         "Hador"@en,
         "Hador"@es,
         "Hador"@fr,
@@ -9342,7 +9355,7 @@ kg-res:Halbarad rdfs:label "Halbarad"@de,
     kg-ont:race "Men" ;
     owl:sameAs <http://dbpedia.org/resource/Halbarad> .
 
-kg-res:Haldir rdfs:label "Haldir"@de,
+kg-res:Haldir_son_of_Orodreth rdfs:label "Haldir"@de,
         "Haldir"@en,
         "Haldir"@es,
         "Haldir"@fi,
@@ -9649,7 +9662,7 @@ kg-res:Lugdush rdfs:label "Lugdusch"@de,
     kg-ont:race "Uruk-hai" ;
     owl:sameAs <http://dbpedia.org/resource/Lugdush> .
 
-kg-res:Mablung_ranger_of_Ithilien rdfs:label "Mablung"@de,
+kg-res:Mablung rdfs:label "Mablung"@de,
         "Mablung"@en,
         "Mablung"@es,
         "Mablung"@fi,
@@ -10024,7 +10037,7 @@ kg-res:Scatha rdfs:label "Scatha"@de,
     kg-ont:race "Dragons" ;
     owl:sameAs <http://dbpedia.org/resource/Scatha> .
 
-kg-res:Shadowfax_video_game rdfs:label "Schattenfell"@de,
+kg-res:Shadowfax rdfs:label "Schattenfell"@de,
         "Shadowfax"@en,
         "Sombragrís"@es,
         "Hallavaharja"@fi,
@@ -10158,7 +10171,7 @@ kg-res:Tarcil rdfs:label "Tarcil"@de,
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Tarcil> .
 
-kg-res:The_Shire rdfs:label "Das Auenland"@de,
+kg-res:The_Shire_video_game rdfs:label "Das Auenland"@de,
         "The Shire"@en,
         "La Comarca"@es,
         "Kontu"@fi,
@@ -10909,18 +10922,6 @@ kg-res:Shelob_s_Lair rdfs:label "Kankras Lauer"@de,
         kg-card:TW-424 ;
     owl:sameAs <http://dbpedia.org/resource/Shelob%E2%80%99s_Lair> .
 
-kg-res:The_One_Ring_role_playing_game rdfs:label "Der Eine Ring"@de,
-        "The One Ring"@en,
-        "El Anillo Único"@es,
-        "Yksi Sormus"@fi,
-        "L'Anneau Unique"@fr,
-        "L'Unico Anello"@it,
-        "一つの指輪"@ja,
-        "The One Ring"@nl ;
-    schema1:subjectOf kg-card:LE-326,
-        kg-card:TW-347 ;
-    owl:sameAs <http://dbpedia.org/resource/The_One_Ring> .
-
 kg-res:Thror_s_Map rdfs:label "Thrórs Landkarte"@de,
         "Thrór’s Map"@en,
         "Mapa de Thrór"@es,
@@ -10997,6 +10998,18 @@ kg-res:Woodmen rdfs:label "Waldmenschen"@de,
     schema1:subjectOf kg-card:LE-295,
         kg-card:TW-368 ;
     owl:sameAs <http://dbpedia.org/resource/Woodmen> .
+
+kg-res:the_One_Ring rdfs:label "Der Eine Ring"@de,
+        "The One Ring"@en,
+        "El Anillo Único"@es,
+        "Yksi Sormus"@fi,
+        "L'Anneau Unique"@fr,
+        "L'Unico Anello"@it,
+        "一つの指輪"@ja,
+        "The One Ring"@nl ;
+    schema1:subjectOf kg-card:LE-326,
+        kg-card:TW-347 ;
+    owl:sameAs <http://dbpedia.org/resource/The_One_Ring> .
 
 kg-res:Barad_dur rdfs:label "Barad-Dûr"@de,
         "Barad-dûr"@de,
