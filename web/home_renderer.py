@@ -135,7 +135,7 @@ def generate_browse_page(
             )
 
             cards_html += f"""
-            <a href="/resource/{slug}" class="character-card">
+            <a href="/page/{slug}" class="character-card">
                 <div class="character-card-content">
                     <div class="character-name">{escape(display_name)}</div>
                     <div class="character-type">{type_icon} {escape(entity_class)}</div>

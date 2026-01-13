@@ -170,14 +170,14 @@ def format_property_value(predicate: str, value: str) -> str:
         ):
             local = value.rsplit("/", 1)[-1]
             return (
-                f'<a href="/resource/{quote(local)}" title="{escape(value)}">'
+                f'<a href="/page/{quote(local)}" title="{escape(value)}">'
                 f"{escape(format_property_label(value))}</a>"
             )
         elif value.startswith("http://tolkien-kg.org/card/"):
             local = value.rsplit("/", 1)[-1]
-            return f'<a href="/resource/{quote(local)}" title="{escape(value)}">Card {escape(local)}</a>'
+            return f'<a href="/page/{quote(local)}" title="{escape(value)}">Card {escape(local)}</a>'
         else:
-            return f'<a href="/resource/{quote(value.rsplit("/", 1)[-1])}">{escape(format_property_label(value))}</a>'
+            return f'<a href="/page/{quote(value.rsplit("/", 1)[-1])}">{escape(format_property_label(value))}</a>'
 
     if (
         "date" in predicate.lower()
@@ -515,7 +515,6 @@ def generate_html_page(resource: ResourceData, related_cards: Optional[List[Dict
                 <div class="format-links">
                     <a href="/resource/{quote(resource.uri.rsplit('/', 1)[-1])}?format=turtle">Turtle (RDF)</a>
                     <a href="/resource/{quote(resource.uri.rsplit('/', 1)[-1])}?format=json">JSON</a>
-                    <a href="/resource/{quote(resource.uri.rsplit('/', 1)[-1])}">HTML</a>
                 </div>
             </div>
 

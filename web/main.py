@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse, HTMLResponse, PlainTextResponse
+from fastapi.responses import JSONResponse, HTMLResponse, PlainTextResponse, RedirectResponse
 
 from web.models import ResourceData
 from web.sparql_queries import (
@@ -146,13 +146,16 @@ async def get_resource(name: str, request: Request, format: str = Query(None, al
     if not resource_uri:
         return JSONResponse(status_code=404, content={"error": f"Ressource '{name}' non trouvee"})
 
+    canonical_name = name
     try:
         canonical = resource_uri.rsplit("/", 1)[-1]
         if canonical != name:
             suffix = ""
             if format:
                 suffix = f"?format={format}"
+            canonical_name = canonical
             return HTMLResponse(status_code=307, content="", headers={"Location": f"/resource/{canonical}{suffix}"})
+        canonical_name = canonical
     except Exception:
         pass
 
@@ -163,34 +166,29 @@ async def get_resource(name: str, request: Request, format: str = Query(None, al
     related_cards = get_related_cards(resource_uri)
     resource = ResourceData(name=name, uri=resource_uri, properties=properties)
 
-    accept_header = request.headers.get("accept", "text/html").lower()
+    # Default: Turtle (machine-readable). HTML only when explicitly asked via format=html.
+    accept_header = request.headers.get("accept", "text/turtle").lower()
 
+    # Explicit format overrides headers
     if format:
-        if format.lower() == "turtle":
+        fmt = format.lower()
+        if fmt == "turtle":
             content = generate_turtle_for_resource(resource)
             return PlainTextResponse(content, media_type="text/turtle")
-        elif format.lower() == "json":
+        if fmt == "json":
             return JSONResponse(
-                {
-                    "name": resource.name,
-                    "uri": resource.uri,
-                    "properties": resource.properties,
-                }
+                {"name": resource.name, "uri": resource.uri, "properties": resource.properties}
             )
-        elif format.lower() == "html":
-            html = generate_html_page(resource, related_cards=related_cards)
-            return HTMLResponse(html)
+        if fmt == "html":
+            return RedirectResponse(url=f"/page/{canonical_name}", status_code=303)
 
+    # Header-driven negotiation (only JSON honored automatically)
     if "application/json" in accept_header or "application/ld+json" in accept_header:
-        return JSONResponse(
-            {"name": resource.name, "uri": resource.uri, "properties": resource.properties}
-        )
-    if "text/turtle" in accept_header or "application/rdf+turtle" in accept_header:
-        content = generate_turtle_for_resource(resource)
-        return PlainTextResponse(content, media_type="text/turtle")
+        return JSONResponse({"name": resource.name, "uri": resource.uri, "properties": resource.properties})
 
-    html = generate_html_page(resource, related_cards=related_cards)
-    return HTMLResponse(html)
+    # Default fallback: Turtle (even if browser asked HTML but no format param)
+    content = generate_turtle_for_resource(resource)
+    return PlainTextResponse(content, media_type="text/turtle")
 
 
 @app.get("/page/{name}", tags=["Linked Data"])
