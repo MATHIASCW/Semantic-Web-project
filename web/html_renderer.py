@@ -611,7 +611,7 @@ def generate_turtle_for_property(prop_info: dict) -> str:
 
 
 def generate_turtle_for_resource(resource: ResourceData) -> str:
-    """Generate Turtle/RDF representation of a resource."""
+    """Generate Turtle/RDF representation of a resource (outgoing + incoming)."""
     turtle = f"""@prefix kg-ont: <http://tolkien-kg.org/ontology/> .
 @prefix kg-res: <http://tolkien-kg.org/resource/> .
 @prefix schema: <http://schema.org/> .
@@ -649,5 +649,19 @@ def generate_turtle_for_resource(resource: ResourceData) -> str:
 
         turtle += ", ".join(value_strings)
 
-    turtle += " .\n"
+    turtle += " .\n\n"
+
+    incoming_triples = []
+    for predicate, values in sorted(resource.properties.items()):
+        if not predicate.startswith("^"):
+            continue
+        pred_uri = predicate[1:]
+        for value in values:
+            if value.startswith("http://") or value.startswith("https://"):
+                incoming_triples.append(f"<{value}> <{pred_uri}> <{resource.uri}> .")
+    
+    if incoming_triples:
+        turtle += "# Incoming relations\n"
+        turtle += "\n".join(incoming_triples) + "\n"
+    
     return turtle

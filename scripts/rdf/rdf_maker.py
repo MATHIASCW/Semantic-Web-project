@@ -56,11 +56,6 @@ def clean_value(value: str, preserve_timeline: bool = False) -> str:
     v = v.replace("&nbsp;", " ").replace("&amp;", "&").replace("&quot;", '"')
     v = v.replace("&lt;", "<").replace("&gt;", ">")
 
-    if not preserve_timeline:
-        timeline_match = re.search(r"\{\{Timeline\s*\|(.*?)\}\}", v, flags=re.DOTALL | re.IGNORECASE)
-        if timeline_match:
-            pass
-
     v = re.sub(r"\{\{SR\|(\d+)\}\}", r"SR \1", v)
     v = re.sub(r"\{\{TA\|(\d+)(\|[^}]+)?\}\}", r"TA \1", v)
     v = re.sub(r"\{\{FA\|(\d+)(\|[^}]+)?\}\}", r"FA \1", v)
@@ -71,7 +66,10 @@ def clean_value(value: str, preserve_timeline: bool = False) -> str:
     if preserve_timeline:
         v = re.sub(r"\{\{(?!Timeline)([^}]+)\}\}", "", v, flags=re.IGNORECASE)
     else:
-        v = re.sub(r"\{\{[^}]+\}\}", "", v)
+        v = re.sub(r"\{\{[^}]*\}\}", "", v, flags=re.DOTALL)
+        v = re.sub(r"\{\{.*$", "", v, flags=re.DOTALL)
+        v = re.sub(r"\}\}", "", v)
+        v = v.replace("{{", "").replace("}}", "")
 
     v = re.sub(r"\{\{(IPA|fact|citation needed|cn)[^}]*\}\}", "", v, flags=re.IGNORECASE)
 
@@ -404,13 +402,11 @@ def emit_mixed(graph: Graph, subj, pred, raw: str, keep_literal_if_links: bool =
         return False
 
     if pred in LITERAL_ONLY_PROPS:
-        is_timeline = pred == KGONT.timeline or pred == KGONT.chronology
-
         text = re.sub(r"\[\[([^]|]+)\|([^]]+)\]\]", r"\2", raw)
         text = re.sub(r"\[\[([^]]+)\]\]", r"\1", text)
-        for part in split_multi(text, preserve_timeline=is_timeline):
+        for part in split_multi(text, preserve_timeline=False):
             if part:
-                wrote |= emit_literal(graph, subj, pred, part, preserve_timeline=is_timeline)
+                wrote |= emit_literal(graph, subj, pred, part, preserve_timeline=False)
         return wrote
 
     has_links = bool(LINK_RE.search(raw))

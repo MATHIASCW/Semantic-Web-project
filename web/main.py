@@ -177,14 +177,30 @@ async def get_resource(name: str, request: Request, format: str = Query(None, al
             content = generate_turtle_for_resource(resource)
             return PlainTextResponse(content, media_type="text/turtle")
         if fmt == "json":
+            outgoing = {k: v for k, v in resource.properties.items() if not k.startswith("^")}
+            incoming = {k[1:]: v for k, v in resource.properties.items() if k.startswith("^")}
             return JSONResponse(
-                {"name": resource.name, "uri": resource.uri, "properties": resource.properties}
+                {
+                    "name": resource.name,
+                    "uri": resource.uri,
+                    "properties": outgoing,
+                    "incoming": incoming
+                }
             )
         if fmt == "html":
             return RedirectResponse(url=f"/page/{canonical_name}", status_code=303)
 
     if "application/json" in accept_header or "application/ld+json" in accept_header:
-        return JSONResponse({"name": resource.name, "uri": resource.uri, "properties": resource.properties})
+        outgoing = {k: v for k, v in resource.properties.items() if not k.startswith("^")}
+        incoming = {k[1:]: v for k, v in resource.properties.items() if k.startswith("^")}
+        return JSONResponse(
+            {
+                "name": resource.name,
+                "uri": resource.uri,
+                "properties": outgoing,
+                "incoming": incoming
+            }
+        )
 
     content = generate_turtle_for_resource(resource)
     return PlainTextResponse(content, media_type="text/turtle")

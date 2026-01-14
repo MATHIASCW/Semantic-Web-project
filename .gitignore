@@ -8,4 +8,4 @@ infobox_structure_report*
 infobox_fields_mapping*
 rdf_maker_old*
 __pycache__
-*.md
+docs/*

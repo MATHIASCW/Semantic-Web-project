@@ -11,8 +11,7 @@ kg-res:20_Northmoor_Road a kg-ont:Location ;
         "20 Northmoor Road"@en ;
     schema:caption "Home of J.R.R. Tolkien"^^xsd:string ;
     schema:image "20 Northmoor Road.jpg"^^xsd:string ;
-    schema:name "20 Northmoor Road"^^xsd:string ;
-    kg-ont:timeline "{{timeline-homes}}"^^xsd:string .
+    schema:name "20 Northmoor Road"^^xsd:string .
 
 kg-res:22_Northmoor_Road a kg-ont:Location ;
     rdfs:label "22 Northmoor Road"^^xsd:string,
@@ -159,26 +158,19 @@ kg-res:Aldor_film_character a kg-ont:Character ;
         "Aldor"@en ;
     schema:caption kg-res:The_Lord_of_the_Rings_The_Two_Towers ;
     schema:description kg-res:Battle_of_the_Hornburg ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "The Lord of the Rings - The Two Towers - Aldor.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Rohanese,
         kg-res:Westron ;
     schema:location kg-res:Hornburg ;
     schema:name "Aldor"^^xsd:string ;
     kg-ont:affiliation kg-res:Rohirrim ;
-    kg-ont:birthDate "TA 2544" ;
-    kg-ont:deathDate "TA 2645" ;
     kg-ont:eyes "Blue"^^xsd:string ;
     kg-ont:hair "Whitish gray hair"^^xsd:string,
         "beard"^^xsd:string ;
     kg-ont:people kg-res:Rohirrim ;
     kg-ont:position "Conscripted archer"^^xsd:string ;
-    kg-ont:race "Men" ;
-    kg-ont:realm "Rohan" ;
-    kg-ont:spouse "Unnamed wife" ;
-    kg-ont:weapons "Bow"^^xsd:string ;
-    owl:sameAs <http://dbpedia.org/resource/Aldor> .
+    kg-ont:weapons "Bow"^^xsd:string .
 
 kg-res:Alex_Lewis a schema:Person ;
     rdfs:label "Alex Lewis"^^xsd:string,
@@ -770,19 +762,14 @@ kg-res:Baranor_man_of_Gondor a kg-ont:Character ;
     rdfs:label "Baranor (man of Gondor)"^^xsd:string,
         "Baranor"@en ;
     schema:caption kg-res:The_Lord_of_the_Rings_Online ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "The Lord of the Rings Online - Baranor.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Baranor"^^xsd:string ;
-    kg-ont:birthDate "FA 317",
-        "Late Third Age"^^xsd:string ;
+    kg-ont:birthDate "Late Third Age"^^xsd:string ;
     kg-ont:children kg-res:Beregond ;
-    kg-ont:people kg-res:Gondorians ;
-    kg-ont:race "Men" ;
-    kg-ont:spouse "Unnamed wife" ;
-    owl:sameAs <http://dbpedia.org/resource/Baranor> .
+    kg-ont:people kg-res:Gondorians .
 
 kg-res:Belegost_video_game a schema:VideoGame ;
     rdfs:label "Belegost (video game)"^^xsd:string,
@@ -1114,7 +1101,8 @@ kg-res:Brego_horse a kg-ont:Character ;
         "Brego"@en ;
     schema:caption kg-res:Aragorn,
         kg-res:The_Lord_of_the_Rings_The_Two_Towers ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "The Two Towers - Brego.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Sindarin,
         kg-res:Westron ;
@@ -1126,11 +1114,17 @@ kg-res:Brego_horse a kg-ont:Character ;
     schema:name "Brego"^^xsd:string ;
     kg-ont:affiliation kg-res:Aragorn,
         kg-res:Rohirrim ;
+    kg-ont:birthDate "TA 2512" ;
+    kg-ont:deathDate "TA 2570" ;
     kg-ont:eyes "Black"^^xsd:string ;
     kg-ont:hair "Brown"^^xsd:string ;
     kg-ont:people kg-res:Horses ;
     kg-ont:position "Mount"^^xsd:string ;
-    kg-ont:race kg-res:Horses .
+    kg-ont:race kg-res:Horses,
+        "Men" ;
+    kg-ont:realm "Rohan" ;
+    kg-ont:spouse "Unnamed wife" ;
+    owl:sameAs <http://dbpedia.org/resource/Brego> .
 
 kg-res:Breredon a kg-ont:Location ;
     rdfs:label "Breredon"^^xsd:string,
@@ -2246,18 +2240,24 @@ kg-res:Egalmoth a kg-ont:Character ;
     rdfs:label "Egalmoth"^^xsd:string,
         "Egalmoth"@en ;
     schema:caption kg-res:Category_Images_by_NimwenHabareth ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "NimwenHabareth - Egalmoth.png"^^xsd:string ;
     schema:location kg-res:Gondolin ;
     schema:name "Egalmoth"^^xsd:string ;
+    kg-ont:birthDate "TA 2626" ;
     kg-ont:clothing "Blue mantle with crystal stars"^^xsd:string ;
+    kg-ont:deathDate "TA 2743" ;
     kg-ont:deathLocation kg-res:Mouths_of_Sirion ;
     kg-ont:family kg-res:House_of_the_Heavenly_Arch ;
     kg-ont:people kg-res:Gnomes ;
     kg-ont:people_duplicated kg-res:Noldor ;
     kg-ont:position kg-res:house_of_the_Heavenly_Arch ;
+    kg-ont:race "Men" ;
+    kg-ont:spouse "Unnamed wife" ;
     kg-ont:weapons "Curved sword"^^xsd:string,
-        "bow"^^xsd:string .
+        "bow"^^xsd:string ;
+    owl:sameAs <http://dbpedia.org/resource/Egalmoth> .
 
 kg-res:Eighth_of_the_Nazgul a schema:CreativeWork ;
     rdfs:label "Eighth of the Nazgûl"^^xsd:string,
@@ -2869,20 +2869,14 @@ kg-res:Farin_video_game_character a kg-ont:Character ;
     rdfs:label "Farin (video game character)"^^xsd:string,
         "Farin"@en ;
     schema:caption kg-res:The_Lord_of_the_Rings_War_in_the_North ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "2011-12-23 00063.jpg"^^xsd:string ;
     schema:location kg-res:Iron_Hills,
         kg-res:Lonely_Mountain ;
     schema:name "Farin"^^xsd:string ;
-    kg-ont:birthDate "Late Third Age"^^xsd:string,
-        "TA 2560" ;
-    kg-ont:deathDate "TA 2803" ;
+    kg-ont:birthDate "Late Third Age"^^xsd:string ;
     kg-ont:parentage kg-res:Norin ;
-    kg-ont:people kg-res:Dwarves ;
-    kg-ont:race "Dwarves" ;
-    kg-ont:spouse "Unnamed wife" ;
-    owl:sameAs <http://dbpedia.org/resource/Farin> .
+    kg-ont:people kg-res:Dwarves .
 
 kg-res:Fastitocalon_poem a schema:CreativeWork ;
     rdfs:label "Fastitocalon (poem)"^^xsd:string,
@@ -3319,17 +3313,15 @@ kg-res:Galdor_elf_of_Gondolin a kg-ont:Character ;
     kg-ont:position kg-res:house_of_the_Tree ;
     kg-ont:weapons "Club"^^xsd:string .
 
-kg-res:Galdor_man_of_Rohan a kg-ont:Character ;
-    rdfs:label "Galdor (man of Rohan)"^^xsd:string,
+kg-res:Galdor_elf_of_the_Havens a kg-ont:Character ;
+    rdfs:label "Galdor (elf of the Havens)"^^xsd:string,
         "Galdor"@en ;
+    schema:caption kg-res:Category_Images_by_Stephen_Schwartz ;
     schema:gender "Male"^^xsd:string ;
-    schema:inLanguage kg-res:Rohanese,
-        kg-res:Westron ;
-    schema:location kg-res:Edoras ;
+    schema:image "Stephen Schwartz - Galdor.jpg"^^xsd:string ;
+    schema:location kg-res:Grey_Havens ;
     schema:name "Galdor"^^xsd:string ;
-    kg-ont:other_names "Ealdor"^^xsd:string ;
-    kg-ont:people kg-res:Rohirrim ;
-    kg-ont:position "Seneschal"^^xsd:string .
+    kg-ont:people kg-res:Sindar .
 
 kg-res:Galhir a kg-ont:Character ;
     rdfs:label "Galhir"^^xsd:string,
@@ -3402,21 +3394,17 @@ kg-res:Gelmir_messenger_of_Cirdan a kg-ont:Character ;
 kg-res:Gelmir_son_of_Golfinweg a kg-ont:Character ;
     rdfs:label "Gelmir (son of Golfinweg)"^^xsd:string,
         "Gelmir"@en ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:location kg-res:Great_Lands,
         kg-res:Valinor ;
     schema:name "Gelmir"^^xsd:string ;
     kg-ont:children kg-res:Fingolfin ;
-    kg-ont:deathDate "FA 473" ;
     kg-ont:other_names kg-res:Qenya,
         "Nelmer (Q)"^^xsd:string ;
     kg-ont:parentage kg-res:Golfinweg ;
     kg-ont:people kg-res:Gnomes ;
     kg-ont:people_duplicated kg-res:Noldor ;
-    kg-ont:position kg-res:Gnomes ;
-    kg-ont:race "Elves" ;
-    owl:sameAs <http://dbpedia.org/resource/Gelmir> .
+    kg-ont:position kg-res:Gnomes .
 
 kg-res:General_Targg a kg-ont:Character ;
     rdfs:label "General Targg"^^xsd:string,
@@ -3671,6 +3659,32 @@ kg-res:Gormr_Doursmith a kg-ont:Character ;
     kg-ont:realm "Thorin's Gate"^^xsd:string ;
     kg-ont:rule "(unknown) - T. A. 3016"^^xsd:string ;
     kg-ont:weapons "Spear"^^xsd:string .
+
+kg-res:Gothmog_Lieutenant_of_Morgul a kg-ont:Character ;
+    rdfs:label "Gothmog (Lieutenant of Morgul)"^^xsd:string,
+        "Gothmog"@en,
+        "Gothmog (Lieutenant of Morgul)"@en ;
+    schema:caption kg-res:John_Howe ;
+    schema:gender "Male" ;
+    schema:image "John Howe - Gothmog 01.jpg"^^xsd:string ;
+    schema:inLanguage kg-res:Black_Speech,
+        kg-res:Westron ;
+    schema:location kg-res:Mordor ;
+    schema:name "Gothmog"^^xsd:string ;
+    kg-ont:affiliation kg-res:Sauron,
+        kg-res:Witch_king ;
+    kg-ont:deathDate "March 15, 3019 (film)",
+        "Probably 15 March TA 3019"^^xsd:string ;
+    kg-ont:deathLocation kg-res:Battle_of_the_Pelennor_Fields ;
+    kg-ont:hair "white/gray, possibly light brown (film)" ;
+    kg-ont:height "5'9\" - 6'4\" (film)" ;
+    kg-ont:people "Unknown"^^xsd:string ;
+    kg-ont:position kg-res:Morgul,
+        kg-res:Witch_king ;
+    kg-ont:race "Orc" ;
+    kg-ont:realm "Minas Morgul,the Witch-King" ;
+    kg-ont:spouse "None" ;
+    owl:sameAs <http://dbpedia.org/resource/Gothmog_%28Lieutenant_of_Morgul%29> .
 
 kg-res:Great_Eagle a kg-ont:Character ;
     rdfs:label "Great Eagle"^^xsd:string,
@@ -3937,52 +3951,21 @@ kg-res:Halbrand a kg-ont:Character ;
         "a pommel depicting a white horse"^^xsd:string,
         "and a cross-guard that is bent towards the blade."^^xsd:string .
 
-kg-res:Haldir_Chieftain_of_Brethil a kg-ont:Character ;
-    rdfs:label "Haldir (Chieftain of Brethil)"^^xsd:string,
-        "Haldir"@en ;
-    schema:age "58"^^xsd:string ;
-    schema:caption kg-res:Category_Images_by_Matej_Cadil ;
-    schema:gender "Male"^^xsd:string ;
-    schema:image "Glóredhel.jpg"^^xsd:string,
-        "Matěj Čadil - Haldir"^^xsd:string ;
-    schema:inLanguage kg-res:Halethian ;
-    schema:location kg-res:Brethil ;
-    schema:name "Haldir"^^xsd:string ;
-    kg-ont:birthDate "FA 414"^^xsd:string ;
-    kg-ont:birthLocation kg-res:Brethil ;
-    kg-ont:children kg-res:Handir ;
-    kg-ont:deathDate "FA 472"^^xsd:string ;
-    kg-ont:deathLocation kg-res:Nirnaeth_Arnoediad ;
-    kg-ont:family kg-res:House_of_Haleth ;
-    kg-ont:parentage kg-res:Halmir ;
-    kg-ont:people kg-res:Edain ;
-    kg-ont:position kg-res:Halad ;
-    kg-ont:sibling kg-res:Hareth,
-        kg-res:Hiril,
-        kg-res:Hundar ;
-    kg-ont:spouse kg-res:Gloredhel .
-
 kg-res:Haleth_film_character a kg-ont:Character ;
     rdfs:label "Haleth (film character)"^^xsd:string,
         "Haleth"@en ;
     schema:caption kg-res:The_Lord_of_the_Rings_The_Two_Towers ;
-    schema:gender "Female",
-        "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "The Lord of the Rings - The Two Towers - Haleth.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Westron ;
     schema:location kg-res:Hornburg ;
     schema:name "Haleth"^^xsd:string ;
     kg-ont:affiliation kg-res:Rohirrim ;
-    kg-ont:birthDate "FA 341" ;
-    kg-ont:deathDate "FA 420" ;
     kg-ont:hair "Blonde"^^xsd:string ;
     kg-ont:parentage kg-res:Hama ;
     kg-ont:people kg-res:Rohirrim ;
     kg-ont:position "Conscripted soldier"^^xsd:string ;
-    kg-ont:race "Men" ;
-    kg-ont:spouse "None" ;
-    kg-ont:weapons "Sword"^^xsd:string ;
-    owl:sameAs <http://dbpedia.org/resource/Haleth> .
+    kg-ont:weapons "Sword"^^xsd:string .
 
 kg-res:Hall_of_Lore a kg-ont:Location ;
     rdfs:label "Hall of Lore"^^xsd:string,
@@ -7846,13 +7829,18 @@ kg-res:Meleth_nurse a kg-ont:Character ;
     rdfs:label "Meleth (nurse)"^^xsd:string,
         "Meleth"@en ;
     schema:caption kg-res:Category_Images_by_Maivolchica ;
-    schema:gender "Female"^^xsd:string ;
+    schema:gender "Female"^^xsd:string,
+        "Female" ;
     schema:image "Maivolchica - Meleth & young Earendil.jpg"^^xsd:string ;
     schema:location kg-res:Gondolin ;
     schema:name "Meleth"^^xsd:string ;
     kg-ont:affiliation kg-res:House_of_the_Wing ;
+    kg-ont:birthDate "Around FA 450" ;
     kg-ont:people kg-res:Elves ;
-    kg-ont:position "Nurse"^^xsd:string .
+    kg-ont:position "Nurse"^^xsd:string ;
+    kg-ont:race "Men" ;
+    kg-ont:spouse "Agathor" ;
+    owl:sameAs <http://dbpedia.org/resource/Meleth> .
 
 kg-res:Mell_Gollum_Game a kg-ont:Character ;
     rdfs:label "Mell (Gollum Game)"^^xsd:string,
@@ -8069,12 +8057,20 @@ kg-res:Morwe_and_Nurwe a kg-ont:Character ;
 kg-res:Morwen_daughter_of_Hurin a kg-ont:Character ;
     rdfs:label "Morwen (daughter of Húrin)"^^xsd:string,
         "Morwen"@en ;
-    schema:gender "Female"^^xsd:string ;
+    schema:gender "Female"^^xsd:string,
+        "Female" ;
     schema:location kg-res:Gondor ;
     schema:name "Morwen"^^xsd:string ;
+    kg-ont:birthDate "FA 443" ;
+    kg-ont:deathDate "FA 500" ;
+    kg-ont:hair "Dark, grey in old age" ;
+    kg-ont:height "Tall" ;
     kg-ont:parentage kg-res:Hurin_Warden_of_the_Keys ;
     kg-ont:people kg-res:Gondorians ;
-    kg-ont:spouse kg-res:Eomer .
+    kg-ont:race "Men" ;
+    kg-ont:spouse kg-res:Eomer,
+        "Húrin Thalion" ;
+    owl:sameAs <http://dbpedia.org/resource/Morwen> .
 
 kg-res:Mr._Mouse a kg-ont:Character ;
     rdfs:label "Mr. Mouse"^^xsd:string,
@@ -9156,17 +9152,6 @@ kg-res:Ragash a kg-ont:Character ;
 kg-res:Ragnir_outlaw a kg-ont:Character ;
     rdfs:label "Ragnir (outlaw)"^^xsd:string,
         "Ragnir"@en ;
-    schema:gender "Male"^^xsd:string ;
-    schema:inLanguage kg-res:Taliska ;
-    schema:location kg-res:Dor_lomin ;
-    schema:name "Ragnir"^^xsd:string ;
-    kg-ont:affiliation kg-res:House_of_Hador ;
-    kg-ont:people kg-res:Edain ;
-    kg-ont:position "Outlaw"^^xsd:string .
-
-kg-res:Ragnir_servant a kg-ont:Character ;
-    rdfs:label "Ragnir (servant)"^^xsd:string,
-        "Ragnir"@en ;
     schema:gender "Male"^^xsd:string,
         "Male" ;
     schema:inLanguage kg-res:Taliska ;
@@ -9175,11 +9160,22 @@ kg-res:Ragnir_servant a kg-ont:Character ;
     kg-ont:affiliation kg-res:House_of_Hador ;
     kg-ont:birthDate "Late ,First Age" ;
     kg-ont:deathDate "Late First Age" ;
-    kg-ont:eyes "Blind"^^xsd:string ;
     kg-ont:people kg-res:Edain ;
-    kg-ont:position kg-res:Morwen ;
+    kg-ont:position "Outlaw"^^xsd:string ;
     kg-ont:race "Men" ;
     owl:sameAs <http://dbpedia.org/resource/Ragnir> .
+
+kg-res:Ragnir_servant a kg-ont:Character ;
+    rdfs:label "Ragnir (servant)"^^xsd:string,
+        "Ragnir"@en ;
+    schema:gender "Male"^^xsd:string ;
+    schema:inLanguage kg-res:Taliska ;
+    schema:location kg-res:Dor_lomin ;
+    schema:name "Ragnir"^^xsd:string ;
+    kg-ont:affiliation kg-res:House_of_Hador ;
+    kg-ont:eyes "Blind"^^xsd:string ;
+    kg-ont:people kg-res:Edain ;
+    kg-ont:position kg-res:Morwen .
 
 kg-res:Ragnor a kg-ont:Character ;
     rdfs:label "Ragnor"^^xsd:string,
@@ -9272,7 +9268,8 @@ kg-res:Rian_Kip_Chapman a kg-ont:Character ;
         "Rían"@en ;
     schema:description kg-res:Galadriel,
         kg-res:Sauron ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Female",
+        "Male"^^xsd:string ;
     schema:inLanguage kg-res:Quenya,
         kg-res:Sindarin ;
     schema:location kg-res:Durnost,
@@ -9280,10 +9277,15 @@ kg-res:Rian_Kip_Chapman a kg-ont:Character ;
         kg-res:Valinor ;
     schema:name "Rían"^^xsd:string ;
     kg-ont:affiliation kg-res:Galadriel ;
-    kg-ont:birthDate "First Age"^^xsd:string ;
+    kg-ont:birthDate "FA 450",
+        "First Age"^^xsd:string ;
+    kg-ont:deathDate "FA 473" ;
     kg-ont:hair "Blond"^^xsd:string ;
     kg-ont:people kg-res:Elves ;
-    kg-ont:sailedwest kg-res:Second_Age .
+    kg-ont:race "Men" ;
+    kg-ont:sailedwest kg-res:Second_Age ;
+    kg-ont:spouse "Huor" ;
+    owl:sameAs <http://dbpedia.org/resource/R%C3%ADan> .
 
 kg-res:Richard_E._Blackwelder a schema:Person ;
     rdfs:label "Richard E. Blackwelder"^^xsd:string,
@@ -10847,13 +10849,6 @@ kg-res:The_Ruined_Enchanter a schema:CreativeWork ;
     kg-ont:written kg-res:11_November,
         kg-res:1919 .
 
-kg-res:The_Shire_video_game a schema:VideoGame ;
-    rdfs:label "The Shire (video game)"^^xsd:string,
-        "The Shire"@en ;
-    schema:datePublished kg-res:1979 ;
-    schema:genre kg-res:wikipedia_Interactive_fiction ;
-    schema:name "The Shire"^^xsd:string .
-
 kg-res:The_Siege_of_Minas_Tirith a schema:Game ;
     rdfs:label "The Siege of Minas Tirith"^^xsd:string,
         "The Siege of Minas Tirith"@en ;
@@ -12398,7 +12393,7 @@ kg-card:LE-14 a schema:CreativeWork ;
         "Hador"@es,
         "Hador"@fr,
         "Hador"@nl ;
-    schema:about kg-res:Hador ;
+    schema:about kg-res:Hador_Steward_of_Gondor ;
     schema:identifier "LE-14" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/le/Hador.jpg> .
 
@@ -12488,7 +12483,7 @@ kg-card:LE-291 a schema:CreativeWork ;
         "Uruk-hai"@es,
         "Uruk-Haï"@fr,
         "Uruk-hai"@nl ;
-    schema:about kg-res:Uruk_hai ;
+    schema:about kg-res:Uruk_Hai ;
     schema:identifier "LE-291" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/le/Urukhai.jpg> .
 
@@ -13008,7 +13003,7 @@ kg-card:TD-28 a schema:CreativeWork ;
         "Gothmog"@fr,
         "ゴスモグ"@ja,
         "Gothmog"@nl ;
-    schema:about kg-res:Gothmog_Lieutenant_of_Morgul ;
+    schema:about kg-res:Gothmog_balrog ;
     schema:identifier "TD-28" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/td/Gothmog.jpg> .
 
@@ -13085,7 +13080,7 @@ kg-card:TD-92 a schema:CreativeWork ;
         "Galdor"@fr,
         "ガルドール"@ja,
         "Galdor"@nl ;
-    schema:about kg-res:Galdor_elf_of_the_Havens ;
+    schema:about kg-res:Galdor_man_of_Rohan ;
     schema:identifier "TD-92" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/td/Galdor.jpg> .
 
@@ -13146,7 +13141,7 @@ kg-card:TW-113 a schema:CreativeWork ;
         "Re Stregone di Angmar"@it,
         "アングマールの魔王"@ja,
         "Witch-king of Angmar"@nl ;
-    schema:about kg-res:Witch_King_of_Angmar ;
+    schema:about kg-res:Witch_king ;
     schema:identifier "TW-113" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/WitchkingofAngmar.jpg> .
 
@@ -13237,7 +13232,7 @@ kg-card:TW-126 a schema:CreativeWork ;
         "Beorn"@it,
         "ビヨルン"@ja,
         "Beorn"@nl ;
-    schema:about kg-res:Beorn_son_of_Heden ;
+    schema:about kg-res:Beorn ;
     schema:identifier "TW-126" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Beorn.jpg> .
 
@@ -13250,7 +13245,7 @@ kg-card:TW-127 a schema:CreativeWork ;
         "Beregond"@it,
         "ベレゴンド"@ja,
         "Beregond"@nl ;
-    schema:about kg-res:Beregond_Steward_of_Gondor ;
+    schema:about kg-res:Beregond ;
     schema:identifier "TW-127" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Beregond.jpg> .
 
@@ -13614,7 +13609,7 @@ kg-card:TW-164 a schema:CreativeWork ;
         "Haldir"@it,
         "ハルディア"@ja,
         "Haldir"@nl ;
-    schema:about kg-res:Haldir ;
+    schema:about kg-res:Haldir_Chieftain_of_Brethil ;
     schema:identifier "TW-164" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Haldir.jpg> .
 
@@ -13718,7 +13713,7 @@ kg-card:TW-172 a schema:CreativeWork ;
         "Óin"@it,
         "オイン"@ja,
         "Óin"@nl ;
-    schema:about kg-res:Oin ;
+    schema:about kg-res:Oin_King_of_Durin_s_Folk ;
     schema:identifier "TW-172" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/Oin.jpg> .
 
@@ -15174,7 +15169,7 @@ kg-card:TW-486 a schema:CreativeWork ;
         "La Contea"@it,
         "ホビット庄"@ja,
         "The Shire"@nl ;
-    schema:about kg-res:The_Shire ;
+    schema:about kg-res:The_Shire_video_game ;
     schema:identifier "TW-486" ;
     schema:image <https://cdn.jsdelivr.net/gh/council-of-rivendell/meccg-remaster/en-remaster/tw/TheShire.jpg> .
 
@@ -16760,12 +16755,19 @@ kg-res:Barahir_grandson_of_Faramir a kg-ont:Character ;
     rdfs:label "Barahir (grandson of Faramir)"^^xsd:string,
         "Barahir"@en ;
     schema:description kg-res:The_Tale_of_Aragorn_and_Arwen ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:location kg-res:Gondor ;
     schema:name "Barahir"^^xsd:string ;
+    kg-ont:birthDate "FA 402" ;
+    kg-ont:deathDate "FA 460" ;
     kg-ont:family kg-res:House_of_Hurin ;
+    kg-ont:hair "Possibly dark" ;
     kg-ont:parentage kg-res:Elboron ;
-    kg-ont:people kg-res:Gondorians .
+    kg-ont:people kg-res:Gondorians ;
+    kg-ont:race "Men" ;
+    kg-ont:spouse "Emeldir" ;
+    owl:sameAs <http://dbpedia.org/resource/Barahir> .
 
 kg-res:Baranor_Man_of_Gondor rdfs:label "Baranor (Man of Gondor)"^^xsd:string,
         "Baranor (Man of Gondor)"@en .
@@ -16835,6 +16837,23 @@ kg-res:Belmarie rdfs:label "Belmarie"^^xsd:string,
 
 kg-res:Beorn_s_Hall rdfs:label "Beorn's Hall"^^xsd:string,
         "Beorn's Hall"@en .
+
+kg-res:Beorn_son_of_Heden a kg-ont:Character ;
+    rdfs:label "Beorn (son of Heden)"^^xsd:string,
+        "Beorn"@en ;
+    schema:gender "Male"^^xsd:string ;
+    schema:inLanguage kg-res:Old_English ;
+    schema:location kg-res:wikipedia_Anglia_peninsula ;
+    schema:name "Beorn"^^xsd:string ;
+    kg-ont:deathDate "5th century AD"^^xsd:string ;
+    kg-ont:other_names kg-res:Gnomish,
+        kg-res:Gothic,
+        kg-res:Old_English,
+        kg-res:Qenya,
+        "Veran, Verain (Q)|||Beren (G)|||Bernus (Go)|||Bera(n) (OE)"^^xsd:string ;
+    kg-ont:parentage kg-res:Heden ;
+    kg-ont:people kg-res:wikipedia_Angles_tribe ;
+    kg-ont:sibling kg-res:Eoh .
 
 kg-res:Bereg a kg-ont:Character ;
     rdfs:label "Bereg"^^xsd:string,
@@ -17932,12 +17951,17 @@ kg-res:Duilin_elf_of_Gondolin a kg-ont:Character ;
 kg-res:Duilin_father_of_Saelon a kg-ont:Character ;
     rdfs:label "Duilin (father of Saelon)"^^xsd:string,
         "Duilin"@en ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:inLanguage kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Duilin"^^xsd:string ;
+    kg-ont:birthDate "Late ,Third Age" ;
     kg-ont:children kg-res:Saelon ;
-    kg-ont:people kg-res:Gondorians .
+    kg-ont:deathDate "TA 3019" ;
+    kg-ont:people kg-res:Gondorians ;
+    kg-ont:race "Men" ;
+    owl:sameAs <http://dbpedia.org/resource/Duilin> .
 
 kg-res:Duilond rdfs:label "Duilond"^^xsd:string,
         "Duilond"@en .
@@ -17999,8 +18023,7 @@ kg-res:Dunhir a kg-ont:Character ;
     kg-ont:sibling kg-res:Baranor_video_game_character .
 
 kg-res:Durin rdfs:label "Durin"^^xsd:string,
-        "Durin"@en ;
-    owl:sameAs <http://dbpedia.org/resource/Durin> .
+        "Durin"@en .
 
 kg-res:Durin_I a kg-ont:Character ;
     rdfs:label "Durin I"^^xsd:string,
@@ -18031,7 +18054,8 @@ kg-res:Durin_I a kg-ont:Character ;
     kg-ont:position kg-res:King_of_Durin_s_Folk,
         kg-res:King_of_Khazad_dum ;
     kg-ont:rule "First Age (encompassing both the Years of the Trees"^^xsd:string,
-        "of the Sun)"^^xsd:string .
+        "of the Sun)"^^xsd:string ;
+    owl:sameAs <http://dbpedia.org/resource/Durin> .
 
 kg-res:Durin_II a kg-ont:Character ;
     rdfs:label "Durin II"^^xsd:string,
@@ -18284,25 +18308,19 @@ kg-res:Egalmoth_Steward_of_Gondor a kg-ont:Character ;
     rdfs:label "Egalmoth (Steward of Gondor)"^^xsd:string,
         "Egalmoth"@en ;
     schema:age "117"^^xsd:string ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:inLanguage kg-res:Sindarin,
         kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Egalmoth"^^xsd:string ;
-    kg-ont:birthDate "TA 2626"^^xsd:string,
-        "TA 2626" ;
+    kg-ont:birthDate "TA 2626"^^xsd:string ;
     kg-ont:children kg-res:Beren_Steward_of_Gondor ;
-    kg-ont:deathDate "TA 2743"^^xsd:string,
-        "TA 2743" ;
+    kg-ont:deathDate "TA 2743"^^xsd:string ;
     kg-ont:family kg-res:House_of_Hurin ;
     kg-ont:parentage kg-res:Morwen_daughter_of_Belecthor ;
     kg-ont:people kg-res:Gondorians ;
     kg-ont:position kg-res:Ruling_Steward ;
-    kg-ont:race "Men" ;
-    kg-ont:rule "TA 2698 - TA 2743 (45 years)"^^xsd:string ;
-    kg-ont:spouse "Unnamed wife" ;
-    owl:sameAs <http://dbpedia.org/resource/Egalmoth> .
+    kg-ont:rule "TA 2698 - TA 2743 (45 years)"^^xsd:string .
 
 kg-res:Egnor rdfs:label "Egnor"^^xsd:string,
         "Egnor"@en .
@@ -18779,26 +18797,26 @@ kg-res:Firiel_The_Last_Ship a kg-ont:Character ;
     rdfs:label "Fíriel (The Last Ship)"^^xsd:string,
         "Fíriel"@en ;
     schema:caption kg-res:Category_Images_by_Eva_Zahradnikova ;
-    schema:gender "Female"^^xsd:string ;
-    schema:image "Eva Zahradníková - The Last Ship.jpg"^^xsd:string ;
-    schema:name "Fíriel"^^xsd:string ;
-    kg-ont:people kg-res:Men .
-
-kg-res:Firiel_The_Lost_Road a kg-ont:Character ;
-    rdfs:label "Fíriel (The Lost Road)"^^xsd:string,
-        "Fíriel"@en ;
     schema:gender "Female"^^xsd:string,
         "Female" ;
-    schema:inLanguage kg-res:Quenya ;
-    schema:location kg-res:Numenor ;
+    schema:image "Eva Zahradníková - The Last Ship.jpg"^^xsd:string ;
     schema:name "Fíriel"^^xsd:string ;
     kg-ont:birthDate "TA 1896" ;
-    kg-ont:parentage kg-res:Orontor ;
-    kg-ont:people kg-res:Numenoreans ;
+    kg-ont:people kg-res:Men ;
     kg-ont:race "Men" ;
     kg-ont:realm "Arthedain" ;
     kg-ont:spouse "Arvedui" ;
     owl:sameAs <http://dbpedia.org/resource/F%C3%ADriel> .
+
+kg-res:Firiel_The_Lost_Road a kg-ont:Character ;
+    rdfs:label "Fíriel (The Lost Road)"^^xsd:string,
+        "Fíriel"@en ;
+    schema:gender "Female"^^xsd:string ;
+    schema:inLanguage kg-res:Quenya ;
+    schema:location kg-res:Numenor ;
+    schema:name "Fíriel"^^xsd:string ;
+    kg-ont:parentage kg-res:Orontor ;
+    kg-ont:people kg-res:Numenoreans .
 
 kg-res:Firienholt a kg-ont:Location ;
     rdfs:label "Firienholt"^^xsd:string,
@@ -19023,25 +19041,27 @@ kg-res:Galbasi rdfs:label "Galbasi"^^xsd:string,
 kg-res:Galdor rdfs:label "Galdor"^^xsd:string,
         "Galdor"@en .
 
-kg-res:Galdor_elf_of_the_Havens a kg-ont:Character ;
-    rdfs:label "Galdor (elf of the Havens)"^^xsd:string,
+kg-res:Galdor_man_of_Rohan a kg-ont:Character ;
+    rdfs:label "Galdor (man of Rohan)"^^xsd:string,
         "Galdor"@de,
         "Galdor"@en,
         "Galdor"@es,
         "Galdor"@fr,
         "ガルドール"@ja,
         "Galdor"@nl ;
-    schema:caption kg-res:Category_Images_by_Stephen_Schwartz ;
     schema:gender "Male"^^xsd:string,
         "Male" ;
-    schema:image "Stephen Schwartz - Galdor.jpg"^^xsd:string ;
-    schema:location kg-res:Grey_Havens ;
+    schema:inLanguage kg-res:Rohanese,
+        kg-res:Westron ;
+    schema:location kg-res:Edoras ;
     schema:name "Galdor"^^xsd:string ;
     schema:subjectOf kg-card:TD-92 ;
     kg-ont:birthDate "FA 417" ;
     kg-ont:deathDate "FA 462" ;
     kg-ont:height "Tall" ;
-    kg-ont:people kg-res:Sindar ;
+    kg-ont:other_names "Ealdor"^^xsd:string ;
+    kg-ont:people kg-res:Rohirrim ;
+    kg-ont:position "Seneschal"^^xsd:string ;
     kg-ont:race "Men" ;
     kg-ont:spouse "Hareth" ;
     owl:sameAs <http://dbpedia.org/resource/Galdor> .
@@ -19416,41 +19436,6 @@ kg-res:Gorgumoth rdfs:label "Gorgumoth"^^xsd:string,
 kg-res:Gothmog rdfs:label "Gothmog"^^xsd:string,
         "Gothmog"@en .
 
-kg-res:Gothmog_Lieutenant_of_Morgul a kg-ont:Character ;
-    rdfs:label "Gothmog (Lieutenant of Morgul)"^^xsd:string,
-        "Gothmog"@de,
-        "Gothmog"@en,
-        "Gothmog (Lieutenant of Morgul)"@en,
-        "Gothmog"@es,
-        "Gothmog"@fr,
-        "ゴスモグ"@ja,
-        "Gothmog"@nl ;
-    schema:caption kg-res:John_Howe ;
-    schema:gender "Male" ;
-    schema:image "John Howe - Gothmog 01.jpg"^^xsd:string ;
-    schema:inLanguage kg-res:Black_Speech,
-        kg-res:Westron ;
-    schema:location kg-res:Mordor ;
-    schema:name "Gothmog"^^xsd:string ;
-    schema:subjectOf kg-card:TD-28 ;
-    kg-ont:affiliation kg-res:Sauron,
-        kg-res:Witch_king ;
-    kg-ont:birthDate "Before the creation of ,Arda" ;
-    kg-ont:deathDate "FA 510",
-        "March 15, 3019 (film)",
-        "Probably 15 March TA 3019"^^xsd:string ;
-    kg-ont:deathLocation kg-res:Battle_of_the_Pelennor_Fields ;
-    kg-ont:hair "white/gray, possibly light brown (film)" ;
-    kg-ont:height "5'9\" - 6'4\" (film)" ;
-    kg-ont:people "Unknown"^^xsd:string ;
-    kg-ont:position kg-res:Morgul,
-        kg-res:Witch_king ;
-    kg-ont:race "Maiar,Balrogs",
-        "Orc" ;
-    kg-ont:realm "Minas Morgul,the Witch-King" ;
-    kg-ont:spouse "None" ;
-    owl:sameAs <http://dbpedia.org/resource/Gothmog> .
-
 kg-res:Grandfather_Yule rdfs:label "Grandfather Yule"^^xsd:string,
         "Grandfather Yule"@en .
 
@@ -19667,6 +19652,40 @@ kg-res:Halbarad a kg-ont:Character ;
     kg-ont:position kg-res:Rangers_of_the_North ;
     kg-ont:race "Men" ;
     owl:sameAs <http://dbpedia.org/resource/Halbarad> .
+
+kg-res:Haldir_Chieftain_of_Brethil a kg-ont:Character ;
+    rdfs:label "Haldir (Chieftain of Brethil)"^^xsd:string,
+        "Haldir"@de,
+        "Haldir"@en,
+        "Haldir"@es,
+        "Haldir"@fi,
+        "Haldir"@fr,
+        "Haldir"@it,
+        "ハルディア"@ja,
+        "Haldir"@nl ;
+    schema:age "58"^^xsd:string ;
+    schema:caption kg-res:Category_Images_by_Matej_Cadil ;
+    schema:gender "Male"^^xsd:string ;
+    schema:image "Glóredhel.jpg"^^xsd:string,
+        "Matěj Čadil - Haldir"^^xsd:string ;
+    schema:inLanguage kg-res:Halethian ;
+    schema:location kg-res:Brethil ;
+    schema:name "Haldir"^^xsd:string ;
+    schema:subjectOf kg-card:TW-164 ;
+    kg-ont:birthDate "FA 414"^^xsd:string ;
+    kg-ont:birthLocation kg-res:Brethil ;
+    kg-ont:children kg-res:Handir ;
+    kg-ont:deathDate "FA 472"^^xsd:string ;
+    kg-ont:deathLocation kg-res:Nirnaeth_Arnoediad ;
+    kg-ont:family kg-res:House_of_Haleth ;
+    kg-ont:parentage kg-res:Halmir ;
+    kg-ont:people kg-res:Edain ;
+    kg-ont:position kg-res:Halad ;
+    kg-ont:sibling kg-res:Hareth,
+        kg-res:Hiril,
+        kg-res:Hundar ;
+    kg-ont:spouse kg-res:Gloredhel ;
+    owl:sameAs <http://dbpedia.org/resource/Haldir> .
 
 kg-res:Haldir_son_of_Orodreth a kg-ont:Character ;
     rdfs:label "Haldir (son of Orodreth)"^^xsd:string,
@@ -20052,17 +20071,24 @@ kg-res:Hurin_Warden_of_the_Keys a kg-ont:Character ;
     rdfs:label "Húrin (Warden of the Keys)"^^xsd:string,
         "Húrin"@en ;
     schema:caption kg-res:Peter_Xavier_Price ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "Peter Xavier Price - Hurin of the Keys.jpeg"^^xsd:string ;
     schema:inLanguage kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Húrin"^^xsd:string ;
-    kg-ont:birthDate "Late Third Age"^^xsd:string ;
-    kg-ont:deathDate "Presumably early Fourth Age"^^xsd:string ;
+    kg-ont:birthDate "FA 441",
+        "Late Third Age"^^xsd:string ;
+    kg-ont:deathDate "FA 502",
+        "Presumably early Fourth Age"^^xsd:string ;
+    kg-ont:hair "Golden, grey (in old age)" ;
     kg-ont:other_names "\"of the Keys\""^^xsd:string,
         "\"the Tall\""^^xsd:string ;
     kg-ont:people kg-res:Gondorians ;
-    kg-ont:position kg-res:Warden_of_the_Keys .
+    kg-ont:position kg-res:Warden_of_the_Keys ;
+    kg-ont:race "Men" ;
+    kg-ont:spouse "Morwen Eledhwen" ;
+    owl:sameAs <http://dbpedia.org/resource/H%C3%BArin> .
 
 kg-res:Hyarmen rdfs:label "Hyarmen"^^xsd:string,
         "Hyarmen"@en .
@@ -20715,21 +20741,14 @@ kg-res:Luthien_disambiguation rdfs:label "Lúthien (disambiguation)"^^xsd:string
 kg-res:Luthien_son_of_Telimektar a kg-ont:Character ;
     rdfs:label "Lúthien (son of Telimektar)"^^xsd:string,
         "Lúthien"@en ;
-    schema:gender "Female",
-        "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string ;
     schema:location kg-res:Valinor ;
     schema:name "Lúthien"^^xsd:string ;
-    kg-ont:birthDate "YT 1200" ;
-    kg-ont:deathDate "FA 503" ;
-    kg-ont:hair "Black" ;
     kg-ont:other_names kg-res:Qenya,
         "Lúsion (possibly Q)"^^xsd:string ;
     kg-ont:parentage kg-res:Telimektar ;
     kg-ont:people kg-res:Valar_Other_versions_of_the_legendarium ;
-    kg-ont:people_duplicated kg-res:Valar ;
-    kg-ont:race "Elves,Maiar" ;
-    kg-ont:spouse "Beren Erchamion" ;
-    owl:sameAs <http://dbpedia.org/resource/L%C3%BAthien> .
+    kg-ont:people_duplicated kg-res:Valar .
 
 kg-res:Mablung_ranger_of_Ithilien a kg-ont:Character ;
     rdfs:label "Mablung (ranger of Ithilien)"^^xsd:string,
@@ -22880,6 +22899,22 @@ kg-res:The_Road_Goes_Ever_On_book rdfs:label "The Road Goes Ever On (book)"^^xsd
 kg-res:The_Road_Goes_Ever_on_..._Pt._1 rdfs:label "The Road Goes Ever on ... Pt. 1"^^xsd:string,
         "The Road Goes Ever on ... Pt. 1"@en .
 
+kg-res:The_Shire_video_game a schema:VideoGame ;
+    rdfs:label "The Shire (video game)"^^xsd:string,
+        "Das Auenland"@de,
+        "The Shire"@en,
+        "La Comarca"@es,
+        "Kontu"@fi,
+        "La Comté"@fr,
+        "La Contea"@it,
+        "ホビット庄"@ja,
+        "The Shire"@nl ;
+    schema:datePublished kg-res:1979 ;
+    schema:genre kg-res:wikipedia_Interactive_fiction ;
+    schema:name "The Shire"^^xsd:string ;
+    schema:subjectOf kg-card:TW-486 ;
+    owl:sameAs <http://dbpedia.org/resource/The_Shire> .
+
 kg-res:The_Siege_of_Gondor_soundtrack rdfs:label "The Siege of Gondor (soundtrack)"^^xsd:string,
         "The Siege of Gondor (soundtrack)"@en .
 
@@ -23321,9 +23356,6 @@ kg-res:University_of_Oxford_Queen_s_College rdfs:label "University of Oxford#Que
 kg-res:Urd rdfs:label "Urd"^^xsd:string,
         "Urd"@en .
 
-kg-res:Uruk_Hai rdfs:label "Uruk-Hai"^^xsd:string,
-        "Uruk-Hai"@en .
-
 kg-res:Vaire a kg-ont:Character ;
     rdfs:label "Vairë"^^xsd:string,
         "Vairë"@en ;
@@ -23700,6 +23732,9 @@ kg-res:Windfola a kg-ont:Character ;
 
 kg-res:Window_of_the_Eye rdfs:label "Window of the Eye"^^xsd:string,
         "Window of the Eye"@en .
+
+kg-res:Witch_King_of_Angmar rdfs:label "Witch-King of Angmar"^^xsd:string,
+        "Witch-King of Angmar"@en .
 
 kg-res:Withywindle rdfs:label "Withywindle"^^xsd:string,
         "Weidenwinde"@de,
@@ -25288,17 +25323,22 @@ kg-res:Barad_Eithel rdfs:label "Barad Eithel"^^xsd:string,
 kg-res:Baranor_video_game_character a kg-ont:Character ;
     rdfs:label "Baranor (video game character)"^^xsd:string,
         "Baranor"@en ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:inLanguage kg-res:Westron ;
     schema:location kg-res:Angle ;
     schema:name "Baranor"^^xsd:string ;
     kg-ont:1 "caption"^^xsd:string ;
     kg-ont:affiliation kg-res:Dunedain_of_Arnor ;
+    kg-ont:birthDate "FA 317" ;
     kg-ont:children kg-res:Eradan ;
     kg-ont:deathLocation kg-res:Misty_Mountains ;
     kg-ont:people kg-res:Arnor ;
     kg-ont:position kg-res:Rangers_of_the_North ;
-    kg-ont:sibling kg-res:Dunhir .
+    kg-ont:race "Men" ;
+    kg-ont:sibling kg-res:Dunhir ;
+    kg-ont:spouse "Unnamed wife" ;
+    owl:sameAs <http://dbpedia.org/resource/Baranor> .
 
 kg-res:Bard_II a kg-ont:Character ;
     rdfs:label "Bard II"^^xsd:string,
@@ -25509,57 +25549,6 @@ kg-res:Belegor a kg-ont:Character ;
     kg-ont:people kg-res:Edain ;
     kg-ont:sibling kg-res:Boromir_Lord_of_Ladros .
 
-kg-res:Beorn a kg-ont:Character ;
-    rdfs:label "Beorn"^^xsd:string,
-        "Beorn"@en ;
-    schema:caption kg-res:Category_Images_by_Lelia ;
-    schema:description kg-res:Skin_changers ;
-    schema:gender "Male"^^xsd:string ;
-    schema:image "Lelia - Beorn.jpg"^^xsd:string ;
-    schema:inLanguage kg-res:Westron ;
-    schema:location kg-res:Beorn_s_Hall ;
-    schema:name "Beorn"^^xsd:string ;
-    kg-ont:affiliation kg-res:Beornings,
-        kg-res:Thorin_and_Company ;
-    kg-ont:birthDate "Before TA 2941"^^xsd:string ;
-    kg-ont:children kg-res:Grimbeorn ;
-    kg-ont:clothing "Woollen tunic"^^xsd:string ;
-    kg-ont:deathDate "Before TA 3018"^^xsd:string ;
-    kg-ont:hair "Black"^^xsd:string ;
-    kg-ont:height "Tall"^^xsd:string ;
-    kg-ont:people kg-res:Northmen .
-
-kg-res:Beorn_son_of_Heden a kg-ont:Character ;
-    rdfs:label "Beorn (son of Heden)"^^xsd:string,
-        "Beorn"@de,
-        "Beorn"@en,
-        "Beorn"@es,
-        "Beorn"@fi,
-        "Beorn"@fr,
-        "Beorn"@it,
-        "ビヨルン"@ja,
-        "Beorn"@nl ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
-    schema:inLanguage kg-res:Old_English ;
-    schema:location kg-res:wikipedia_Anglia_peninsula ;
-    schema:name "Beorn"^^xsd:string ;
-    schema:subjectOf kg-card:TW-126 ;
-    kg-ont:deathDate "5th century AD"^^xsd:string,
-        "Before the ,War of the Ring" ;
-    kg-ont:hair "Black" ;
-    kg-ont:height "Tall" ;
-    kg-ont:other_names kg-res:Gnomish,
-        kg-res:Gothic,
-        kg-res:Old_English,
-        kg-res:Qenya,
-        "Veran, Verain (Q)|||Beren (G)|||Bernus (Go)|||Bera(n) (OE)"^^xsd:string ;
-    kg-ont:parentage kg-res:Heden ;
-    kg-ont:people kg-res:wikipedia_Angles_tribe ;
-    kg-ont:race "Skin-changer" ;
-    kg-ont:sibling kg-res:Eoh ;
-    owl:sameAs <http://dbpedia.org/resource/Beorn> .
-
 kg-res:Beregar a kg-ont:Character ;
     rdfs:label "Beregar"^^xsd:string,
         "Beregar"@de,
@@ -25573,6 +25562,21 @@ kg-res:Beregar a kg-ont:Character ;
     kg-ont:children kg-res:Erendis ;
     kg-ont:people kg-res:Numenoreans ;
     kg-ont:spouse kg-res:Nuneth .
+
+kg-res:Beregond_Steward_of_Gondor a kg-ont:Character ;
+    rdfs:label "Beregond (Steward of Gondor)"^^xsd:string,
+        "Beregond"@en ;
+    schema:age "111"^^xsd:string ;
+    schema:gender "Male"^^xsd:string ;
+    schema:name "Beregond"^^xsd:string ;
+    kg-ont:birthDate "TA 2700"^^xsd:string ;
+    kg-ont:children kg-res:Belecthor_II ;
+    kg-ont:deathDate "TA 2811"^^xsd:string ;
+    kg-ont:family kg-res:House_of_Hurin ;
+    kg-ont:parentage kg-res:Beren_Steward_of_Gondor ;
+    kg-ont:people kg-res:Gondorians ;
+    kg-ont:position kg-res:Ruling_Steward ;
+    kg-ont:rule "TA 2763 - TA 2811 (48 years)"^^xsd:string .
 
 kg-res:Beren_Steward_of_Gondor a kg-ont:Character ;
     rdfs:label "Beren (Steward of Gondor)"^^xsd:string,
@@ -25683,18 +25687,25 @@ kg-res:Calimehtar_King_of_Gondor a kg-ont:Character ;
     rdfs:label "Calimehtar (King of Gondor)"^^xsd:string,
         "Calimehtar"@en ;
     schema:age "200"^^xsd:string ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:inLanguage kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Calimehtar"^^xsd:string ;
-    kg-ont:birthDate "TA 1736"^^xsd:string ;
+    kg-ont:birthDate "TA 1736"^^xsd:string,
+        "TA 1736" ;
     kg-ont:children kg-res:Ondoher ;
-    kg-ont:deathDate "TA 1936"^^xsd:string ;
+    kg-ont:deathDate "TA 1936"^^xsd:string,
+        "TA 1936" ;
     kg-ont:family kg-res:House_of_Anarion ;
     kg-ont:parentage kg-res:Narmacil_II ;
     kg-ont:people kg-res:Gondorians ;
     kg-ont:position kg-res:Kings_of_Gondor ;
-    kg-ont:rule "TA 1856 - TA 1936 (80 years)"^^xsd:string .
+    kg-ont:race "Men" ;
+    kg-ont:realm "Gondor" ;
+    kg-ont:rule "TA 1856 - TA 1936 (80 years)"^^xsd:string ;
+    kg-ont:spouse "Unnamed wife" ;
+    owl:sameAs <http://dbpedia.org/resource/Calimehtar> .
 
 kg-res:Calimmacil a kg-ont:Character ;
     rdfs:label "Calimmacil"^^xsd:string,
@@ -26424,23 +26435,18 @@ kg-res:Duilin_son_of_Duinhir a kg-ont:Character ;
     rdfs:label "Duilin (son of Duinhir)"^^xsd:string,
         "Duilin"@en ;
     schema:caption kg-res:The_Lord_of_the_Rings_Trading_Card_Game ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "Decipher - Duilin.jpg"^^xsd:string ;
     schema:location kg-res:Gondor ;
     schema:name "Duilin"^^xsd:string ;
-    kg-ont:birthDate "Late ,Third Age",
-        "Late Third Age"^^xsd:string ;
+    kg-ont:birthDate "Late Third Age"^^xsd:string ;
     kg-ont:deathDate "15 March"^^xsd:string,
-        "TA 3019"^^xsd:string,
-        "TA 3019" ;
+        "TA 3019"^^xsd:string ;
     kg-ont:deathLocation kg-res:Battle_of_the_Pelennor_Fields ;
     kg-ont:parentage kg-res:Duinhir ;
     kg-ont:people kg-res:Gondorians ;
-    kg-ont:race "Men" ;
     kg-ont:sibling kg-res:Derufin ;
-    kg-ont:weapons "Bow"^^xsd:string ;
-    owl:sameAs <http://dbpedia.org/resource/Duilin> .
+    kg-ont:weapons "Bow"^^xsd:string .
 
 kg-res:Duinhir a kg-ont:Character ;
     rdfs:label "Duinhir"^^xsd:string,
@@ -26496,20 +26502,27 @@ kg-res:Earendil_King_of_Gondor a kg-ont:Character ;
         "Eärendil"@en ;
     schema:age "276"^^xsd:string ;
     schema:caption kg-res:Matej_Cadil ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "Matěj Čadil - Eärendil of Gondor.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Sindarin,
         kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Eärendil"^^xsd:string ;
-    kg-ont:birthDate "TA 48"^^xsd:string ;
+    kg-ont:birthDate "FA 503",
+        "TA 48"^^xsd:string ;
     kg-ont:children kg-res:Anardil_King_of_Gondor ;
-    kg-ont:deathDate "TA 324"^^xsd:string ;
+    kg-ont:deathDate "Still Alive",
+        "TA 324"^^xsd:string ;
     kg-ont:family kg-res:House_of_Anarion ;
+    kg-ont:hair "Golden" ;
     kg-ont:parentage kg-res:Cemendur_King_of_Gondor ;
     kg-ont:people kg-res:Gondorians ;
     kg-ont:position kg-res:Kings_of_Gondor ;
-    kg-ont:rule "TA 238 - TA 324 (86 years)"^^xsd:string .
+    kg-ont:race "Half-elven" ;
+    kg-ont:rule "TA 238 - TA 324 (86 years)"^^xsd:string ;
+    kg-ont:spouse "Elwing" ;
+    owl:sameAs <http://dbpedia.org/resource/E%C3%A4rendil> .
 
 kg-res:Earendur_King_of_Arnor a kg-ont:Character ;
     rdfs:label "Eärendur (King of Arnor)"^^xsd:string,
@@ -27636,24 +27649,6 @@ kg-res:Guardians_of_Middle_earth a schema:VideoGame ;
 kg-res:Gwaith_i_Mirdain rdfs:label "Gwaith-i-Mírdain"^^xsd:string,
         "Gwaith-i-Mírdain"@en .
 
-kg-res:Hador_Steward_of_Gondor a kg-ont:Character ;
-    rdfs:label "Hador (Steward of Gondor)"^^xsd:string,
-        "Hador"@en ;
-    schema:age "150"^^xsd:string ;
-    schema:gender "Male"^^xsd:string ;
-    schema:inLanguage kg-res:Sindarin,
-        kg-res:Westron ;
-    schema:location kg-res:Gondor ;
-    schema:name "Hador"^^xsd:string ;
-    kg-ont:birthDate "TA 2245"^^xsd:string ;
-    kg-ont:children kg-res:Barahir_Steward_of_Gondor ;
-    kg-ont:deathDate "TA 2395"^^xsd:string ;
-    kg-ont:family kg-res:House_of_Hurin ;
-    kg-ont:parentage kg-res:Turin_I ;
-    kg-ont:people kg-res:Gondorians ;
-    kg-ont:position kg-res:Ruling_Steward ;
-    kg-ont:rule "TA 2278 - TA 2395 (117 years)"^^xsd:string .
-
 kg-res:Haldad a kg-ont:Character ;
     rdfs:label "Haldad"^^xsd:string,
         "Haldad"@de,
@@ -27706,20 +27701,26 @@ kg-res:Haleth a kg-ont:Character ;
         "Haleth"@en ;
     schema:age "79 years"^^xsd:string ;
     schema:caption kg-res:Category_Images_by_Turner_Mohan ;
-    schema:gender "Female"^^xsd:string ;
+    schema:gender "Female"^^xsd:string,
+        "Female" ;
     schema:image "Turner Mohan - Haleth.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Halethian,
         kg-res:Sindarin ;
     schema:location kg-res:Brethil ;
     schema:name "Haleth"^^xsd:string ;
-    kg-ont:birthDate "FA 341"^^xsd:string ;
+    kg-ont:birthDate "FA 341"^^xsd:string,
+        "FA 341" ;
     kg-ont:birthLocation kg-res:Thargelion ;
-    kg-ont:deathDate "FA 420"^^xsd:string ;
+    kg-ont:deathDate "FA 420"^^xsd:string,
+        "FA 420" ;
     kg-ont:family kg-res:House_of_Haleth ;
     kg-ont:parentage kg-res:Haldad ;
     kg-ont:people kg-res:Edain ;
     kg-ont:position kg-res:Halad ;
-    kg-ont:sibling kg-res:Haldar .
+    kg-ont:race "Men" ;
+    kg-ont:sibling kg-res:Haldar ;
+    kg-ont:spouse "None" ;
+    owl:sameAs <http://dbpedia.org/resource/Haleth> .
 
 kg-res:Hallas a kg-ont:Character ;
     rdfs:label "Hallas"^^xsd:string,
@@ -30327,27 +30328,19 @@ kg-res:Turgon_Steward_of_Gondor a kg-ont:Character ;
     rdfs:label "Turgon (Steward of Gondor)"^^xsd:string,
         "Turgon"@en ;
     schema:age "98"^^xsd:string ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:inLanguage kg-res:Sindarin,
         kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Turgon"^^xsd:string ;
-    kg-ont:birthDate "TA 2855"^^xsd:string,
-        "YT 1300" ;
+    kg-ont:birthDate "TA 2855"^^xsd:string ;
     kg-ont:children kg-res:Ecthelion_II ;
-    kg-ont:deathDate "FA 510",
-        "TA 2953"^^xsd:string ;
+    kg-ont:deathDate "TA 2953"^^xsd:string ;
     kg-ont:family kg-res:House_of_Hurin ;
-    kg-ont:hair "Dark" ;
     kg-ont:parentage kg-res:Turin_II ;
     kg-ont:people kg-res:Gondorians ;
     kg-ont:position kg-res:Ruling_Steward ;
-    kg-ont:race "Elves" ;
-    kg-ont:realm "Nevrast,Gondolin" ;
-    kg-ont:rule "TA 2914 - TA 2953 (39 years)"^^xsd:string ;
-    kg-ont:spouse "Elenwë" ;
-    owl:sameAs <http://dbpedia.org/resource/Turgon> .
+    kg-ont:rule "TA 2914 - TA 2953 (39 years)"^^xsd:string .
 
 kg-res:Turin_I a kg-ont:Character ;
     rdfs:label "Túrin I"^^xsd:string,
@@ -30447,6 +30440,16 @@ kg-res:United_States rdfs:label "United States"^^xsd:string,
 
 kg-res:University_of_Oxford rdfs:label "University of Oxford"^^xsd:string,
         "University of Oxford"@en .
+
+kg-res:Uruk_Hai rdfs:label "Uruk-Hai"^^xsd:string,
+        "Uruk-hai"@de,
+        "Uruk-Hai"@en,
+        "Uruk-hai"@en,
+        "Uruk-hai"@es,
+        "Uruk-Haï"@fr,
+        "Uruk-hai"@nl ;
+    schema:subjectOf kg-card:LE-291 ;
+    owl:sameAs <http://dbpedia.org/resource/Uruk-hai> .
 
 kg-res:Valandur a kg-ont:Character ;
     rdfs:label "Valandur"^^xsd:string,
@@ -30694,8 +30697,7 @@ kg-res:Wilcome_Cotton_I a kg-ont:Character ;
     kg-ont:other_names "\"Will\""^^xsd:string ;
     kg-ont:parentage kg-res:Holman_Cotton ;
     kg-ont:people kg-res:Hobbits ;
-    kg-ont:sibling kg-res:Farmer_Cotton ;
-    owl:sameAs <http://dbpedia.org/resource/Wilcome_Cotton> .
+    kg-ont:sibling kg-res:Farmer_Cotton .
 
 kg-res:Wiseman_Gamwich a kg-ont:Character ;
     rdfs:label "Wiseman Gamwich"^^xsd:string,
@@ -30714,26 +30716,6 @@ kg-res:Wiseman_Gamwich a kg-ont:Character ;
     kg-ont:race "Hobbit" ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Wiseman_Gamwich> .
-
-kg-res:Witch_King_of_Angmar rdfs:label "Witch-King of Angmar"^^xsd:string,
-        "Hexenkönig von Angmar"@de,
-        "Witch-King of Angmar"@en,
-        "Witch-king of Angmar"@en,
-        "El Rey Brujo de Angmar"@es,
-        "Angmarin Noitakuningas"@fi,
-        "Roi-Sorcier d'Angmar"@fr,
-        "Re Stregone di Angmar"@it,
-        "アングマールの魔王"@ja,
-        "Witch-king of Angmar"@nl ;
-    schema:gender "Male" ;
-    schema:subjectOf kg-card:TW-113 ;
-    kg-ont:birthDate "Mid-,Second Age" ;
-    kg-ont:deathDate "March 15 ,3019" ;
-    kg-ont:hair "Brown, graying, later white" ;
-    kg-ont:height "7' 1\" (2.13 metres)" ;
-    kg-ont:race "Men,Wraith" ;
-    kg-ont:realm "Angmar,Minas Morgul,Osgiliath" ;
-    owl:sameAs <http://dbpedia.org/resource/Witch-king_of_Angmar> .
 
 kg-res:Withered_Heath a kg-ont:Location ;
     rdfs:label "Withered Heath"^^xsd:string,
@@ -31506,69 +31488,59 @@ kg-res:Beor a kg-ont:Character ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/B%C3%ABor> .
 
-kg-res:Beregond a kg-ont:Character ;
-    rdfs:label "Beregond"^^xsd:string,
-        "Beregond"@en ;
-    schema:caption kg-res:William_O_Connor ;
-    schema:gender "Male"^^xsd:string ;
-    schema:image "Pippin.jpg"^^xsd:string,
-        "William O'Connor - Beregond"^^xsd:string ;
-    schema:inLanguage kg-res:Westron ;
-    schema:location kg-res:Gondor,
-        kg-res:Ithilien ;
-    schema:name "Beregond"^^xsd:string ;
-    kg-ont:birthDate "Late Third Age"^^xsd:string ;
-    kg-ont:children kg-res:Bergil ;
-    kg-ont:clothing "Black"^^xsd:string,
-        "silver livery"^^xsd:string ;
-    kg-ont:deathDate "During Fourth Age"^^xsd:string ;
-    kg-ont:parentage kg-res:Baranor_Man_of_Gondor ;
-    kg-ont:people kg-res:Gondorians ;
-    kg-ont:position kg-res:Guard_of_the_Citadel,
-        kg-res:White_Company,
-        "\"Beregond of the Guard\""^^xsd:string ;
-    kg-ont:weapons "Sword"^^xsd:string .
-
-kg-res:Beregond_Steward_of_Gondor a kg-ont:Character ;
-    rdfs:label "Beregond (Steward of Gondor)"^^xsd:string,
-        "Beregond"@de,
-        "Beregond"@en,
-        "Beregond"@es,
-        "Beregond"@fi,
-        "Beregond"@fr,
-        "Beregond"@it,
-        "ベレゴンド"@ja,
-        "Beregond"@nl ;
-    schema:age "111"^^xsd:string ;
+kg-res:Beorn a kg-ont:Character ;
+    rdfs:label "Beorn"^^xsd:string,
+        "Beorn"@de,
+        "Beorn"@en,
+        "Beorn"@es,
+        "Beorn"@fi,
+        "Beorn"@fr,
+        "Beorn"@it,
+        "ビヨルン"@ja,
+        "Beorn"@nl ;
+    schema:caption kg-res:Category_Images_by_Lelia ;
+    schema:description kg-res:Skin_changers ;
     schema:gender "Male"^^xsd:string,
         "Male" ;
-    schema:name "Beregond"^^xsd:string ;
-    schema:subjectOf kg-card:TW-127 ;
-    kg-ont:birthDate "TA 2700"^^xsd:string,
-        "TA 2700" ;
-    kg-ont:children kg-res:Belecthor_II ;
-    kg-ont:deathDate "TA 2811"^^xsd:string,
-        "TA 2811" ;
-    kg-ont:family kg-res:House_of_Hurin ;
-    kg-ont:parentage kg-res:Beren_Steward_of_Gondor ;
-    kg-ont:people kg-res:Gondorians ;
-    kg-ont:position kg-res:Ruling_Steward ;
-    kg-ont:race "Men" ;
-    kg-ont:rule "TA 2763 - TA 2811 (48 years)"^^xsd:string ;
-    kg-ont:spouse "Unnamed wife" ;
-    owl:sameAs <http://dbpedia.org/resource/Beregond> .
+    schema:image "Lelia - Beorn.jpg"^^xsd:string ;
+    schema:inLanguage kg-res:Westron ;
+    schema:location kg-res:Beorn_s_Hall ;
+    schema:name "Beorn"^^xsd:string ;
+    schema:subjectOf kg-card:TW-126 ;
+    kg-ont:affiliation kg-res:Beornings,
+        kg-res:Thorin_and_Company ;
+    kg-ont:birthDate "Before TA 2941"^^xsd:string ;
+    kg-ont:children kg-res:Grimbeorn ;
+    kg-ont:clothing "Woollen tunic"^^xsd:string ;
+    kg-ont:deathDate "Before TA 3018"^^xsd:string,
+        "Before the ,War of the Ring" ;
+    kg-ont:hair "Black"^^xsd:string,
+        "Black" ;
+    kg-ont:height "Tall"^^xsd:string,
+        "Tall" ;
+    kg-ont:people kg-res:Northmen ;
+    kg-ont:race "Skin-changer" ;
+    owl:sameAs <http://dbpedia.org/resource/Beorn> .
 
 kg-res:Beren_son_of_Belemir a kg-ont:Character ;
     rdfs:label "Beren (son of Belemir)"^^xsd:string,
         "Beren"@en ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:name "Beren"^^xsd:string ;
-    kg-ont:birthDate "FA 374"^^xsd:string ;
+    kg-ont:birthDate "FA 374"^^xsd:string,
+        "FA 432" ;
     kg-ont:children kg-res:Emeldir ;
+    kg-ont:deathDate "FA 466" ;
     kg-ont:family kg-res:House_of_Beor ;
+    kg-ont:hair "Dark" ;
+    kg-ont:height "Tall" ;
     kg-ont:parentage kg-res:Adanel,
         kg-res:Belemir ;
-    kg-ont:people kg-res:Edain .
+    kg-ont:people kg-res:Edain ;
+    kg-ont:race "Men" ;
+    kg-ont:spouse "Lúthien Tinúviel" ;
+    owl:sameAs <http://dbpedia.org/resource/Beren> .
 
 kg-res:Bergil a kg-ont:Character ;
     rdfs:label "Bergil"^^xsd:string,
@@ -32001,23 +31973,16 @@ kg-res:Calacirya rdfs:label "Calacirya"^^xsd:string,
 kg-res:Calimehtar_son_of_Calmacil a kg-ont:Character ;
     rdfs:label "Calimehtar (son of Calmacil)"^^xsd:string,
         "Calimehtar"@en ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:inLanguage kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Calimehtar"^^xsd:string ;
-    kg-ont:birthDate "After TA 1126"^^xsd:string,
-        "TA 1736" ;
+    kg-ont:birthDate "After TA 1126"^^xsd:string ;
     kg-ont:children kg-res:Castamir ;
-    kg-ont:deathDate "TA 1936" ;
     kg-ont:family kg-res:House_of_Anarion ;
     kg-ont:parentage kg-res:Calmacil_King_of_Gondor ;
     kg-ont:people kg-res:Gondorians ;
-    kg-ont:race "Men" ;
-    kg-ont:realm "Gondor" ;
-    kg-ont:sibling kg-res:Romendacil_II ;
-    kg-ont:spouse "Unnamed wife" ;
-    owl:sameAs <http://dbpedia.org/resource/Calimehtar> .
+    kg-ont:sibling kg-res:Romendacil_II .
 
 kg-res:Carcharoth a kg-ont:Character ;
     rdfs:label "Carcharoth"^^xsd:string,
@@ -32733,21 +32698,27 @@ kg-res:Farin a kg-ont:Character ;
     rdfs:label "Farin"^^xsd:string,
         "Farin"@en ;
     schema:caption kg-res:The_Lord_of_the_Rings_Online ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "The Lord of the Rings Online - Farin.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Khuzdul ;
     schema:location kg-res:Grey_Mountains,
         kg-res:Lonely_Mountain ;
     schema:name "Farin"^^xsd:string ;
-    kg-ont:birthDate "TA 2560"^^xsd:string ;
+    kg-ont:birthDate "TA 2560"^^xsd:string,
+        "TA 2560" ;
     kg-ont:birthLocation kg-res:Grey_Mountains ;
     kg-ont:children kg-res:Fundin,
         kg-res:Groin ;
-    kg-ont:deathDate "TA 2803 (aged 243)"^^xsd:string ;
+    kg-ont:deathDate "TA 2803",
+        "TA 2803 (aged 243)"^^xsd:string ;
     kg-ont:family kg-res:House_of_Durin ;
     kg-ont:parentage kg-res:Borin ;
     kg-ont:people kg-res:Dwarves ;
-    kg-ont:sibling "possibly an older sister"^^xsd:string .
+    kg-ont:race "Dwarves" ;
+    kg-ont:sibling "possibly an older sister"^^xsd:string ;
+    kg-ont:spouse "Unnamed wife" ;
+    owl:sameAs <http://dbpedia.org/resource/Farin> .
 
 kg-res:Faring_Forth rdfs:label "Faring Forth"^^xsd:string,
         "Faring Forth"@en .
@@ -33212,17 +33183,21 @@ kg-res:Gelmir_son_of_Guilin a kg-ont:Character ;
     rdfs:label "Gelmir (son of Guilin)"^^xsd:string,
         "Gelmir"@en ;
     schema:caption kg-res:Category_Images_by_Juliana_Pinho ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "Finduilas"^^xsd:string,
         "Gelmir.png"^^xsd:string,
         "Juliana Pinho - Gwindor"^^xsd:string ;
     schema:location kg-res:Nargothrond ;
     schema:name "Gelmir"^^xsd:string ;
-    kg-ont:deathDate "FA 472"^^xsd:string ;
+    kg-ont:deathDate "FA 472"^^xsd:string,
+        "FA 473" ;
     kg-ont:deathLocation kg-res:Barad_Eithel ;
     kg-ont:parentage kg-res:Guilin ;
     kg-ont:people kg-res:Noldor ;
-    kg-ont:sibling kg-res:Gwindor .
+    kg-ont:race "Elves" ;
+    kg-ont:sibling kg-res:Gwindor ;
+    owl:sameAs <http://dbpedia.org/resource/Gelmir> .
 
 kg-res:Gift_of_Iluvatar rdfs:label "Gift of Ilúvatar"^^xsd:string,
         "Gift of Ilúvatar"@en .
@@ -33280,38 +33255,6 @@ kg-res:Gloin_King_of_Durin_s_Folk a kg-ont:Character ;
 
 kg-res:Gothic rdfs:label "Gothic"^^xsd:string,
         "Gothic"@en .
-
-kg-res:Gothmog_balrog a kg-ont:Character ;
-    rdfs:label "Gothmog (balrog)"^^xsd:string,
-        "Gothmog"@en ;
-    schema:caption kg-res:Ted_Nasmith ;
-    schema:description kg-res:Ecthelion,
-        kg-res:Feanor,
-        kg-res:Fingon,
-        kg-res:Gondolin,
-        kg-res:Hurin,
-        kg-res:Nirnaeth_Arnoediad ;
-    schema:gender "Male"^^xsd:string ;
-    schema:image "Gothmog.jpg"^^xsd:string,
-        "Ted Nasmith - Fingon"^^xsd:string ;
-    schema:location kg-res:Angband,
-        kg-res:Utumno ;
-    schema:name "Gothmog"^^xsd:string ;
-    kg-ont:affiliation kg-res:Morgoth ;
-    kg-ont:birthDate "Creation of the Ainur"^^xsd:string ;
-    kg-ont:birthLocation kg-res:Timeless_Halls ;
-    kg-ont:deathDate "FA 510"^^xsd:string ;
-    kg-ont:deathLocation kg-res:Fall_of_Gondolin ;
-    kg-ont:height "Possibly twice man-height"^^xsd:string ;
-    kg-ont:people kg-res:Balrogs,
-        kg-res:Maiar ;
-    kg-ont:people_duplicated kg-res:Maiar ;
-    kg-ont:position kg-res:Lord_of_Balrogs,
-        "High-captain of Angband"^^xsd:string ;
-    kg-ont:pronunciation kg-res:Sindarin ;
-    kg-ont:slayer kg-res:Ecthelion ;
-    kg-ont:weapons "Black axe"^^xsd:string,
-        "whip"^^xsd:string .
 
 kg-res:Gram a kg-ont:Character ;
     rdfs:label "Gram"^^xsd:string,
@@ -33411,6 +33354,36 @@ kg-res:Gundabald_Bolger a kg-ont:Character ;
     kg-ont:people kg-res:Hobbits ;
     kg-ont:spouse kg-res:Salvia_Brandybuck .
 
+kg-res:Hador_Steward_of_Gondor a kg-ont:Character ;
+    rdfs:label "Hador (Steward of Gondor)"^^xsd:string,
+        "Hador"@de,
+        "Hador"@en,
+        "Hador"@es,
+        "Hador"@fr,
+        "Hador"@nl ;
+    schema:age "150"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
+    schema:inLanguage kg-res:Sindarin,
+        kg-res:Westron ;
+    schema:location kg-res:Gondor ;
+    schema:name "Hador"^^xsd:string ;
+    schema:subjectOf kg-card:LE-14 ;
+    kg-ont:birthDate "FA 390",
+        "TA 2245"^^xsd:string ;
+    kg-ont:children kg-res:Barahir_Steward_of_Gondor ;
+    kg-ont:deathDate "FA 455",
+        "TA 2395"^^xsd:string ;
+    kg-ont:family kg-res:House_of_Hurin ;
+    kg-ont:hair "Golden" ;
+    kg-ont:parentage kg-res:Turin_I ;
+    kg-ont:people kg-res:Gondorians ;
+    kg-ont:position kg-res:Ruling_Steward ;
+    kg-ont:race "Men" ;
+    kg-ont:rule "TA 2278 - TA 2395 (117 years)"^^xsd:string ;
+    kg-ont:spouse "Gildis" ;
+    owl:sameAs <http://dbpedia.org/resource/Hador> .
+
 kg-res:Haldar a kg-ont:Character ;
     rdfs:label "Haldar"^^xsd:string,
         "Haldar"@de,
@@ -33432,6 +33405,20 @@ kg-res:Haldar a kg-ont:Character ;
     kg-ont:people kg-res:Edain ;
     kg-ont:sibling kg-res:Haleth ;
     owl:sameAs <http://dbpedia.org/resource/Haldar> .
+
+kg-res:Haldir a kg-ont:Character ;
+    rdfs:label "Haldir"^^xsd:string,
+        "Haldir"@en ;
+    schema:caption kg-res:Anke_Eißmann ;
+    schema:gender "Male"^^xsd:string ;
+    schema:image "Anke Eißmann - Atop Cerin Amroth.jpeg"^^xsd:string ;
+    schema:inLanguage kg-res:Silvan_Elvish,
+        kg-res:Westron ;
+    schema:location kg-res:Lothlorien ;
+    schema:name "Haldir"^^xsd:string ;
+    kg-ont:people kg-res:Silvan_Elves ;
+    kg-ont:sibling kg-res:Orophin,
+        kg-res:Rumil_elf_of_Lorien .
 
 kg-res:Haleth_son_of_Helm a kg-ont:Character ;
     rdfs:label "Haleth (son of Helm)"^^xsd:string,
@@ -34939,24 +34926,6 @@ kg-res:Odo_Proudfoot a kg-ont:Character ;
     kg-ont:spouse "Mrs. Proudfoot" ;
     owl:sameAs <http://dbpedia.org/resource/Odo_Proudfoot> .
 
-kg-res:Oin_King_of_Durin_s_Folk a kg-ont:Character ;
-    rdfs:label "Óin (King of Durin's Folk)"^^xsd:string,
-        "Óin"@en ;
-    schema:gender "Male"^^xsd:string ;
-    schema:inLanguage kg-res:Khuzdul ;
-    schema:location kg-res:Grey_Mountains ;
-    schema:name "Óin"^^xsd:string ;
-    kg-ont:birthDate "TA 2238"^^xsd:string ;
-    kg-ont:birthLocation kg-res:Grey_Mountains ;
-    kg-ont:children kg-res:Nain_II ;
-    kg-ont:deathDate "TA 2488 (aged 250)"^^xsd:string ;
-    kg-ont:deathLocation kg-res:Grey_Mountains ;
-    kg-ont:family kg-res:House_of_Durin ;
-    kg-ont:parentage kg-res:Gloin_King_of_Durin_s_Folk ;
-    kg-ont:people kg-res:Dwarves ;
-    kg-ont:position kg-res:Kings_of_Durin_s_Folk ;
-    kg-ont:rule "TA 2385 - TA 2488"^^xsd:string .
-
 kg-res:Old_Man_Willow a kg-ont:Character ;
     rdfs:label "Old Man Willow"^^xsd:string,
         "Der alte Weidenmann"@de,
@@ -35027,28 +34996,20 @@ kg-res:Orodreth_Steward_of_Gondor a kg-ont:Character ;
     rdfs:label "Orodreth (Steward of Gondor)"^^xsd:string,
         "Orodreth"@en ;
     schema:age "109"^^xsd:string ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:inLanguage kg-res:Sindarin,
         kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Orodreth"^^xsd:string ;
-    kg-ont:birthDate "TA 2576"^^xsd:string,
-        "YT" ;
+    kg-ont:birthDate "TA 2576"^^xsd:string ;
     kg-ont:children kg-res:Ecthelion_I ;
-    kg-ont:deathDate "FA 495 ,Battle of Tumhalad",
-        "TA 2685"^^xsd:string ;
+    kg-ont:deathDate "TA 2685"^^xsd:string ;
     kg-ont:family kg-res:House_of_Hurin ;
-    kg-ont:hair "Golden" ;
     kg-ont:parentage kg-res:Belecthor_I ;
     kg-ont:people kg-res:Gondorians ;
     kg-ont:position kg-res:Ruling_Steward ;
-    kg-ont:race "Elves" ;
-    kg-ont:realm "Nargothrond" ;
     kg-ont:rule "TA 2655 - TA 2685 (30 years)"^^xsd:string ;
-    kg-ont:sibling kg-res:Morwen_daughter_of_Belecthor ;
-    kg-ont:spouse "Unnamed wife" ;
-    owl:sameAs <http://dbpedia.org/resource/Orodreth> .
+    kg-ont:sibling kg-res:Morwen_daughter_of_Belecthor .
 
 kg-res:Oromendil a kg-ont:Character ;
     rdfs:label "Oromendil"^^xsd:string,
@@ -35265,22 +35226,16 @@ kg-res:Rian a kg-ont:Character ;
 kg-res:Rian_daughter_of_Steward_Barahir a kg-ont:Character ;
     rdfs:label "Rían (daughter of Steward Barahir)"^^xsd:string,
         "Rían"@en ;
-    schema:gender "Female"^^xsd:string,
-        "Female" ;
+    schema:gender "Female"^^xsd:string ;
     schema:inLanguage kg-res:Westron ;
     schema:location kg-res:Gondor ;
     schema:name "Rían"^^xsd:string ;
-    kg-ont:birthDate "FA 450",
-        "c. TA 2328"^^xsd:string ;
+    kg-ont:birthDate "c. TA 2328"^^xsd:string ;
     kg-ont:children kg-res:Denethor_I ;
-    kg-ont:deathDate "FA 473" ;
     kg-ont:family kg-res:House_of_Hurin ;
     kg-ont:parentage kg-res:Barahir_Steward_of_Gondor ;
     kg-ont:people kg-res:Gondorians ;
-    kg-ont:race "Men" ;
-    kg-ont:sibling kg-res:Dior_Steward_of_Gondor ;
-    kg-ont:spouse "Huor" ;
-    owl:sameAs <http://dbpedia.org/resource/R%C3%ADan> .
+    kg-ont:sibling kg-res:Dior_Steward_of_Gondor .
 
 kg-res:Ring_of_Barahir rdfs:label "Ring of Barahir"^^xsd:string,
         "Ring of Barahir"@en .
@@ -36423,24 +36378,31 @@ kg-res:Aldor a kg-ont:Character ;
     rdfs:label "Aldor"^^xsd:string,
         "Aldor"@en ;
     schema:caption kg-res:Lida_Holubova ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "Lída Holubová - The House of Eorl - Aldor the Old.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Rohanese,
         kg-res:Westron ;
     schema:location kg-res:Rohan ;
     schema:name "Aldor"^^xsd:string ;
-    kg-ont:birthDate "TA 2544"^^xsd:string ;
+    kg-ont:birthDate "TA 2544"^^xsd:string,
+        "TA 2544" ;
     kg-ont:children kg-res:Frea ;
-    kg-ont:deathDate "TA 2645 (aged 101)"^^xsd:string ;
+    kg-ont:deathDate "TA 2645",
+        "TA 2645 (aged 101)"^^xsd:string ;
     kg-ont:family kg-res:House_of_Eorl ;
     kg-ont:other_names kg-res:the_Old,
         "\"the Old\""^^xsd:string ;
     kg-ont:parentage kg-res:Brego ;
     kg-ont:people kg-res:Rohirrim ;
     kg-ont:position kg-res:Kings_of_Rohan ;
+    kg-ont:race "Men" ;
+    kg-ont:realm "Rohan" ;
     kg-ont:rule "TA 2570 – TA 2645 (75 years)"^^xsd:string ;
     kg-ont:sibling kg-res:Baldor,
-        kg-res:Eofor .
+        kg-res:Eofor ;
+    kg-ont:spouse "Unnamed wife" ;
+    owl:sameAs <http://dbpedia.org/resource/Aldor> .
 
 kg-res:Alfrida_of_the_Yale a kg-ont:Character ;
     rdfs:label "Alfrida of the Yale"^^xsd:string,
@@ -36968,6 +36930,43 @@ kg-res:Belegund a kg-ont:Character ;
     kg-ont:spouse "Unnamed wife" ;
     owl:sameAs <http://dbpedia.org/resource/Belegund> .
 
+kg-res:Beregond a kg-ont:Character ;
+    rdfs:label "Beregond"^^xsd:string,
+        "Beregond"@de,
+        "Beregond"@en,
+        "Beregond"@es,
+        "Beregond"@fi,
+        "Beregond"@fr,
+        "Beregond"@it,
+        "ベレゴンド"@ja,
+        "Beregond"@nl ;
+    schema:caption kg-res:William_O_Connor ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
+    schema:image "Pippin.jpg"^^xsd:string,
+        "William O'Connor - Beregond"^^xsd:string ;
+    schema:inLanguage kg-res:Westron ;
+    schema:location kg-res:Gondor,
+        kg-res:Ithilien ;
+    schema:name "Beregond"^^xsd:string ;
+    schema:subjectOf kg-card:TW-127 ;
+    kg-ont:birthDate "Late Third Age"^^xsd:string,
+        "TA 2700" ;
+    kg-ont:children kg-res:Bergil ;
+    kg-ont:clothing "Black"^^xsd:string,
+        "silver livery"^^xsd:string ;
+    kg-ont:deathDate "During Fourth Age"^^xsd:string,
+        "TA 2811" ;
+    kg-ont:parentage kg-res:Baranor_Man_of_Gondor ;
+    kg-ont:people kg-res:Gondorians ;
+    kg-ont:position kg-res:Guard_of_the_Citadel,
+        kg-res:White_Company,
+        "\"Beregond of the Guard\""^^xsd:string ;
+    kg-ont:race "Men" ;
+    kg-ont:spouse "Unnamed wife" ;
+    kg-ont:weapons "Sword"^^xsd:string ;
+    owl:sameAs <http://dbpedia.org/resource/Beregond> .
+
 kg-res:Berylla_Baggins rdfs:label "Berylla Baggins"^^xsd:string,
         "Berylla Baggins"@en .
 
@@ -37158,29 +37157,22 @@ kg-res:Brego a kg-ont:Character ;
     rdfs:label "Brego"^^xsd:string,
         "Brego"@en ;
     schema:caption kg-res:Category_Images_by_Lida_Holubova ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "Lída Holubová - The House of Eorl - Brego.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Rohanese,
         kg-res:Westron ;
     schema:location kg-res:Rohan ;
     schema:name "Brego"^^xsd:string ;
-    kg-ont:birthDate "TA 2512"^^xsd:string,
-        "TA 2512" ;
+    kg-ont:birthDate "TA 2512"^^xsd:string ;
     kg-ont:children kg-res:Aldor,
         kg-res:Baldor,
         kg-res:Eofor ;
-    kg-ont:deathDate "TA 2570",
-        "TA 2570 (aged 58)"^^xsd:string ;
+    kg-ont:deathDate "TA 2570 (aged 58)"^^xsd:string ;
     kg-ont:family kg-res:House_of_Eorl ;
     kg-ont:parentage kg-res:Eorl ;
     kg-ont:people kg-res:Rohirrim ;
     kg-ont:position kg-res:Kings_of_Rohan ;
-    kg-ont:race "Men" ;
-    kg-ont:realm "Rohan" ;
-    kg-ont:rule "TA 2545 - TA 2570 (25 years)"^^xsd:string ;
-    kg-ont:spouse "Unnamed wife" ;
-    owl:sameAs <http://dbpedia.org/resource/Brego> .
+    kg-ont:rule "TA 2545 - TA 2570 (25 years)"^^xsd:string .
 
 kg-res:Broadbeams rdfs:label "Broadbeams"^^xsd:string,
         "Broadbeams"@en,
@@ -38241,6 +38233,49 @@ kg-res:Gormadoc_Brandybuck a kg-ont:Character ;
     kg-ont:rule "until SR 1236"^^xsd:string ;
     kg-ont:spouse kg-res:Malva_Headstrong .
 
+kg-res:Gothmog_balrog a kg-ont:Character ;
+    rdfs:label "Gothmog (balrog)"^^xsd:string,
+        "Gothmog"@de,
+        "Gothmog"@en,
+        "Gothmog"@es,
+        "Gothmog"@fr,
+        "ゴスモグ"@ja,
+        "Gothmog"@nl ;
+    schema:caption kg-res:Ted_Nasmith ;
+    schema:description kg-res:Ecthelion,
+        kg-res:Feanor,
+        kg-res:Fingon,
+        kg-res:Gondolin,
+        kg-res:Hurin,
+        kg-res:Nirnaeth_Arnoediad ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
+    schema:image "Gothmog.jpg"^^xsd:string,
+        "Ted Nasmith - Fingon"^^xsd:string ;
+    schema:location kg-res:Angband,
+        kg-res:Utumno ;
+    schema:name "Gothmog"^^xsd:string ;
+    schema:subjectOf kg-card:TD-28 ;
+    kg-ont:affiliation kg-res:Morgoth ;
+    kg-ont:birthDate "Before the creation of ,Arda",
+        "Creation of the Ainur"^^xsd:string ;
+    kg-ont:birthLocation kg-res:Timeless_Halls ;
+    kg-ont:deathDate "FA 510"^^xsd:string,
+        "FA 510" ;
+    kg-ont:deathLocation kg-res:Fall_of_Gondolin ;
+    kg-ont:height "Possibly twice man-height"^^xsd:string ;
+    kg-ont:people kg-res:Balrogs,
+        kg-res:Maiar ;
+    kg-ont:people_duplicated kg-res:Maiar ;
+    kg-ont:position kg-res:Lord_of_Balrogs,
+        "High-captain of Angband"^^xsd:string ;
+    kg-ont:pronunciation kg-res:Sindarin ;
+    kg-ont:race "Maiar,Balrogs" ;
+    kg-ont:slayer kg-res:Ecthelion ;
+    kg-ont:weapons "Black axe"^^xsd:string,
+        "whip"^^xsd:string ;
+    owl:sameAs <http://dbpedia.org/resource/Gothmog> .
+
 kg-res:Groin a kg-ont:Character ;
     rdfs:label "Gróin"^^xsd:string,
         "Gróin"@de,
@@ -38417,29 +38452,6 @@ kg-res:Gwaihir a kg-ont:Character ;
     kg-ont:race "Great Eagles" ;
     kg-ont:sibling kg-res:Landroval ;
     owl:sameAs <http://dbpedia.org/resource/Gwaihir> .
-
-kg-res:Haldir a kg-ont:Character ;
-    rdfs:label "Haldir"^^xsd:string,
-        "Haldir"@de,
-        "Haldir"@en,
-        "Haldir"@es,
-        "Haldir"@fi,
-        "Haldir"@fr,
-        "Haldir"@it,
-        "ハルディア"@ja,
-        "Haldir"@nl ;
-    schema:caption kg-res:Anke_Eißmann ;
-    schema:gender "Male"^^xsd:string ;
-    schema:image "Anke Eißmann - Atop Cerin Amroth.jpeg"^^xsd:string ;
-    schema:inLanguage kg-res:Silvan_Elvish,
-        kg-res:Westron ;
-    schema:location kg-res:Lothlorien ;
-    schema:name "Haldir"^^xsd:string ;
-    schema:subjectOf kg-card:TW-164 ;
-    kg-ont:people kg-res:Silvan_Elves ;
-    kg-ont:sibling kg-res:Orophin,
-        kg-res:Rumil_elf_of_Lorien ;
-    owl:sameAs <http://dbpedia.org/resource/Haldir> .
 
 kg-res:Hallacar a kg-ont:Character ;
     rdfs:label "Hallacar"^^xsd:string,
@@ -39091,6 +39103,56 @@ kg-res:Nora_Bolger a kg-ont:Character ;
 kg-res:Oath_of_Eorl rdfs:label "Oath of Eorl"^^xsd:string,
         "Oath of Eorl"@en .
 
+kg-res:Oin a kg-ont:Character ;
+    rdfs:label "Óin"^^xsd:string,
+        "Óin"@en ;
+    schema:caption kg-res:Category_Images_by_Francesco_Amadio ;
+    schema:gender "Male"^^xsd:string ;
+    schema:image "Francesco Amadio - Oin.jpg"^^xsd:string ;
+    schema:inLanguage kg-res:Khuzdul,
+        kg-res:Westron ;
+    schema:location kg-res:Lonely_Mountain,
+        kg-res:Moria,
+        kg-res:Thorin_s_Halls ;
+    schema:name "Óin"^^xsd:string ;
+    kg-ont:affiliation kg-res:Balin_s_folk,
+        kg-res:Thorin_and_Company ;
+    kg-ont:birthDate "TA 2774"^^xsd:string ;
+    kg-ont:clothing "Brown hood"^^xsd:string ;
+    kg-ont:deathDate "Possibly in or after TA 2994 (aged 220+)"^^xsd:string ;
+    kg-ont:deathLocation kg-res:Sirannon ;
+    kg-ont:family kg-res:House_of_Durin ;
+    kg-ont:parentage kg-res:Groin ;
+    kg-ont:people kg-res:Dwarves ;
+    kg-ont:sibling kg-res:Gloin .
+
+kg-res:Oin_King_of_Durin_s_Folk a kg-ont:Character ;
+    rdfs:label "Óin (King of Durin's Folk)"^^xsd:string,
+        "Óin"@de,
+        "Óin"@en,
+        "Oin"@es,
+        "Óin"@fi,
+        "Óïn"@fr,
+        "Óin"@it,
+        "オイン"@ja,
+        "Óin"@nl ;
+    schema:gender "Male"^^xsd:string ;
+    schema:inLanguage kg-res:Khuzdul ;
+    schema:location kg-res:Grey_Mountains ;
+    schema:name "Óin"^^xsd:string ;
+    schema:subjectOf kg-card:TW-172 ;
+    kg-ont:birthDate "TA 2238"^^xsd:string ;
+    kg-ont:birthLocation kg-res:Grey_Mountains ;
+    kg-ont:children kg-res:Nain_II ;
+    kg-ont:deathDate "TA 2488 (aged 250)"^^xsd:string ;
+    kg-ont:deathLocation kg-res:Grey_Mountains ;
+    kg-ont:family kg-res:House_of_Durin ;
+    kg-ont:parentage kg-res:Gloin_King_of_Durin_s_Folk ;
+    kg-ont:people kg-res:Dwarves ;
+    kg-ont:position kg-res:Kings_of_Durin_s_Folk ;
+    kg-ont:rule "TA 2385 - TA 2488"^^xsd:string ;
+    owl:sameAs <http://dbpedia.org/resource/%C3%93in> .
+
 kg-res:Orcs_of_Mordor rdfs:label "Orcs of Mordor"^^xsd:string,
         "Orcs of Mordor"@en .
 
@@ -39713,6 +39775,9 @@ kg-res:Ulwarth a kg-ont:Character ;
 
 kg-res:United_Kingdom rdfs:label "United Kingdom"^^xsd:string,
         "United Kingdom"@en .
+
+kg-res:Uruk_hai rdfs:label "Uruk-hai"^^xsd:string,
+        "Uruk-hai"@en .
 
 kg-res:Urwen rdfs:label "Urwen"^^xsd:string,
         "Urwen"@de,
@@ -41736,22 +41801,17 @@ kg-res:Marmadoc_Brandybuck a kg-ont:Character ;
 kg-res:Meleth a kg-ont:Character ;
     rdfs:label "Meleth"^^xsd:string,
         "Meleth"@en ;
-    schema:gender "Female"^^xsd:string,
-        "Female" ;
+    schema:gender "Female"^^xsd:string ;
     schema:inLanguage kg-res:Halethian ;
     schema:location kg-res:Brethil ;
     schema:name "Meleth"^^xsd:string ;
-    kg-ont:birthDate "Around FA 450" ;
     kg-ont:children kg-res:Hunthor,
         kg-res:Manthor ;
     kg-ont:family kg-res:House_of_Haleth ;
     kg-ont:parentage kg-res:Enthor,
         kg-res:Hiril ;
     kg-ont:people kg-res:Edain ;
-    kg-ont:race "Men" ;
-    kg-ont:spouse kg-res:Agathor,
-        "Agathor" ;
-    owl:sameAs <http://dbpedia.org/resource/Meleth> .
+    kg-ont:spouse kg-res:Agathor .
 
 kg-res:Minas_Tirith_Beleriand rdfs:label "Minas Tirith (Beleriand)"^^xsd:string,
         "Minas Tirith (Beleriand)"@en .
@@ -41946,38 +42006,6 @@ kg-res:Odovacar_Bolger a kg-ont:Character ;
     kg-ont:spouse kg-res:Rosamunda_Took,
         "Rosamunda Took" ;
     owl:sameAs <http://dbpedia.org/resource/Odovacar_Bolger> .
-
-kg-res:Oin a kg-ont:Character ;
-    rdfs:label "Óin"^^xsd:string,
-        "Óin"@de,
-        "Óin"@en,
-        "Oin"@es,
-        "Óin"@fi,
-        "Óïn"@fr,
-        "Óin"@it,
-        "オイン"@ja,
-        "Óin"@nl ;
-    schema:caption kg-res:Category_Images_by_Francesco_Amadio ;
-    schema:gender "Male"^^xsd:string ;
-    schema:image "Francesco Amadio - Oin.jpg"^^xsd:string ;
-    schema:inLanguage kg-res:Khuzdul,
-        kg-res:Westron ;
-    schema:location kg-res:Lonely_Mountain,
-        kg-res:Moria,
-        kg-res:Thorin_s_Halls ;
-    schema:name "Óin"^^xsd:string ;
-    schema:subjectOf kg-card:TW-172 ;
-    kg-ont:affiliation kg-res:Balin_s_folk,
-        kg-res:Thorin_and_Company ;
-    kg-ont:birthDate "TA 2774"^^xsd:string ;
-    kg-ont:clothing "Brown hood"^^xsd:string ;
-    kg-ont:deathDate "Possibly in or after TA 2994 (aged 220+)"^^xsd:string ;
-    kg-ont:deathLocation kg-res:Sirannon ;
-    kg-ont:family kg-res:House_of_Durin ;
-    kg-ont:parentage kg-res:Groin ;
-    kg-ont:people kg-res:Dwarves ;
-    kg-ont:sibling kg-res:Gloin ;
-    owl:sameAs <http://dbpedia.org/resource/%C3%93in> .
 
 kg-res:Olwe a kg-ont:Character ;
     rdfs:label "Olwë"^^xsd:string,
@@ -42569,15 +42597,6 @@ kg-res:Undertowers a kg-ont:Location ;
     schema:name "Undertowers"^^xsd:string ;
     kg-ont:created kg-res:Fourth_Age ;
     kg-ont:inhabitants kg-res:Hobbits .
-
-kg-res:Uruk_hai rdfs:label "Uruk-hai"^^xsd:string,
-        "Uruk-hai"@de,
-        "Uruk-hai"@en,
-        "Uruk-hai"@es,
-        "Uruk-Haï"@fr,
-        "Uruk-hai"@nl ;
-    schema:subjectOf kg-card:LE-291 ;
-    owl:sameAs <http://dbpedia.org/resource/Uruk-hai> .
 
 kg-res:Valar_Other_versions_of_the_legendarium rdfs:label "Valar#Other versions of the legendarium"^^xsd:string,
         "Valar#Other versions of the legendarium"@en .
@@ -45004,6 +45023,37 @@ kg-res:Gundahar_Bolger a kg-ont:Character ;
     kg-ont:spouse kg-res:Dina_Diggle ;
     owl:sameAs <http://dbpedia.org/resource/Gundahar_Bolger> .
 
+kg-res:Hador a kg-ont:Character ;
+    rdfs:label "Hador"^^xsd:string,
+        "Hador"@en ;
+    schema:age "65"^^xsd:string ;
+    schema:caption kg-res:Category_Images_by_Kimberly ;
+    schema:gender "Male"^^xsd:string ;
+    schema:image "Kimberly - Hador the Goldenhaired.jpg"^^xsd:string ;
+    schema:inLanguage kg-res:Mannish,
+        kg-res:Sindarin ;
+    schema:location kg-res:Dor_lomin ;
+    schema:name "Hador"^^xsd:string ;
+    kg-ont:birthDate "FA 390"^^xsd:string ;
+    kg-ont:birthLocation kg-res:Ered_Wethrin ;
+    kg-ont:children kg-res:Galdor_Lord_of_Dor_lomin,
+        kg-res:Gloredhel,
+        kg-res:Gundor ;
+    kg-ont:clothing "Dragon-helm of Dor-lómin"^^xsd:string ;
+    kg-ont:deathDate "FA 455"^^xsd:string ;
+    kg-ont:deathLocation kg-res:Eithel_Sirion ;
+    kg-ont:eyes "Blue"^^xsd:string ;
+    kg-ont:family kg-res:House_of_Hador ;
+    kg-ont:hair "Golden"^^xsd:string ;
+    kg-ont:other_names kg-res:Lorindol,
+        "Lórindol, the Golden-haired"^^xsd:string ;
+    kg-ont:parentage kg-res:Hathol ;
+    kg-ont:people kg-res:Edain ;
+    kg-ont:position kg-res:Lord_of_Dor_lomin,
+        "Head of the House of Hador"^^xsd:string ;
+    kg-ont:rule "FA 416 - FA 455"^^xsd:string ;
+    kg-ont:spouse kg-res:Gildis .
+
 kg-res:Halfred_Gamgee a kg-ont:Character ;
     rdfs:label "Halfred Gamgee"^^xsd:string,
         "Halfred Gamgee"@en ;
@@ -45593,7 +45643,8 @@ kg-res:Orodreth a kg-ont:Character ;
     rdfs:label "Orodreth"^^xsd:string,
         "Orodreth"@en ;
     schema:caption kg-res:Marya_Filatova ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "Marya Filatova - Artaresto.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Quenya,
         kg-res:Sindarin ;
@@ -45601,14 +45652,17 @@ kg-res:Orodreth a kg-ont:Character ;
         kg-res:Nargothrond,
         kg-res:Tirion ;
     schema:name "Orodreth"^^xsd:string ;
-    kg-ont:birthDate "Between YT 1300 & YT 1495"^^xsd:string ;
+    kg-ont:birthDate "Between YT 1300 & YT 1495"^^xsd:string,
+        "YT" ;
     kg-ont:birthLocation kg-res:Tirion ;
     kg-ont:children kg-res:Finduilas,
         kg-res:Gil_galad,
         kg-res:Gil_galad_Parentage ;
-    kg-ont:deathDate "FA 495"^^xsd:string ;
+    kg-ont:deathDate "FA 495"^^xsd:string,
+        "FA 495 ,Battle of Tumhalad" ;
     kg-ont:deathLocation kg-res:Battle_of_Tumhalad ;
     kg-ont:family kg-res:House_of_Finarfin ;
+    kg-ont:hair "Golden" ;
     kg-ont:other_names kg-res:Father_name,
         kg-res:Quenya,
         kg-res:Sindarin,
@@ -45619,8 +45673,12 @@ kg-res:Orodreth a kg-ont:Character ;
     kg-ont:position kg-res:King_of_Nargothrond,
         kg-res:Minas_Tirith_Beleriand ;
     kg-ont:pronunciation kg-res:Sindarin ;
+    kg-ont:race "Elves" ;
+    kg-ont:realm "Nargothrond" ;
     kg-ont:rule "FA 465 - FA 495"^^xsd:string ;
-    kg-ont:spouse kg-res:Sindar .
+    kg-ont:spouse kg-res:Sindar,
+        "Unnamed wife" ;
+    owl:sameAs <http://dbpedia.org/resource/Orodreth> .
 
 kg-res:Paladin_Took_II a kg-ont:Character ;
     rdfs:label "Paladin Took II"^^xsd:string,
@@ -45877,7 +45935,8 @@ kg-res:Wilcome_Cotton_II a kg-ont:Character ;
     kg-ont:sibling kg-res:Bowman_Cotton,
         kg-res:Carl_Cotton,
         kg-res:Rose_Cotton,
-        kg-res:Tolman_Cotton_Junior .
+        kg-res:Tolman_Cotton_Junior ;
+    owl:sameAs <http://dbpedia.org/resource/Wilcome_Cotton> .
 
 kg-res:Yavanna a kg-ont:Character ;
     rdfs:label "Yavanna"^^xsd:string,
@@ -46690,49 +46749,6 @@ kg-res:Glittering_Caves rdfs:label "Glittering Caves"^^xsd:string,
 kg-res:Guild_of_Venturers rdfs:label "Guild of Venturers"^^xsd:string,
         "Guild of Venturers"@en .
 
-kg-res:Hador a kg-ont:Character ;
-    rdfs:label "Hador"^^xsd:string,
-        "Hador"@de,
-        "Hador"@en,
-        "Hador"@es,
-        "Hador"@fr,
-        "Hador"@nl ;
-    schema:age "65"^^xsd:string ;
-    schema:caption kg-res:Category_Images_by_Kimberly ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
-    schema:image "Kimberly - Hador the Goldenhaired.jpg"^^xsd:string ;
-    schema:inLanguage kg-res:Mannish,
-        kg-res:Sindarin ;
-    schema:location kg-res:Dor_lomin ;
-    schema:name "Hador"^^xsd:string ;
-    schema:subjectOf kg-card:LE-14 ;
-    kg-ont:birthDate "FA 390"^^xsd:string,
-        "FA 390" ;
-    kg-ont:birthLocation kg-res:Ered_Wethrin ;
-    kg-ont:children kg-res:Galdor_Lord_of_Dor_lomin,
-        kg-res:Gloredhel,
-        kg-res:Gundor ;
-    kg-ont:clothing "Dragon-helm of Dor-lómin"^^xsd:string ;
-    kg-ont:deathDate "FA 455"^^xsd:string,
-        "FA 455" ;
-    kg-ont:deathLocation kg-res:Eithel_Sirion ;
-    kg-ont:eyes "Blue"^^xsd:string ;
-    kg-ont:family kg-res:House_of_Hador ;
-    kg-ont:hair "Golden"^^xsd:string,
-        "Golden" ;
-    kg-ont:other_names kg-res:Lorindol,
-        "Lórindol, the Golden-haired"^^xsd:string ;
-    kg-ont:parentage kg-res:Hathol ;
-    kg-ont:people kg-res:Edain ;
-    kg-ont:position kg-res:Lord_of_Dor_lomin,
-        "Head of the House of Hador"^^xsd:string ;
-    kg-ont:race "Men" ;
-    kg-ont:rule "FA 416 - FA 455"^^xsd:string ;
-    kg-ont:spouse kg-res:Gildis,
-        "Gildis" ;
-    owl:sameAs <http://dbpedia.org/resource/Hador> .
-
 kg-res:Hamson_Gamgee a kg-ont:Character ;
     rdfs:label "Hamson Gamgee"^^xsd:string,
         "Hamson Gamgee"@en ;
@@ -46979,37 +46995,29 @@ kg-res:Morwen a kg-ont:Character ;
         "Morwen"@en ;
     schema:age "58"^^xsd:string ;
     schema:caption kg-res:Category_Images_by_Kimberly ;
-    schema:gender "Female"^^xsd:string,
-        "Female" ;
+    schema:gender "Female"^^xsd:string ;
     schema:image "Kimberly - Morwen.jpg"^^xsd:string ;
     schema:location kg-res:Dor_lomin,
         kg-res:Doriath,
         kg-res:Ladros ;
     schema:name "Morwen"^^xsd:string ;
-    kg-ont:birthDate "FA 443"^^xsd:string,
-        "FA 443" ;
+    kg-ont:birthDate "FA 443"^^xsd:string ;
     kg-ont:birthLocation kg-res:Ladros ;
     kg-ont:children kg-res:Nienor,
         kg-res:Turin,
         kg-res:Urwen ;
-    kg-ont:deathDate "FA 500",
-        "FA 501"^^xsd:string ;
+    kg-ont:deathDate "FA 501"^^xsd:string ;
     kg-ont:deathLocation kg-res:Cabed_Naeramarth ;
     kg-ont:eyes "Bright"^^xsd:string ;
     kg-ont:family kg-res:House_of_Beor ;
-    kg-ont:hair "Dark"^^xsd:string,
-        "Dark, grey in old age" ;
-    kg-ont:height "Tall"^^xsd:string,
-        "Tall" ;
+    kg-ont:hair "Dark"^^xsd:string ;
+    kg-ont:height "Tall"^^xsd:string ;
     kg-ont:other_names kg-res:Sindarin,
         "Eledhwen (S, \"Elfsheen\")"^^xsd:string ;
     kg-ont:parentage kg-res:Baragund ;
     kg-ont:people kg-res:Edain ;
     kg-ont:position "Lady of Dor-lómin"^^xsd:string ;
-    kg-ont:race "Men" ;
-    kg-ont:spouse kg-res:Hurin,
-        "Húrin Thalion" ;
-    owl:sameAs <http://dbpedia.org/resource/Morwen> .
+    kg-ont:spouse kg-res:Hurin .
 
 kg-res:Nerdanel a kg-ont:Character ;
     rdfs:label "Nerdanel"^^xsd:string,
@@ -47394,53 +47402,6 @@ kg-res:White_Mountains rdfs:label "White Mountains"^^xsd:string,
     schema:subjectOf kg-card:TW-359 ;
     owl:sameAs <http://dbpedia.org/resource/White_Mountains> .
 
-kg-res:Witch_king a kg-ont:Character ;
-    rdfs:label "Witch-king"^^xsd:string,
-        "Witch-king of Angmar"@en ;
-    schema:age "4209+"^^xsd:string ;
-    schema:caption kg-res:Category_Images_by_Melissa_Hitchcock ;
-    schema:description kg-res:Angmar,
-        kg-res:Arnor_The_Fall_of_Arthedain,
-        kg-res:Boromir_Steward_of_Gondor,
-        kg-res:Earnur,
-        kg-res:Frodo_Baggins,
-        kg-res:Minas_Ithil,
-        kg-res:Osgiliath,
-        kg-res:Theoden ;
-    schema:gender "Male"^^xsd:string ;
-    schema:image "Melissa Hitchcock - The Black Captain.jpg"^^xsd:string ;
-    schema:inLanguage kg-res:Black_Speech,
-        kg-res:Westron ;
-    schema:location kg-res:Angmar,
-        kg-res:Minas_Morgul ;
-    schema:name "Witch-king of Angmar"^^xsd:string ;
-    kg-ont:affiliation kg-res:Eye_of_Sauron,
-        kg-res:Nazgul ;
-    kg-ont:birthDate "Before SA 2251"^^xsd:string ;
-    kg-ont:birthLocation "Unknown"^^xsd:string ;
-    kg-ont:clothing "Crown"^^xsd:string ;
-    kg-ont:deathDate "15 March"^^xsd:string,
-        "TA 3019"^^xsd:string ;
-    kg-ont:deathLocation kg-res:Pelennor_Fields ;
-    kg-ont:eyes "Fiery red"^^xsd:string ;
-    kg-ont:gallery "the Witch-king"^^xsd:string ;
-    kg-ont:hair "Gleaming"^^xsd:string ;
-    kg-ont:height "Tallest of the Nazgûl"^^xsd:string ;
-    kg-ont:other_names kg-res:Dwimmerlaik,
-        "Black Captain, Chief of the Nine, Dwimmerlaik"^^xsd:string ;
-    kg-ont:people kg-res:Men,
-        kg-res:Wraiths ;
-    kg-ont:position kg-res:Nazgul,
-        "King of Angmar"^^xsd:string,
-        "Lord of Minas Morgul"^^xsd:string ;
-    kg-ont:rule "TA 1300 - TA 1975 (in Angmar)"^^xsd:string,
-        "TA 2002 - TA 3019 (in Minas Morgul)"^^xsd:string ;
-    kg-ont:steed "Black horse"^^xsd:string,
-        "Fell Beast"^^xsd:string ;
-    kg-ont:weapons "A great black mace"^^xsd:string,
-        "Black Breath"^^xsd:string,
-        "Morgul-knife"^^xsd:string .
-
 kg-res:1945 rdfs:label "1945"^^xsd:string,
         "1945"@en .
 
@@ -47775,6 +47736,69 @@ kg-res:Tuor a kg-ont:Character ;
         "sword"^^xsd:string ;
     owl:sameAs <http://dbpedia.org/resource/Tuor> .
 
+kg-res:Witch_king a kg-ont:Character ;
+    rdfs:label "Witch-king"^^xsd:string,
+        "Hexenkönig von Angmar"@de,
+        "Witch-king of Angmar"@en,
+        "El Rey Brujo de Angmar"@es,
+        "Angmarin Noitakuningas"@fi,
+        "Roi-Sorcier d'Angmar"@fr,
+        "Re Stregone di Angmar"@it,
+        "アングマールの魔王"@ja,
+        "Witch-king of Angmar"@nl ;
+    schema:age "4209+"^^xsd:string ;
+    schema:caption kg-res:Category_Images_by_Melissa_Hitchcock ;
+    schema:description kg-res:Angmar,
+        kg-res:Arnor_The_Fall_of_Arthedain,
+        kg-res:Boromir_Steward_of_Gondor,
+        kg-res:Earnur,
+        kg-res:Frodo_Baggins,
+        kg-res:Minas_Ithil,
+        kg-res:Osgiliath,
+        kg-res:Theoden ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
+    schema:image "Melissa Hitchcock - The Black Captain.jpg"^^xsd:string ;
+    schema:inLanguage kg-res:Black_Speech,
+        kg-res:Westron ;
+    schema:location kg-res:Angmar,
+        kg-res:Minas_Morgul ;
+    schema:name "Witch-king of Angmar"^^xsd:string ;
+    schema:subjectOf kg-card:TW-113 ;
+    kg-ont:affiliation kg-res:Eye_of_Sauron,
+        kg-res:Nazgul ;
+    kg-ont:birthDate "Before SA 2251"^^xsd:string,
+        "Mid-,Second Age" ;
+    kg-ont:birthLocation "Unknown"^^xsd:string ;
+    kg-ont:clothing "Crown"^^xsd:string ;
+    kg-ont:deathDate "15 March"^^xsd:string,
+        "March 15 ,3019",
+        "TA 3019"^^xsd:string ;
+    kg-ont:deathLocation kg-res:Pelennor_Fields ;
+    kg-ont:eyes "Fiery red"^^xsd:string ;
+    kg-ont:gallery "the Witch-king"^^xsd:string ;
+    kg-ont:hair "Brown, graying, later white",
+        "Gleaming"^^xsd:string ;
+    kg-ont:height "7' 1\" (2.13 metres)",
+        "Tallest of the Nazgûl"^^xsd:string ;
+    kg-ont:other_names kg-res:Dwimmerlaik,
+        "Black Captain, Chief of the Nine, Dwimmerlaik"^^xsd:string ;
+    kg-ont:people kg-res:Men,
+        kg-res:Wraiths ;
+    kg-ont:position kg-res:Nazgul,
+        "King of Angmar"^^xsd:string,
+        "Lord of Minas Morgul"^^xsd:string ;
+    kg-ont:race "Men,Wraith" ;
+    kg-ont:realm "Angmar,Minas Morgul,Osgiliath" ;
+    kg-ont:rule "TA 1300 - TA 1975 (in Angmar)"^^xsd:string,
+        "TA 2002 - TA 3019 (in Minas Morgul)"^^xsd:string ;
+    kg-ont:steed "Black horse"^^xsd:string,
+        "Fell Beast"^^xsd:string ;
+    kg-ont:weapons "A great black mace"^^xsd:string,
+        "Black Breath"^^xsd:string,
+        "Morgul-knife"^^xsd:string ;
+    owl:sameAs <http://dbpedia.org/resource/Witch-king_of_Angmar> .
+
 kg-res:wikipedia_English_language rdfs:label "wikipedia:English language"^^xsd:string,
         "wikipedia:English language"@en .
 
@@ -47833,34 +47857,27 @@ kg-res:Barahir a kg-ont:Character ;
         "Barahir"@en ;
     schema:age "60"^^xsd:string ;
     schema:caption kg-res:Category_Images_by_Marya_Filatova ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "Barahir.jpg"^^xsd:string,
         "Marya Filatova - Rescue - Finrod"^^xsd:string ;
     schema:location kg-res:Ladros,
         kg-res:Tarn_Aeluin ;
     schema:name "Barahir"^^xsd:string ;
-    kg-ont:birthDate "FA 400"^^xsd:string,
-        "FA 402" ;
+    kg-ont:birthDate "FA 400"^^xsd:string ;
     kg-ont:children kg-res:Beren,
         kg-res:Hiril_daughter_of_Barahir ;
-    kg-ont:deathDate "FA 460"^^xsd:string,
-        "FA 460" ;
+    kg-ont:deathDate "FA 460"^^xsd:string ;
     kg-ont:deathLocation kg-res:Tarn_Aeluin ;
     kg-ont:family kg-res:House_of_Beor ;
-    kg-ont:hair "Possibly dark" ;
     kg-ont:parentage kg-res:Bregor ;
     kg-ont:people kg-res:Edain ;
     kg-ont:position kg-res:House_of_Beor ;
-    kg-ont:race "Men" ;
     kg-ont:rule "FA 455-FA 460"^^xsd:string ;
     kg-ont:sibling kg-res:Bregil,
         kg-res:Bregolas,
         kg-res:Gilwen,
         kg-res:Hirwen ;
-    kg-ont:spouse kg-res:Emeldir,
-        "Emeldir" ;
-    owl:sameAs <http://dbpedia.org/resource/Barahir> .
+    kg-ont:spouse kg-res:Emeldir .
 
 kg-res:Black_Numenoreans rdfs:label "Black Númenóreans"^^xsd:string,
         "Schwarze Númenórer"@de,
@@ -48718,8 +48735,7 @@ kg-res:Earendil a kg-ont:Character ;
     rdfs:label "Eärendil"^^xsd:string,
         "Eärendil"@en ;
     schema:caption kg-res:Jenny_Dolfen ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "Jenny Dolfen - Earendil the Mariner.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Quenya,
         kg-res:Sindarin,
@@ -48727,15 +48743,12 @@ kg-res:Earendil a kg-ont:Character ;
     schema:location kg-res:Gondolin,
         kg-res:Havens_of_Sirion ;
     schema:name "Eärendil"^^xsd:string ;
-    kg-ont:birthDate "FA 503"^^xsd:string,
-        "FA 503" ;
+    kg-ont:birthDate "FA 503"^^xsd:string ;
     kg-ont:birthLocation kg-res:Gondolin ;
     kg-ont:children kg-res:Elrond,
         kg-res:Elros ;
-    kg-ont:deathDate "Still Alive" ;
     kg-ont:family kg-res:House_of_Hador ;
-    kg-ont:hair "Golden"^^xsd:string,
-        "Golden" ;
+    kg-ont:hair "Golden"^^xsd:string ;
     kg-ont:heritage kg-res:Elves,
         kg-res:Men ;
     kg-ont:other_names kg-res:Adunaic,
@@ -48748,14 +48761,11 @@ kg-res:Earendil a kg-ont:Character ;
         kg-res:Tuor ;
     kg-ont:people kg-res:Half_elven ;
     kg-ont:pronunciation kg-res:Quenya ;
-    kg-ont:race "Half-elven" ;
-    kg-ont:spouse kg-res:Elwing,
-        "Elwing" ;
+    kg-ont:spouse kg-res:Elwing ;
     kg-ont:steed "Vingilótë (ship)"^^xsd:string ;
     kg-ont:weapons "Bow of dragon-horn"^^xsd:string,
         "arrows of ebony"^^xsd:string,
-        "sword of steel in a scabbard of chalcedony"^^xsd:string ;
-    owl:sameAs <http://dbpedia.org/resource/E%C3%A4rendil> .
+        "sword of steel in a scabbard of chalcedony"^^xsd:string .
 
 kg-res:Eomer a kg-ont:Character ;
     rdfs:label "Éomer"^^xsd:string,
@@ -48897,8 +48907,7 @@ kg-res:Hurin a kg-ont:Character ;
     schema:age "61"^^xsd:string ;
     schema:caption kg-res:Category_Images_by_Kimberly ;
     schema:description "Being among the greatest mortal warriors"^^xsd:string ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "Kimberly - Hurin Thalion.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Mannish,
         kg-res:Sindarin ;
@@ -48908,19 +48917,16 @@ kg-res:Hurin a kg-ont:Character ;
         kg-res:Thangorodrim ;
     schema:name "Húrin"^^xsd:string ;
     kg-ont:affiliation kg-res:Union_of_Maedhros ;
-    kg-ont:birthDate "FA 441"^^xsd:string,
-        "FA 441" ;
+    kg-ont:birthDate "FA 441"^^xsd:string ;
     kg-ont:birthLocation kg-res:Dor_lomin ;
     kg-ont:children kg-res:Nienor,
         kg-res:Turin,
         kg-res:Urwen ;
-    kg-ont:deathDate "FA 502"^^xsd:string,
-        "FA 502" ;
+    kg-ont:deathDate "FA 502"^^xsd:string ;
     kg-ont:deathLocation kg-res:Belegaer ;
     kg-ont:eyes "Blue"^^xsd:string ;
     kg-ont:family kg-res:House_of_Hador ;
     kg-ont:hair "Blond"^^xsd:string,
-        "Golden, grey (in old age)",
         "Grey"^^xsd:string ;
     kg-ont:height "Short among the Edain"^^xsd:string ;
     kg-ont:other_names kg-res:Sindarin,
@@ -48931,15 +48937,12 @@ kg-res:Hurin a kg-ont:Character ;
     kg-ont:people kg-res:Edain ;
     kg-ont:position kg-res:Lord_of_Dor_lomin,
         "Head of the House of Hador"^^xsd:string ;
-    kg-ont:race "Men" ;
     kg-ont:rule "FA 462 - FA 472"^^xsd:string ;
     kg-ont:sibling kg-res:Huor ;
-    kg-ont:spouse kg-res:Morwen,
-        "Morwen Eledhwen" ;
+    kg-ont:spouse kg-res:Morwen ;
     kg-ont:steed "Arroch"^^xsd:string ;
     kg-ont:weapons "Sword"^^xsd:string,
-        "axe"^^xsd:string ;
-    owl:sameAs <http://dbpedia.org/resource/H%C3%BArin> .
+        "axe"^^xsd:string .
 
 kg-res:King_of_Rohan rdfs:label "King of Rohan"^^xsd:string,
         "King of Rohan"@en .
@@ -49309,7 +49312,8 @@ kg-res:Luthien a kg-ont:Character ;
         kg-res:Gift_of_Iluvatar,
         kg-res:Iron_Crown,
         kg-res:Silmaril ;
-    schema:gender "Female"^^xsd:string ;
+    schema:gender "Female"^^xsd:string,
+        "Female" ;
     schema:image "Aerankai - Lúthien.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Sindarin,
         kg-res:Taliska ;
@@ -49317,18 +49321,21 @@ kg-res:Luthien a kg-ont:Character ;
         kg-res:Tol_Galen ;
     schema:name "Lúthien"^^xsd:string ;
     kg-ont:affiliation kg-res:Quest_for_the_Silmaril ;
-    kg-ont:birthDate "YT 1200"^^xsd:string ;
+    kg-ont:birthDate "YT 1200"^^xsd:string,
+        "YT 1200" ;
     kg-ont:birthLocation kg-res:Forest_of_Neldoreth ;
     kg-ont:children kg-res:Dior ;
     kg-ont:clothing "Blue raiment"^^xsd:string,
         "appearance of Thuringwethil"^^xsd:string,
         "sewn with golden flowers"^^xsd:string,
         "shadowy cloak"^^xsd:string ;
-    kg-ont:deathDate "FA 467"^^xsd:string ;
+    kg-ont:deathDate "FA 467"^^xsd:string,
+        "FA 503" ;
     kg-ont:deathLocation kg-res:Dor_Firn_i_Guinar,
         kg-res:Doriath ;
     kg-ont:eyes "Grey"^^xsd:string ;
-    kg-ont:hair "Dark"^^xsd:string ;
+    kg-ont:hair "Black",
+        "Dark"^^xsd:string ;
     kg-ont:other_names kg-res:Quenya,
         kg-res:Sindarin,
         "Tinúviel (S)|||Tindómerel (Q)"^^xsd:string ;
@@ -49338,11 +49345,14 @@ kg-res:Luthien a kg-ont:Character ;
         kg-res:Thingol ;
     kg-ont:people kg-res:Sindar ;
     kg-ont:position kg-res:Tol_Galen ;
+    kg-ont:race "Elves,Maiar" ;
     kg-ont:sibling kg-res:Turin ;
-    kg-ont:spouse kg-res:Beren ;
+    kg-ont:spouse kg-res:Beren,
+        "Beren Erchamion" ;
     kg-ont:steed "Huan"^^xsd:string ;
     kg-ont:weapons "Voice"^^xsd:string,
-        "enchantment"^^xsd:string .
+        "enchantment"^^xsd:string ;
+    owl:sameAs <http://dbpedia.org/resource/L%C3%BAthien> .
 
 kg-res:Menegroth a kg-ont:Location ;
     rdfs:label "Menegroth"^^xsd:string,
@@ -50452,7 +50462,8 @@ kg-res:Turgon a kg-ont:Character ;
     schema:age "426"^^xsd:string,
         "c. 2"^^xsd:string ;
     schema:caption kg-res:Category_Images_by_NimwenHabareth ;
-    schema:gender "Male"^^xsd:string ;
+    schema:gender "Male"^^xsd:string,
+        "Male" ;
     schema:image "NimwenHabareth - Turgon.png"^^xsd:string ;
     schema:inLanguage kg-res:Quenya,
         kg-res:Sindarin ;
@@ -50460,12 +50471,15 @@ kg-res:Turgon a kg-ont:Character ;
         kg-res:Gondolin,
         kg-res:Vinyamar ;
     schema:name "Turgon"^^xsd:string ;
-    kg-ont:birthDate "YT 1300"^^xsd:string ;
+    kg-ont:birthDate "YT 1300"^^xsd:string,
+        "YT 1300" ;
     kg-ont:birthLocation kg-res:Eldamar ;
     kg-ont:children kg-res:Idril ;
-    kg-ont:deathDate "FA 510"^^xsd:string ;
+    kg-ont:deathDate "FA 510"^^xsd:string,
+        "FA 510" ;
     kg-ont:deathLocation kg-res:Fall_of_Gondolin ;
     kg-ont:family kg-res:House_of_Fingolfin ;
+    kg-ont:hair "Dark" ;
     kg-ont:height "Taller than all but Thingol"^^xsd:string ;
     kg-ont:other_names kg-res:Father_name,
         kg-res:Quenya,
@@ -50477,13 +50491,17 @@ kg-res:Turgon a kg-ont:Character ;
     kg-ont:position kg-res:Gondolin,
         kg-res:High_King_of_the_Noldor ;
     kg-ont:pronunciation kg-res:Sindarin ;
+    kg-ont:race "Elves" ;
+    kg-ont:realm "Nevrast,Gondolin" ;
     kg-ont:rule "FA 116 - FA 510 (as the King of Gondolin)"^^xsd:string,
         "FA 472 - FA 510 (as the High King of the Noldor)"^^xsd:string ;
     kg-ont:sibling kg-res:Aredhel,
         kg-res:Argon,
         kg-res:Fingon ;
-    kg-ont:spouse kg-res:Elenwe ;
-    kg-ont:weapons "Glamdring"^^xsd:string .
+    kg-ont:spouse kg-res:Elenwe,
+        "Elenwë" ;
+    kg-ont:weapons "Glamdring"^^xsd:string ;
+    owl:sameAs <http://dbpedia.org/resource/Turgon> .
 
 kg-res:25_March rdfs:label "25 March"^^xsd:string,
         "25 March"@en .
@@ -51694,32 +51712,6 @@ kg-res:Aragorn a kg-ont:Character ;
     kg-ont:spouse kg-res:Arwen ;
     kg-ont:steed "Hasufel"^^xsd:string,
         "Roheryn"^^xsd:string ;
-    kg-ont:timeline """{{Timeline\r
-|section1=Y.T.\r
-|section1short=Y.T.\r
-|section1length=1500\r
-\r
-|section2=I\r
-|section2short=I\r
-|section2length=590\r
-\r
-|section3=II\r
-|section3short=II\r
-|section3length=3441\r
-\r
-|section4=III\r
-|section4short=III\r
-|section4length=3021\r
-\r
-|section4period1=Lifespan\r
-|section4period1start=2931\r
-|section4period1end=3141\r
-|section4period1color=brown\r
-\r
-|section5=IV\r
-|section5short=IV\r
-|section5length=1000\r
-}}"""^^xsd:string ;
     kg-ont:weapons "Andúril"^^xsd:string .
 
 kg-res:Battle_of_the_Pelennor_Fields rdfs:label "Battle of the Pelennor Fields"^^xsd:string,
@@ -51745,8 +51737,7 @@ kg-res:Beren a kg-ont:Character ;
     schema:caption kg-res:Category_Images_by_Tuuliky ;
     schema:description kg-res:Iron_Crown,
         kg-res:Silmaril ;
-    schema:gender "Male"^^xsd:string,
-        "Male" ;
+    schema:gender "Male"^^xsd:string ;
     schema:image "Tuuliky - Beren.jpg"^^xsd:string ;
     schema:inLanguage kg-res:Sindarin,
         kg-res:Taliska ;
@@ -51754,20 +51745,16 @@ kg-res:Beren a kg-ont:Character ;
         kg-res:Ossiriand ;
     schema:name "Beren"^^xsd:string ;
     kg-ont:affiliation kg-res:Barahir_s_outlaws ;
-    kg-ont:birthDate "FA 432"^^xsd:string,
-        "FA 432" ;
+    kg-ont:birthDate "FA 432"^^xsd:string ;
     kg-ont:birthLocation kg-res:Dorthonion ;
     kg-ont:children kg-res:Dior ;
-    kg-ont:deathDate "FA 466"^^xsd:string,
-        "FA 466" ;
+    kg-ont:deathDate "FA 466"^^xsd:string ;
     kg-ont:deathLocation kg-res:Dor_Firn_i_Guinar,
         kg-res:Hunting_of_the_Wolf ;
     kg-ont:eyes "Grey"^^xsd:string ;
     kg-ont:family kg-res:House_of_Beor ;
-    kg-ont:hair "Dark",
-        "Golden brown"^^xsd:string ;
-    kg-ont:height "Tall",
-        "Taller than most of his House"^^xsd:string ;
+    kg-ont:hair "Golden brown"^^xsd:string ;
+    kg-ont:height "Taller than most of his House"^^xsd:string ;
     kg-ont:other_names kg-res:Sindarin,
         "Camlost (S)"^^xsd:string ;
     kg-ont:parentage kg-res:Barahir,
@@ -51775,16 +51762,13 @@ kg-res:Beren a kg-ont:Character ;
     kg-ont:people kg-res:Edain ;
     kg-ont:position kg-res:House_of_Beor,
         kg-res:Tol_Galen ;
-    kg-ont:race "Men" ;
     kg-ont:sibling kg-res:Hiril_daughter_of_Barahir ;
-    kg-ont:spouse kg-res:Luthien,
-        "Lúthien Tinúviel" ;
+    kg-ont:spouse kg-res:Luthien ;
     kg-ont:steed "Huan"^^xsd:string,
         "Unnamed horse (from Curufin)"^^xsd:string ;
     kg-ont:weapons "Angrist"^^xsd:string,
         "Dagmor (in the Lays of Beleriand)"^^xsd:string,
-        "Spear"^^xsd:string ;
-    owl:sameAs <http://dbpedia.org/resource/Beren> .
+        "Spear"^^xsd:string .
 
 kg-res:Father_name rdfs:label "Father-name"^^xsd:string,
         "Father-name"@en .
@@ -53383,16 +53367,7 @@ kg-res:Rohan rdfs:label "Rohan"^^xsd:string,
     owl:sameAs <http://dbpedia.org/resource/Rohan> .
 
 kg-res:The_Shire rdfs:label "The Shire"^^xsd:string,
-        "Das Auenland"@de,
-        "The Shire"@en,
-        "La Comarca"@es,
-        "Kontu"@fi,
-        "La Comté"@fr,
-        "La Contea"@it,
-        "ホビット庄"@ja,
-        "The Shire"@nl ;
-    schema:subjectOf kg-card:TW-486 ;
-    owl:sameAs <http://dbpedia.org/resource/The_Shire> .
+        "The Shire"@en .
 
 kg-res:Men a kg-ont:Race ;
     rdfs:label "Men"^^xsd:string,

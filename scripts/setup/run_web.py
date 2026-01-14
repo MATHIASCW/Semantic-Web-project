@@ -35,8 +35,8 @@ if __name__ == "__main__":
     try:
         uvicorn.run(
             "web.main:app",
-            host="127.0.0.1",
-            port=8000,
+            host="tolkien-kg.org",
+            port=80,
             reload=True,
             log_level="info",
             app_dir=str(project_root),
