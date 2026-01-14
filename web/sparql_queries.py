@@ -221,6 +221,11 @@ def get_statistics() -> Dict[str, int]:
     sparql.setQuery('''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a ?type .
+            ?s <http://schema.org/name> ?name .
+            FILTER(
+                STRSTARTS(STR(?type), "http://tolkien-kg.org/ontology/") ||
+                STRSTARTS(STR(?type), "http://schema.org/")
+            )
         }
     ''')
     sparql.setReturnFormat(JSON)
@@ -235,6 +240,7 @@ def get_statistics() -> Dict[str, int]:
     sparql.setQuery('''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a <http://tolkien-kg.org/ontology/Character> .
+            ?s <http://schema.org/name> ?name .
         }
     ''')
     
@@ -248,6 +254,7 @@ def get_statistics() -> Dict[str, int]:
     sparql.setQuery('''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a <http://tolkien-kg.org/ontology/Location> .
+            ?s <http://schema.org/name> ?name .
         }
     ''')
     
@@ -261,6 +268,7 @@ def get_statistics() -> Dict[str, int]:
     sparql.setQuery('''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a <http://schema.org/CreativeWork> .
+            ?s <http://schema.org/name> ?name .
         }
     ''')
     
@@ -274,53 +282,105 @@ def get_statistics() -> Dict[str, int]:
     return stats
 
 
-def get_entities_by_type(entity_type: str = None, limit: int = 20, offset: int = 0, 
-                        search_query: str = None) -> tuple:
+def _resolve_type_iri(type_name: str) -> str:
+    """Return a full IRI for a given type name or IRI."""
+    if not type_name:
+        return ""
+    if type_name.startswith("http://") or type_name.startswith("https://"):
+        return type_name
+
+    aliases = {
+        "Character": "http://tolkien-kg.org/ontology/Character",
+        "Location": "http://tolkien-kg.org/ontology/Location",
+        "Work": "http://schema.org/CreativeWork",
+        "Organization": "http://tolkien-kg.org/ontology/Organization",
+        "Artifact": "http://tolkien-kg.org/ontology/Artifact",
+        "Race": "http://tolkien-kg.org/ontology/Race",
+        "Event": "http://tolkien-kg.org/ontology/Event",
+        "Object": "http://tolkien-kg.org/ontology/Object",
+    }
+    if type_name in aliases:
+        return aliases[type_name]
+
+    return f"http://tolkien-kg.org/ontology/{type_name}"
+
+
+def get_entity_type_facets() -> list[dict]:
+    """Return available entity types with counts for filter UI."""
+    sparql = SPARQLWrapper(FUSEKI_URL)
+    sparql.setQuery(
+        """
+        SELECT ?type (COUNT(DISTINCT ?s) AS ?count) WHERE {
+            ?s a ?type .
+            ?s <http://schema.org/name> ?name .
+            FILTER(
+                STRSTARTS(STR(?type), "http://tolkien-kg.org/ontology/") ||
+                STRSTARTS(STR(?type), "http://schema.org/")
+            )
+        }
+        GROUP BY ?type
+        ORDER BY DESC(?count)
+        LIMIT 20
+        """
+    )
+    sparql.setReturnFormat(JSON)
+
+    facets = []
+    try:
+        results = sparql.query().convert()
+        for row in results["results"]["bindings"]:
+            facets.append(
+                {
+                    "type": row["type"]["value"],
+                    "count": int(row["count"]["value"]),
+                }
+            )
+    except Exception:
+        pass
+
+    return facets
+
+
+def get_entities_by_type(
+    entity_type: str = None, limit: int = 20, offset: int = 0, search_query: str = None
+) -> tuple:
     """
-    Returns a list of entities filtered by type with pagination.
-    
-    Returns:
-        (entities_list, total_count) where entities_list is list of dicts with name, uri, type
+    Returns: (entities_list, total_count, type_facets)
+    entities_list: list of dicts {name, uri, type}
     """
     sparql = SPARQLWrapper(FUSEKI_URL)
-    
-    type_filter = ""
-    if entity_type == 'Character':
-        type_filter = '?s a <http://tolkien-kg.org/ontology/Character> .'
-    elif entity_type == 'Location':
-        type_filter = '?s a <http://tolkien-kg.org/ontology/Location> .'
-    elif entity_type == 'Work':
-        type_filter = '?s a <http://schema.org/CreativeWork> .'
-    else:
-        type_filter = '?s a ?type .'
-    
-    search_filter = ""
+
+    type_filter = "?s a ?type ."
+    type_iri = _resolve_type_iri(entity_type) if entity_type else ""
+    if type_iri:
+        type_filter = f"?s a <{type_iri}> ."
+
     if search_query:
-        safe_query = search_query.replace('"', '\\"')
+        safe_query = search_query.replace('"', '\"')
         search_filter = f'''
             ?s <http://schema.org/name> ?name .
             FILTER(CONTAINS(LCASE(?name), LCASE("{safe_query}")))
         '''
     else:
-        search_filter = '?s <http://schema.org/name> ?name .'
-    
+        search_filter = "?s <http://schema.org/name> ?name ."
+
     count_query = f'''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {{
             {type_filter}
             {search_filter}
         }}
     '''
-    
+
     sparql.setQuery(count_query)
     sparql.setReturnFormat(JSON)
-    
+
     total_count = 0
     try:
         results = sparql.query().convert()
         total_count = int(results["results"]["bindings"][0]["count"]["value"])
     except Exception:
         pass
-    
+
     query = f'''
         SELECT DISTINCT ?s ?name ?type WHERE {{
             {type_filter}
@@ -331,24 +391,26 @@ def get_entities_by_type(entity_type: str = None, limit: int = 20, offset: int =
         LIMIT {limit}
         OFFSET {offset}
     '''
-    
+
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
-    
+
     entities = []
     try:
         results = sparql.query().convert()
         for binding in results["results"]["bindings"]:
             entity = {
-                'name': binding['name']['value'],
-                'uri': binding['s']['value'],
-                'type': binding['type']['value']
+                "name": binding["name"]["value"],
+                "uri": binding["s"]["value"],
+                "type": binding["type"]["value"],
             }
             entities.append(entity)
     except Exception:
         pass
-    
-    return entities, total_count
+
+    type_facets = get_entity_type_facets()
+
+    return entities, total_count, type_facets
 
 
 def get_related_cards(subject_uri: str) -> List[Dict[str, str]]:

@@ -4343,6 +4343,9 @@
         "Góra Gundabad"@pl,
         "Гундабад"@ru .
 
+<http://tolkien-kg.org/resource/Mr._Mugwort> rdfs:label "Labkraut"@de,
+        "Famille Larmoise"@fr .
+
 <http://tolkien-kg.org/resource/Muzgash> rdfs:label "Muzgasch"@de,
         "Muzgash"@it,
         "Muzgash"@pl,

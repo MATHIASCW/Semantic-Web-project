@@ -10,6 +10,7 @@ from web.sparql_queries import (
     get_character_by_name,
     get_statistics,
     get_entities_by_type,
+    get_entity_type_facets,
     get_ontology_property_info,
     get_related_cards,
 )
@@ -70,7 +71,8 @@ app.add_middleware(
 def root():
     """Generate the home page with global statistics."""
     stats = get_statistics()
-    html = generate_home_page(stats)
+    type_facets = get_entity_type_facets()
+    html = generate_home_page(stats, type_facets)
     return HTMLResponse(html)
 
 
@@ -98,7 +100,7 @@ def browse_entities(
     items_per_page = 20
     offset = (page - 1) * items_per_page
 
-    entities, total_count = get_entities_by_type(
+    entities, total_count, type_facets = get_entities_by_type(
         entity_type=type,
         limit=items_per_page,
         offset=offset,
@@ -115,6 +117,7 @@ def browse_entities(
         page=page,
         total_pages=total_pages,
         search_query=search,
+        type_facets=type_facets,
     )
 
     return HTMLResponse(html)
@@ -166,10 +169,8 @@ async def get_resource(name: str, request: Request, format: str = Query(None, al
     related_cards = get_related_cards(resource_uri)
     resource = ResourceData(name=name, uri=resource_uri, properties=properties)
 
-    # Default: Turtle (machine-readable). HTML only when explicitly asked via format=html.
     accept_header = request.headers.get("accept", "text/turtle").lower()
 
-    # Explicit format overrides headers
     if format:
         fmt = format.lower()
         if fmt == "turtle":
@@ -182,11 +183,9 @@ async def get_resource(name: str, request: Request, format: str = Query(None, al
         if fmt == "html":
             return RedirectResponse(url=f"/page/{canonical_name}", status_code=303)
 
-    # Header-driven negotiation (only JSON honored automatically)
     if "application/json" in accept_header or "application/ld+json" in accept_header:
         return JSONResponse({"name": resource.name, "uri": resource.uri, "properties": resource.properties})
 
-    # Default fallback: Turtle (even if browser asked HTML but no format param)
     content = generate_turtle_for_resource(resource)
     return PlainTextResponse(content, media_type="text/turtle")
 

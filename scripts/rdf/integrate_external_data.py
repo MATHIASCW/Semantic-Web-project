@@ -178,6 +178,16 @@ def main():
     csv_count = integrate_csv(out, labels_index, linked_dbpedia)
 
     out.serialize(destination=str(OUTPUT_TTL), format="turtle")
+    try:
+        with open(OUTPUT_TTL, "r", encoding="utf-8") as f:
+            content = f.read()
+        if "@prefix schema1:" in content:
+            content = content.replace("@prefix schema1:", "@prefix schema:")
+            content = content.replace("schema1:", "schema:")
+            with open(OUTPUT_TTL, "w", encoding="utf-8") as f:
+                f.write(content)
+    except Exception:
+        pass
     print(f"OK. External triples written: {OUTPUT_TTL}")
     print(f"  - Cards linked: {cards_count}")
     print(f"  - CSV rows linked: {csv_count}")

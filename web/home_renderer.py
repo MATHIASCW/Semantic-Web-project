@@ -9,12 +9,61 @@ from .layout import render_header, render_footer
 from .styles import get_home_css
 
 
-def generate_home_page(stats: dict) -> str:
-    """Generate the home page HTML."""
-    characters = stats.get("characters", 0)
-    locations = stats.get("locations", 0)
-    works = stats.get("works", 0)
-    total = stats.get("total", 0)
+def generate_home_page(stats: dict, type_facets: list | None = None) -> str:
+    """Generate the home page HTML with dynamic type tiles."""
+    facets = type_facets or []
+    total = sum(f.get("count", 0) for f in facets) if facets else stats.get("total", 0)
+    
+    characters = 0
+    locations = 0
+    works = 0
+    for facet in facets:
+        ftype = facet.get("type", "")
+        fcount = facet.get("count", 0)
+        if "Character" in ftype:
+            characters = fcount
+        elif "Location" in ftype:
+            locations = fcount
+        elif "CreativeWork" in ftype:
+            works = fcount
+
+    tiles_html = ""
+    if facets:
+        for facet in facets:
+            facet_type = facet.get("type", "")
+            count = facet.get("count", 0)
+            label = _prettify_type_label(facet_type)
+            tiles_html += f"""
+                <a href="/browse?type={quote(facet_type)}" class="category-card">
+                    <div class="category-icon">{_type_icon(facet_type)}</div>
+                    <div class="category-name">{escape(label)}</div>
+                    <div class="category-count">{count} entries</div>
+                    <div class="category-desc">Browse all {escape(label.lower())}</div>
+                </a>
+            """
+    else:
+        tiles_html = f"""
+            <a href="/browse?type=Character" class="category-card">
+                <div class="category-icon">{_type_icon('Character')}</div>
+                <div class="category-name">Characters</div>
+                <div class="category-count">{characters} entries</div>
+                <div class="category-desc">Heroes, sages, villains, and creatures</div>
+            </a>
+
+            <a href="/browse?type=Location" class="category-card">
+                <div class="category-icon">{_type_icon('Location')}</div>
+                <div class="category-name">Locations</div>
+                <div class="category-count">{locations} entries</div>
+                <div class="category-desc">Kingdoms, cities, and legendary lands</div>
+            </a>
+
+            <a href="/browse?type=Work" class="category-card">
+                <div class="category-icon">{_type_icon('Work')}</div>
+                <div class="category-name">Works</div>
+                <div class="category-count">{works} entries</div>
+                <div class="category-desc">Books, movies, games, and adaptations</div>
+            </a>
+        """
 
     html = f"""
     <!DOCTYPE html>
@@ -53,29 +102,8 @@ def generate_home_page(stats: dict) -> str:
                 </div>
             </div>
 
-            <h2 class="section-title">Main categories</h2>
-            <div class="categories-grid">
-                <a href="/browse?type=Character" class="category-card">
-                    <div class="category-icon"></div>
-                    <div class="category-name">Characters</div>
-                    <div class="category-count">{characters} entries</div>
-                    <div class="category-desc">Heroes, sages, villains, and creatures</div>
-                </a>
-
-                <a href="/browse?type=Location" class="category-card">
-                    <div class="category-icon"></div>
-                    <div class="category-name">Locations</div>
-                    <div class="category-count">{locations} entries</div>
-                    <div class="category-desc">Kingdoms, cities, and legendary lands</div>
-                </a>
-
-                <a href="/browse?type=Work" class="category-card">
-                    <div class="category-icon"></div>
-                    <div class="category-name">Works</div>
-                    <div class="category-count">{works} entries</div>
-                    <div class="category-desc">Books, movies, games, and adaptations</div>
-                </a>
-            </div>
+            <h2 class="section-title">All entity types</h2>
+            <div class="categories-grid">{tiles_html}</div>
         </div>
 
         {render_footer()}
@@ -85,38 +113,55 @@ def generate_home_page(stats: dict) -> str:
     return html
 
 
+def _prettify_type_label(type_uri: str) -> str:
+    """Human-friendly label from a type URI."""
+    if not type_uri:
+        return "Unknown"
+    label = type_uri.rsplit("/", 1)[-1]
+    return label.replace("_", " ")
+
+
+def _type_icon(type_uri: str) -> str:
+    """Return a compact icon marker based on type URI."""
+    if not type_uri:
+        return "[ ]"
+    if "Character" in type_uri:
+        return "[C]"
+    if "Location" in type_uri:
+        return "[L]"
+    if "CreativeWork" in type_uri or "Work" in type_uri:
+        return "[W]"
+    if "Organization" in type_uri:
+        return "[O]"
+    if "Artifact" in type_uri or "Object" in type_uri:
+        return "[A]"
+    if "Event" in type_uri:
+        return "[E]"
+    return f"[{_prettify_type_label(type_uri)[:1]}]"
+
+
 def generate_browse_page(
     entities: list,
     entity_type: str = None,
     page: int = 1,
     total_pages: int = 1,
     search_query: str = None,
+    type_facets: list | None = None,
 ) -> str:
-    """Generate the entity browsing page."""
+    """Generate the entity browsing page with dynamic type filters."""
 
-    type_labels = {
-        "Character": "Characters",
-        "Location": "Locations",
-        "Work": "Works",
-        None: "All entities",
-    }
+    current_type_label = _prettify_type_label(entity_type) if entity_type else "All entities"
+    current_desc = (
+        f"Browsing all {current_type_label.lower()}" if entity_type else "Browse every entity in the knowledge graph"
+    )
 
-    type_descriptions = {
-        "Character": "Explore the characters of Tolkien's legendarium",
-        "Location": "Discover the places and realms of Middle-earth",
-        "Work": "Browse the books, movies, and adaptations",
-        None: "Browse every entity in the knowledge graph",
-    }
-
-    current_type = type_labels.get(entity_type, type_labels[None])
-    current_desc = type_descriptions.get(entity_type, type_descriptions[None])
-
-    cards_html = ""
+    grouped = {}
     if entities:
         for entity in entities:
             raw_name = entity.get("name") or ""
             entity_uri = entity.get("uri", "")
-            entity_class = entity.get("type", "Unknown").split("/")[-1]
+            entity_class_uri = entity.get("type", "")
+            entity_class = _prettify_type_label(entity_class_uri)
 
             display_name = raw_name.strip() or (
                 entity_uri.rsplit("/", 1)[-1] if entity_uri else "Resource"
@@ -126,15 +171,9 @@ def generate_browse_page(
                 continue
 
             slug = quote(display_name.replace(" ", "_"))
-            type_icon = (
-                "[C]"
-                if "Character" in entity_class
-                else "[L]"
-                if "Location" in entity_class
-                else "[W]"
-            )
+            type_icon = _type_icon(entity_class_uri)
 
-            cards_html += f"""
+            card_html = f"""
             <a href="/page/{slug}" class="character-card">
                 <div class="character-card-content">
                     <div class="character-name">{escape(display_name)}</div>
@@ -142,13 +181,21 @@ def generate_browse_page(
                 </div>
             </a>
             """
+            grouped.setdefault(entity_class_uri or "Unknown", {"label": entity_class, "cards": []})["cards"].append(
+                card_html
+            )
     else:
-        cards_html = """
-        <div class="empty-state" style="grid-column: 1/-1;">
-            <h2>No entities found</h2>
-            <p>Try another search or pick a different category.</p>
-        </div>
-        """
+        grouped["empty"] = {
+            "label": "No entities",
+            "cards": [
+                """
+                <div class="empty-state" style="grid-column: 1/-1;">
+                    <h2>No entities found</h2>
+                    <p>Try another search or pick a different category.</p>
+                </div>
+                """
+            ],
+        }
 
     pagination_html = ""
     if total_pages > 1:
@@ -157,7 +204,7 @@ def generate_browse_page(
         if page > 1:
             prev_page = page - 1
             query_param = f"&search={search_query}" if search_query else ""
-            type_param = f"&type={entity_type}" if entity_type else ""
+            type_param = f"&type={quote(entity_type)}" if entity_type else ""
             pagination_html += (
                 f'<a href="/browse?page={prev_page}{type_param}{query_param}">Previous</a>'
             )
@@ -176,7 +223,7 @@ def generate_browse_page(
             if p == page:
                 pagination_html += f'<span class="active">{p}</span>'
             else:
-                type_param = f"&type={entity_type}" if entity_type else ""
+                type_param = f"&type={quote(entity_type)}" if entity_type else ""
                 query_param = f"&search={search_query}" if search_query else ""
                 pagination_html += (
                     f'<a href="/browse?page={p}{type_param}{query_param}">{p}</a>'
@@ -185,7 +232,7 @@ def generate_browse_page(
         if end_page < total_pages:
             if end_page < total_pages - 1:
                 pagination_html += "<span>...</span>"
-            type_param = f"&type={entity_type}" if entity_type else ""
+            type_param = f"&type={quote(entity_type)}" if entity_type else ""
             query_param = f"&search={search_query}" if search_query else ""
             pagination_html += (
                 f'<a href="/browse?page={total_pages}{type_param}{query_param}">'
@@ -195,7 +242,7 @@ def generate_browse_page(
         if page < total_pages:
             next_page = page + 1
             query_param = f"&search={search_query}" if search_query else ""
-            type_param = f"&type={entity_type}" if entity_type else ""
+            type_param = f"&type={quote(entity_type)}" if entity_type else ""
             pagination_html += (
                 f'<a href="/browse?page={next_page}{type_param}{query_param}">Next</a>'
             )
@@ -204,14 +251,20 @@ def generate_browse_page(
 
         pagination_html += "</div>"
 
-    filter_html = f"""
-    <div class="filters">
-        <a href="/browse" class="filter-btn {'active' if not entity_type else ''}">All</a>
-        <a href="/browse?type=Character" class="filter-btn {'active' if entity_type == 'Character' else ''}">Characters</a>
-        <a href="/browse?type=Location" class="filter-btn {'active' if entity_type == 'Location' else ''}"> Locations</a>
-        <a href="/browse?type=Work" class="filter-btn {'active' if entity_type == 'Work' else ''}">Works</a>
-    </div>
-    """
+    filter_items = [
+        f'<a href="/browse" class="filter-btn {"active" if not entity_type else ""}">All</a>'
+    ]
+    facets = type_facets or []
+    for facet in facets:
+        facet_type = facet.get("type", "")
+        facet_count = facet.get("count", 0)
+        label = _prettify_type_label(facet_type)
+        active_cls = "active" if entity_type == facet_type or entity_type == label else ""
+        filter_items.append(
+            f'<a href="/browse?type={quote(facet_type)}" class="filter-btn {active_cls}">{escape(label)} ({facet_count})</a>'
+        )
+
+    filter_html = f"<div class=\"filters\">{''.join(filter_items)}</div>"
 
     search_value = search_query if search_query else ""
     search_form = f"""
@@ -221,13 +274,26 @@ def generate_browse_page(
     </form>
     """
 
+    sections_html = ""
+    for type_uri, group in grouped.items():
+        cards_joined = "".join(group["cards"])
+        sections_html += f"""
+        <div class="group-block">
+            <div class="group-header">
+                <h2>{escape(group['label'])}</h2>
+                <span class="group-count">{len(group['cards'])} items</span>
+            </div>
+            <div class="characters-grid">{cards_joined}</div>
+        </div>
+        """
+
     html = f"""
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{current_type} - Tolkien Knowledge Graph</title>
+        <title>{current_type_label} - Tolkien Knowledge Graph</title>
         <style>{get_home_css()}</style>
     </head>
     <body>
@@ -235,15 +301,13 @@ def generate_browse_page(
 
         <div class="container">
             <div class="characters-header">
-                <h1>{current_type}</h1>
+                <h1>{current_type_label}</h1>
                 <p>{current_desc}</p>
                 {search_form}
                 {filter_html}
             </div>
 
-            <div class="characters-grid">
-                {cards_html}
-            </div>
+            {sections_html}
 
             {pagination_html}
         </div>
