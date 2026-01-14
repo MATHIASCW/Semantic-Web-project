@@ -81,3 +81,4 @@ for title in all_titles:
         infobox = extract_infobox(wikitext)
         if infobox:
             print(f"--- {title} ---\n{infobox}\n")
+

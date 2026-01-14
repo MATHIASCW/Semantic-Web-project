@@ -1,8 +1,8 @@
 """
-Comparison of infoboxes between infoboxes/ and infoboxes_old_data/
+Comparison of infoboxes between data/infoboxes/ and data/infoboxes_old_data/
 
 This script:
-- Counts the number of infoboxes in each folder
+- Counts the number of data/infoboxes in each folder
 - Extracts page titles ("--- Title ---" part)
 - Compares titles to find similarities/differences
 - Displays a detailed report
@@ -51,21 +51,21 @@ def get_infoboxes_from_directory(directory):
 
 def compare_infoboxes():
     """
-    Compare infoboxes between the two folders.
+    Compare data/infoboxes between the two folders.
     """
     print("=" * 80)
     print("INFOBOX COMPARISON")
     print("=" * 80)
 
-    current_dir = "infoboxes"
-    old_dir = "infoboxes_old_data"
+    current_dir = "data/infoboxes"
+    old_dir = "data/infoboxes_old_data"
 
     current_infoboxes = get_infoboxes_from_directory(current_dir)
     old_infoboxes = get_infoboxes_from_directory(old_dir)
 
     print("\nSTATISTICS:")
-    print(f"  - Current infoboxes ({current_dir}): {len(current_infoboxes)}")
-    print(f"  - Old infoboxes ({old_dir}): {len(old_infoboxes)}")
+    print(f"  - Current data/infoboxes ({current_dir}): {len(current_infoboxes)}")
+    print(f"  - Old data/infoboxes ({old_dir}): {len(old_infoboxes)}")
 
     current_titles = set(current_infoboxes.values())
     old_titles = set(old_infoboxes.values())
@@ -126,3 +126,5 @@ def compare_infoboxes():
 
 if __name__ == "__main__":
     compare_infoboxes()
+
+

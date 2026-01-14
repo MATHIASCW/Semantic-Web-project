@@ -5,12 +5,12 @@ from rdflib import Graph
 
 print("Loading RDF data...")
 data = Graph()
-data.parse("RdfData/kg_full.ttl", format="turtle")
+data.parse("data/rdf/kg_full.ttl", format="turtle")
 print(f"OK. {len(data)} triples loaded")
 
 print("\nLoading SHACL shapes...")
 shapes = Graph()
-shapes.parse("RdfData/tolkien-shapes.ttl", format="turtle")
+shapes.parse("data/rdf/tolkien-shapes.ttl", format="turtle")
 print(f"OK. {len(shapes)} shapes loaded")
 
 print("\nRunning SHACL validation...")
@@ -40,3 +40,5 @@ else:
     print(f"  - RDF triples: {len(data)}")
     print(f"  - SHACL triples: {len(shapes)}")
     print("  - Conformity: 100%")
+
+

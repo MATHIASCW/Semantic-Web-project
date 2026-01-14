@@ -4,14 +4,14 @@ import time
 import os
 
 """
-Fetch Tolkien Gateway infoboxes
+Fetch Tolkien Gateway data/infoboxes
 
 This script queries the MediaWiki API of tolkiengateway.net to:
 - list pages (via `allpages`),
 - retrieve the wikitext of each page (`parse`),
 - extract the infobox (block {{Infobox ... }} with handling of nested braces),
-- save each infobox in the `infoboxes/` folder with a Windows-safe filename,
-- log status to `infoboxes/infobox_log.txt`.
+- save each infobox in the `data/infoboxes/` folder with a Windows-safe filename,
+- log status to `data/infoboxes/infobox_log.txt`.
 
 Main Functions
 - `safe_filename_from_title(title, max_length=180)`: normalizes titles into Windows-safe filenames (replaces forbidden characters, handles reserved names, truncates).
@@ -22,14 +22,14 @@ Main Functions
 
 Input/Output
 - Input: no user input (limit parameter hard-coded, modifiable).
-- Output: `infobox_*.txt` files in `infoboxes/` + `infobox_log.txt` (OK / NO INFOBOX / NO WIKITEXT).
+- Output: `infobox_*.txt` files in `data/infoboxes/` + `infobox_log.txt` (OK / NO INFOBOX / NO WIKITEXT).
 
 Requirements
 - Python 3.8+ and the `requests` package.
 - Install dependencies: `pip install -r requirements.txt` (or `pip install requests`).
 
 Usage
-- Run: `python ApiRequestWithFastApi/requestAllInfobox.py`
+- Run: `python scripts/legacy/ApiRequestData/requestAllInfobox.py`
 - Adjust `limit` as needed (larger = more pages = slower).
 - Site courtesy: the script uses a `User-Agent` and processes sequentially; add `time.sleep()` if you significantly increase `limit`.
 
@@ -120,7 +120,7 @@ def extract_section(wikitext, section_title="Other names"):
     return None
 
 
-def get_existing_titles_from_infoboxes(output_dir="infoboxes"):
+def get_existing_titles_from_infoboxes(output_dir="data/infoboxes"):
     """
     Extracts the titles of pages already downloaded.
     Extracts the title from the first line: --- Page Title ---
@@ -237,7 +237,7 @@ def get_pages_with_infobox(limit=500):
         "Template:Gondorian infobox",
         "Template:Half-elf infobox",
         "Template:Infobox character",
-        "Template:Infoboxes",
+        "Template:Infobox",
         "Template:Journal",
         "Template:Kingdom",
         "Template:Letter infobox",
@@ -388,7 +388,7 @@ def get_all_infobox_template_titles(limit=500):
     return titles
 
 
-output_dir = "infoboxes"
+output_dir = "data/infoboxes"
 os.makedirs(output_dir, exist_ok=True)
 
 MODE = 2  
@@ -464,3 +464,4 @@ with open(log_file, "a", encoding="utf-8") as log:
     log.write(f"Session completed in {duration:.2f} seconds\n")
 
 print(f"Finished processing {len(all_titles)} pages in {end_time - start_time:.2f} seconds.")
+

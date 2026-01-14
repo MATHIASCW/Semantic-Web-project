@@ -4,9 +4,9 @@ from rdflib import Namespace
 
 SCHEMA = Namespace("http://schema.org/")
 
-INPUT_TTL = "RdfData/all_infoboxes.ttl"
-LABELS_TTL = "RdfData/multilang_labels.ttl"
-OUTPUT_TTL = "RdfData/all_infoboxes_with_lang.ttl"
+INPUT_TTL = "data/rdf/all_infoboxes.ttl"
+LABELS_TTL = "data/rdf/multilang_labels.ttl"
+OUTPUT_TTL = "data/rdf/all_infoboxes_with_lang.ttl"
 
 
 def has_en_label(graph: Graph, subject) -> bool:
@@ -50,3 +50,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

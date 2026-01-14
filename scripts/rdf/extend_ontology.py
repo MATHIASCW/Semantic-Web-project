@@ -7,10 +7,10 @@ from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import RDF, RDFS, OWL, XSD
 
 ontology = Graph()
-ontology.parse("RdfData/tolkien-kg-ontology.ttl", format="turtle")
+ontology.parse("data/rdf/tolkien-kg-ontology.ttl", format="turtle")
 
 data = Graph()
-data.parse("RdfData/all_infoboxes.ttl", format="turtle")
+data.parse("data/rdf/all_infoboxes.ttl", format="turtle")
 
 KG_ONT = Namespace("http://tolkien-kg.org/ontology/")
 ontology.bind("kg-ont", KG_ONT)
@@ -40,12 +40,12 @@ for prop_uri in undefined:
     
     ontology.add((prop, RDF.type, OWL.DatatypeProperty))
     ontology.add((prop, RDFS.label, Literal(local_name.replace("_", " ").title())))
-    ontology.add((prop, RDFS.comment, Literal(f"Property automatically extracted from infoboxes.")))
+    ontology.add((prop, RDFS.comment, Literal(f"Property automatically extracted from data/infoboxes.")))
     ontology.add((prop, RDFS.range, XSD.string))
     
     print(f"  ✅ Added: {local_name}")
 
-output_file = "RdfData/tolkien-kg-ontology.ttl"
+output_file = "data/rdf/tolkien-kg-ontology.ttl"
 ontology.serialize(destination=output_file, format="turtle")
 
 print(f"\n📄 Ontology updated: {output_file}")
@@ -56,7 +56,7 @@ ontology2 = Graph()
 ontology2.parse(output_file, format="turtle")
 
 data2 = Graph()
-data2.parse("RdfData/all_infoboxes.ttl", format="turtle")
+data2.parse("data/rdf/all_infoboxes.ttl", format="turtle")
 
 used2 = set()
 defined2 = set()
@@ -76,3 +76,5 @@ if still_undefined:
     print(f"❌ Still {len(still_undefined)} properties not defined!")
 else:
     print("✅✅✅ ALL properties are now defined!\n")
+
+

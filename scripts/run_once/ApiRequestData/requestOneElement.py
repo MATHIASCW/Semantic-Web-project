@@ -43,3 +43,4 @@ def extract_infobox(wikitext):
 wikitext = get_infobox_wikitext("Elrond")
 infobox = extract_infobox(wikitext)
 print(infobox)    
+

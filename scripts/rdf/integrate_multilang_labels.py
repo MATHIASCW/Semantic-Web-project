@@ -8,8 +8,8 @@ USER_AGENT = "TolkienKGBot/1.0 (student project; contact: you@example.com)"
 REQUEST_DELAY_SEC = 0.4
 BATCH_SIZE = 50
 
-INPUT_TTL = "RdfData/all_infoboxes.ttl"
-OUTPUT_TTL = "RdfData/multilang_labels.ttl"
+INPUT_TTL = "data/rdf/all_infoboxes.ttl"
+OUTPUT_TTL = "data/rdf/multilang_labels.ttl"
 
 SCHEMA = Namespace("http://schema.org/")
 
@@ -111,3 +111,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

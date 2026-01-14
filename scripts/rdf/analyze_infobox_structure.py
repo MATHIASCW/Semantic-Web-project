@@ -89,8 +89,8 @@ def parse_infobox(text):
 
 
 def analyze_infoboxes():
-    """Scans all infoboxes and builds statistics."""
-    input_dir = "infoboxes"
+    """Scans all data/infoboxes and builds statistics."""
+    input_dir = "data/infoboxes"
     
     template_types = defaultdict(list) 
     template_stats = defaultdict(lambda: {
@@ -214,7 +214,7 @@ def generate_report(template_stats, all_fields):
         out.write(f"""
     <div class="stats">
         <div class="stat-box">
-            <h3>Total Infoboxes</h3>
+            <h3>Total data/infoboxes</h3>
             <div class="number">{total_infoboxes}</div>
         </div>
         <div class="stat-box">
@@ -339,7 +339,7 @@ def print_summary(template_stats):
                           reverse=True):
         stats = template_stats[template]
         print(f"📋 {template}")
-        print(f"   • Number of infoboxes: {stats['count']}")
+        print(f"   • Number of data/infoboxes: {stats['count']}")
         print(f"   • Distinct fields: {len(stats['fields'])}")
         print(f"   • Common fields: {', '.join(sorted(list(stats['fields'].keys())[:5]))}...")
         print()
@@ -349,3 +349,5 @@ if __name__ == "__main__":
     template_stats, all_fields = analyze_infoboxes()
     print_summary(template_stats)
     generate_report(template_stats, all_fields)
+
+

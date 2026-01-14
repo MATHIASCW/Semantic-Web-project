@@ -407,7 +407,7 @@ fuseki-server --mem /kg-tolkiengateway
 # Charger les données RDF:
 curl -X POST \
   -H "Content-Type: text/turtle" \
-  -d @RdfData/all_infoboxes.ttl \
+  -d @data/rdf/all_infoboxes.ttl \
   http://localhost:3030/kg-tolkiengateway/data
             </div>
         </div>
@@ -445,3 +445,4 @@ curl -X POST \
     </div>
 </body>
 </html>
+

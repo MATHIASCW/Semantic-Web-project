@@ -5,8 +5,8 @@ from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD, RDFS
 import wikitextparser as wtp
 
-INPUT_DIR = "infoboxes"
-OUTPUT_DIR = "RdfData"
+INPUT_DIR = "data/infoboxes"
+OUTPUT_DIR = "data/rdf"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "all_infoboxes.ttl")
 
 KGONT = Namespace("http://tolkien-kg.org/ontology/")
@@ -508,3 +508,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

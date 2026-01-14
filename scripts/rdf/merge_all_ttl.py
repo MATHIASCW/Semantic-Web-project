@@ -1,10 +1,10 @@
 from rdflib import Graph
 
 INPUTS = [
-    "RdfData/all_infoboxes_with_lang.ttl",
-    "RdfData/external_links.ttl",
+    "data/rdf/all_infoboxes_with_lang.ttl",
+    "data/rdf/external_links.ttl",
 ]
-OUTPUT = "RdfData/kg_full.ttl"
+OUTPUT = "data/rdf/kg_full.ttl"
 
 
 def main():
@@ -17,3 +17,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

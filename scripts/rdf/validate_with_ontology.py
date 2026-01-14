@@ -8,10 +8,10 @@ are correctly defined in the corresponding ontology.
 """
 
 ontology = Graph()
-ontology.parse("RdfData/tolkien-kg-ontology.ttl", format="turtle")
+ontology.parse("data/rdf/tolkien-kg-ontology.ttl", format="turtle")
 
 data = Graph()
-data.parse("RdfData/kg_full.ttl", format="turtle")
+data.parse("data/rdf/kg_full.ttl", format="turtle")
 
 print(f"OK. Ontology: {len(ontology)} triples")
 print(f"OK. Data: {len(data)} triples")
@@ -36,3 +36,5 @@ if undefined:
         print(f"  - {prop}")
 else:
     print("\nOK. All kg-ont:* properties are defined.")
+
+

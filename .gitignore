@@ -1,11 +1,11 @@
-infoboxes
+data/infoboxes
 *.zip
 .venv
-.gitignore
-infoboxes_Old_data*
+data/infoboxes_old_data*
 infobox_comparison_report.txt
-*all_infoboxes/*
+data/rdf/all_infoboxes*
 infobox_structure_report*
 infobox_fields_mapping*
 rdf_maker_old*
+__pycache__
 *.md

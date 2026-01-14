@@ -10,10 +10,10 @@ KGONT = Namespace("http://tolkien-kg.org/ontology/")
 SCHEMA = Namespace("http://schema.org/")
 KGCARD = Namespace("http://tolkien-kg.org/card/")
 
-INPUT_TTL = Path("RdfData/all_infoboxes.ttl")
-CARDS_JSON = Path("RdfData/cards.json")
-CSV_CHARACTERS = Path("RdfData/lotr_characters.csv")
-OUTPUT_TTL = Path("RdfData/external_links.ttl")
+INPUT_TTL = Path("data/rdf/all_infoboxes.ttl")
+CARDS_JSON = Path("data/rdf/cards.json")
+CSV_CHARACTERS = Path("data/rdf/lotr_characters.csv")
+OUTPUT_TTL = Path("data/rdf/external_links.ttl")
 
 ADD_DBPEDIA_SAMEAS = True
 
@@ -186,3 +186,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
