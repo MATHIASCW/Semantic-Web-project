@@ -65,6 +65,8 @@ git clone https://github.com/MATHIASCW/Semantic-Web-project.git
 cd Semantic-Web-project
 ```
 
+![Clone Tolkien KG](images/Github_clone.png)
+
 #### 2. Créer l'Environnement Virtuel Python
 
 ```bash
@@ -102,6 +104,8 @@ fuseki-server.bat --mem /kg-tolkiengateway
 ```
 
 **Note:** Fuseki démarre sur `http://localhost:3030` par défaut.
+
+![Fuseki Tolkien KG](images/Kg_tolkiengateway_fuseki.png)
 
 #### 5. Charger les Données RDF dans Fuseki
 
@@ -485,6 +489,115 @@ Basé sur l'analyse réelle du graphe RDF kg_full.ttl:
 - **Temps validation SHACL:** ~5 secondes
 - **Temps chargement Fuseki:** ~2 secondes (en mémoire)
 - **Temps réponse API:** ~100-300ms par ressource
+
+---
+
+## 📸 Captures d'Écran du Projet
+
+### Interface Web - Page d'Accueil
+
+![Homepage Tolkien KG](images/Home_kg.png)
+
+**Statistiques affichées:**
+- 2,000 entités totales
+- 1,260 personnages (Characters)
+- 228 lieux (Locations)
+- 240 œuvres (Works)
+
+**Fonctionnalités:**
+- Tuiles cliquables par type d'entité ([C] Character, [W] CreativeWork, [L] Location, etc.)
+- Navigation vers Browse et API
+- Interface responsive avec design moderne
+
+---
+
+### Interface Web - Navigation (Browse)
+
+![Browse Entities](images/All_enities.png)
+
+**Fonctionnalités:**
+- Recherche textuelle d'entités
+- Filtres par type (Character, Location, Person, Game, etc.)
+- Pagination (navigation par pages)
+- Badges colorés pour identifier les types
+- Liste organisée par sections (Character, Location, TVEpisode, Person, Game)
+
+---
+
+### Fiche Détaillée d'une Entité (Abigail)
+
+![Resource Page - Abigail](images/Entitie_kg.png)
+
+**Sections:**
+- **Property/Value table** avec propriétés structurées:
+  - Gender: Female
+  - In Language: Westron
+  - Location: Mordor, Sundering_Seas, Middle_Earth
+  - Name: Abigail
+  - Birth Date: Late Second Age
+  - People: Pre_Numenoreans
+  - Label: Abigail (EN)
+- **Available formats:** Turtle (RDF) et JSON
+- Liens vers autres entités (cliquables)
+
+---
+
+### Données RDF (Format Turtle)
+
+![RDF Turtle Example](images/Entitie_rdf_kg.png)
+
+**Exemple de triples RDF pour Abigail:**
+```turtle
+kg-res:Abigail schema:gender "Female" ;
+               schema:inLanguage kg-res:Westron ;
+               schema:location <http://tolkien-kg.org/resource/Middle_earth> ,
+                               kg-res:Mordor ,
+                               <http://tolkien-kg.org/resource/Sundering_Seas> ;
+               schema:name "Abigail" ;
+               kg-ont:birthDate "Late Second Age" ;
+               kg-ont:people <http://tolkien-kg.org/resource/Pre_Numenoreans> ;
+               <http://tolkien-kg.org/ontology/people_duplicated> kg-res:Men ;
+               rdf:type kg-ont:Character ;
+               rdfs:label "Abigail" .
+```
+
+---
+
+### Apache Jena Fuseki - Interface SPARQL
+
+![Fuseki Interface](images/Fuseki_file_add_to_kg.png)
+
+**Fonctionnalités:**
+- Upload de fichiers RDF (Turtle, RDF/XML, TriG)
+- Dataset: `/kg-tolkiengateway`
+- Fichiers chargés:
+  - `tolkien-shapes.ttl` (3.79kb) - Contraintes SHACL
+  - `tolkien-kg-ontology.ttl` (28.73kb) - Ontologie
+  - `kg_full.ttl` (1.86mb) - **Knowledge Graph complet (49,242 triples)**
+- Interface de requêtes SPARQL
+- Gestion des datasets
+
+---
+
+### API Documentation (FastAPI)
+
+![API Documentation](images/Api_kg.png)
+
+**Endpoints disponibles:**
+- **Root:** `GET /` - Page d'accueil
+- **Characters:** 
+  - `GET /characters` - Liste des personnages
+  - `GET /character/{name}` - Détails d'un personnage
+- **Browse:** `GET /browse` - Navigation par type
+- **Linked Data:**
+  - `GET /resource/{name}` - Ressource avec négociation de contenu
+  - `GET /page/{name}` - Page HTML d'une ressource
+- **Ontology:** `GET /ontology/{name}` - Propriétés de l'ontologie
+- **Default:** `GET /favicon.ico`
+
+**Schemas:** HTTPValidationError, ValidationError
+
+**Interface:** OpenAPI 3.1 (OAS 3.1) avec documentation interactive
 
 ---
 
@@ -1159,4 +1272,76 @@ python scripts/rdf/validate_final.py
 
 ---
 
-## Objectifs Pédagogiques Atteints
+## 🎯 Conclusion
+
+Ce projet démontre une implémentation **complète et rigoureuse** de la chaîne de traitement des données du Web Sémantique. Partant d'un wiki non-structuré (Tolkien Gateway), nous avons construit un Knowledge Graph public accessible via un endpoint SPARQL et une interface Linked Data, respectant les standards W3C (RDF, SPARQL, SHACL, schema.org).
+
+**Points forts du projet:**
+- ✅ **100% de conformité** aux exigences (13/13 critères implémentés)
+- ✅ **49,242 triples RDF** entièrement validés (SHACL)
+- ✅ **Architecture modulaire** et extensible
+- ✅ **Documentation complète** avec exemples de requêtes
+- ✅ **Données enrichies** via alignement avec DBpedia, METW, CSV
+- ✅ **Interface utilisateur moderne** avec recherche, filtres, navigation
+
+**Apport scientifique:**
+Ce projet illustre comment transformer des données semi-structurées (infoboxes wiki) en RDF de haute qualité, un processus fondamental pour la construction de Knowledge Graphs à grande échelle.
+
+---
+
+## 🔮 Améliorations Futures Possibles
+
+### 1. **Enrichissement des Données**
+- Extraction d'informations depuis les **sections de texte libre** (actuellement, seules les infoboxes sont traitées)
+- Reconnaissance automatique d'entités nommées (NER) pour identifier les références non-structurées
+- Extraction de relations temporelles et spatiales depuis le texte
+
+### 2. **Raisonnement Avancé**
+- Implémentation de **règles d'inférence personnalisées** (ex: si X est parent de Y et Y est parent de Z, alors X est grandparent de Z)
+- Support des **fuzzy matching** pour améliorer l'alignement DBpedia (actuellement basé sur correspondances exactes de noms)
+- Détection de contradictions et résolution (ex: date de mort antérieure à date de naissance)
+
+### 3. **Intégration Multi-Source**
+- Fusion avec d'autres wikis Tolkien (Encyclopedia of Arda, theonering.net)
+- Alignement avec **GeoNames** pour les lieux (coordonnées géographiques)
+- Liaison avec **MovieDB/IMDb** pour les adaptations filmées
+
+### 4. **Interface Utilisateur Avancée**
+- **Visualisation graphique** des relations (force-directed graph)
+- **Timeline interactive** montrant l'évolution chronologique de la Terre du Milieu
+- **Carte 3D interactive** des lieux (Rivendell, Moria, Gondor, etc.)
+- **Comparaison d'entités** côte à côte
+- **Historique des modifications** (version control pour le KG)
+
+### 5. **Performance et Scalabilité**
+- Migration vers une **triplestore persistante** (PostgreSQL + PostGIS, AllegroGraph)
+- Implémentation du **caching SPARQL** pour accélérer les requêtes fréquentes
+- Support de la **fédération SPARQL** pour interroger DBpedia en temps réel
+- Optimisation des **property paths** complexes
+
+### 6. **Validation et Qualité**
+- Ajout de **provenance RDF** (PROV ontology) pour tracer l'origine de chaque triple
+- Calcul du **confidence score** pour les propriétés (ex: "90% de certitude sur la date de naissance")
+- Détection des **anomalies** (valeurs manquantes, divergences inter-sources)
+- Dashboard de **qualité des données** en temps réel
+
+### 7. **Web Sémantique Avancé**
+- Support complet du **Linked Data Platform (LDP)** pour CRUD opérations
+- Implémentation du **Activity Streams 2.0** pour suivre les changements du KG
+- Publication vers le **Web Sémantique fédéré** (décentralisé via Solid Protocol)
+
+---
+
+## 👥 Développement
+
+### Auteurs
+
+**Mathias CHANE-WAYE**  
+**Timur BALI**  
+
+### Supervision
+
+**Antoine Zimmermann**  
+**Victor Charpenay**
+
+---
