@@ -1,65 +1,59 @@
-# Tolkien Knowledge Graph - Projet Web Sémantique
+# Tolkien Knowledge Graph - Semantic Web Project
 
-**Auteurs:** MATHIAS CHANE-WAYE TIMUR BALI
-**Date:** Janvier 2026  
-**Contexte:** Projet Web Sémantique - Construction d'un Knowledge Graph à partir du Tolkien Gateway  
-
----
-
-##  Table des Matières
-
-1. [Présentation du Projet](#-présentation-du-projet)
-2. [Installation Complète et Pipeline](#-installation-complète-et-pipeline)
-3. [Comment Tester le Projet](#-comment-tester-le-projet)
-4. [Architecture et Choix Techniques](#-architecture-et-choix-techniques)
-5. [Implémentation des Exigences](#-implémentation-des-exigences-du-projet)
-6. [Résultats et Statistiques](#-résultats-et-statistiques)
-7. [Structure du Projet](#-structure-du-projet-détaillée)
-8. [Documentation Technique](#-documentation-technique)
+**Authors:** Mathias CHANE-WAYE, Timur BALI  
+**Date:** January 2026  
+**Context:** Semantic Web Project - Building a Knowledge Graph from Tolkien Gateway  
 
 ---
 
-##  Présentation du Projet
+##  Table of Contents
 
-### Objectif Principal
-
-Construire un **Knowledge Graph (KG)** complet à partir du wiki [Tolkien Gateway](https://tolkiengateway.net/), similaire à la construction de DBpedia à partir de Wikipédia. Le projet couvre l'ensemble de la chaîne de traitement des données du Web Sémantique : extraction, transformation RDF, alignement ontologique, validation, raisonnement et publication via une interface Linked Data.
-
-### Résultats Clés
-
--  **49,242 triples RDF** générés à partir de 800+ pages wiki
--  **Ontologie hybride** : schema.org + vocabulaire personnalisé kg-ont
--  **Support multilingue** : labels en anglais, allemand, français, espagnol, italien, russe
--  **Enrichissement externe** : 898 liens DBpedia + 290 cartes METW + 756 caractères CSV
--  **Endpoint SPARQL fonctionnel** : Apache Jena Fuseki avec raisonnement
--  **Interface Linked Data complète** : négociation de contenu HTML/Turtle/JSON
--  **Validation SHACL** : 100% de conformité, 0 violations détectées
-
-### Technologies Utilisées
-
-- **Python 3.11+** - Langage principal
-- **FastAPI 0.125.0** - Framework web API REST
-- **RDFlib 7.5.0** - Manipulation de graphes RDF
-- **SPARQLWrapper 2.0.0** - Client SPARQL
-- **pyshacl 0.30.1** - Validation SHACL
-- **Apache Jena Fuseki** - Triplestore et endpoint SPARQL
-- **wikitextparser 0.56.4** - Parsing de templates MediaWiki
+1. [Project Overview](#project-overview)
+2. [Complete Installation and Pipeline](#complete-installation-and-pipeline)
+3. [How to Test the Project](#how-to-test-the-project)
+4. [Architecture and Technical Choices](#architecture-and-technical-choices)
+5. [Requirements Implementation](#requirements-implementation)
+6. [Results and Statistics](#results-and-statistics)
+7. [Project Structure](#detailed-project-structure)
+8. [Technical Documentation](#technical-documentation)
 
 ---
 
-##  Installation Complète et Pipeline
+##  Project Overview
 
-### Prérequis Système
+### Main Objective
 
-- **Python 3.11+** installé ([télécharger ici](https://www.python.org/downloads/))
-- **Java 8+** pour Apache Jena Fuseki ([télécharger ici](https://www.java.com/))
-- **Git** pour cloner le repository
-- **curl** ou navigateur web pour tester l'API
-- **Environ 5-10 GB d'espace disque** pour les données
+Build a complete **Knowledge Graph (KG)** from the [Tolkien Gateway](https://tolkiengateway.net/) wiki, similar to building DBpedia from Wikipedia. The project covers the entire Semantic Web data processing chain: extraction, RDF transformation, ontological alignment, validation, reasoning, and publication via a Linked Data interface.
 
-### Phase 1: Configuration de l'Environnement
+### Key Results
 
-#### 1.1 Cloner le Repository
+See the [Results and Statistics](#results-and-statistics) section below for a complete overview of metrics (49,242 triples, 2,291 entities, 0 SHACL violations, etc.).
+
+### Technologies Used
+
+- **Python 3.11+** - Main language
+- **FastAPI 0.125.0** - REST API web framework
+- **RDFlib 7.5.0** - RDF graph manipulation
+- **SPARQLWrapper 2.0.0** - SPARQL client
+- **pyshacl 0.30.1** - SHACL validation
+- **Apache Jena Fuseki** - Triplestore and SPARQL endpoint
+- **wikitextparser 0.56.4** - MediaWiki template parsing
+
+---
+
+##  Complete Installation and Pipeline
+
+### System Requirements
+
+- **Python 3.11+** installed ([download here](https://www.python.org/downloads/))
+- **Java 8+** for Apache Jena Fuseki ([download here](https://www.java.com/))
+- **Git** to clone the repository
+- **curl** or web browser to test the API
+- **Approximately 5-10 GB disk space** for data
+
+### Phase 1: Environment Setup
+
+#### 1.1 Clone the Repository
 
 ```bash
 git clone https://github.com/MATHIASCW/Semantic-Web-project.git
@@ -68,202 +62,192 @@ cd Semantic-Web-project
 
 ![Clone Tolkien KG](images/Github_clone.png)
 
-#### 1.2 Créer l'Environnement Virtuel Python
+#### 1.2 Create Python Virtual Environment
 
 ```bash
-# Créer l'environnement virtuel
+# Create virtual environment
 python -m venv .venv
 
-# Activer l'environnement
-# Sur Windows:
+# Activate environment
+# On Windows:
 .venv\Scripts\activate
 
-# Sur Linux/Mac:
+# On Linux/Mac:
 source .venv/bin/activate
 ```
 
-#### 1.3 Installer les Dépendances Python
+#### 1.3 Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-#### 1.4 Télécharger et Configurer Apache Jena Fuseki
+#### 1.4 Download and Configure Apache Jena Fuseki
 
 ```bash
-# Télécharger depuis: https://jena.apache.org/download/
-# Extraire l'archive dans un répertoire (ex: C:\fuseki)
+# Download from: https://jena.apache.org/download/
+# Extract archive to a directory (e.g., C:\fuseki)
 
-# Lancer Fuseki avec un dataset en mémoire
+# Launch Fuseki with in-memory dataset
 cd apache-jena-fuseki-x.x.x
 
-# Windows: Utiliser le script batch
+# Windows: Use batch script
 fuseki-server.bat --mem /kg-tolkiengateway
 
-# Linux/Mac: Utiliser la commande shell
+# Linux/Mac: Use shell command
 ./fuseki-server --mem /kg-tolkiengateway
 ```
 
-**Note:** Fuseki démarre sur `http://localhost:3030` par défaut.
+**Note:** Fuseki starts on `http://localhost:3030` by default.
 
 ![Fuseki Tolkien KG](images/Kg_tolkiengateway_fuseki.png)
 
-### Phase 2: Extraction des Données (Si nécessaire)
+### Phase 2: Data Extraction (Optional)
 
-**IMPORTANT:** Les données RDF finales (`data/rdf/kg_full.ttl`) sont déjà incluses dans le repository. 
-Vous pouvez **passer directement à la Phase 3** pour charger les données.
+ **IMPORTANT:** Final RDF data (`data/rdf/kg_full.ttl` with 49,242 triples) is already included in the repository. **You can skip directly to Phase 3.**
 
-Cette phase est nécessaire **uniquement si vous modifiez les infoboxes** ou souhaitez régénérer le KG complet.
+This phase is necessary **only if you modify wiki infoboxes** or want to regenerate the complete graph.
 
-#### 2.1 Télécharger les Infoboxes depuis Tolkien Gateway
+#### 2.1 Download Infoboxes from Tolkien Gateway
 
-Dans un **nouveau terminal** (avec l'environnement virtuel activé):
+In a **new terminal** (with virtual environment activated):
 
 ```bash
-# Télécharger TOUTES les infoboxes (800+ pages)
+# Download ALL infoboxes (800+ pages)
 python scripts/run_once/ApiRequestData/requestAllInfobox.py
 ```
 
-**Résultat:** Les fichiers seront sauvegardés dans `data/infoboxes/`
+**Result:** Files will be saved in `data/infoboxes/`
 
-#### 2.2 Générer le Knowledge Graph Complet
+#### 2.2 Generate Complete Knowledge Graph
 
 ```bash
-# Étape 1: Extraire infoboxes → RDF (31,308 triples)
+# Step 1: Extract infoboxes → RDF (31,308 triples)
 python scripts/rdf/rdf_maker.py
 
-# Étape 2: Ajouter labels multilingues
+# Step 2: Add multilingual labels
 python scripts/rdf/merge_multilang_labels.py
 
-# Étape 3: Intégrer données externes (DBpedia, METW, CSV)
+# Step 3: Integrate external data (DBpedia, METW, CSV)
 python scripts/rdf/integrate_external_data.py
 
-# Étape 4: Fusionner tout en KG final (49,242 triples)
+# Step 4: Merge everything into final KG (49,242 triples)
 python scripts/rdf/merge_all_ttl.py
 
-# Étape 5: Valider avec SHACL (vérifier 0 violations)
+# Step 5: Validate with SHACL (verify 0 violations)
 python scripts/rdf/validate_final.py
 ```
 
-**Résultat:** `data/rdf/kg_full.ttl` (49,242 triples)
+**Result:** `data/rdf/kg_full.ttl` (49,242 triples)
 
-### Phase 3: Charger les Données dans Fuseki
+### Phase 3: Load Data into Fuseki
 
-Dans un **nouveau terminal**:
+In a **new terminal**:
 
 ```bash
-# Charger le KG final dans Fuseki
+# Load final KG into Fuseki
 curl -X POST http://localhost:3030/kg-tolkiengateway/data \
     -H "Content-Type: text/turtle" \
     --data-binary @data/rdf/kg_full.ttl
 ```
 
-**Résultat attendu:** 
+**Expected result:** 
 ```
 "count" : 49252 ,
 "tripleCount" : 49252
 ```
 
-**Alternative (via interface web Fuseki):**
-- Ouvrir http://localhost:3030 dans un navigateur
-- Aller dans "Manage Datasets" → `/kg-tolkiengateway` → "Upload files"
-- Uploader `data/rdf/kg_full.ttl`
+**Alternative (via Fuseki web interface):**
+- Open http://localhost:3030 in a browser
+- Go to "Manage Datasets" → `/kg-tolkiengateway` → "Upload files"
+- Upload `data/rdf/kg_full.ttl`
 
-**Important (résumé clair):**
-- **Obligatoire pour l'application:** charger uniquement `data/rdf/kg_full.ttl` dans le dataset `/kg-tolkiengateway`.
-- **Optionnel:**
-  - `data/rdf/tolkien-shapes.ttl` (SHACL) → seulement si vous voulez valider dans Fuseki
-  - `data/rdf/tolkien-kg-ontology.ttl` (ontologie) → seulement pour inspecter classes/propriétés
-- **Bonnes pratiques:** si vous chargez ces fichiers optionnels, utilisez un dataset séparé (ex: `/kg-validation`)
+**Important (clear summary):**
+- **Required for application:** load only `data/rdf/kg_full.ttl` into dataset `/kg-tolkiengateway`.
+- **Optional:**
+  - `data/rdf/tolkien-shapes.ttl` (SHACL) → only if you want to validate in Fuseki
+  - `data/rdf/tolkien-kg-ontology.ttl` (ontology) → only to inspect classes/properties
+- **Best practices:** if you load these optional files, use a separate dataset (e.g., `/kg-validation`)
 
-### Phase 4: Lancer l'Interface Web
+### Phase 4: Launch Web Interface
 
 ```bash
-# Dans le répertoire racine du projet, Terminal 3:
+# In project root directory, Terminal 3:
 
-# Option A: Via script Python
+# Option A: Via Python script
 python scripts/setup/run_web.py
 
-# Option B: Via script batch (Windows)
+# Option B: Via batch script (Windows)
 scripts\setup\start_web.bat
 
-# Option C: Via script shell (Linux/Mac)
+# Option C: Via shell script (Linux/Mac)
 bash scripts/setup/start_web.sh
 ```
 
-**L'application est maintenant accessible sur:**
+**Application is now accessible at:**
 
--  **Accueil:** http://tolkien-kg.org/
--  **Navigation:** http://tolkien-kg.org/browse
--  **Documentation API:** http://tolkien-kg.org/docs
+-  **Home:** http://tolkien-kg.org/
+-  **Browse:** http://tolkien-kg.org/browse
+-  **API Documentation:** http://tolkien-kg.org/docs
 -  **ReDoc:** http://tolkien-kg.org/redoc
 -  **Fuseki UI:** http://localhost:3030/
 
-### Résumé Visuel du Pipeline Complet
+### Complete Pipeline Visual Summary
 
 ```
-[Phase 2] Données Brutes (Optionnel - déjà incluses)
-    ↓
-requestAllInfobox.py → data/infoboxes/ (800+ fichiers txt)
-    ↓
-[Phase 2] Génération RDF (Optionnel)
-    ↓
+[Phase 2 - Optional] Raw Data Extraction
+requestAllInfobox.py → data/infoboxes/ (800+ files)
+         ↓
 rdf_maker.py → all_infoboxes.ttl (31,308 triples)
-    ↓
-merge_multilang_labels.py → all_infoboxes_with_lang.ttl
-    ↓
-integrate_external_data.py → external_links.ttl (DBpedia + METW + CSV)
-    ↓
-merge_all_ttl.py → kg_full.ttl (49,242 triples) 
-    ↓
-validate_final.py → Validation SHACL (0 violations)
-    ↓
-[Phase 3] Chargement Fuseki
-    ↓
-curl POST → Fuseki localhost:3030/kg-tolkiengateway/data
-    ↓
-[Phase 4] Lancement Interface Web
-    ↓
-FastAPI + content negotiation → http://tolkien-kg.org/
+merge_multilang_labels.py → +Multilingual labels
+integrate_external_data.py → +DBpedia/METW/CSV
+merge_all_ttl.py → kg_full.ttl (49,242 triples)
+validate_final.py → SHACL Validation (0 violations) 
+         ↓
+[Phase 3] Load into Fuseki
+curl POST data/rdf/kg_full.ttl → localhost:3030/kg-tolkiengateway
+         ↓
+[Phase 4] Launch Web Interface
+FastAPI → http://tolkien-kg.org/ (with content negotiation)
 ```
 
 ---
 
-##  Comment Tester le Projet
+##  How to Test the Project
 
-### Test 1: Vérifier que Fuseki est Opérationnel
+### Test 1: Verify Fuseki is Operational
 
 ```bash
-# Tester la disponibilité de Fuseki
+# Test Fuseki availability
 curl http://localhost:3030/$/ping
 
-# Compter les triples chargés
+# Count loaded triples
 curl -X POST http://localhost:3030/kg-tolkiengateway/sparql \
     -H "Content-Type: application/sparql-query" \
     --data "SELECT (COUNT(*) as ?count) WHERE { ?s ?p ?o }"
 ```
 
-**Résultat attendu:** `"value": "49242"` (ou proche)
+**Expected result:** `"value": "49242"` (or close)
 
-### Test 2: Accéder à une Ressource via Linked Data
+### Test 2: Access a Resource via Linked Data
 
 ```bash
-# Obtenir la description RDF de Gandalf en Turtle
+# Get Gandalf's RDF description in Turtle
 curl -H "Accept: text/turtle" http://tolkien-kg.org/resource/Gandalf
 
-# Obtenir la description en HTML
+# Get description in HTML
 curl -H "Accept: text/html" http://tolkien-kg.org/resource/Gandalf
 
-# Obtenir la description en JSON-LD
+# Get description in JSON-LD
 curl -H "Accept: application/ld+json" http://tolkien-kg.org/resource/Gandalf
 ```
 
-### Test 3: Exécuter une Requête SPARQL
+### Test 3: Execute a SPARQL Query
 
-Ouvrir http://localhost:3030/#/dataset/kg-tolkiengateway/query et tester:
+Open http://localhost:3030/#/dataset/kg-tolkiengateway/query and test:
 
 ```sparql
-# Lister les 10 premiers personnages
+# List first 10 characters
 PREFIX kg-ont: <http://tolkien-kg.org/ontology/>
 PREFIX schema: <http://schema.org/>
 
@@ -275,35 +259,35 @@ WHERE {
 LIMIT 10
 ```
 
-### Test 4: Naviguer dans l'Interface Web
+### Test 4: Navigate Web Interface
 
-1. Ouvrir http://tolkien-kg.org/
-2. Cliquer sur "Browse" pour voir la liste des entités
-3. Utiliser les filtres par type (Character, Location, Work, etc.)
-4. Cliquer sur un nom (ex: "Aragorn") pour voir sa fiche détaillée
-5. Vérifier les propriétés, liens externes, timeline, image
+1. Open http://tolkien-kg.org/
+2. Click "Browse" to see entity list
+3. Use filters by type (Character, Location, Work, etc.)
+4. Click a name (e.g., "Aragorn") to see detailed page
+5. Check properties, external links, timeline, image
 
-### Test 5: Valider les Données avec SHACL
+### Test 5: Validate Data with SHACL
 
 ```bash
-# Exécuter la validation SHACL
+# Run SHACL validation
 python scripts/rdf/validate_final.py
 ```
 
-**Résultat attendu:**
+**Expected result:**
 ```
  NO SHACL VIOLATIONS!
 OK. The RDF conforms to the shapes.
 Final statistics:
   - RDF triples: 49242
-  - SHACL triples: [nombre de shapes]
+  - SHACL triples: [number of shapes]
   - Conformity: 100%
 ```
 
-### Test 6: Tester le Raisonnement SPARQL
+### Test 6: Test SPARQL Reasoning
 
 ```sparql
-# Trouver toutes les classes d'Aragorn (y compris superclasses)
+# Find all Aragorn's classes (including superclasses)
 PREFIX kg-res: <http://tolkien-kg.org/resource/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -313,156 +297,156 @@ WHERE {
 }
 ```
 
-**Résultat attendu:** `kg-ont:Character`, `schema:Person`, etc.
+**Expected result:** `kg-ont:Character`, `schema:Person`, etc.
 
 ---
 
-##  Architecture et Choix Techniques
+##  Architecture and Technical Choices
 
-### 1. Extraction et Transformation RDF
+### 1. Extraction and RDF Transformation
 
-**Choix:** Utilisation de wikitextparser pour parser les templates MediaWiki
-
-**Justification:**
-- MediaWiki utilise un format de template complexe avec imbrications
-- wikitextparser gère nativement cette syntaxe
-- Alternative considérée: regex (trop fragile pour les cas complexes)
-
-**Processus:**
-1. Extraction des infoboxes depuis les pages wiki (format txt)
-2. Parsing des templates avec détection du type (`{{Infobox character}}`, etc.)
-3. Mapping des champs vers des propriétés RDF selon le type de template
-4. Génération d'IRIs uniques: `kg-res:Nom_de_Entite`
-5. Nettoyage des valeurs (suppression HTML, refs, templates imbriqués)
-
-**Fichier principal:** [scripts/rdf/rdf_maker.py](scripts/rdf/rdf_maker.py)
-
-### 2. Alignement Ontologique
-
-**Choix:** Approche hybride schema.org + vocabulaire personnalisé
+**Choice:** Use wikitextparser to parse MediaWiki templates
 
 **Justification:**
-- **schema.org** pour l'interopérabilité web (SEO, Google Knowledge Graph)
-- **kg-ont:** pour concepts spécifiques à Tolkien non couverts par schema.org
-- Alternative rejetée: DBpedia Ontology (trop complexe, moins standard web)
+- MediaWiki uses complex template format with nesting
+- wikitextparser handles this syntax natively
+- Alternative considered: regex (too fragile for complex cases)
 
-**Exemples de réutilisation:**
+**Process:**
+1. Extract infoboxes from wiki pages (txt format)
+2. Parse templates with type detection (`{{Infobox character}}`, etc.)
+3. Map fields to RDF properties according to template type
+4. Generate unique IRIs: `kg-res:Entity_Name`
+5. Clean values (remove HTML, refs, nested templates)
 
-| Concept | schema.org | kg-ont: personnalisé |
-|---------|------------|----------------------|
-| Nom | `schema:name`  | - |
-| Date naissance | - | `kg-ont:birthDate` (format spécifique Tolkien: "TA 2931") |
-| Lieu naissance | *(idée initiale: `schema:birthPlace`)* | `kg-ont:birthLocation` (utilisé dans le KG final) |
-| Chronologie | - | `kg-ont:timeline` (spécifique univers) |
-| Affiliation | - | `kg-ont:affiliation` (groupes Terre du Milieu) |
+**Main file:** [scripts/rdf/rdf_maker.py](scripts/rdf/rdf_maker.py)
 
-**Note:** Le KG final n'emploie pas `schema:birthPlace`; toutes les naissances sont encodées avec `kg-ont:birthLocation` pour rester cohérents avec les timelines Tolkien.
+### 2. Ontological Alignment
 
-**Fichiers:**
-- Ontologie: [data/rdf/tolkien-kg-ontology.ttl](data/rdf/tolkien-kg-ontology.ttl)
-- Shapes SHACL: [data/rdf/tolkien-shapes.ttl](data/rdf/tolkien-shapes.ttl)
-
-### 3. Labels Multilingues
-
-**Choix:** Extraction via l'API du wiki Lord of the Rings Fandom
+**Choice:** Hybrid approach schema.org + custom vocabulary
 
 **Justification:**
-- Le Tolkien Gateway n'a pas de versions multilingues
-- Le LotR Fandom Wiki a des versions en 10+ langues
-- Utilisation des `langlinks` de l'API MediaWiki
+- **schema.org** for web interoperability (SEO, Google Knowledge Graph)
+- **kg-ont:** for Tolkien-specific concepts not covered by schema.org
+- Alternative rejected: DBpedia Ontology (too complex, less web standard)
 
-**Processus:**
-1. Extraction des noms depuis le KG (via `schema:name`)
-2. Requête API Fandom pour chaque nom: `action=query&prop=langlinks`
-3. Ajout des `rdfs:label@lang` au graphe
-4. Fallback: si pas de label anglais, `schema:name` devient `rdfs:label@en`
+**Reuse examples:**
 
-**Fichier:** [scripts/rdf/integrate_multilang_labels.py](scripts/rdf/integrate_multilang_labels.py)
+| Concept | schema.org | kg-ont: custom |
+|---------|------------|----------------|
+| Name | `schema:name`  | - |
+| Birth date | - | `kg-ont:birthDate` (Tolkien-specific format: "TA 2931") |
+| Birth place | *(initial idea: `schema:birthPlace`)* | `kg-ont:birthLocation` (used in final KG) |
+| Chronology | - | `kg-ont:timeline` (universe-specific) |
+| Affiliation | - | `kg-ont:affiliation` (Middle-earth groups) |
 
-**Résultat:** Support de DE, FR, ES, IT, RU, CA avec 200+ labels traduits
+**Note:** Final KG doesn't use `schema:birthPlace`; all births are encoded with `kg-ont:birthLocation` to stay consistent with Tolkien timelines.
 
-### 4. Intégration de Données Externes
+**Files:**
+- Ontology: [data/rdf/tolkien-kg-ontology.ttl](data/rdf/tolkien-kg-ontology.ttl)
+- SHACL Shapes: [data/rdf/tolkien-shapes.ttl](data/rdf/tolkien-shapes.ttl)
 
-**Choix:** Trois sources complémentaires
+### 3. Multilingual Labels
 
-#### A) DBpedia (898 liens owl:sameAs)
+**Choice:** Extraction via Lord of the Rings Fandom wiki API
 
-**Méthode:** Alignement par nom exact
+**Justification:**
+- Tolkien Gateway has no multilingual versions
+- LotR Fandom Wiki has versions in 10+ languages
+- Use of MediaWiki API `langlinks`
+
+**Process:**
+1. Extract names from KG (via `schema:name`)
+2. Query Fandom API for each name: `action=query&prop=langlinks`
+3. Add `rdfs:label@lang` to graph
+4. Fallback: if no English label, `schema:name` becomes `rdfs:label@en`
+
+**File:** [scripts/rdf/integrate_multilang_labels.py](scripts/rdf/integrate_multilang_labels.py)
+
+**Result:** Support for DE, FR, ES, IT, RU, CA with 200+ translated labels
+
+### 4. External Data Integration
+
+**Choice:** Three complementary sources
+
+#### A) DBpedia (898 owl:sameAs links)
+
+**Method:** Exact name matching
 ```turtle
 kg-res:Gandalf owl:sameAs dbr:Gandalf .
 ```
 
 **Justification:**
-- Permet d'interroger les données DBpedia via nos entités
-- Active le raisonnement SPARQL avec `owl:sameAs`
+- Enables querying DBpedia data via our entities
+- Activates SPARQL reasoning with `owl:sameAs`
 
-#### B) Middle-Earth: The Wizards Card Game (290 cartes)
+#### B) Middle-Earth: The Wizards Card Game (290 cards)
 
-**Format:** JSON avec métadonnées en plusieurs langues
+**Format:** JSON with multilingual metadata
 
-**Processus:**
-1. Parsing du JSON ([data/rdf/cards.json](data/rdf/cards.json))
-2. Normalisation des noms de cartes
-3. Matching avec les entités du KG
-4. Création de liens `kg-ont:hasCard`
+**Process:**
+1. Parse JSON ([data/rdf/cards.json](data/rdf/cards.json))
+2. Normalize card names
+3. Match with KG entities
+4. Create `kg-ont:hasCard` links
 
-**Exemple:**
+**Example:**
 ```turtle
 kg-res:Aragorn kg-ont:hasCard kg-card:TW_001 .
 kg-card:TW_001 schema:name "Aragorn"@en, "Aragorn"@fr .
 ```
 
-#### C) CSV LotR Characters (756 enrichissements)
+#### C) CSV LotR Characters (756 enrichments)
 
-**Format:** CSV avec colonnes birth, death, gender, hair, height, race, realm, spouse
+**Format:** CSV with columns birth, death, gender, hair, height, race, realm, spouse
 
-**Processus:**
-1. Lecture CSV via pandas
-2. Normalisation des noms
-3. Enrichissement des propriétés existantes
-4. Ajout de métadonnées structurées
+**Process:**
+1. Read CSV via pandas
+2. Normalize names
+3. Enrich existing properties
+4. Add structured metadata
 
-**Fichier:** [scripts/rdf/integrate_external_data.py](scripts/rdf/integrate_external_data.py)
+**File:** [scripts/rdf/integrate_external_data.py](scripts/rdf/integrate_external_data.py)
 
-### 5. Endpoint SPARQL et Raisonnement
+### 5. SPARQL Endpoint and Reasoning
 
-**Choix:** Apache Jena Fuseki
+**Choice:** Apache Jena Fuseki
 
 **Justification:**
-- Standard de facto pour SPARQL 1.1
-- Support natif du raisonnement RDFS/OWL
-- Interface web pour tests manuels
-- Performant en mémoire pour 49k triples
+- De facto standard for SPARQL 1.1
+- Native RDFS/OWL reasoning support
+- Web interface for manual testing
+- Performant in-memory for 49k triples
 
-**Raisonnement implémenté:**
+**Implemented reasoning:**
 
-1. **Property paths** pour hiérarchies de classes:
+1. **Property paths** for class hierarchies:
 ```sparql
 ?entity a/rdfs:subClassOf* ?superClass
 ```
 
-2. **owl:sameAs propagation** pour données externes:
+2. **owl:sameAs propagation** for external data:
 ```sparql
 ?entity (owl:sameAs|^owl:sameAs)? ?equivalent .
 ?equivalent ?p ?o .
 ```
 
-### 6. Interface Linked Data
+### 6. Linked Data Interface
 
-**Choix:** FastAPI avec négociation de contenu
+**Choice:** FastAPI with content negotiation
 
 **Justification:**
-- FastAPI: performance, validation automatique (Pydantic), documentation Swagger
-- Alternative rejetée: Flask (moins moderne, pas de validation auto)
+- FastAPI: performance, automatic validation (Pydantic), Swagger documentation
+- Alternative rejected: Flask (less modern, no auto validation)
 
-**Négociation de contenu implémentée:**
+**Implemented content negotiation:**
 
-| Accept Header | Format retourné | Content-Type |
+| Accept Header | Returned Format | Content-Type |
 |---------------|-----------------|--------------|
 | `text/turtle` | RDF Turtle | `text/turtle` |
 | `application/ld+json` | JSON-LD | `application/ld+json` |
-| `text/html` | HTML avec styling | `text/html` |
-| (par défaut) | Turtle | `text/turtle` |
+| `text/html` | HTML with styling | `text/html` |
+| (default) | Turtle | `text/turtle` |
 
 **Architecture:**
 ```
@@ -473,71 +457,67 @@ Client → FastAPI (main.py)
          models.py (ResourceData)
             ↓
          html_renderer.py → HTML
-         OU
-         Génération Turtle/JSON
+         OR
+         Turtle/JSON Generation
 ```
 
-**Fichiers:**
+**Files:**
 - Routes: [web/main.py](web/main.py)
-- Requêtes SPARQL: [web/sparql_queries.py](web/sparql_queries.py)
-- Rendu HTML: [web/html_renderer.py](web/html_renderer.py)
+- SPARQL Queries: [web/sparql_queries.py](web/sparql_queries.py)
+- HTML Rendering: [web/html_renderer.py](web/html_renderer.py)
 
 ---
 
-##  Implémentation des Exigences du Projet
+##  Requirements Implementation
 
-### Tableau de Conformité Complet
+### Complete Compliance Table
 
-| # | Exigence du Projet | Statut | Implémentation | Preuve |
-|---|-------------------|--------|----------------|--------|
-| **1** | **KG capture le contenu du wiki** |  Complet | Chaque page → entité RDF avec IRI unique | 800+ entités dans [kg_full.ttl](data/rdf/kg_full.ttl) |
-| **2** | **Infoboxes → triples RDF** |  Complet | Mapping champs → propriétés par type de template | [rdf_maker.py](scripts/rdf/rdf_maker.py) L106-500 |
-| **3** | **Liens wiki → triples RDF** |  Complet | `[[Entity]]` → `kg-res:Entity` (IRIs) | [rdf_maker.py](scripts/rdf/rdf_maker.py) L82-104 |
-| **4** | **Labels multilingues** |  Complet | `rdfs:label@en/de/fr/es/it/ru/ca` | [multilang_labels.ttl](data/rdf/multilang_labels.ttl) |
-| **5** | **Validation par schémas (SHACL)** |  Complet | 5 NodeShapes, 0 violations | [tolkien-shapes.ttl](data/rdf/tolkien-shapes.ttl) + [validate_final.py](scripts/rdf/validate_final.py) |
-| **6** | **Vocabulaire schema.org OU DBpedia** |  schema.org | Réutilisation: Person, Place, CreativeWork, name, birthDate | [tolkien-kg-ontology.ttl](data/rdf/tolkien-kg-ontology.ttl) |
-| **7** | **Liens vers pages wiki originales** |  Complet | Via IRI + propriétés `schema:url` | Chaque entité a un lien |
-| **8** | **Liens vers autres KGs** |  Complet | 898 liens `owl:sameAs` vers DBpedia | [external_links.ttl](data/rdf/external_links.ttl) |
-| **9** | **Endpoint SPARQL accessible** |  Complet | Fuseki sur localhost:3030/kg-tolkiengateway | Tester: http://localhost:3030 |
-| **10** | **Requêtes avec faits implicites** |  Complet | Property paths + owl:sameAs propagation | Exemples dans section "Test 6" |
-| **11** | **Interface Linked Data** |  Complet | Dereferencement IRI → Turtle/HTML | [web/main.py](web/main.py) L40-100 |
-| **12** | **Négociation de contenu** |  Complet | Accept: text/turtle, text/html, application/ld+json | [web/main.py](web/main.py) L65-85 |
-| **13** | **Description via SPARQL endpoint** |  Complet | Interface appelle Fuseki pour chaque ressource | [sparql_queries.py](web/sparql_queries.py) |
+| # | Project Requirement | Status | Implementation | Proof |
+|---|---------------------|--------|----------------|-------|
+| **1** | **KG captures wiki content** |  Complete | Each page → RDF entity with unique IRI | 800+ entities in [kg_full.ttl](data/rdf/kg_full.ttl) |
+| **2** | **Infoboxes → RDF triples** |  Complete | Field mapping → properties by template type | [rdf_maker.py](scripts/rdf/rdf_maker.py) L106-500 |
+| **3** | **Wiki links → RDF triples** |  Complete | `[[Entity]]` → `kg-res:Entity` (IRIs) | [rdf_maker.py](scripts/rdf/rdf_maker.py) L82-104 |
+| **4** | **Multilingual labels** |  Complete | `rdfs:label@en/de/fr/es/it/ru/ca` | [multilang_labels.ttl](data/rdf/multilang_labels.ttl) |
+| **5** | **Schema validation (SHACL)** |  Complete | 5 NodeShapes, 0 violations | [tolkien-shapes.ttl](data/rdf/tolkien-shapes.ttl) + [validate_final.py](scripts/rdf/validate_final.py) |
+| **6** | **schema.org OR DBpedia vocabulary** |  schema.org | Reuse: Person, Place, CreativeWork, name, birthDate | [tolkien-kg-ontology.ttl](data/rdf/tolkien-kg-ontology.ttl) |
+| **7** | **Links to original wiki pages** |  Complete | Via IRI + `schema:url` properties | Each entity has a link |
+| **8** | **Links to other KGs** |  Complete | 898 `owl:sameAs` links to DBpedia | [external_links.ttl](data/rdf/external_links.ttl) |
+| **9** | **Accessible SPARQL endpoint** |  Complete | Fuseki on localhost:3030/kg-tolkiengateway | Test: http://localhost:3030 |
+| **10** | **Queries with implicit facts** |  Complete | Property paths + owl:sameAs propagation | Examples in "Test 6" section |
+| **11** | **Linked Data interface** |  Complete | IRI dereferencing → Turtle/HTML | [web/main.py](web/main.py) L40-100 |
+| **12** | **Content negotiation** |  Complete | Accept: text/turtle, text/html, application/ld+json | [web/main.py](web/main.py) L65-85 |
+| **13** | **Description via SPARQL endpoint** |  Complete | Interface calls Fuseki for each resource | [sparql_queries.py](web/sparql_queries.py) |
 
-### Fonctionnalités Supplémentaires (Bonus)
+** Summary: All 13 criteria satisfied and tested.**
 
-- **Interface web moderne** avec design responsive
-- **Page statistiques** avec compteurs dynamiques
-- **Recherche et filtres** par type d'entité
-- **Timeline visuelle** pour les événements chronologiques
-- **Section cartes TCG** avec images et métadonnées multilingues
-- **Affichage d'images** pour les entités (quand disponibles)
-- **Mobile-friendly** avec navigation tactile
+### Implemented Bonus Features
+
+ Modern web interface (responsive) • Dynamic statistics • Search/filters by type • Visual timeline • Multilingual TCG metadata • Mobile-friendly
 
 ---
 
-## Résultats et Statistiques
+## Results and Statistics
 
-### Métriques du Knowledge Graph
+### Knowledge Graph Metrics
 
-| Métrique | Valeur | Détails |
-|----------|--------|---------|
-| **Triples RDF totaux** | 49,242 | Fichier final: kg_full.ttl |
-| **Entités distinctes** | 2,291 | Toutes les ressources typées du KG |
-| **Types d'entités** | 13 | Character, Location, CreativeWork, Person, VideoGame, Object, Game, Movie, House, Organization, Race, TVEpisode, Book |
-| **Personnages extraits** | 1,260 | Via infobox character templates |
-| **Propriétés définies** | 150+ | Dans tolkien-kg-ontology.ttl |
-| **Labels multilingues** | 200+ | Traductions en 6+ langues |
-| **Liens DBpedia** | 898 | Alignements owl:sameAs |
-| **Cartes METW** | 290 | Liens vers cartes du jeu |
-| **Enrichissements CSV** | 756 | Métadonnées caractères LotR |
-| **Violations SHACL** | 0 | 100% de conformité |
+| Metric | Value |
+|--------|-------|
+| **Total RDF triples** | 49,242 |
+| **Distinct entities** | 2,291 |
+| **Entity types** | 13 (Character, Location, CreativeWork, Person, VideoGame, Object, Game, Movie, House, Organization, Race, TVEpisode, Book) |
+| **Extracted characters** | 1,260 |
+| **Defined properties** | 150+ |
+| **Multilingual labels** | 200+ (DE, FR, ES, IT, RU, CA) |
+| **DBpedia links** | 898 |
+| **METW cards** | 290 |
+| **CSV enrichments** | 756 |
+| **SHACL violations** | 0 (100% compliance) |
 
-### Répartition par Type d'Entité
+### Distribution by Entity Type
 
-Basé sur l'analyse réelle du graphe RDF kg_full.ttl:
+Based on real analysis of kg_full.ttl RDF graph:
 
-| Type | Nombre | Pourcentage |
+| Type | Number | Percentage |
 |------|--------|------------|
 | Character | 1,260 | 55% |
 | CreativeWork | 531 | 23% |
@@ -553,67 +533,67 @@ Basé sur l'analyse réelle du graphe RDF kg_full.ttl:
 | TVEpisode | 6 | 0.3% |
 | Book | 2 | 0.1% |
 
-**Total: 2,291 entités**
+**Total: 2,291 entities**
 
-### Couverture des Templates Wiki
+### Wiki Template Coverage
 
-| Template Type | Nombre Traité | Taux Extraction |
-|---------------|---------------|-----------------|
+| Template Type | Processed Number | Extraction Rate |
+|---------------|------------------|-----------------|
 | Infobox Character | 750+ | 95% |
 | Infobox Location | 120+ | 90% |
 | Infobox Book | 60+ | 85% |
 | Infobox Film | 40+ | 90% |
 | Infobox Person | 50+ | 80% |
-| Autres templates | 180+ | Variable |
+| Other templates | 180+ | Variable |
 
 ### Performance
 
-- **Temps récupèration Infobox :** ~- varie en fonction du nombre d’exécutions (23000+ fichiers)
-- **Temps génération RDF:** ~3 minutes (800+ fichiers)
-- **Temps validation SHACL:** ~5 secondes
-- **Temps chargement Fuseki:** ~2 secondes (en mémoire)
-- **Temps réponse API:** ~100-300ms par ressource
+- **Infobox retrieval time:** ~varies depending on execution count (23000+ files)
+- **RDF generation time:** ~3 minutes (800+ files)
+- **SHACL validation time:** ~5 seconds
+- **Fuseki loading time:** ~2 seconds (in-memory)
+- **API response time:** ~100-300ms per resource
 
 ---
 
-## 📸 Captures d'Écran du Projet
+##  Project Screenshots
 
-### Interface Web - Page d'Accueil
+### Web Interface - Homepage
 
 ![Homepage Tolkien KG](images/Home_kg.png)
 
-**Statistiques affichées:**
-- 2,291 entités totales
-- 1,260 personnages (Characters)
-- 228 lieux (Locations)
-- 531 œuvres (Works)
+**Displayed statistics:**
+- 2,291 total entities
+- 1,260 characters (Characters)
+- 228 places (Locations)
+- 531 works (Works)
 
-**Fonctionnalités:**
-- Tuiles cliquables par type d'entité ([C] Character, [W] CreativeWork, [L] Location, etc.)
-- Navigation vers Browse et API
-- Interface responsive avec design moderne
+**Features:**
+- Clickable tiles by entity type ([C] Character, [W] CreativeWork, [L] Location, etc.)
+- Navigation to Browse and API
+- Responsive interface with modern design
 
 ---
 
-### Interface Web - Navigation (Browse)
+### Web Interface - Browse
 
 ![Browse Entities](images/All_enities.png)
 
-**Fonctionnalités:**
-- Recherche textuelle d'entités
-- Filtres par type (Character, Location, Person, Game, etc.)
-- Pagination (navigation par pages)
-- Badges colorés pour identifier les types
-- Liste organisée par sections (Character, Location, TVEpisode, Person, Game)
+**Features:**
+- Text search for entities
+- Filters by type (Character, Location, Person, Game, etc.)
+- Pagination (page navigation)
+- Colored badges to identify types
+- List organized by sections (Character, Location, TVEpisode, Person, Game)
 
 ---
 
-### Fiche Détaillée d'une Entité (Abigail)
+### Detailed Entity Page (Abigail)
 
 ![Resource Page - Abigail](images/Entitie_kg.png)
 
 **Sections:**
-- **Property/Value table** avec propriétés structurées:
+- **Property/Value table** with structured properties:
   - Gender: Female
   - In Language: Westron
   - Location: Mordor, Sundering_Seas, Middle_Earth
@@ -621,16 +601,16 @@ Basé sur l'analyse réelle du graphe RDF kg_full.ttl:
   - Birth Date: Late Second Age
   - People: Pre_Numenoreans
   - Label: Abigail (EN)
-- **Available formats:** Turtle (RDF) et JSON
-- Liens vers autres entités (cliquables)
+- **Available formats:** Turtle (RDF) and JSON
+- Links to other entities (clickable)
 
 ---
 
-### Données RDF (Format Turtle)
+### RDF Data (Turtle Format)
 
 ![RDF Turtle Example](images/Entitie_rdf_kg.png)
 
-**Exemple de triples RDF pour Abigail:**
+**RDF triples example for Abigail:**
 ```turtle
 kg-res:Abigail schema:gender "Female" ;
                schema:inLanguage kg-res:Westron ;
@@ -647,19 +627,19 @@ kg-res:Abigail schema:gender "Female" ;
 
 ---
 
-### Apache Jena Fuseki - Interface SPARQL
+### Apache Jena Fuseki - SPARQL Interface
 
 ![Fuseki Interface](images/Fuseki_file_add_to_kg.png)
 
-**Fonctionnalités:**
-- Upload de fichiers RDF (Turtle, RDF/XML, TriG)
+**Features:**
+- Upload RDF files (Turtle, RDF/XML, TriG)
 - Dataset: `/kg-tolkiengateway`
-- Fichiers chargés:
-  - `tolkien-shapes.ttl` (3.79kb) - Contraintes SHACL
-  - `tolkien-kg-ontology.ttl` (28.73kb) - Ontologie
-  - `kg_full.ttl` (1.86mb) - **Knowledge Graph complet (49,242 triples)**
-- Interface de requêtes SPARQL
-- Gestion des datasets
+- Loaded files:
+  - `tolkien-shapes.ttl` (3.79kb) - SHACL constraints
+  - `tolkien-kg-ontology.ttl` (28.73kb) - Ontology
+  - `kg_full.ttl` (1.86mb) - **Complete Knowledge Graph (49,242 triples)**
+- SPARQL query interface
+- Dataset management
 
 ---
 
@@ -667,120 +647,120 @@ kg-res:Abigail schema:gender "Female" ;
 
 ![API Documentation](images/Api_kg.png)
 
-**Endpoints disponibles:**
-- **Root:** `GET /` - Page d'accueil
+**Available endpoints:**
+- **Root:** `GET /` - Homepage
 - **Characters:** 
-  - `GET /characters` - Liste des personnages
-  - `GET /character/{name}` - Détails d'un personnage
-- **Browse:** `GET /browse` - Navigation par type
+  - `GET /characters` - List of characters
+  - `GET /character/{name}` - Character details
+- **Browse:** `GET /browse` - Navigation by type
 - **Linked Data:**
-  - `GET /resource/{name}` - Ressource avec négociation de contenu
-  - `GET /page/{name}` - Page HTML d'une ressource
-- **Ontology:** `GET /ontology/{name}` - Propriétés de l'ontologie
+  - `GET /resource/{name}` - Resource with content negotiation
+  - `GET /page/{name}` - HTML page of a resource
+- **Ontology:** `GET /ontology/{name}` - Ontology properties
 - **Default:** `GET /favicon.ico`
 
 **Schemas:** HTTPValidationError, ValidationError
 
-**Interface:** OpenAPI 3.1 (OAS 3.1) avec documentation interactive
+**Interface:** OpenAPI 3.1 (OAS 3.1) with interactive documentation
 
 ---
 
-## Structure du Projet Détaillée
+## Detailed Project Structure
 
 ```
 Semantic-Web-project/
 ├── data/
-│   ├── infoboxes/ ← Pages extraites du wiki (format txt)
+│   ├── infoboxes/ ← Wiki pages extracted (txt format)
 │   │   ├── infobox_Aragorn.txt
 │   │   ├── infobox_Gandalf.txt
-│   │   └── ... (800+ fichiers)
-│   └── rdf/                          ← Données RDF générées
-│       ├── all_infoboxes.ttl         ← RDF base (31,308 triples)
-│       ├── all_infoboxes_with_lang.ttl  ← + Labels multilingues
-│       ├── multilang_labels.ttl      ← Labels externes
+│   │   └── ... (800+ files)
+│   └── rdf/                          ← Generated RDF data
+│       ├── all_infoboxes.ttl         ← Base RDF (31,308 triples)
+│       ├── all_infoboxes_with_lang.ttl  ← + Multilingual labels
+│       ├── multilang_labels.ttl      ← External labels
 │       ├── external_links.ttl        ← DBpedia + METW + CSV
-│       ├── kg_full.ttl               ← KG final (49,242 triples)
-│       ├── tolkien-kg-ontology.ttl   ← Ontologie personnalisée
-│       └── tolkien-shapes.ttl        ← Shapes SHACL
+│       ├── kg_full.ttl               ← Final KG (49,242 triples)
+│       ├── tolkien-kg-ontology.ttl   ← Custom ontology
+│       └── tolkien-shapes.ttl        ← SHACL shapes
 │
 ├── scripts/
-│   ├── rdf/                          ← Pipeline de génération RDF
-│   │   ├── rdf_maker.py              ← Extraction infobox → RDF
-│   │   ├── merge_multilang_labels.py ← Fusion labels multilingues
+│   ├── rdf/                          ← RDF generation pipeline
+│   │   ├── rdf_maker.py              ← Infobox extraction → RDF
+│   │   ├── merge_multilang_labels.py ← Merge multilingual labels
 │   │   ├── integrate_external_data.py  ← DBpedia + METW + CSV
-│   │   ├── merge_all_ttl.py          ← Fusion finale
-│   │   ├── validate_final.py         ← Validation SHACL
-│   │   ├── validate_with_ontology.py ← Vérif. properties définies
-│   │   ├── extend_ontology.py        ← Extension automatique
-│   │   ├── analyze_infobox_structure.py  ← Analyse structure
-│   │   ├── compare_infoboxes.py      ← Comparaison datasets
-│   │   └── integrate_multilang_labels.py  ← Récup labels API
+│   │   ├── merge_all_ttl.py          ← Final merge
+│   │   ├── validate_final.py         ← SHACL validation
+│   │   ├── validate_with_ontology.py ← Verify defined properties
+│   │   ├── extend_ontology.py        ← Automatic extension
+│   │   ├── analyze_infobox_structure.py  ← Structure analysis
+│   │   ├── compare_infoboxes.py      ← Dataset comparison
+│   │   └── integrate_multilang_labels.py  ← Retrieve API labels
 │   │
-│   ├── setup/                        ← Lancement serveurs
-│   │   ├── run_web.py                ← Démarrage FastAPI
-│   │   ├── start_web.bat             ← Lanceur Windows
-│   │   └── start_web.sh              ← Lanceur Linux/Mac
+│   ├── setup/                        ← Server launchers
+│   │   ├── run_web.py                ← FastAPI startup
+│   │   ├── start_web.bat             ← Windows launcher
+│   │   └── start_web.sh              ← Linux/Mac launcher
 │   │
 │   └── run_once/
 │       └── ApiRequestData/
-│           ├── requestAllInfobox.py  ← Télécharge toutes infoboxes
-│           └── requestOneElement.py  ← Teste API wiki (exemple)
+│           ├── requestAllInfobox.py  ← Download all infoboxes
+│           └── requestOneElement.py  ← Test wiki API (example)
 │
-├── web/                              ← Interface FastAPI
-│   ├── main.py                       ← Routes API + content negotiation
-│   ├── sparql_queries.py             ← Requêtes SPARQL vers Fuseki
-│   ├── html_renderer.py              ← Génération pages HTML
-│   ├── home_renderer.py              ← Page d'accueil + navigation
+├── web/                              ← FastAPI interface
+│   ├── main.py                       ← API routes + content negotiation
+│   ├── sparql_queries.py             ← SPARQL queries to Fuseki
+│   ├── html_renderer.py              ← HTML page generation
+│   ├── home_renderer.py              ← Homepage + navigation
 │   ├── models.py                     ← Data structures (ResourceData, etc)
-│   ├── styles.py                     ← CSS partagés
-│   ├── layout.py                     ← En-têtes/pieds communs
+│   ├── styles.py                     ← Shared CSS
+│   ├── layout.py                     ← Common headers/footers
 │   └── __pycache__/
 │
 │
-├── README.md                         ← Ce fichier
-├── requirements.txt                  ← Dépendances Python
-├── workspace.code-workspace          ← Config VS Code
+├── README.md                         ← This file
+├── requirements.txt                  ← Python dependencies
+├── workspace.code-workspace          ← VS Code config
 └── .gitignore, .gitattributes
 ```
 
 ---
 
-##  Documentation Technique
+##  Technical Documentation
 
-### Pipeline de Génération RDF (7 Étapes)
+### RDF Generation Pipeline (7 Steps)
 
-### Étape 1 : Extraction des infoboxes
-**Fichier:** [scripts/rdf/rdf_maker.py](scripts/rdf/rdf_maker.py)
+### Step 1: Infobox Extraction
+**File:** [scripts/rdf/rdf_maker.py](scripts/rdf/rdf_maker.py)
 
-Transforme les pages wiki brutes en RDF structuré :
-- Entrée : `data/infoboxes/*.txt` (800+ fichiers)
-- Nettoyage wikitext : supprime refs, HTML, balises, templates
-- Détection template et mappage champs → propriétés RDF
-- Génération d'IRIs : `kg-res:Aragorn`, `kg-res:Rivendell`, etc.
-- Sortie : `data/rdf/all_infoboxes.ttl` (31,308 triples)
+Transforms raw wiki pages into structured RDF:
+- Input: `data/infoboxes/*.txt` (800+ files)
+- Wikitext cleaning: removes refs, HTML, tags, templates
+- Template detection and field mapping → RDF properties
+- IRI generation: `kg-res:Aragorn`, `kg-res:Rivendell`, etc.
+- Output: `data/rdf/all_infoboxes.ttl` (31,308 triples)
 
-**Exemple de transformation :**
+**Transformation example:**
 ```
 Infobox wikitext:
   | birth = TA 2931
   | birthplace = [[Rivendell]]
   
-↓ (après rdf_maker.py)
+↓ (after rdf_maker.py)
 
 kg-res:Aragorn 
   kg-ont:birthDate "TA 2931" ;
   kg-ont:birthLocation kg-res:Rivendell .
 ```
 
-### Étape 2 : Labels multilingues
-**Fichier:** [scripts/rdf/merge_multilang_labels.py](scripts/rdf/merge_multilang_labels.py)
+### Step 2: Multilingual Labels
+**File:** [scripts/rdf/merge_multilang_labels.py](scripts/rdf/merge_multilang_labels.py)
 
-Fusionne les labels dans plusieurs langues :
-- Entrée : `multilang_labels.ttl` (DE, FR, ES, IT, RU, CA...)
-- Règle : si pas de `rdfs:label@en`, utilise `schema:name` comme fallback
-- Sortie : `data/rdf/all_infoboxes_with_lang.ttl`
+Merges labels in multiple languages:
+- Input: `multilang_labels.ttl` (DE, FR, ES, IT, RU, CA...)
+- Rule: if no `rdfs:label@en`, use `schema:name` as fallback
+- Output: `data/rdf/all_infoboxes_with_lang.ttl`
 
-**Exemple :**
+**Example:**
 ```turtle
 kg-res:Aeglos_spear 
   rdfs:label "Aeglos"@en, 
@@ -789,134 +769,134 @@ kg-res:Aeglos_spear
   schema:name "Aeglos" .
 ```
 
-### Étape 3 : Intégration données externes
-**Fichier:** [scripts/rdf/integrate_external_data.py](scripts/rdf/integrate_external_data.py)
+### Step 3: External Data Integration
+**File:** [scripts/rdf/integrate_external_data.py](scripts/rdf/integrate_external_data.py)
 
-Enrichit le KG avec 3 sources externes :
+Enriches KG with 3 external sources:
 
-| Source | Nombre | Namespace | Exemple |
+| Source | Number | Namespace | Example |
 |--------|--------|-----------|---------|
-| **DBpedia** | 898 liens | `owl:sameAs` | `kg-res:Gandalf owl:sameAs dbr:Gandalf` |
-| **METW Cards** | 290 cartes | `kg-card:` | `kg-res:Aragorn kg-ont:hasCard kg-card:AS_101` |
-| **CSV LotR** | 756 caractères | enrichissement | Dates, genre, race, lignée |
+| **DBpedia** | 898 links | `owl:sameAs` | `kg-res:Gandalf owl:sameAs dbr:Gandalf` |
+| **METW Cards** | 290 cards | `kg-card:` | `kg-res:Aragorn kg-ont:hasCard kg-card:AS_101` |
+| **CSV LotR** | 756 characters | enrichment | Dates, gender, race, lineage |
 
-- Sortie : `data/rdf/external_links.ttl`
+- Output: `data/rdf/external_links.ttl`
 
-### Étape 4 : Fusion finale
-**Fichier:** [scripts/rdf/merge_all_ttl.py](scripts/rdf/merge_all_ttl.py)
+### Step 4: Final Merge
+**File:** [scripts/rdf/merge_all_ttl.py](scripts/rdf/merge_all_ttl.py)
 
-Combine tous les fichiers RDF en un seul :
-- Entrées : `all_infoboxes_with_lang.ttl` + `external_links.ttl`
-- Normalisation : `schema1:` → `schema:` (correction préfixes)
-- Sortie : `data/rdf/kg_full.ttl` (49,242 triples)
+Combines all RDF files into one:
+- Inputs: `all_infoboxes_with_lang.ttl` + `external_links.ttl`
+- Normalization: `schema1:` → `schema:` (prefix correction)
+- Output: `data/rdf/kg_full.ttl` (49,242 triples)
 
-### Étape 5 : Validation SHACL
-**Fichier:** [scripts/rdf/validate_final.py](scripts/rdf/validate_final.py)
+### Step 5: SHACL Validation
+**File:** [scripts/rdf/validate_final.py](scripts/rdf/validate_final.py)
 
-Valide l'intégrité avec shapes SPARQL :
-- Shapes définies dans : `data/rdf/tolkien-shapes.ttl`
-- **Résultat : 0 violations, 100% conformité**
-- Contraintes testées :
-  - Character : doit avoir schema:name
-  - Location : doit avoir géolocalisation optionnelle
-  - Work : titre, auteur, date publication
+Validates integrity with SPARQL shapes:
+- Shapes defined in: `data/rdf/tolkien-shapes.ttl`
+- **Result: 0 violations, 100% compliance**
+- Tested constraints:
+  - Character: must have schema:name
+  - Location: must have optional geolocation
+  - Work: title, author, publication date
 
 ```bash
 python scripts/rdf/validate_final.py
-# NO SHACL VIOLATIONS!
+#  NO SHACL VIOLATIONS!
 # OK. The RDF conforms to the shapes.
 ```
 
-### Étape 6 : Endpoint SPARQL (Fuseki)
-**Serveur:** Apache Jena Fuseki
+### Step 6: SPARQL Endpoint (Fuseki)
+**Server:** Apache Jena Fuseki
 
-Configure un endpoint SPARQL 1.1 complet sur `localhost:3030` :
-- Support des property paths (pour raisonnement)
-- Support owl:sameAs propagation
-- 49,242 triples chargés en mémoire
+Configures complete SPARQL 1.1 endpoint on `localhost:3030`:
+- Support for property paths (for reasoning)
+- Support for owl:sameAs propagation
+- 49,242 triples loaded in-memory
 
-**Exemples de requêtes :**
+**Query examples:**
 
 ```sparql
-# Compter les entités
+# Count entities
 SELECT (COUNT(?s) AS ?count) WHERE {
   ?s a kg-ont:Character ; schema:name ?name .
 }
-# Résultat: 800+ caractères
+# Result: 800+ characters
 
-# Types via hiérarchie (property paths)
+# Types via hierarchy (property paths)
 SELECT ?type WHERE {
   kg-res:Elrond a/rdfs:subClassOf* ?type .
 }
 
-# Relations avec sameAs propagation
+# Relations with sameAs propagation
 SELECT ?p ?o WHERE {
   kg-res:Aragorn (owl:sameAs|^owl:sameAs)? ?equiv .
   ?equiv ?p ?o .
 }
 ```
 
-### Étape 7 : Interface Web (FastAPI)
+### Step 7: Web Interface (FastAPI)
 **Code:** [web/](web/) (main.py, sparql_queries.py, html_renderer.py, etc.)
 
-Publie le KG via une interface Linked Data avec :
+Publishes KG via Linked Data interface with:
 
-| Endpoint | Formats | Exemple |
+| Endpoint | Formats | Example |
 |----------|---------|---------|
-| `/resource/{name}` | Turtle (défaut) | `GET /resource/Aragorn` → RDF Turtle |
-| `/resource/{name}?format=json` | JSON-LD | Propriétés structurées |
-| `/resource/{name}?format=html` | HTML | Page HTML formatée |
-| `/page/{name}` | HTML toujours | Affichage web |
-| `/browse` | HTML | Navigation + filtres par type |
-| `/` | HTML | Page d'accueil avec stats |
+| `/resource/{name}` | Turtle (default) | `GET /resource/Aragorn` → RDF Turtle |
+| `/resource/{name}?format=json` | JSON-LD | Structured properties |
+| `/resource/{name}?format=html` | HTML | Formatted HTML page |
+| `/page/{name}` | Always HTML | Web display |
+| `/browse` | HTML | Navigation + type filters |
+| `/` | HTML | Homepage with stats |
 
-**Contenu négocié :**
+**Negotiated content:**
 ```bash
-# Récupère en Turtle
+# Retrieve in Turtle
 curl -H "Accept: text/turtle" http://tolkien-kg.org/resource/Aragorn
 
-# Récupère en HTML
+# Retrieve in HTML
 curl -H "Accept: text/html" http://tolkien-kg.org/resource/Aragorn
 
-# Récupère en JSON-LD
+# Retrieve in JSON-LD
 curl -H "Accept: application/ld+json" http://tolkien-kg.org/resource/Aragorn
 ```
 
 ---
 
-## Détails d'Implémentation par Composant
+## Implementation Details by Component
 
-### 1. Extraction et Parsing (rdf_maker.py)
+### 1. Extraction and Parsing (rdf_maker.py)
 
-**Algorithme de nettoyage des valeurs:**
-1. Suppression des références `<ref>...</ref>`
-2. Suppression des balises HTML (`<br>`, `<small>`, etc.)
-3. Extraction du texte des liens wiki: `[[Rivendell|Imladris]]` → `Rivendell`
-4. Nettoyage des templates imbriqués
-5. Normalisation des espaces blancs
+**Value cleaning algorithm:**
+1. Remove references `<ref>...</ref>`
+2. Remove HTML tags (`<br>`, `<small>`, etc.)
+3. Extract text from wiki links: `[[Rivendell|Imladris]]` → `Rivendell`
+4. Clean nested templates
+5. Normalize whitespace
 
-**Gestion des types:**
-- Détection automatique du type de template
-- Mapping contextuel: `birthplace` devient `kg-ont:birthLocation` pour Character, `schema:location` pour Location
-- Création d'IRIs: espaces → underscores, caractères spéciaux URL-encodés
+**Type handling:**
+- Automatic template type detection
+- Contextual mapping: `birthplace` becomes `kg-ont:birthLocation` for Character, `schema:location` for Location
+- IRI creation: spaces → underscores, special characters URL-encoded
 
-**Code clé:**
+**Key code:**
 ```python
-# Normalisation IRI
+# IRI normalization
 def normalize_iri_name(name: str) -> str:
     name = name.strip().replace(' ', '_')
     name = re.sub(r'[^\w_-]', '', name)
     return name
 
-# Parsing template
+# Template parsing
 parsed = wtp.parse(infobox_block)
 template = parsed.templates[0]
 template_type = _normalize_template_key(template.name)
 ```
 
-### 2. Validation SHACL (tolkien-shapes.ttl)
+### 2. SHACL Validation (tolkien-shapes.ttl)
 
-**Shapes implémentées:**
+**Implemented shapes:**
 
 #### CharacterShape
 ```turtle
@@ -930,20 +910,20 @@ kg-ont:CharacterShape a sh:NodeShape ;
     ] .
 ```
 
-**Contraintes validées:**
-- Chaque Character doit avoir exactement 1 `schema:name`
-- Les dates (birth/death) sont optionnelles mais doivent être des strings
-- Les relations (parent, spouse) doivent pointer vers des IRIs ou strings
-- Gender doit être un string
+**Validated constraints:**
+- Each Character must have exactly 1 `schema:name`
+- Dates (birth/death) are optional but must be strings
+- Relations (parent, spouse) must point to IRIs or strings
+- Gender must be a string
 
-**Relaxation appliquée:**
-- Pas de contraintes strictes sur les propriétés optionnelles
-- Accepte IRIs ou literals pour la flexibilité
-- Severity: `sh:Info` ou `sh:Warning` uniquement (pas de `sh:Violation` bloquante)
+**Applied relaxation:**
+- No strict constraints on optional properties
+- Accepts IRIs or literals for flexibility
+- Severity: `sh:Info` or `sh:Warning` only (no blocking `sh:Violation`)
 
-### 3. Requêtes SPARQL avec Raisonnement
+### 3. SPARQL Queries with Reasoning
 
-**Exemple 1: Hiérarchie de classes**
+**Example 1: Class hierarchy**
 ```sparql
 PREFIX kg-res: <http://tolkien-kg.org/resource/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -953,9 +933,9 @@ WHERE {
   kg-res:Aragorn a/rdfs:subClassOf* ?type .
 }
 ```
-Résultat: `kg-ont:Character`, `schema:Person`, `owl:Thing`
+Result: `kg-ont:Character`, `schema:Person`, `owl:Thing`
 
-**Exemple 2: Propagation owl:sameAs**
+**Example 2: owl:sameAs propagation**
 ```sparql
 PREFIX kg-res: <http://tolkien-kg.org/resource/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -966,11 +946,11 @@ WHERE {
   ?equiv ?p ?o .
 }
 ```
-Résultat: propriétés de Gandalf + propriétés de dbr:Gandalf
+Result: Gandalf's properties + dbr:Gandalf's properties
 
-**Exemple 3: Relations inverses**
+**Example 3: Inverse relations**
 ```sparql
-# Trouver tous les enfants d'Elrond
+# Find all Elrond's children
 PREFIX kg-ont: <http://tolkien-kg.org/ontology/>
 
 SELECT ?child
@@ -979,9 +959,9 @@ WHERE {
 }
 ```
 
-### 4. API REST et Négociation de Contenu
+### 4. REST API and Content Negotiation
 
-**Algorithme de négociation:**
+**Negotiation algorithm:**
 ```python
 @app.get("/resource/{name}")
 async def get_resource(name: str, request: Request):
@@ -998,112 +978,112 @@ async def get_resource(name: str, request: Request):
         )
 ```
 
-**Endpoints implémentés:**
+**Implemented endpoints:**
 
-| Route | Méthode | Paramètres | Retour |
-|-------|---------|------------|--------|
-| `/` | GET | - | Page d'accueil HTML |
-| `/browse` | GET | `?type=Character&page=1` | Liste paginée |
-| `/page/{name}` | GET | - | HTML toujours |
-| `/resource/{name}` | GET | `?format=html/json` | Négociation de contenu |
-| `/ontology/{property}` | GET | - | Description propriété |
-| `/sparql` | GET/POST | `?query=...` | Résultats SPARQL |
+| Route | Method | Parameters | Return |
+|-------|--------|------------|--------|
+| `/` | GET | - | HTML homepage |
+| `/browse` | GET | `?type=Character&page=1` | Paginated list |
+| `/page/{name}` | GET | - | Always HTML |
+| `/resource/{name}` | GET | `?format=html/json` | Content negotiation |
+| `/ontology/{property}` | GET | - | Property description |
+| `/sparql` | GET/POST | `?query=...` | SPARQL results |
 
 ---
 
-## Dépannage et Problèmes Connus
+## Troubleshooting and Known Issues
 
-### Sources de Données
+### Data Sources
 
-| Fichier | Contenu | Utilité |
-|---------|---------|---------|
-| `data/infoboxes/*.txt` | Pages extraites du wiki | Brut → traité par rdf_maker.py |
-| `data/rdf/cards.json` | 290 cartes METW TCG | Enrichissement jeu carte |
-| `data/rdf/lotr_characters.csv` | 756 persos LotR | Dates, gender, race, lignée |
-| `data/rdf/multilang_labels.ttl` | Labels DE/FR/ES/IT/RU/... | Support multilingue |
+| File | Content | Purpose |
+|------|---------|---------|
+| `data/infoboxes/*.txt` | Extracted wiki pages | Raw → processed by rdf_maker.py |
+| `data/rdf/cards.json` | 290 METW TCG cards | Card game enrichment |
+| `data/rdf/lotr_characters.csv` | 756 LotR characters | Dates, gender, race, lineage |
+| `data/rdf/multilang_labels.ttl` | Labels DE/FR/ES/IT/RU/... | Multilingual support |
 
-### Fichiers RDF Générés
+### Generated RDF Files
 
-| Fichier | Triples | Étape | Contenu |
-|---------|---------|-------|---------|
-| `all_infoboxes.ttl` | 31,308 | 1 | RDF base (infoboxes uniquement) |
-| `all_infoboxes_with_lang.ttl` | ~31,500 | 2 | + Labels multilingues |
+| File | Triples | Step | Content |
+|------|---------|------|---------|
+| `all_infoboxes.ttl` | 31,308 | 1 | Base RDF (infoboxes only) |
+| `all_infoboxes_with_lang.ttl` | ~31,500 | 2 | + Multilingual labels |
 | `external_links.ttl` | ~18,000 | 3 | DBpedia + METW + CSV |
-| `kg_full.ttl` | 49,242 | 4 | KG final (complète) |
+| `kg_full.ttl` | 49,242 | 4 | Final KG (complete) |
 
-### Configuration/Ontologie
+### Configuration/Ontology
 
-| Fichier | Rôle | Contenu |
-|---------|------|---------|
-| `data/rdf/tolkien-kg-ontology.ttl` | Ontologie | Classes et propriétés définis (DatatypeProperty, ObjectProperty) |
-| `data/rdf/tolkien-shapes.ttl` | SHACL | 18 shapes pour validation (Character, Location, Work, etc.) |
+| File | Role | Content |
+|------|------|---------|
+| `data/rdf/tolkien-kg-ontology.ttl` | Ontology | Defined classes and properties (DatatypeProperty, ObjectProperty) |
+| `data/rdf/tolkien-shapes.ttl` | SHACL | 18 shapes for validation (Character, Location, Work, etc.) |
 
-### Scripts Utilitaires
+### Utility Scripts
 
-| Script | But | Usage |
-|--------|-----|-------|
-| `analyze_infobox_structure.py` | Analyse structure | Génère rapport HTML sur templates utilisés |
-| `compare_infoboxes.py` | Comparer datasets | Identifie nouvelles/supprimées pages |
-| `extend_ontology.py` | Extension auto | Ajoute propriétés manquantes détectées |
-| `validate_with_ontology.py` | Vérif. ontologie | Confirme toutes props définies |
-| `integrate_multilang_labels.py` | Labels externes | Récupère labels Fandom API (en attente) |
+| Script | Purpose | Usage |
+|--------|---------|-------|
+| `analyze_infobox_structure.py` | Structure analysis | Generates HTML report on used templates |
+| `compare_infoboxes.py` | Compare datasets | Identifies new/deleted pages |
+| `extend_ontology.py` | Auto extension | Adds detected missing properties |
+| `validate_with_ontology.py` | Ontology verification | Confirms all props defined |
+| `integrate_multilang_labels.py` | External labels | Retrieves Fandom API labels (pending) |
 
-### Interface Web (web/)
+### Web Interface (web/)
 
-| Fichier | Rôle | Responsable de |
-|---------|------|-----------------|
-| `main.py` | Routes API | Endpoints `/resource`, `/page`, `/browse`, `/` |
-| `sparql_queries.py` | Requêtes SPARQL | Communication avec Fuseki (49,242 triples) |
-| `html_renderer.py` | HTML generation | Formatage page détail (propriétés, timeline, images) |
-| `home_renderer.py` | Pages navigation | Accueil (stats) + browse (filtres, pagination) |
+| File | Role | Responsible for |
+|------|------|-----------------|
+| `main.py` | API routes | Endpoints `/resource`, `/page`, `/browse`, `/` |
+| `sparql_queries.py` | SPARQL queries | Communication with Fuseki (49,242 triples) |
+| `html_renderer.py` | HTML generation | Detail page formatting (properties, timeline, images) |
+| `home_renderer.py` | Navigation pages | Homepage (stats) + browse (filters, pagination) |
 | `models.py` | Data structures | ResourceData, TimelineEvent, PageContent |
-| `styles.py` | CSS partagés | Styling toutes pages |
-| `layout.py` | Template commun | Header/footer |
+| `styles.py` | Shared CSS | Styling all pages |
+| `layout.py` | Common template | Header/footer |
 
 ---
 
-## Ontologie et Vocabulaire
+## Ontology and Vocabulary
 
-### Namespaces RDF
+### RDF Namespaces
 
-| Préfixe | Namespace | Usage | Exemples |
-|---------|-----------|-------|----------|
-| `kg-res:` | http://tolkien-kg.org/resource/ | **Entités** | kg-res:Aragorn, kg-res:Rivendell |
-| `kg-ont:` | http://tolkien-kg.org/ontology/ | **Propriétés** | kg-ont:birthDate, kg-ont:birthLocation |
-| `kg-card:` | http://tolkien-kg.org/card/ | Cartes TCG | kg-card:AS_101 |
-| `schema:` | http://schema.org/ | **Standard web** | schema:Person, schema:name, schema:Place |
-| `rdfs:` | RDF Schema | Labels/commentaires | rdfs:label, rdfs:comment |
+| Prefix | Namespace | Usage | Examples |
+|--------|-----------|-------|----------|
+| `kg-res:` | http://tolkien-kg.org/resource/ | **Entities** | kg-res:Aragorn, kg-res:Rivendell |
+| `kg-ont:` | http://tolkien-kg.org/ontology/ | **Properties** | kg-ont:birthDate, kg-ont:birthLocation |
+| `kg-card:` | http://tolkien-kg.org/card/ | TCG Cards | kg-card:AS_101 |
+| `schema:` | http://schema.org/ | **Web standard** | schema:Person, schema:name, schema:Place |
+| `rdfs:` | RDF Schema | Labels/comments | rdfs:label, rdfs:comment |
 | `owl:` | OWL | Relations | owl:sameAs (DBpedia links) |
 | `dbp:` | http://dbpedia.org/property/ | DBpedia | dbp:birthPlace |
 
-### Priorité Réutilisation
+### Reuse Priority
 
-1. **schema.org en priorité** (interopérabilité web SEO)
+1. **schema.org priority** (web interoperability SEO)
    - `schema:Person`, `schema:Place`, `schema:CreativeWork`
    - `schema:name`, `schema:gender`, `schema:image`
    
-2. **kg-ont: pour spécificités Tolkien**
-   - `kg-ont:birthDate`, `kg-ont:deathDate` (formats spéciaux: TA/SA/FO)
-   - `kg-ont:birthLocation` (+ contexte Tolkien)
+2. **kg-ont: for Tolkien specifics**
+   - `kg-ont:birthDate`, `kg-ont:deathDate` (special formats: TA/SA/FO)
+   - `kg-ont:birthLocation` (+ Tolkien context)
    - `kg-ont:timeline`, `kg-ont:chronology`
    - `kg-ont:family`, `kg-ont:affiliation`
 
-3. **rdfs: pour labels multilingues**
+3. **rdfs: for multilingual labels**
    - `rdfs:label@en`, `rdfs:label@de`, `rdfs:label@fr`
 
-### Exemple Complet
+### Complete Example
 
 ```turtle
 kg-res:Aragorn a kg-ont:Character, schema:Person ;
-    # Noms/labels
+    # Names/labels
     schema:name "Aragorn"^^xsd:string ;
     rdfs:label "Aragorn"@en, "Aragorn"@de, "Aragorn"@fr ;
     
-    # Dates (littéral avec format Tolkien)
+    # Dates (literal with Tolkien format)
     kg-ont:birthDate "TA 2931" ;
     kg-ont:deathDate "FO 120" ;
     
-    # Lieux (IRIs)
+    # Places (IRIs)
     kg-ont:birthLocation kg-res:Rivendell ;
     schema:location kg-res:Middle_earth ;
     
@@ -1118,46 +1098,46 @@ kg-res:Aragorn a kg-ont:Character, schema:Person ;
     # Image
     schema:image "Aragorn.jpg"^^xsd:string ;
     
-    # Propriétés multilingues
+    # Multilingual properties
     schema:gender "Male"^^xsd:string .
 ```
 
 ---
 
-## Statistiques
+## Statistics
 
-| Métrique | Valeur | Details |
-|----------|--------|---------|
-| **Total Triples** | 49,242 | Dans kg_full.ttl |
-| **Entités principales** | 2,001 | Ressources kg-res: |
-| **Entités matérialisées** | 4,076 | Incluant labels générés |
-| **Types d'entités** | 11 | Character, Location, Work, Person, Organization, etc. |
-| **Caractères** | 800+ | Extraits infoboxes |
-| **DBpedia links** | 898 | owl:sameAs alignements |
-| **METW cartes** | 290 | Enrichissement jeu |
-| **CSV enrichissements** | 756 | Données structurées LotR |
-| **SHACL violations** | 0 | 100% conformité  |
+| Metric | Value | Details |
+|--------|-------|---------|
+| **Total Triples** | 49,242 | In kg_full.ttl |
+| **Main entities** | 2,001 | kg-res: resources |
+| **Materialized entities** | 4,076 | Including generated labels |
+| **Entity types** | 11 | Character, Location, Work, Person, Organization, etc. |
+| **Characters** | 800+ | Extracted infoboxes |
+| **DBpedia links** | 898 | owl:sameAs alignments |
+| **METW cards** | 290 | Game enrichment |
+| **CSV enrichments** | 756 | Structured LotR data |
+| **SHACL violations** | 0 | 100% compliance |
 
 ---
 
-## Dépannage et Problèmes Connus
+## Troubleshooting and Known Issues
 
-### Problèmes Courants et Solutions
+### Common Problems and Solutions
 
-#### 1. Fuseki ne démarre pas
+#### 1. Fuseki won't start
 
-**Symptôme:** `Connection refused` sur port 3030
+**Symptom:** `Connection refused` on port 3030
 
 **Solutions:**
 ```bash
-# Vérifier que Java est installé
+# Check that Java is installed
 java -version
 
-# Si Java manque, installer JDK 11+
+# If Java is missing, install JDK 11+
 # Windows: https://adoptium.net/
 # Linux: sudo apt install openjdk-11-jdk
 
-# Relancer Fuseki
+# Restart Fuseki
 cd apache-jena-fuseki-x.x.x
 
 # Windows:
@@ -1167,16 +1147,16 @@ fuseki-server.bat --mem /kg-tolkiengateway
 ./fuseki-server --mem /kg-tolkiengateway
 ```
 
-#### 2. Port déjà utilisé (8000 ou 3030)
+#### 2. Port already in use (8000 or 3030)
 
-**Symptôme:** `Address already in use`
+**Symptom:** `Address already in use`
 
 **Solutions:**
 ```bash
-# Changer le port dans run_web.py
-# Ligne 37: port=8001  (au lieu de 8000)
+# Change port in run_web.py
+# Line 37: port=8001 (instead of 8000)
 
-# OU tuer le processus existant
+# OR kill existing process
 # Windows:
 netstat -ano | findstr :8000
 taskkill /PID <PID> /F
@@ -1185,75 +1165,75 @@ taskkill /PID <PID> /F
 lsof -ti:8000 | xargs kill -9
 ```
 
-#### 3. Données non chargées dans Fuseki
+#### 3. Data not loaded in Fuseki
 
-**Symptôme:** Compteur de triples = 0
+**Symptom:** Triple counter = 0
 
 **Solution:**
 ```bash
-# Recharger les données
+# Reload data
 curl -X POST http://localhost:3030/kg-tolkiengateway/data \
     -H "Content-Type: text/turtle" \
     --data-binary @data/rdf/kg_full.ttl
 
-# Vérifier le chargement
+# Verify loading
 curl -X POST http://localhost:3030/kg-tolkiengateway/sparql \
     -H "Content-Type: application/sparql-query" \
     --data "SELECT (COUNT(*) as ?count) WHERE { ?s ?p ?o }"
 ```
 
-#### 4. Erreur "schema1: prefix not found"
+#### 4. "schema1: prefix not found" error
 
-**Symptôme:** Erreurs de parsing RDF
+**Symptom:** RDF parsing errors
 
-**Cause:** Problème de normalisation des préfixes
+**Cause:** Prefix normalization problem
 
 **Solution:**
 ```bash
-# Recréer le KG final avec correction auto
+# Recreate final KG with auto-correction
 python scripts/rdf/merge_all_ttl.py
 ```
 
-#### 5. Module Python manquant
+#### 5. Missing Python module
 
-**Symptôme:** `ModuleNotFoundError: No module named 'XXX'`
+**Symptom:** `ModuleNotFoundError: No module named 'XXX'`
 
 **Solution:**
 ```bash
-# Réinstaller les dépendances
+# Reinstall dependencies
 pip install -r requirements.txt --force-reinstall
 
-# Ou installer le module spécifique
-pip install <nom_module>
+# Or install specific module
+pip install <module_name>
 ```
 
-#### 6. Validation SHACL échoue
+#### 6. SHACL validation fails
 
-**Symptôme:** Violations détectées
+**Symptom:** Violations detected
 
 **Solution:**
 ```bash
-# Vérifier les détails
+# Check details
 python scripts/rdf/validate_final.py
 
-# Si violations légitimes, ajuster les shapes
-# Éditer: data/rdf/tolkien-shapes.ttl
-# Relaxer les contraintes (sh:minCount, sh:severity)
+# If legitimate violations, adjust shapes
+# Edit: data/rdf/tolkien-shapes.ttl
+# Relax constraints (sh:minCount, sh:severity)
 ```
 
-### Limitations Connues
+### Known Limitations
 
-1. **Données wiki évolutives:** Les extractions datent de décembre 2025, le wiki peut avoir changé
-2. **Labels multilingues partiels:** Seuls ~200 termes traduits (pas tout le vocabulaire)
-3. **Images non hébergées:** Les URLs d'images pointent vers le wiki externe
-4. **Raisonnement limité:** Pas d'inférences OWL complètes (seulement RDFS + property paths)
-5. **Performance:** Avec >100k triples, envisager un backend persistant (TDB) au lieu de mémoire
+1. **Evolving wiki data:** Extractions from December 2025, wiki may have changed
+2. **Partial multilingual labels:** Only ~200 translated terms (not entire vocabulary)
+3. **Non-hosted images:** Image URLs point to external wiki
+4. **Limited reasoning:** No complete OWL inferences (only RDFS + property paths)
+5. **Performance:** With >100k triples, consider persistent backend (TDB) instead of in-memory
 
 ---
 
-## Références et Ressources
+## References and Resources
 
-### Documentation Officielle
+### Official Documentation
 
 - **RDF 1.1:** https://www.w3.org/TR/rdf11-primer/
 - **SPARQL 1.1:** https://www.w3.org/TR/sparql11-query/
@@ -1261,14 +1241,14 @@ python scripts/rdf/validate_final.py
 - **schema.org:** https://schema.org/
 - **Apache Jena Fuseki:** https://jena.apache.org/documentation/fuseki2/
 
-### APIs et Sources Externes
+### APIs and External Sources
 
 - **Tolkien Gateway API:** https://tolkiengateway.net/w/api.php
 - **MediaWiki API:** https://www.mediawiki.org/wiki/API:Main_page
 - **DBpedia:** https://www.dbpedia.org/
 - **LotR Fandom Wiki:** https://lotr.fandom.com/
 
-### Technologies Python
+### Python Technologies
 
 - **FastAPI:** https://fastapi.tiangolo.com/
 - **RDFlib:** https://rdflib.readthedocs.io/
@@ -1279,66 +1259,66 @@ python scripts/rdf/validate_final.py
 
 ##  Conclusion
 
-Ce projet démontre une implémentation **complète et rigoureuse** de la chaîne de traitement des données du Web Sémantique. Partant d'un wiki non-structuré (Tolkien Gateway), nous avons construit un Knowledge Graph public accessible via un endpoint SPARQL et une interface Linked Data, respectant les standards W3C (RDF, SPARQL, SHACL, schema.org).
+This project demonstrates a **complete and rigorous** implementation of the Semantic Web data processing chain. Starting from an unstructured wiki (Tolkien Gateway), we built a public Knowledge Graph accessible via a SPARQL endpoint and Linked Data interface, complying with W3C standards (RDF, SPARQL, SHACL, schema.org).
 
-**Points forts du projet:**
--  **49,242 triples RDF** entièrement validés (SHACL)
--  **Architecture modulaire** et extensible
--  **Documentation complète** avec exemples de requêtes
--  **Données enrichies** via alignement avec DBpedia, METW, CSV
--  **Interface utilisateur moderne** avec recherche, filtres, navigation
+**Project strengths:**
+-  **49,242 RDF triples** fully validated (SHACL)
+-  **Modular architecture** and extensible
+-  **Complete documentation** with query examples
+-  **Enriched data** via alignment with DBpedia, METW, CSV
+-  **Modern user interface** with search, filters, navigation
 
-**Apport scientifique:**
-Ce projet illustre comment transformer des données semi-structurées (infoboxes wiki) en RDF de haute qualité, un processus fondamental pour la construction de Knowledge Graphs à grande échelle.
-
----
-
-## 🔮 Améliorations Futures Possibles
-
-### 1. **Enrichissement des Données**
-- Extraction d'informations depuis les **sections de texte libre** (actuellement, seules les infoboxes sont traitées)
-- Reconnaissance automatique d'entités nommées (NER) pour identifier les références non-structurées
-- Extraction de relations temporelles et spatiales depuis le texte
-
-### 2. **Raisonnement Avancé**
-- Implémentation de **règles d'inférence personnalisées** (ex: si X est parent de Y et Y est parent de Z, alors X est grandparent de Z)
-- Support des **fuzzy matching** pour améliorer l'alignement DBpedia (actuellement basé sur correspondances exactes de noms)
-- Détection de contradictions et résolution (ex: date de mort antérieure à date de naissance)
-
-### 3. **Intégration Multi-Source**
-- Fusion avec d'autres wikis Tolkien (Encyclopedia of Arda, theonering.net)
-- Alignement avec **GeoNames** pour les lieux (coordonnées géographiques)
-- Liaison avec **MovieDB/IMDb** pour les adaptations filmées
-
-### 4. **Interface Utilisateur Avancée**
-- **Visualisation graphique** des relations (force-directed graph)
-- **Timeline interactive** montrant l'évolution chronologique de la Terre du Milieu
-- **Carte 3D interactive** des lieux (Rivendell, Moria, Gondor, etc.)
-- **Comparaison d'entités** côte à côte
-- **Historique des modifications** (version control pour le KG)
-
-### 5. **Performance et Scalabilité**
-- Migration vers une **triplestore persistante** (PostgreSQL + PostGIS, AllegroGraph)
-- Implémentation du **caching SPARQL** pour accélérer les requêtes fréquentes
-- Support de la **fédération SPARQL** pour interroger DBpedia en temps réel
-- Optimisation des **property paths** complexes
-
-### 6. **Validation et Qualité**
-- Ajout de **provenance RDF** (PROV ontology) pour tracer l'origine de chaque triple
-- Calcul du **confidence score** pour les propriétés (ex: "90% de certitude sur la date de naissance")
-- Détection des **anomalies** (valeurs manquantes, divergences inter-sources)
-- Dashboard de **qualité des données** en temps réel
-
-### 7. **Web Sémantique Avancé**
-- Support complet du **Linked Data Platform (LDP)** pour CRUD opérations
-- Implémentation du **Activity Streams 2.0** pour suivre les changements du KG
-- Publication vers le **Web Sémantique fédéré** (décentralisé via Solid Protocol)
+**Scientific contribution:**
+This project illustrates how to transform semi-structured data (wiki infoboxes) into high-quality RDF, a fundamental process for building large-scale Knowledge Graphs.
 
 ---
 
-##  Développement
+##  Possible Future Improvements
 
-### Auteurs
+### 1. **Data Enrichment**
+- Extract information from **free-text sections** (currently, only infoboxes are processed)
+- Named Entity Recognition (NER) to identify unstructured references
+- Extract temporal and spatial relations from text
+
+### 2. **Advanced Reasoning**
+- Implement **custom inference rules** (e.g., if X is parent of Y and Y is parent of Z, then X is grandparent of Z)
+- Support **fuzzy matching** to improve DBpedia alignment (currently based on exact name matches)
+- Detect and resolve contradictions (e.g., death date before birth date)
+
+### 3. **Multi-Source Integration**
+- Merge with other Tolkien wikis (Encyclopedia of Arda, theonering.net)
+- Align with **GeoNames** for places (geographic coordinates)
+- Link with **MovieDB/IMDb** for film adaptations
+
+### 4. **Advanced User Interface**
+- **Graphical visualization** of relationships (force-directed graph)
+- **Interactive timeline** showing Middle-earth chronological evolution
+- **Interactive 3D map** of places (Rivendell, Moria, Gondor, etc.)
+- **Entity comparison** side-by-side
+- **Modification history** (version control for KG)
+
+### 5. **Performance and Scalability**
+- Migrate to **persistent triplestore** (PostgreSQL + PostGIS, AllegroGraph)
+- Implement **SPARQL caching** to speed up frequent queries
+- Support **SPARQL federation** to query DBpedia in real-time
+- Optimize complex **property paths**
+
+### 6. **Validation and Quality**
+- Add **RDF provenance** (PROV ontology) to trace origin of each triple
+- Calculate **confidence score** for properties (e.g., "90% certainty on birth date")
+- Detect **anomalies** (missing values, inter-source divergences)
+- Real-time **data quality dashboard**
+
+### 7. **Advanced Semantic Web**
+- Full **Linked Data Platform (LDP)** support for CRUD operations
+- Implement **Activity Streams 2.0** to track KG changes
+- Publish to **federated Semantic Web** (decentralized via Solid Protocol)
+
+---
+
+##  Development
+
+### Authors
 
 **Mathias CHANE-WAYE**  
 **Timur BALI**  
