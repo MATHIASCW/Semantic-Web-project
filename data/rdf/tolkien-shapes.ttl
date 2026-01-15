@@ -7,7 +7,6 @@
 kg-ont:CharacterShape a sh:NodeShape ;
     sh:targetClass kg-ont:Character ;
     
-    # Required name
     sh:property [
         sh:path schema:name ;
         sh:minCount 1 ;
@@ -16,14 +15,12 @@ kg-ont:CharacterShape a sh:NodeShape ;
         sh:message "Each character must have exactly one name (schema:name)." ;
     ] ;
     
-    # Gender (string)
     sh:property [
         sh:path schema:gender ;
         sh:datatype xsd:string ;
         sh:message "Gender must be a string." ;
     ] ;
     
-    # Dates (optional)
     sh:property [
         sh:path kg-ont:birthDate ;
         sh:datatype xsd:string ;
@@ -36,7 +33,6 @@ kg-ont:CharacterShape a sh:NodeShape ;
         sh:message "Death date must be a string." ;
     ] ;
     
-    # Relationship to a House (family)
     sh:property [
         sh:path kg-ont:family ;
         sh:or (
@@ -46,7 +42,6 @@ kg-ont:CharacterShape a sh:NodeShape ;
         sh:message "Family must be a House IRI or a string." ;
     ] ;
     
-    # Parental relations (can be multiple)
     sh:property [
         sh:path kg-ont:parentage ;
         sh:or (
@@ -74,13 +69,11 @@ kg-ont:CharacterShape a sh:NodeShape ;
         sh:message "Spouse must be an IRI or a string." ;
     ] ;
     
-    # Affiliation (may be multiple)
     sh:property [
         sh:path kg-ont:affiliation ;
         sh:message "Affiliation must point to an organization or group." ;
     ] ;
     
-    # Locations (IRI or string)
     sh:property [
         sh:path kg-ont:birthLocation ;
         sh:or (
@@ -99,7 +92,6 @@ kg-ont:CharacterShape a sh:NodeShape ;
         sh:message "Death location must be either an IRI or a string." ;
     ] ;
     
-    # Physical properties
     sh:property [
         sh:path kg-ont:height ;
         sh:datatype xsd:string ;
@@ -118,7 +110,6 @@ kg-ont:CharacterShape a sh:NodeShape ;
         sh:message "Eye color must be a string." ;
     ] ;
     
-    # Weapons and mounts
     sh:property [
         sh:path kg-ont:weapons ;
         sh:datatype xsd:string ;
@@ -131,10 +122,38 @@ kg-ont:CharacterShape a sh:NodeShape ;
         sh:message "Mount must be described by a string." ;
     ] .
 
-# Forme pour les Maisons
 kg-ont:HouseShape a sh:NodeShape ;
     sh:targetClass kg-ont:House .
 
-# Forme pour les Lieux
 kg-ont:LocationShape a sh:NodeShape ;
     sh:targetClass kg-ont:Location .
+
+kg-ont:CreativeWorkShape a sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    
+    sh:property [
+        sh:path schema:name ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Creative work name must be a string if present." ;
+    ] .
+
+kg-ont:ObjectShape a sh:NodeShape ;
+    sh:targetClass kg-ont:Object ;
+    
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Each object must have a name." ;
+    ] .
+
+kg-ont:RaceShape a sh:NodeShape ;
+    sh:targetClass kg-ont:Race ;
+    
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Each race must have a name." ;
+    ] .
