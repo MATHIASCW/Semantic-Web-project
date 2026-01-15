@@ -9,7 +9,7 @@
 ##  Table des Matières
 
 1. [Présentation du Projet](#-présentation-du-projet)
-2. [Guide d'Installation](#-guide-dinstallation-et-démarrage)
+2. [Installation Complète et Pipeline](#-installation-complète-et-pipeline)
 3. [Comment Tester le Projet](#-comment-tester-le-projet)
 4. [Architecture et Choix Techniques](#-architecture-et-choix-techniques)
 5. [Implémentation des Exigences](#-implémentation-des-exigences-du-projet)
@@ -47,7 +47,7 @@ Construire un **Knowledge Graph (KG)** complet à partir du wiki [Tolkien Gatewa
 
 ---
 
-##  Guide d'Installation et Démarrage
+##  Installation Complète et Pipeline
 
 ### Prérequis Système
 
@@ -55,10 +55,11 @@ Construire un **Knowledge Graph (KG)** complet à partir du wiki [Tolkien Gatewa
 - **Java 8+** pour Apache Jena Fuseki ([télécharger ici](https://www.java.com/))
 - **Git** pour cloner le repository
 - **curl** ou navigateur web pour tester l'API
+- **Environ 5-10 GB d'espace disque** pour les données
 
-### Installation Étape par Étape
+### Phase 1: Configuration de l'Environnement
 
-#### 1. Cloner le Repository
+#### 1.1 Cloner le Repository
 
 ```bash
 git clone https://github.com/MATHIASCW/Semantic-Web-project.git
@@ -67,7 +68,7 @@ cd Semantic-Web-project
 
 ![Clone Tolkien KG](images/Github_clone.png)
 
-#### 2. Créer l'Environnement Virtuel Python
+#### 1.2 Créer l'Environnement Virtuel Python
 
 ```bash
 # Créer l'environnement virtuel
@@ -81,13 +82,13 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-#### 3. Installer les Dépendances
+#### 1.3 Installer les Dépendances Python
 
 ```bash
 pip install -r requirements.txt
 ```
 
-#### 4. Télécharger et Configurer Apache Jena Fuseki
+#### 1.4 Télécharger et Configurer Apache Jena Fuseki
 
 ```bash
 # Télécharger depuis: https://jena.apache.org/download/
@@ -107,25 +108,79 @@ fuseki-server.bat --mem /kg-tolkiengateway
 
 ![Fuseki Tolkien KG](images/Kg_tolkiengateway_fuseki.png)
 
-#### 5. Charger les Données RDF dans Fuseki
+### Phase 2: Extraction des Données (Si nécessaire)
+
+**IMPORTANT:** Les données RDF finales (`data/rdf/kg_full.ttl`) sont déjà incluses dans le repository. 
+Vous pouvez **passer directement à la Phase 3** pour charger les données.
+
+Cette phase est nécessaire **uniquement si vous modifiez les infoboxes** ou souhaitez régénérer le KG complet.
+
+#### 2.1 Télécharger les Infoboxes depuis Tolkien Gateway
 
 Dans un **nouveau terminal** (avec l'environnement virtuel activé):
 
 ```bash
-# Méthode 1: Via curl (recommandé)
+# Télécharger TOUTES les infoboxes (800+ pages)
+python scripts/run_once/ApiRequestData/requestAllInfobox.py
+```
+
+**Résultat:** Les fichiers seront sauvegardés dans `data/infoboxes/`
+
+#### 2.2 Générer le Knowledge Graph Complet
+
+```bash
+# Étape 1: Extraire infoboxes → RDF (31,308 triples)
+python scripts/rdf/rdf_maker.py
+
+# Étape 2: Ajouter labels multilingues
+python scripts/rdf/merge_multilang_labels.py
+
+# Étape 3: Intégrer données externes (DBpedia, METW, CSV)
+python scripts/rdf/integrate_external_data.py
+
+# Étape 4: Fusionner tout en KG final (49,242 triples)
+python scripts/rdf/merge_all_ttl.py
+
+# Étape 5: Valider avec SHACL (vérifier 0 violations)
+python scripts/rdf/validate_final.py
+```
+
+**Résultat:** `data/rdf/kg_full.ttl` (49,242 triples)
+
+### Phase 3: Charger les Données dans Fuseki
+
+Dans un **nouveau terminal**:
+
+```bash
+# Charger le KG final dans Fuseki
 curl -X POST http://localhost:3030/kg-tolkiengateway/data \
     -H "Content-Type: text/turtle" \
     --data-binary @data/rdf/kg_full.ttl
-
-# Méthode 2: Via l'interface web Fuseki
-# Ouvrir http://localhost:3030 dans un navigateur
-# Aller dans "manage datasets" → kg-tolkiengateway → "upload files"
-# Uploader data/rdf/kg_full.ttl
 ```
 
-#### 6. Lancer l'Interface Web
+**Résultat attendu:** 
+```
+"count" : 49252 ,
+"tripleCount" : 49252
+```
+
+**Alternative (via interface web Fuseki):**
+- Ouvrir http://localhost:3030 dans un navigateur
+- Aller dans "Manage Datasets" → `/kg-tolkiengateway` → "Upload files"
+- Uploader `data/rdf/kg_full.ttl`
+
+**Important (résumé clair):**
+- **Obligatoire pour l'application:** charger uniquement `data/rdf/kg_full.ttl` dans le dataset `/kg-tolkiengateway`.
+- **Optionnel:**
+  - `data/rdf/tolkien-shapes.ttl` (SHACL) → seulement si vous voulez valider dans Fuseki
+  - `data/rdf/tolkien-kg-ontology.ttl` (ontologie) → seulement pour inspecter classes/propriétés
+- **Bonnes pratiques:** si vous chargez ces fichiers optionnels, utilisez un dataset séparé (ex: `/kg-validation`)
+
+### Phase 4: Lancer l'Interface Web
 
 ```bash
+# Dans le répertoire racine du projet, Terminal 3:
+
 # Option A: Via script Python
 python scripts/setup/run_web.py
 
@@ -143,6 +198,34 @@ bash scripts/setup/start_web.sh
 -  **Documentation API:** http://tolkien-kg.org/docs
 -  **ReDoc:** http://tolkien-kg.org/redoc
 -  **Fuseki UI:** http://localhost:3030/
+
+### Résumé Visuel du Pipeline Complet
+
+```
+[Phase 2] Données Brutes (Optionnel - déjà incluses)
+    ↓
+requestAllInfobox.py → data/infoboxes/ (800+ fichiers txt)
+    ↓
+[Phase 2] Génération RDF (Optionnel)
+    ↓
+rdf_maker.py → all_infoboxes.ttl (31,308 triples)
+    ↓
+merge_multilang_labels.py → all_infoboxes_with_lang.ttl
+    ↓
+integrate_external_data.py → external_links.ttl (DBpedia + METW + CSV)
+    ↓
+merge_all_ttl.py → kg_full.ttl (49,242 triples) 
+    ↓
+validate_final.py → Validation SHACL (0 violations)
+    ↓
+[Phase 3] Chargement Fuseki
+    ↓
+curl POST → Fuseki localhost:3030/kg-tolkiengateway/data
+    ↓
+[Phase 4] Lancement Interface Web
+    ↓
+FastAPI + content negotiation → http://tolkien-kg.org/
+```
 
 ---
 
@@ -269,9 +352,11 @@ WHERE {
 |---------|------------|----------------------|
 | Nom | `schema:name`  | - |
 | Date naissance | - | `kg-ont:birthDate` (format spécifique Tolkien: "TA 2931") |
-| Lieu naissance | `schema:birthPlace` | `kg-ont:birthLocation` (+ contexte Tolkien) |
+| Lieu naissance | *(idée initiale: `schema:birthPlace`)* | `kg-ont:birthLocation` (utilisé dans le KG final) |
 | Chronologie | - | `kg-ont:timeline` (spécifique univers) |
 | Affiliation | - | `kg-ont:affiliation` (groupes Terre du Milieu) |
+
+**Note:** Le KG final n'emploie pas `schema:birthPlace`; toutes les naissances sont encodées avec `kg-ont:birthLocation` pour rester cohérents avec les timelines Tolkien.
 
 **Fichiers:**
 - Ontologie: [data/rdf/tolkien-kg-ontology.ttl](data/rdf/tolkien-kg-ontology.ttl)
@@ -419,8 +504,6 @@ Client → FastAPI (main.py)
 | **12** | **Négociation de contenu** |  Complet | Accept: text/turtle, text/html, application/ld+json | [web/main.py](web/main.py) L65-85 |
 | **13** | **Description via SPARQL endpoint** |  Complet | Interface appelle Fuseki pour chaque ressource | [sparql_queries.py](web/sparql_queries.py) |
 
-**Score de conformité: 13/13 = 100% **
-
 ### Fonctionnalités Supplémentaires (Bonus)
 
 - **Interface web moderne** avec design responsive
@@ -485,6 +568,7 @@ Basé sur l'analyse réelle du graphe RDF kg_full.ttl:
 
 ### Performance
 
+- **Temps récupèration Infobox :** ~- varie en fonction du nombre d’exécutions (23000+ fichiers)
 - **Temps génération RDF:** ~3 minutes (800+ fichiers)
 - **Temps validation SHACL:** ~5 secondes
 - **Temps chargement Fuseki:** ~2 secondes (en mémoire)
@@ -499,10 +583,10 @@ Basé sur l'analyse réelle du graphe RDF kg_full.ttl:
 ![Homepage Tolkien KG](images/Home_kg.png)
 
 **Statistiques affichées:**
-- 2,000 entités totales
+- 2,291 entités totales
 - 1,260 personnages (Characters)
 - 228 lieux (Locations)
-- 240 œuvres (Works)
+- 531 œuvres (Works)
 
 **Fonctionnalités:**
 - Tuiles cliquables par type d'entité ([C] Character, [W] CreativeWork, [L] Location, etc.)
@@ -661,86 +745,7 @@ Semantic-Web-project/
 
 ---
 
-## Démarrage Rapide
-
-### Prérequis
-- Python 3.11+
-- Java 8+ (pour Fuseki)
-- curl (pour API calls)
-- Git
-
-### Installation
-
-```bash
-# 1. Cloner et installer
-git clone https://github.com/MATHIASCW/Semantic-Web-project.git
-cd Semantic-Web-project
-python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-# Linux/Mac
-source .venv/bin/activate
-
-# 2. Installer dépendances
-pip install -r requirements.txt
-```
-
-### Générer le Knowledge Graph
-
-```bash
-# Étape 1: Extraire infoboxes → RDF (31,308 triples)
-python scripts/rdf/rdf_maker.py
-
-# Étape 2: Ajouter labels multilingues
-python scripts/rdf/merge_multilang_labels.py
-
-# Étape 3: Intégrer données externes (DBpedia, METW, CSV)
-python scripts/rdf/integrate_external_data.py
-
-# Étape 4: Fusionner tout en KG final (49,242 triples)
-python scripts/rdf/merge_all_ttl.py
-
-# Étape 5: Valider avec SHACL
-python scripts/rdf/validate_final.py
-```
-
-### Lancer les serveurs
-
-**Terminal 1 : Fuseki (SPARQL)**
-```bash
-# Windows:
-cd C:\chemin\vers\apache-jena-fuseki
-fuseki-server.bat --mem /kg-tolkiengateway
-
-# Linux/Mac:
-cd /chemin/vers/apache-jena-fuseki
-./fuseki-server --mem /kg-tolkiengateway
-
-# Puis charger les données dans un autre terminal:
-curl -X POST http://localhost:3030/kg-tolkiengateway/data \
-    -H "Content-Type: text/turtle" \
-    --data-binary @data/rdf/kg_full.ttl
-```
-
-**Terminal 2 : Interface Web (FastAPI)**
-```bash
-# Windows
-scripts\setup\start_web.bat
-
-# Linux/Mac
-bash scripts/setup/start_web.sh
-```
-
-URLs de l'interface :
-- **Home** : http://tolkien-kg.org/
-- **Browse** : http://tolkien-kg.org/browse
-- **API Docs** : http://tolkien-kg.org/docs
-- **ReDoc** : http://tolkien-kg.org/redoc
-
----
-
-## � Documentation Technique
+##  Documentation Technique
 
 ### Pipeline de Génération RDF (7 Étapes)
 
@@ -1272,17 +1277,16 @@ python scripts/rdf/validate_final.py
 
 ---
 
-## 🎯 Conclusion
+##  Conclusion
 
 Ce projet démontre une implémentation **complète et rigoureuse** de la chaîne de traitement des données du Web Sémantique. Partant d'un wiki non-structuré (Tolkien Gateway), nous avons construit un Knowledge Graph public accessible via un endpoint SPARQL et une interface Linked Data, respectant les standards W3C (RDF, SPARQL, SHACL, schema.org).
 
 **Points forts du projet:**
-- ✅ **100% de conformité** aux exigences (13/13 critères implémentés)
-- ✅ **49,242 triples RDF** entièrement validés (SHACL)
-- ✅ **Architecture modulaire** et extensible
-- ✅ **Documentation complète** avec exemples de requêtes
-- ✅ **Données enrichies** via alignement avec DBpedia, METW, CSV
-- ✅ **Interface utilisateur moderne** avec recherche, filtres, navigation
+-  **49,242 triples RDF** entièrement validés (SHACL)
+-  **Architecture modulaire** et extensible
+-  **Documentation complète** avec exemples de requêtes
+-  **Données enrichies** via alignement avec DBpedia, METW, CSV
+-  **Interface utilisateur moderne** avec recherche, filtres, navigation
 
 **Apport scientifique:**
 Ce projet illustre comment transformer des données semi-structurées (infoboxes wiki) en RDF de haute qualité, un processus fondamental pour la construction de Knowledge Graphs à grande échelle.
@@ -1332,7 +1336,7 @@ Ce projet illustre comment transformer des données semi-structurées (infoboxes
 
 ---
 
-## 👥 Développement
+##  Développement
 
 ### Auteurs
 

@@ -1,3 +1,10 @@
+"""
+Extract Tolkien Gateway infoboxes into RDF triples.
+Parses wikitext, maps infobox fields to ontology predicates, normalizes IRIs,
+materializes labels for linked resources, and writes data/rdf/all_infoboxes.ttl.
+Also strips noisy markup, handles links vs literals, and fixes schema prefix quirks.
+"""
+
 import os
 import re
 import unicodedata

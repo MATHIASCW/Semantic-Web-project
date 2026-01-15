@@ -221,7 +221,6 @@ def get_statistics() -> Dict[str, int]:
     sparql.setQuery('''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a ?type .
-            ?s <http://schema.org/name> ?name .
             FILTER(
                 STRSTARTS(STR(?type), "http://tolkien-kg.org/ontology/") ||
                 STRSTARTS(STR(?type), "http://schema.org/")
@@ -240,7 +239,6 @@ def get_statistics() -> Dict[str, int]:
     sparql.setQuery('''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a <http://tolkien-kg.org/ontology/Character> .
-            ?s <http://schema.org/name> ?name .
         }
     ''')
     
@@ -254,7 +252,6 @@ def get_statistics() -> Dict[str, int]:
     sparql.setQuery('''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a <http://tolkien-kg.org/ontology/Location> .
-            ?s <http://schema.org/name> ?name .
         }
     ''')
     
@@ -268,7 +265,6 @@ def get_statistics() -> Dict[str, int]:
     sparql.setQuery('''
         SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a <http://schema.org/CreativeWork> .
-            ?s <http://schema.org/name> ?name .
         }
     ''')
     
@@ -312,7 +308,6 @@ def get_entity_type_facets() -> list[dict]:
         """
         SELECT ?type (COUNT(DISTINCT ?s) AS ?count) WHERE {
             ?s a ?type .
-            ?s <http://schema.org/name> ?name .
             FILTER(
                 STRSTARTS(STR(?type), "http://tolkien-kg.org/ontology/") ||
                 STRSTARTS(STR(?type), "http://schema.org/")

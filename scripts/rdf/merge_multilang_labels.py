@@ -1,3 +1,10 @@
+"""
+Merge multilingual labels into the Tolkien KG and ensure English fallbacks.
+Combines base infobox triples with fetched langlink labels, adds missing
+`rdfs:label@en` using schema:name or existing untagged labels, and writes
+data/rdf/all_infoboxes_with_lang.ttl for downstream merging.
+"""
+
 from rdflib import Graph, Literal
 from rdflib.namespace import RDFS
 from rdflib import Namespace

@@ -1,3 +1,10 @@
+"""
+Automatic multilingual label enrichment for the Tolkien KG.
+Fetches langlinks from the LotR Fandom API for each entity label, then writes
+new rdfs:label literals (with language tags) into data/rdf/multilang_labels.ttl.
+Only labels uniquely mapped to one entity in data/rdf/all_infoboxes.ttl are used.
+"""
+
 import time
 import requests
 from rdflib import Graph, Literal, Namespace

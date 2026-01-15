@@ -14,15 +14,15 @@ if __name__ == "__main__":
       Tolkien Knowledge Graph - Web Interface
 
       Configuration:
-      - Host: 127.0.0.1
-      - Port: 8000
+      - Host: tolkien-kg.org
+      - Port: 80
       - Reload: Enabled (detects changes)
 
       URLs:
-      - Home:        http://localhost:8000/
-      - Browse:      http://localhost:8000/browse
-      - API Docs:    http://localhost:8000/docs
-      - ReDoc:       http://localhost:8000/redoc
+      - Home:        http://tolkien-kg.org/
+      - Browse:      http://tolkien-kg.org/browse
+      - API Docs:    http://tolkien-kg.org/docs
+      - ReDoc:       http://tolkien-kg.org/redoc
 
       Press Ctrl+C to stop
     ===============================================

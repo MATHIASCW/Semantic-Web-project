@@ -1,3 +1,9 @@
+"""
+Merge pipeline outputs into the final Tolkien KG TTL.
+Loads language-enriched infobox triples and external links, merges them,
+normalizes schema prefix quirks, and writes data/rdf/kg_full.ttl for Fuseki.
+"""
+
 from rdflib import Graph
 
 INPUTS = [

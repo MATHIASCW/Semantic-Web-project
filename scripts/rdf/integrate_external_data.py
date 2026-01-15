@@ -1,3 +1,11 @@
+"""
+Automatic enrichment of the Tolkien KG.
+Merges external data sources (METW cards JSON, LotR characters CSV),
+adds multilingual labels, schema metadata, and optional DBpedia owl:sameAs links,
+then writes the consolidated triples to data/rdf/external_links.ttl.
+Relies on labels from data/rdf/all_infoboxes.ttl to match entities.
+"""
+
 import csv
 import json
 from pathlib import Path

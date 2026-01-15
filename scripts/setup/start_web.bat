@@ -8,9 +8,9 @@ echo ===============================================
 echo  Tolkien Knowledge Graph - Web Interface
 echo ===============================================
 echo  URLs:
-echo  - Home:     http://localhost:8000/
-echo  - Browse:   http://localhost:8000/browse
-echo  - API Docs: http://localhost:8000/docs
+echo  - Home:     http://tolkien-kg.org/
+echo  - Browse:   http://tolkien-kg.org/browse
+echo  - API Docs: http://tolkien-kg.org/docs
 echo.
 
 echo Checking Fuseki...
