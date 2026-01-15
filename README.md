@@ -14,8 +14,16 @@
 4. [Architecture and Technical Choices](#architecture-and-technical-choices)
 5. [Requirements Implementation](#requirements-implementation)
 6. [Results and Statistics](#results-and-statistics)
-7. [Project Structure](#detailed-project-structure)
-8. [Technical Documentation](#technical-documentation)
+7. [Project Screenshots](#project-screenshots)
+8. [Project Structure](#detailed-project-structure)
+9. [Technical Documentation](#technical-documentation)
+10. [Implementation Details by Component](#implementation-details-by-component)
+11. [Troubleshooting and Known Issues](#troubleshooting-and-known-issues)
+12. [Ontology and Vocabulary](#ontology-and-vocabulary)
+13. [References and Resources](#references-and-resources)
+14. [Conclusion](#conclusion)
+15. [Possible Future Improvements](#possible-future-improvements)
+16. [Development](#development)
 
 ---
 
@@ -53,7 +61,7 @@ See the [Results and Statistics](#results-and-statistics) section below for a co
 
 ### Phase 0: Configure Host File (Windows/Linux/Mac)
 
-⚠️ **IMPORTANT:** The web application uses the custom domain `tolkien-kg.org` on localhost. You must add this to your system's hosts file.
+ **IMPORTANT:** The web application uses the custom domain `tolkien-kg.org` on localhost. You must add this to your system's hosts file.
 
 #### Windows (Administrators Only)
 
