@@ -171,8 +171,7 @@ PROPERTY_MAP = {
     "rulePeriod": KGONT.rulePeriod,
     "ruleperiod": KGONT.rulePeriod,
     "image": SCHEMA.image,
-    "caption": SCHEMA.caption,
-    "people": KGONT.people,
+    "people": KGONT.race,
     "pronun": KGONT.pronunciation,
     "pronunciation": KGONT.pronunciation,
     "notablefor": SCHEMA.description,
@@ -434,6 +433,12 @@ def map_predicate(key: str):
     if norm in PROPERTY_MAP:
         return PROPERTY_MAP[norm]
     fallback = sanitize_local(norm.replace(" ", "_"))
+    
+    if not fallback or fallback in ("_", "unknown", "caption"):
+        return None
+    if fallback.isdigit():
+        return None
+    
     return KGONT[fallback]
 
 
@@ -479,6 +484,8 @@ def main():
             if not raw_val or key == "name":
                 continue
             pred = map_predicate(key)
+            if pred is None:
+                continue
             is_other = pred == KGONT.other_names
 
             if is_other and ("see below" in raw_val.lower() or "see [[" in raw_val.lower()):
