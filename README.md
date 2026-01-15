@@ -51,6 +51,45 @@ See the [Results and Statistics](#results-and-statistics) section below for a co
 - **curl** or web browser to test the API
 - **Approximately 5-10 GB disk space** for data
 
+### Phase 0: Configure Host File (Windows/Linux/Mac)
+
+⚠️ **IMPORTANT:** The web application uses the custom domain `tolkien-kg.org` on localhost. You must add this to your system's hosts file.
+
+#### Windows (Administrators Only)
+
+1. Open **Notepad as Administrator**
+2. File → Open → Navigate to: `C:\Windows\System32\drivers\etc\hosts`
+3. Add at the end of file:
+```
+127.0.0.1 tolkien-kg.org
+```
+4. Save the file
+
+#### Linux/Mac
+
+Open terminal and run:
+```bash
+sudo nano /etc/hosts
+```
+
+Add the line:
+```
+127.0.0.1 tolkien-kg.org
+```
+
+Save and close (Ctrl+X, then Y, then Enter)
+
+#### Verify Configuration
+
+```bash
+# Test hostname resolution
+ping tolkien-kg.org
+
+# Should return 127.0.0.1
+```
+
+---
+
 ### Phase 1: Environment Setup
 
 #### 1.1 Clone the Repository
@@ -101,30 +140,6 @@ fuseki-server.bat --mem /kg-tolkiengateway
 **Note:** Fuseki starts on `http://localhost:3030` by default.
 
 ![Fuseki Tolkien KG](images/Kg_tolkiengateway_fuseki.png)
-
-#### 1.5 Configure Local Hostname
-
-To access the web interface at **http://tolkien-kg.org** instead of localhost, add an entry to your hosts file:
-
-**Windows:**
-```bash
-# Open Notepad as Administrator
-notepad C:\Windows\System32\drivers\etc\hosts
-
-# Add this line at the end:
-127.0.0.1 tolkien-kg.org
-```
-
-**Linux/Mac:**
-```bash
-# Edit hosts file with sudo
-sudo nano /etc/hosts
-
-# Add this line at the end:
-127.0.0.1 tolkien-kg.org
-```
-
-**Save and close.** The hostname is now configured locally.
 
 ### Phase 2: Data Extraction (Optional)
 
@@ -215,6 +230,59 @@ bash scripts/setup/start_web.sh
 -  **API Documentation:** http://tolkien-kg.org/docs
 -  **ReDoc:** http://tolkien-kg.org/redoc
 -  **Fuseki UI:** http://localhost:3030/
+
+#### Port Configuration Troubleshooting
+
+##### Issue: Port 80 Already in Use
+
+**Symptom:** Error message like `"Address already in use"` or `"Permission denied"` when starting the web interface.
+
+**Solution 1: Use Port 8000 Instead (Recommended)**
+
+Edit `scripts/setup/run_web.py`:
+```python
+# Line 36-39, change this:
+try:
+    uvicorn.run(
+        "web.main:app",
+        host="tolkien-kg.org",
+        port=80,  # ← Change 80 to 8000
+
+# To this:
+try:
+    uvicorn.run(
+        "web.main:app",
+        host="tolkien-kg.org",
+        port=8000,  # ← New port
+```
+
+Then access the application at:
+- **Home:** http://tolkien-kg.org:8000/
+- **Browse:** http://tolkien-kg.org:8000/browse
+- **API Docs:** http://tolkien-kg.org:8000/docs
+
+**Solution 2: Find and Kill Process Using Port 80**
+
+```bash
+# Windows:
+netstat -ano | findstr :80
+taskkill /PID <PID> /F
+
+# Linux/Mac:
+lsof -ti:80 | xargs kill -9
+```
+
+**Solution 3: Use Different Port Numbers**
+
+If you prefer different ports, common alternatives are:
+- **8000** - Default Flask/FastAPI development port
+- **5000** - Alternative development port
+- **8080** - Common proxy port
+- **3000** - Node.js convention
+
+##### Note on Port 80
+
+Port 80 is the standard HTTP port and requires administrator/root privileges on most systems. If port 80 is blocked by firewall or antivirus, use port 8000 instead.
 
 ### Complete Pipeline Visual Summary
 
