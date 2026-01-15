@@ -102,6 +102,30 @@ fuseki-server.bat --mem /kg-tolkiengateway
 
 ![Fuseki Tolkien KG](images/Kg_tolkiengateway_fuseki.png)
 
+#### 1.5 Configure Local Hostname
+
+To access the web interface at **http://tolkien-kg.org** instead of localhost, add an entry to your hosts file:
+
+**Windows:**
+```bash
+# Open Notepad as Administrator
+notepad C:\Windows\System32\drivers\etc\hosts
+
+# Add this line at the end:
+127.0.0.1 tolkien-kg.org
+```
+
+**Linux/Mac:**
+```bash
+# Edit hosts file with sudo
+sudo nano /etc/hosts
+
+# Add this line at the end:
+127.0.0.1 tolkien-kg.org
+```
+
+**Save and close.** The hostname is now configured locally.
+
 ### Phase 2: Data Extraction (Optional)
 
  **IMPORTANT:** Final RDF data (`data/rdf/kg_full.ttl` with 49,242 triples) is already included in the repository. **You can skip directly to Phase 3.**
