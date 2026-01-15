@@ -71,7 +71,11 @@ kg-ont:CharacterShape a sh:NodeShape ;
     
     sh:property [
         sh:path kg-ont:affiliation ;
-        sh:message "Affiliation must point to an organization or group." ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:message "Affiliation must be either an IRI or a string." ;
     ] ;
     
     sh:property [
