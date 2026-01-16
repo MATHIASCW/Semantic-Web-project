@@ -1201,23 +1201,6 @@ kg-res:Aragorn a kg-ont:Character, schema:Person ;
     # Multilingual properties
     schema:gender "Male"^^xsd:string .
 ```
-
----
-
-## Statistics
-
-| Metric | Value | Details |
-|--------|-------|---------|
-| **Total Triples** | 49,242 | In kg_full.ttl |
-| **Main entities** | 2,291 | kg-res: resources |
-| **Materialized entities** | 4,076 | Including generated labels |
-| **Entity types** | 13 | Character, Location, Work, Person, Organization, etc. |
-| **Characters** | 1,260 | Extracted infoboxes |
-| **DBpedia links** | 898 | owl:sameAs alignments |
-| **METW cards** | 290 | Game enrichment |
-| **CSV enrichments** | 756 | Structured LotR data |
-| **SHACL violations** | 0 | 100% compliance |
-
 ---
 
 ## Troubleshooting and Known Issues
