@@ -18,12 +18,13 @@
 8. [Project Structure](#detailed-project-structure)
 9. [Technical Documentation](#technical-documentation)
 10. [Implementation Details by Component](#implementation-details-by-component)
-11. [Troubleshooting and Known Issues](#troubleshooting-and-known-issues)
+11. [Project File Reference](#project-file-reference)
 12. [Ontology and Vocabulary](#ontology-and-vocabulary)
-13. [References and Resources](#references-and-resources)
-14. [Conclusion](#conclusion)
-15. [Possible Future Improvements](#possible-future-improvements)
-16. [Development](#development)
+13. [Troubleshooting and Known Issues](#troubleshooting-and-known-issues)
+14. [References and Resources](#references-and-resources)
+15. [Conclusion](#conclusion)
+16. [Possible Future Improvements](#possible-future-improvements)
+17. [Development](#development)
 
 ---
 
@@ -200,8 +201,8 @@ curl -X POST http://localhost:3030/kg-tolkiengateway/data \
 
 **Expected result:** 
 ```
-"count" : 49252 ,
-"tripleCount" : 49252
+"count" : 49242 ,
+"tripleCount" : 49242
 ```
 
 **Alternative (via Fuseki web interface):**
@@ -374,15 +375,7 @@ LIMIT 10
 python scripts/rdf/validate_final.py
 ```
 
-**Expected result:**
-```
- NO SHACL VIOLATIONS!
-OK. The RDF conforms to the shapes.
-Final statistics:
-  - RDF triples: 49242
-  - SHACL triples: [number of shapes]
-  - Conformity: 100%
-```
+**Expected result:** 0 violations, 100% compliance
 
 ### Test 6: Test SPARQL Reasoning
 
@@ -436,11 +429,11 @@ WHERE {
 |---------|------------|----------------|
 | Name | `schema:name`  | - |
 | Birth date | - | `kg-ont:birthDate` (Tolkien-specific format: "TA 2931") |
-| Birth place | *(initial idea: `schema:birthPlace`)* | `kg-ont:birthLocation` (used in final KG) |
+| Birth location | - | `kg-ont:birthLocation` (Tolkien-specific format with timeline context) |
 | Chronology | - | `kg-ont:timeline` (universe-specific) |
 | Affiliation | - | `kg-ont:affiliation` (Middle-earth groups) |
 
-**Note:** Final KG doesn't use `schema:birthPlace`; all births are encoded with `kg-ont:birthLocation` to stay consistent with Tolkien timelines.
+**Note:** The final KG uses `kg-ont:birthLocation` instead of `schema:birthPlace` to maintain consistency with Tolkien-specific timeline formats (TA, SA, FO).
 
 **Files:**
 - Ontology: [data/rdf/tolkien-kg-ontology.ttl](data/rdf/tolkien-kg-ontology.ttl)
@@ -893,13 +886,9 @@ Combines all RDF files into one:
 ### Step 5: SHACL Validation
 **File:** [scripts/rdf/validate_final.py](scripts/rdf/validate_final.py)
 
-Validates integrity with SPARQL shapes:
+Validates integrity with SHACL shapes:
 - Shapes defined in: `data/rdf/tolkien-shapes.ttl`
 - **Result: 0 violations, 100% compliance**
-- Tested constraints:
-  - Character: must have schema:name
-  - Location: must have optional geolocation
-  - Work: title, author, publication date
 
 ```bash
 python scripts/rdf/validate_final.py
@@ -1091,7 +1080,7 @@ async def get_resource(name: str, request: Request):
 
 ---
 
-## Troubleshooting and Known Issues
+## Project File Reference
 
 ### Data Sources
 
@@ -1201,22 +1190,6 @@ kg-res:Aragorn a kg-ont:Character, schema:Person ;
     # Multilingual properties
     schema:gender "Male"^^xsd:string .
 ```
-
----
-
-## Statistics
-
-| Metric | Value | Details |
-|--------|-------|---------|
-| **Total Triples** | 49,242 | In kg_full.ttl |
-| **Main entities** | 2,001 | kg-res: resources |
-| **Materialized entities** | 4,076 | Including generated labels |
-| **Entity types** | 11 | Character, Location, Work, Person, Organization, etc. |
-| **Characters** | 800+ | Extracted infoboxes |
-| **DBpedia links** | 898 | owl:sameAs alignments |
-| **METW cards** | 290 | Game enrichment |
-| **CSV enrichments** | 756 | Structured LotR data |
-| **SHACL violations** | 0 | 100% compliance |
 
 ---
 
