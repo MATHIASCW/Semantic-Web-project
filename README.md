@@ -160,7 +160,7 @@ This phase is necessary **only if you modify wiki infoboxes** or want to regener
 In a **new terminal** (with virtual environment activated):
 
 ```bash
-# Download ALL infoboxes (800+ pages)
+# Download ALL infoboxes (2000+ pages)
 python scripts/run_once/ApiRequestData/requestAllInfobox.py
 ```
 
@@ -296,7 +296,7 @@ Port 80 is the standard HTTP port and requires administrator/root privileges on 
 
 ```
 [Phase 2 - Optional] Raw Data Extraction
-requestAllInfobox.py → data/infoboxes/ (800+ files)
+requestAllInfobox.py → data/infoboxes/ (2000+ files)
          ↓
 rdf_maker.py → all_infoboxes.ttl (31,308 triples)
 merge_multilang_labels.py → +Multilingual labels
@@ -574,7 +574,7 @@ Client → FastAPI (main.py)
 
 | # | Project Requirement | Status | Implementation | Proof |
 |---|---------------------|--------|----------------|-------|
-| **1** | **KG captures wiki content** |  Complete | Each page → RDF entity with unique IRI | 800+ entities in [kg_full.ttl](data/rdf/kg_full.ttl) |
+| **1** | **KG captures wiki content** |  Complete | Each page → RDF entity with unique IRI | 2000+ entities in [kg_full.ttl](data/rdf/kg_full.ttl) |
 | **2** | **Infoboxes → RDF triples** |  Complete | Field mapping → properties by template type | [rdf_maker.py](scripts/rdf/rdf_maker.py) L106-500 |
 | **3** | **Wiki links → RDF triples** |  Complete | `[[Entity]]` → `kg-res:Entity` (IRIs) | [rdf_maker.py](scripts/rdf/rdf_maker.py) L82-104 |
 | **4** | **Multilingual labels** |  Complete | `rdfs:label@en/de/fr/es/it/ru/ca` | [multilang_labels.ttl](data/rdf/multilang_labels.ttl) |
@@ -648,8 +648,8 @@ Based on real analysis of kg_full.ttl RDF graph:
 
 ### Performance
 
-- **Infobox retrieval time:** ~varies depending on execution count (23000+ files)
-- **RDF generation time:** ~3 minutes (800+ files)
+- **Infobox retrieval time:** ~varies depending on execution count (23000+ pages)
+- **RDF generation time:** ~3 minutes (2000+ files)
 - **SHACL validation time:** ~5 seconds
 - **Fuseki loading time:** ~2 seconds (in-memory)
 - **API response time:** ~100-300ms per resource
@@ -773,7 +773,7 @@ Semantic-Web-project/
 │   ├── infoboxes/ ← Wiki pages extracted (txt format)
 │   │   ├── infobox_Aragorn.txt
 │   │   ├── infobox_Gandalf.txt
-│   │   └── ... (800+ files)
+│   │   └── ... (2000+ files)
 │   └── rdf/                          ← Generated RDF data
 │       ├── all_infoboxes.ttl         ← Base RDF (31,308 triples)
 │       ├── all_infoboxes_with_lang.ttl  ← + Multilingual labels
@@ -833,7 +833,7 @@ Semantic-Web-project/
 **File:** [scripts/rdf/rdf_maker.py](scripts/rdf/rdf_maker.py)
 
 Transforms raw wiki pages into structured RDF:
-- Input: `data/infoboxes/*.txt` (800+ files)
+- Input: `data/infoboxes/*.txt` (2000+ files)
 - Wikitext cleaning: removes refs, HTML, tags, templates
 - Template detection and field mapping → RDF properties
 - IRI generation: `kg-res:Aragorn`, `kg-res:Rivendell`, etc.
@@ -922,7 +922,7 @@ Configures complete SPARQL 1.1 endpoint on `localhost:3030`:
 SELECT (COUNT(?s) AS ?count) WHERE {
   ?s a kg-ont:Character ; schema:name ?name .
 }
-# Result: 800+ characters
+# Result: 1000+ characters
 
 # Types via hierarchy (property paths)
 SELECT ?type WHERE {

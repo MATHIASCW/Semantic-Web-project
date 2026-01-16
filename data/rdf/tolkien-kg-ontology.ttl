@@ -1,13 +1,13 @@
 @prefix kg-ont: <http://tolkien-kg.org/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema1: <http://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 kg-ont:Character a owl:Class ;
     rdfs:label "Character" ;
     rdfs:comment "Character from Tolkien's universe (fictional character as defined on Tolkien Gateway)." ;
-    rdfs:subClassOf schema1:Person .
+    rdfs:subClassOf schema:Person .
 
 kg-ont:House a owl:Class ;
     rdfs:label "House" ;
